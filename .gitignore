@@ -160,9 +160,6 @@ __pycache__/
 # Install Packages
 /installer/output/
 
-# Copyrighted Resources (excluded from GPL release)
-edusweep2.ico
-
 # Static Resources (images, signature packs, icons, TrID defs)
 /static_resource/images/
 /static_resource/logos/
