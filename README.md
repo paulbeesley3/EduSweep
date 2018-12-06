@@ -4,6 +4,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![CodeFactor](https://www.codefactor.io/repository/github/paulbeesley3/edusweep/badge)](https://www.codefactor.io/repository/github/paulbeesley3/edusweep)
 [![Documentation Status](https://readthedocs.org/projects/edusweep/badge/?version=latest)](https://edusweep.readthedocs.io/en/latest/?badge=latest)
+[![Build status](https://ci.appveyor.com/api/projects/status/3uxpunct797ouv75?svg=true)](https://ci.appveyor.com/project/paulbeesley3/edusweep)
 
 EduSweep is a tool to keep IT networks - especially those in an education environment - free of unwanted files that anti-malware
 software doesn’t search for.
