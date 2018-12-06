@@ -1,0 +1,64 @@
+EduSweep:
+    Author: Paul Beesley
+    Web: https://github.com/paulbeesley3/EduSweep
+    License: GNU GPL 3.0
+
+Silk Icon Pack
+    Author: Mark James
+    Web: http://www.famfamfam.com/lab/icons/silk/
+    License: Creative Commons Attribution 2.5
+
+Material Icons Pack
+    Author: Google
+    Web: https://github.com/google/material-design-icons
+    License: Apache 2.0
+
+Castle.Core Library
+    Author: Castle Project Contributors
+    Web: http://www.castleproject.org/
+    License: Apache 2.0
+
+Config.Net Library
+    Author: Ivan Gavryliuk
+    Web: https://github.com/aloneguid/config
+    License: MIT
+
+Config.Net.Json Library
+    Author: Ivan Gavryliuk
+    Web: https://github.com/aloneguid/config
+    License: MIT
+
+CRC32.Net Library
+    Author: force-net
+    Web: https://github.com/force-net/Crc32.NET
+    License: MIT
+
+nClam Library
+    Author: Ryan Hoffman
+    Web: https://github.com/tekmaven/nClam
+    License: Apache 2.0
+
+NewtonSoft.Json Library
+    Author: James Newton-King
+    Web: https://www.newtonsoft.com/json
+    License: MIT
+
+NLog Library
+    Author: Multiple
+    Web: https://nlog-project.org/
+    License: BSD 3-Clause
+
+NLog.Windows.Forms Library
+    Author: Multiple
+    Web: https://github.com/NLog/NLog.Windows.Forms
+    License: BSD 3-Clause
+
+ObjectListView Library
+    Author: Phillip Piper
+    Web: http://http://objectlistview.sourceforge.net
+    License: GNU GPL 3.0
+
+TrIDLib Library
+    Author: Marco Pontello
+    Web: http://mark0.net/code-tridlib-e.html
+    License: see TrIDLib-License.txt

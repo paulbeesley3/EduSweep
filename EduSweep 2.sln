@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSweep 2", "EduSweep 2\EduSweep 2.csproj", "{771576A9-C1AE-459E-8BE6-609971CBEFAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5A905E6-1548-42CA-A157-5D8382B820B8} = {A5A905E6-1548-42CA-A157-5D8382B820B8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Inspector", "File Inspector\File Inspector.csproj", "{D682A546-8C36-4BB5-8879-A3FC294769F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5A905E6-1548-42CA-A157-5D8382B820B8} = {A5A905E6-1548-42CA-A157-5D8382B820B8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduEngine", "EduEngine\EduEngine.csproj", "{F75E05C8-E02C-4C07-A6EF-5C1D352B3364}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5A905E6-1548-42CA-A157-5D8382B820B8} = {A5A905E6-1548-42CA-A157-5D8382B820B8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdUtils", "EdUtils\EdUtils.csproj", "{A5A905E6-1548-42CA-A157-5D8382B820B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signature Studio", "Signature Studio\Signature Studio.csproj", "{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F75E05C8-E02C-4C07-A6EF-5C1D352B3364} = {F75E05C8-E02C-4C07-A6EF-5C1D352B3364}
+		{A5A905E6-1548-42CA-A157-5D8382B820B8} = {A5A905E6-1548-42CA-A157-5D8382B820B8}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CFBD1321-68E4-4BD3-8B79-6098BFF1C746}"
+	ProjectSection(SolutionItems) = preProject
+		CodeAnalysis.ruleset = CodeAnalysis.ruleset
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{771576A9-C1AE-459E-8BE6-609971CBEFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771576A9-C1AE-459E-8BE6-609971CBEFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771576A9-C1AE-459E-8BE6-609971CBEFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771576A9-C1AE-459E-8BE6-609971CBEFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D682A546-8C36-4BB5-8879-A3FC294769F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D682A546-8C36-4BB5-8879-A3FC294769F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D682A546-8C36-4BB5-8879-A3FC294769F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D682A546-8C36-4BB5-8879-A3FC294769F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75E05C8-E02C-4C07-A6EF-5C1D352B3364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75E05C8-E02C-4C07-A6EF-5C1D352B3364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75E05C8-E02C-4C07-A6EF-5C1D352B3364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75E05C8-E02C-4C07-A6EF-5C1D352B3364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A905E6-1548-42CA-A157-5D8382B820B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A905E6-1548-42CA-A157-5D8382B820B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A905E6-1548-42CA-A157-5D8382B820B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A905E6-1548-42CA-A157-5D8382B820B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BB7A21C-C41E-4208-BB8D-3261E0EEEE9E}
+	EndGlobalSection
+EndGlobal
