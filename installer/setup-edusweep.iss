@@ -23,7 +23,7 @@ AllowNoIcons=yes
 LicenseFile=..\LICENSE.txt
 OutputDir=.\output
 OutputBaseFilename=EduSweep Installer
-SetupIconFile=..\edusweep2.ico
+SetupIconFile=..\static_resource\edusweep2.ico
 Compression=lzma
 SolidCompression=yes
 
