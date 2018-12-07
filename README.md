@@ -3,9 +3,6 @@
     <img src="https://raw.githubusercontent.com/paulbeesley3/edusweep/master/static_resource/img/banner.png"
          alt="EduSweep Logo"
          width=401>
-    <br>
-    EduSweep
-    <br>
 </h1>
 
 <h4 align="center">Unwanted File Detection and Management for Education</h4>
