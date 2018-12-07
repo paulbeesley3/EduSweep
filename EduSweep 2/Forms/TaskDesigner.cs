@@ -601,16 +601,21 @@ namespace EduSweep_2.Forms
             AddFiles(selectedFileNames);
             listViewElements.SetObjects(task.Elements);
             RefreshElementsPage();
+            SetSaveButtonState();
         }
 
         private void toolStripButtonAddKeyword_Click(object sender, EventArgs e)
         {
-            /* TODO */
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
         }
 
         private void toolStripButtonAddExtension_Click(object sender, EventArgs e)
         {
-            /* TODO */
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
         }
 
         private void toolStripButtonRemove_Click(object sender, EventArgs e)
