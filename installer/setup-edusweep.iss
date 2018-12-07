@@ -4,6 +4,7 @@
 #define MyAppURL "https://github.com/paulbeesley3/EduSweep"
 #define CoreAppName "EduSweep.exe"
 #define InspectorAppName "finspector.exe"
+#define StudioAppName "sigstudio.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -45,7 +46,7 @@ Name: "custom"; Description: "Custom installation"; Flags: iscustom
 Name: "core"; Description: "Core Application"; Types: full compact custom; Flags: fixed
 Name: "sig"; Description: "Default Signatures"; Types: full compact custom; Flags: fixed
 Name: "insp"; Description: "File Inspector Tool"; Types: full custom
-Name: "sig"; Description: "Default Signatures"; Types: full compact custom
+Name: "studio"; Description: "Signature Studio Tool"; Types: full custom
 
 [Dirs]
 Name: "{app}\Signatures"
@@ -72,9 +73,13 @@ Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags:
 ; Default Signatures Component (sig)
 Source: "..\static_resource\signatures\*"; DestDir: "{app}\Signatures"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: sig
 
+; Signature Studio Component (studio)
+Source: "..\Signature Studio\bin\Release\sigstudio.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: studio
+
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"
 Name: "{group}\File Inspector"; Filename: "{app}\{#InspectorAppName}"; Flags: createonlyiffileexists
+Name: "{group}\Signature Studio"; Filename: "{app}\{#StudioAppName}"; Flags: createonlyiffileexists
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon
 
