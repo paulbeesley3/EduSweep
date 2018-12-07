@@ -43,6 +43,7 @@ Name: "custom"; Description: "Custom installation"; Flags: iscustom
 
 [Components]
 Name: "core"; Description: "Core Application"; Types: full compact custom; Flags: fixed
+Name: "sig"; Description: "Default Signatures"; Types: full compact custom; Flags: fixed
 Name: "insp"; Description: "File Inspector Tool"; Types: full custom
 Name: "sig"; Description: "Default Signatures"; Types: full compact custom
 
