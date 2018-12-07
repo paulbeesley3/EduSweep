@@ -620,6 +620,7 @@ namespace EduSweep_2.Forms
             task.Elements.Remove(element);
             listViewElements.SetObjects(task.Elements);
             RefreshElementsPage();
+            SetSaveButtonState();
         }
     }
 }
