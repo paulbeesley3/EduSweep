@@ -1,34 +1,82 @@
 Standard Installation
 #####################
 
-Double click on the downloaded MSI file to begin the setup process. The setup
-wizard below will launch if the necessary prerequisites are installed on your
-system. If the wizard warns you that components required for the installation
-are missing then you should first install the Microsoft .NET Framework 3.5
-package.
+The EduSweep installer is provided as an executable (exe) setup program. The default name
+for the program is "EduSweep Installer.exe".
 
+Please review the requirements and prerequisites before beginning the installation process.
+
+Double click on the downloaded installer file to begin the setup process.
+If User Account Control (UAC) is enabled then you will be prompted to provide elevated
+permissions to install the software. If you choose No then the installation will be
+cancelled and EduSweep will not be installed. Choose Yes to proceed with the installation.
+
+The setup wizard below will launch if the necessary prerequisites are installed on your
+system.
+
+License Acceptance
+------------------
 .. image:: ../../screenshots/installer/1.png
 
-Click Next > to begin the setup process. The installer will proceed to the second
-step in which you can select the destination folder into which EduSweep will be
-installed. It is safe to install EduSweep onto a drive that is not the boot drive.
-Once installed, EduSweep will not require write access to its installation folder.
-4
+The first page of the installer prompts you to accept the terms of the license that EduSweep
+is provided under. Review these terms carefully and press Next > to indicate acceptance if
+you agree.
 
-Once you are happy with the selected location choose Next > again to proceed
-to the next step. The following screen offers a final chance to cancel the
-installation before proceeding to copy files. Choose Install to continue.
+Directory Selection
+-------------------
+.. image:: ../../screenshots/installer/2.png
 
-Windows Vista, 7, 2008: If User Account Control (UAC) is enabled on the
-computer then you will be prompted to provide permission to install the software
-by a dialog similar to the one shown below. If you choose No then the
-installation will be canceled and EduSweep will not be installed. Choose Yes
-to proceed with the installation.
+On the second page you can modify the directory into which EduSweep will be installed.
+EduSweep does not require write access to this folder after the installation is completed.
+Modify the directory path, or accept the proposed default, and choose Next > to proceed.
+
+Component Selection
+-------------------
+.. image:: ../../screenshots/installer/3.png
+
+Select from a full installation (which includes the File Inspector and Signature Studio
+utilities), a minimal installation (which omits both utilities) or a custom installation
+that allows you to choose components manually.
+
+.. image:: ../../screenshots/installer/3a.png
+
+The core EduSweep application and its collection of default signatures are always required
+and cannot be deselected. Even in a minimal installation these are selected as shown above.
+
+Start Menu Shortcuts
+--------------------
+.. image:: ../../screenshots/installer/4.png
+
+By default the installer will create Start Menu shortcuts for the EduSweep application and
+any utilities that were selected in the previous step. You may clear the checkbox in order
+to prevent the creation of these shortcuts.
+
+Desktop Shortcut
+----------------
+.. image:: ../../screenshots/installer/5.png
+
+The installer offers to create a desktop shortcut for the EduSweep application. This
+option is not enabled by default and the checkbox must be checked manually to enable
+shortcut creation.
+
+Desktop shortcuts for any utilities (e.g. the File Inspector) will not be created even if
+the checkbox is checked.
+
+Review Installation Options
+---------------------------
+.. image:: ../../screenshots/installer/6.png
+
+This page offers a chance to review the installation options and to cancel the
+installation if needed. Choose Install to continue and to install the application and any
+selected components.
 
 At this stage the files required for EduSweep to run will be copied to the destination
 folder that was selected earlier in the installation process.
 
+Completion
+----------
+.. image:: ../../screenshots/installer/7.png
+
 Once the file copy process completes the installation is finished and EduSweep
-can be started from its corresponding entry in the Start Menu (Start -> EduSweep
--> EduSweep 2.5) or simply by typing “EduSweep” into the Start Menu’s search
-box.
+can be started from its Start Menu shortcut. The installer offers to start EduSweep
+immediately as well.
