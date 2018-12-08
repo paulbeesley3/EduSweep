@@ -497,11 +497,6 @@ namespace EduSweep_2.Forms
             }
         }
 
-        private void signatureManagerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            return;
-        }
-
         #endregion
 
         #region List View Event Handlers
