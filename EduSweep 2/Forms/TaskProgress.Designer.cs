@@ -114,6 +114,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxLog.Location = new System.Drawing.Point(13, 74);
             this.richTextBoxLog.Name = "richTextBoxLog";
+            this.richTextBoxLog.ReadOnly = true;
             this.richTextBoxLog.Size = new System.Drawing.Size(679, 260);
             this.richTextBoxLog.TabIndex = 29;
             this.richTextBoxLog.Text = "";

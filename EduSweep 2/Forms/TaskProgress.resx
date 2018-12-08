@@ -118,22 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBoxResults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAb1JREFUaEPt
-        2btKxUAABNDbiBba+UCwFj/NShBrURD8GsHHL/joFNH/EFELrXQGXFiWScxsNm6UDJwmxHE291a5syn/
-        MAuwB3fwAe9wC7swD6POBjzCZ4N7WIdRhk/3AdTwGD+NORhddkANVrbhV7IFZ/ACakibE1iGFTj9vuZ4
-        gwvghqzwD59BlXfB8SGroO7pghuyDsEnrwq74pMPWQN1T1fnYCfnaxPj14ZPnuM5QN3T1SvYUUU12VEl
-        NdlRJTXZUSU12VElNdlRJUO4hOPkmmJHlZTG8YvAHIK6J7CjSkqKx4e0HcKOKilFjWf+xAGuwB1PdlRJ
-        X7njyY4q6aPPeLKjSnJx/BKk6Tqe7KiS2BHcJNeUEuPJjioJ9oHhsLZDlBpPdlQJHUCcpkNcQ6nxZEeV
-        EAekSQ9RejzZUSVB2yGGGE92VEms6RBDjCc7qiSlDpGmxHiyo0qUtkOUGk92VEkTdYiS48mOKmkTH6L0
-        eLKjSn7C4UOMJzuqpCY7qqQmO6qkJjuqpCY7fD+vimrIernLHxdUWQ18022n7w8cpTzBJmSFh+C7fX6E
-        qnxI/J988tnjp0yZMmXozGZfp7SZ6lW9/JgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="labelResultsMinor.Text" xml:space="preserve">
-    <value>The files below were detected during the scan process. You can move them to quarantine to act on later or remove them permanently. Use Show File to see a file's containing folder or Inspect to see more details.</value>
-  </data>
   <data name="pictureBoxLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAXZJREFUaEPt
@@ -160,6 +144,22 @@
   </data>
   <data name="labelTargetsMinor.Text" xml:space="preserve">
     <value>These are the top-level directories that will be scanned. Directories marked as recursive will have their subdirectories scanned as well. The scan is complete when all directories listed here have been scanned.</value>
+  </data>
+  <data name="pictureBoxResults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAb1JREFUaEPt
+        2btKxUAABNDbiBba+UCwFj/NShBrURD8GsHHL/joFNH/EFELrXQGXFiWScxsNm6UDJwmxHE291a5syn/
+        MAuwB3fwAe9wC7swD6POBjzCZ4N7WIdRhk/3AdTwGD+NORhddkANVrbhV7IFZ/ACakibE1iGFTj9vuZ4
+        gwvghqzwD59BlXfB8SGroO7pghuyDsEnrwq74pMPWQN1T1fnYCfnaxPj14ZPnuM5QN3T1SvYUUU12VEl
+        NdlRJTXZUSU12VElNdlRJUO4hOPkmmJHlZTG8YvAHIK6J7CjSkqKx4e0HcKOKilFjWf+xAGuwB1PdlRJ
+        X7njyY4q6aPPeLKjSnJx/BKk6Tqe7KiS2BHcJNeUEuPJjioJ9oHhsLZDlBpPdlQJHUCcpkNcQ6nxZEeV
+        EAekSQ9RejzZUSVB2yGGGE92VEms6RBDjCc7qiSlDpGmxHiyo0qUtkOUGk92VEkTdYiS48mOKmkTH6L0
+        eLKjSn7C4UOMJzuqpCY7qqQmO6qkJjuqpCY7fD+vimrIernLHxdUWQ18022n7w8cpTzBJmSFh+C7fX6E
+        qnxI/J988tnjp0yZMmXozGZfp7SZ6lW9/JgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="labelResultsMinor.Text" xml:space="preserve">
+    <value>The files below were detected during the scan process. You can move them to quarantine to act on later or remove them permanently. Use Show File to see a file's containing folder or Inspect to see more details.</value>
   </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
