@@ -108,7 +108,15 @@ namespace EduSweep_2.Reports
         /// <param name="file"></param>
         public static void RemoveReport(ScanReport report)
         {
-            File.Delete(Path.Combine(AppFolders.ReportFolder, string.Format("{0}.json", report.Guid)));
+            try
+            {
+                File.Delete(Path.Combine(AppFolders.ReportFolder, string.Format("{0}.json", report.Guid)));
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Failed to delete report file: {0}", report.Guid);
+                throw;
+            }
         }
 
         /// <summary>
