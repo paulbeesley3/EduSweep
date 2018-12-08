@@ -62,6 +62,8 @@ namespace EduSweep_2.Forms
         private TypedObjectListView<DirectoryItem> typedLocationView;
         private TypedObjectListView<FileItem> typedResultsView;
 
+        private bool resultsTimerStopping = false;
+
         private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
         .UseJsonFile(AppFolders.AppSettingsPath)
         .Build();
@@ -125,12 +127,7 @@ namespace EduSweep_2.Forms
             toolStripProgressBar.Value = 100;
 
             timerLocations.Stop();
-            timerResults.Stop();
-
-            listViewResults.Enabled = true;
-            listViewResults.SetObjects(detections);
-
-            toolStripStatuslabelStatus.Text = "Scan task complete";
+            resultsTimerStopping = true;
         }
 
         private void TaskProgress_FormClosing(object sender, FormClosingEventArgs e)
@@ -407,6 +404,20 @@ namespace EduSweep_2.Forms
         {
             detections = scanner.GetDetectedFiles().ToList();
             tabPageResults.Text = string.Format("Scan Results ({0})", detections.Count);
+
+            /*
+             * The timer must stop itself to avoid a race condition when the scan
+             * completes very quickly. If the scan completes before the timer interval
+             * has been reached at least once then the results list will be empty.
+             */
+            if (resultsTimerStopping)
+            {
+                timerResults.Stop();
+                listViewResults.Enabled = true;
+                listViewResults.SetObjects(detections);
+
+                toolStripStatuslabelStatus.Text = "Scan task complete";
+            }
         }
 
         private void timerLocations_Tick(object sender, EventArgs e)
