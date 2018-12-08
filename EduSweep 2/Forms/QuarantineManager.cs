@@ -43,7 +43,7 @@ namespace EduSweep_2.Forms
             .UseJsonFile(AppFolders.AppSettingsPath)
             .Build();
 
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private Logger logger = LogManager.GetCurrentClassLogger();
 
         private List<QuarantineFileItem> files;
 
@@ -56,6 +56,7 @@ namespace EduSweep_2.Forms
 
         private void LoadFilesList()
         {
+            logger.Debug("Reloading quarantine file list");
             files = Quarantine.QuarantineManager.GetFileItemList();
 
             objectListViewFiles.SetObjects(files);
@@ -66,6 +67,7 @@ namespace EduSweep_2.Forms
 
         private void Quarantine_Load(object sender, EventArgs e)
         {
+            logger.Info("Form opened");
             FormStatus.QuarantineManagerOpen = true;
 
             SetListViewOverlay();
@@ -84,6 +86,7 @@ namespace EduSweep_2.Forms
             overlay.TextColor = Color.Black;
 
             objectListViewFiles.EmptyListMsg = "Quarantine is empty.";
+            logger.Trace("Set list view overlay");
         }
 
         private void SetStatusBarText()
@@ -93,10 +96,12 @@ namespace EduSweep_2.Forms
             toolStripStatusLabelCount.Text = fileCount == 1 ?
                 "1 file in quarantine" :
                 string.Format("{0} files in quarantine", fileCount);
+            logger.Trace("Set status bar text");
         }
 
         private void SetButtonStates(int selectedItemCount)
         {
+            logger.Debug("Updating button states");
             toolStripButtonDelete.Enabled = false;
             toolStripButtonDetails.Enabled = false;
             toolStripButtonRestore.Enabled = false;
@@ -106,6 +111,7 @@ namespace EduSweep_2.Forms
 
             if (selectedItemCount > 0)
             {
+                logger.Trace("Button states initially set to single selection");
                 toolStripDropDownButtonOnline.Enabled = true;
                 toolStripDropDownButtonExtensions.Enabled = true;
                 toolStripButtonOpenOriginalLocation.Enabled = true;
@@ -114,21 +120,28 @@ namespace EduSweep_2.Forms
 
                 if (AppFolders.FileInspectorIsInstalled())
                 {
+                    logger.Trace("File Inspector button enabled");
                     toolStripButtonDetails.ToolTipText = "Opens file in the File Inspector utility.";
                     toolStripButtonDetails.Enabled = true;
                 }
                 else
                 {
+                    logger.Trace("File Inspector button disabled");
                     toolStripButtonDetails.ToolTipText = "The File Inspector utility is not installed.";
                 }
 
                 if (selectedItemCount > 1)
                 {
+                    logger.Trace("Button states set to multiple selection");
                     toolStripDropDownButtonOnline.Enabled = false;
                     toolStripDropDownButtonExtensions.Enabled = false;
                     toolStripButtonOpenOriginalLocation.Enabled = false;
                     toolStripButtonDetails.Enabled = false;
                 }
+            }
+            else
+            {
+                logger.Trace("Button states set to disabled as no item is selected");
             }
         }
 
@@ -171,10 +184,16 @@ namespace EduSweep_2.Forms
                     {
                         if (action == RemovalAction.RESTORE)
                         {
+                            logger.Debug(
+                                "Restoring file: {0} to {1}", 
+                                file.AbsolutePath,
+                                file.OriginalDirectoryPath);
+
                             Quarantine.QuarantineManager.RestoreFile(file);
                         }
                         else
                         {
+                            logger.Debug("Deleting file: {0}", file.AbsolutePath);
                             File.Delete(file.AbsolutePath);
                         }
                     }
@@ -201,7 +220,11 @@ namespace EduSweep_2.Forms
             }
         }
 
-        private void QuarantineManager_FormClosing(object sender, FormClosingEventArgs e) => FormStatus.QuarantineManagerOpen = false;
+        private void QuarantineManager_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            logger.Info("Form closed");
+            FormStatus.QuarantineManagerOpen = false;
+        }
 
         #region Toolstrip Button Event Handlers
 
@@ -209,6 +232,7 @@ namespace EduSweep_2.Forms
         {
             var selectedFileNames = new List<string>();
 
+            logger.Debug("Showing add file dialog");
             using (var cfd = new CommonOpenFileDialog("Move Files to Quarantine")
             {
                 EnsureReadOnly = true,
@@ -222,9 +246,13 @@ namespace EduSweep_2.Forms
                 if (cfd.ShowDialog(this.Handle) == CommonFileDialogResult.Ok)
                 {
                     selectedFileNames = new List<string>(cfd.FileNames);
+                    logger.Trace(
+                        "Dialog returned {0} file(s) to move into quarantine",
+                        selectedFileNames.Count);
                 }
                 else
                 {
+                    logger.Trace("The dialog was cancelled");
                     return;
                 }
             }
@@ -251,6 +279,7 @@ namespace EduSweep_2.Forms
 
             try
             {
+                logger.Debug("Starting file inspector process: {0}", AppFolders.FileInspectorPath);
                 Process.Start(inspectorProcess);
             }
             catch (Exception err)
@@ -276,6 +305,7 @@ namespace EduSweep_2.Forms
                 return;
             }
 
+            logger.Debug("Starting explorer process to show {0}", selectedItem.OriginalDirectoryPath);
             Process.Start("explorer.exe", selectedItem.OriginalDirectoryPath);
         }
 
@@ -367,11 +397,21 @@ namespace EduSweep_2.Forms
 
         #region ListView Event Handlers
 
-        private void objectListViewFiles_SelectedIndexChanged(object sender, EventArgs e) => SetButtonStates(objectListViewFiles.SelectedItems.Count);
+        private void objectListViewFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            logger.Trace("Selected listview item changed");
+            SetButtonStates(objectListViewFiles.SelectedItems.Count);
+        }
 
         private void objectListViewFiles_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+
+            logger.Debug("{0} files were dropped onto the listview", files.Length);
+            foreach (var file in files)
+            {
+                logger.Trace("Dropped file: {0}", file);
+            }
 
             ImportFiles(files);
         }
@@ -396,6 +436,7 @@ namespace EduSweep_2.Forms
             {
                 try
                 {
+                    logger.Debug("Importing file {0}", fileName);
                     Quarantine.QuarantineManager.ImportFile(new FileInfo(fileName));
                 }
                 catch (Exception ex)
