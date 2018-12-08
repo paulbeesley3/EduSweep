@@ -20,11 +20,13 @@
 
 using System;
 using System.Windows.Forms;
+using NLog;
 
 namespace EduSweep_2.Forms
 {
     public partial class AddNetworkPath : Form
     {
+        private Logger logger = LogManager.GetCurrentClassLogger();
         private bool cancelled = false;
 
         public AddNetworkPath()
@@ -38,9 +40,11 @@ namespace EduSweep_2.Forms
             {
                 if (cancelled)
                 {
+                    logger.Debug("Returning empty path because the dialog was cancelled");
                     return string.Empty;
                 }
 
+                logger.Debug("Returning {0]", textBoxPath.Text);
                 return textBoxPath.Text;
             }
         }
@@ -48,17 +52,20 @@ namespace EduSweep_2.Forms
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             cancelled = true;
+            logger.Info("Form closed (cancelled)");
             Close();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            logger.Info("Form closed (saved)");
             Close();
         }
 
         private void AddNetworkPath_Load(object sender, EventArgs e)
         {
             ActiveControl = textBoxPath;
+            logger.Info("Form opened");
         }
 
         private void textBoxPath_TextChanged(object sender, EventArgs e)
