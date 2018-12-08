@@ -22,7 +22,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using Config.Net;
@@ -33,6 +32,7 @@ using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using NLog;
 
 namespace EduSweep_2.Forms
 {
@@ -41,6 +41,8 @@ namespace EduSweep_2.Forms
         private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
         .UseJsonFile(AppFolders.AppSettingsPath)
         .Build();
+
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         private List<CompositeScanTask> tasks = new List<CompositeScanTask>();
 
@@ -85,6 +87,8 @@ namespace EduSweep_2.Forms
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            logger.Info("Form opened");
+
             toolStripStatusLabelWorkDirectory.Text = AppFolders.BaseWorkingFolder;
 
             SetListViewOverlay();
@@ -102,28 +106,34 @@ namespace EduSweep_2.Forms
             tasks = CompositeScanTaskManager.GetTaskList();
             listViewTasks.SetObjects(tasks);
             SetTaskControlStates();
+
+            logger.Debug("Loaded task list");
         }
 
         private void SetToolsMenuItemStates()
         {
             if (AppFolders.FileInspectorIsInstalled())
             {
+                logger.Trace("File Inspector menu item enabled");
                 fileInspectorToolStripMenuItem.ToolTipText = "Launches the File Inspector utility.";
                 fileInspectorToolStripMenuItem.Enabled = true;
             }
             else
             {
+                logger.Trace("File Inspector menu item disabled");
                 fileInspectorToolStripMenuItem.ToolTipText = "File Inspector is not installed.";
                 fileInspectorToolStripMenuItem.Enabled = false;
             }
 
             if (AppFolders.SigStudioIsInstalled())
             {
+                logger.Trace("Signature Studio menu item enabled");
                 launchSignatureStudioToolStripMenuItem.ToolTipText = "Launches the Signature Studio utility.";
                 launchSignatureStudioToolStripMenuItem.Enabled = true;
             }
             else
             {
+                logger.Trace("Signature Studio menu item disabled");
                 launchSignatureStudioToolStripMenuItem.ToolTipText = "Signature Studio is not installed.";
                 launchSignatureStudioToolStripMenuItem.Enabled = false;
             }
@@ -135,6 +145,7 @@ namespace EduSweep_2.Forms
 
             if (task == null)
             {
+                logger.Trace("Disabling task buttons and menu items");
                 toolStripButtonStartTask.Enabled = false;
                 startToolStripMenuItem.Enabled = false;
 
@@ -154,6 +165,8 @@ namespace EduSweep_2.Forms
                     case ScanStatus.INITIALIZED:
                     case ScanStatus.RUNNING:
                     case ScanStatus.PAUSED:
+                        logger.Trace("Setting buttons and menu items to running state");
+
                         toolStripButtonStartTask.Enabled = false;
                         toolStripButtonEditTask.Enabled = false;
                         toolStripButtonClone.Enabled = false;
@@ -169,6 +182,8 @@ namespace EduSweep_2.Forms
                     case ScanStatus.COMPLETED:
                     case ScanStatus.FAILED:
                     default:
+                        logger.Trace("Setting buttons and menu items to inactive state");
+
                         toolStripButtonStartTask.Enabled = true;
                         toolStripButtonEditTask.Enabled = true;
                         toolStripButtonClone.Enabled = true;
@@ -191,6 +206,7 @@ namespace EduSweep_2.Forms
         {
             CompositeScanTask selectedTask = typedTaskList.SelectedObject;
 
+            logger.Debug("Starting task {0}", selectedTask.Task.Name);
             var tp = new TaskProgress(selectedTask);
             tp.Show();
 
@@ -199,6 +215,7 @@ namespace EduSweep_2.Forms
 
         private void TaskControlActionNew()
         {
+            logger.Debug("Starting task designer (new task)");
             using (var nt = new TaskDesigner())
             {
                 nt.ShowDialog(this);
@@ -211,6 +228,7 @@ namespace EduSweep_2.Forms
         {
             CompositeScanTask selectedTask = typedTaskList.SelectedObject;
 
+            logger.Debug("Starting task designer (editing {0})", selectedTask.Task.Name);
             using (var nt = new TaskDesigner(selectedTask.Task))
             {
                 nt.ShowDialog(this);
@@ -225,6 +243,7 @@ namespace EduSweep_2.Forms
 
             try
             {
+                logger.Debug("Cloning task {0}", selectedTask.Task.Name);
                 ScanTaskManager.CloneTask(selectedTask.Task, AppFolders.TaskFolder);
                 LoadTaskList();
             }
@@ -248,6 +267,7 @@ namespace EduSweep_2.Forms
             TaskDialogResult result;
             CompositeScanTask selectedTask = typedTaskList.SelectedObject;
 
+            logger.Trace("Displaying task deletion confirmation dialog");
             using (var dialog = new TaskDialog())
             {
                 TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
@@ -274,6 +294,7 @@ namespace EduSweep_2.Forms
             {
                 try
                 {
+                    logger.Debug("Removing task {0}", selectedTask.Task.Name);
                     ScanTaskManager.RemoveTask(selectedTask.Task);
                     LoadTaskList();
                 }
@@ -290,6 +311,10 @@ namespace EduSweep_2.Forms
                         MessageBoxIcon.Error,
                         MessageBoxDefaultButton.Button1);
                 }
+            }
+            else
+            {
+                logger.Trace("Removal of task '{0}' cancelled by user", selectedTask.Task.Name);
             }
         }
 
@@ -324,6 +349,7 @@ namespace EduSweep_2.Forms
 
         private void toolStripButtonDonate_Click(object sender, EventArgs e)
         {
+            logger.Debug("Launching web browser for donation (thanks!)");
             Web.LaunchWebBrowser(appSettings.ProjectDonationLink);
         }
 
@@ -358,6 +384,7 @@ namespace EduSweep_2.Forms
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            logger.Debug("Application exit requested");
             Application.Exit();
         }
 
@@ -365,7 +392,9 @@ namespace EduSweep_2.Forms
         {
             try
             {
-                var inspectorProcess = new ProcessStartInfo(AppFolders.FileInspectorPath);
+                string path = AppFolders.FileInspectorPath;
+                logger.Debug("Starting File Inspector process: {0}", path);
+                var inspectorProcess = new ProcessStartInfo(path);
                 Process.Start(inspectorProcess);
             }
             catch (Exception err)
@@ -383,7 +412,9 @@ namespace EduSweep_2.Forms
         {
             try
             {
-                var studioProcess = new ProcessStartInfo(AppFolders.SigStudioPath);
+                string path = AppFolders.SigStudioPath;
+                logger.Debug("Starting Signature Studio process: {0}", path);
+                var studioProcess = new ProcessStartInfo(path);
                 Process.Start(studioProcess);
             }
             catch (Exception err)
@@ -399,26 +430,31 @@ namespace EduSweep_2.Forms
 
         private void toolStripMenuItemHomepage_Click(object sender, EventArgs e)
         {
+            logger.Debug("Launching web browser for project home");
             Web.LaunchWebBrowser(appSettings.ProjectHomeLink);
         }
 
         private void toolStripMenuItemDocs_Click(object sender, EventArgs e)
         {
+            logger.Debug("Launching web browser for documentation");
             Web.LaunchWebBrowser(appSettings.ProjectDocsLink);
         }
 
         private void toolStripMenuItemIssue_Click(object sender, EventArgs e)
         {
+            logger.Debug("Launching web browser for issue reporting");
             Web.LaunchWebBrowser(appSettings.ProjectIssueLink);
         }
 
         private void toolStripMenuItemUpdates_Click(object sender, EventArgs e)
         {
+            logger.Debug("Launching web browser for version check");
             Web.LaunchWebBrowser(appSettings.ProjectReleasesLink);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            logger.Debug("Displaying about dialog");
             var ab = new About();
             ab.ShowDialog(this);
         }
@@ -427,6 +463,7 @@ namespace EduSweep_2.Forms
         {
             if (!FormStatus.ProgramSettingsOpen)
             {
+                logger.Debug("Displaying settings dialog");
                 var ps = new ProgramSettings();
                 ps.ShowDialog(this);
             }
@@ -436,8 +473,13 @@ namespace EduSweep_2.Forms
         {
             if (!FormStatus.QuarantineManagerOpen)
             {
+                logger.Debug("Displaying quarantine manager window");
                 var qu = new QuarantineManager();
                 qu.Show(this);
+            }
+            else
+            {
+                logger.Trace("Cancelled opening quarantine manager. An instance is already open.");
             }
         }
 
@@ -445,8 +487,13 @@ namespace EduSweep_2.Forms
         {
             if (!FormStatus.ReportManagerOpen)
             {
+                logger.Debug("Displaying reports window");
                 var rp = new TaskReports();
                 rp.Show(this);
+            }
+            else
+            {
+                logger.Trace("Cancelled opening report manager. An instance is already open.");
             }
         }
 
@@ -461,14 +508,20 @@ namespace EduSweep_2.Forms
 
         private void listViewTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
+            logger.Trace("Task selection updated");
             SetTaskControlStates();
         }
 
         private void listViewTasks_DoubleClick(object sender, EventArgs e)
         {
-            /* Start the task */
+            logger.Trace("Task double clicked");
         }
 
         #endregion
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logger.Info("Form closed");
+        }
     }
 }
