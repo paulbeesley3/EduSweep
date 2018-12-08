@@ -19,7 +19,6 @@
 #endregion
 
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -32,13 +31,9 @@ using Config.Net;
 using EduEngine.Scanner;
 using EduSweep_2.Common;
 using EduSweep_2.Tasks;
-using EdUtils.Detections;
 using EdUtils.Filesystem;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using NLog;
-using NLog.Targets;
-using NLog.Targets.Wrappers;
 using NLog.Windows.Forms;
 
 namespace EduSweep_2.Forms
