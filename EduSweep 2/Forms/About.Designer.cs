@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.buttonClose = new System.Windows.Forms.Button();
-            this.textBoxLicenseInfo = new System.Windows.Forms.TextBox();
             this.groupBoxLicenseInfo = new System.Windows.Forms.GroupBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBoxVersions = new System.Windows.Forms.GroupBox();
             this.listViewVersions = new System.Windows.Forms.ListView();
             this.columnHeaderComponent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.richTextBoxCredits = new System.Windows.Forms.RichTextBox();
             this.groupBoxLicenseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.groupBoxVersions.SuspendLayout();
@@ -52,21 +52,9 @@
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             // 
-            // textBoxLicenseInfo
-            // 
-            this.textBoxLicenseInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxLicenseInfo.Location = new System.Drawing.Point(6, 19);
-            this.textBoxLicenseInfo.Multiline = true;
-            this.textBoxLicenseInfo.Name = "textBoxLicenseInfo";
-            this.textBoxLicenseInfo.ReadOnly = true;
-            this.textBoxLicenseInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxLicenseInfo.Size = new System.Drawing.Size(555, 161);
-            this.textBoxLicenseInfo.TabIndex = 64;
-            this.textBoxLicenseInfo.Text = resources.GetString("textBoxLicenseInfo.Text");
-            // 
             // groupBoxLicenseInfo
             // 
-            this.groupBoxLicenseInfo.Controls.Add(this.textBoxLicenseInfo);
+            this.groupBoxLicenseInfo.Controls.Add(this.richTextBoxCredits);
             this.groupBoxLicenseInfo.Location = new System.Drawing.Point(12, 321);
             this.groupBoxLicenseInfo.Name = "groupBoxLicenseInfo";
             this.groupBoxLicenseInfo.Size = new System.Drawing.Size(570, 186);
@@ -121,6 +109,19 @@
             this.columnHeaderVersion.Text = "Version";
             this.columnHeaderVersion.Width = 97;
             // 
+            // richTextBoxCredits
+            // 
+            this.richTextBoxCredits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxCredits.Location = new System.Drawing.Point(3, 16);
+            this.richTextBoxCredits.Name = "richTextBoxCredits";
+            this.richTextBoxCredits.ReadOnly = true;
+            this.richTextBoxCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxCredits.ShortcutsEnabled = false;
+            this.richTextBoxCredits.Size = new System.Drawing.Size(564, 167);
+            this.richTextBoxCredits.TabIndex = 0;
+            this.richTextBoxCredits.Text = resources.GetString("richTextBoxCredits.Text");
+            this.richTextBoxCredits.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxCredits_LinkClicked);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,7 +142,6 @@
             this.Text = "About";
             this.Load += new System.EventHandler(this.About_Load);
             this.groupBoxLicenseInfo.ResumeLayout(false);
-            this.groupBoxLicenseInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.groupBoxVersions.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -150,12 +150,12 @@
 
         #endregion
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.TextBox textBoxLicenseInfo;
         private System.Windows.Forms.GroupBox groupBoxLicenseInfo;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.GroupBox groupBoxVersions;
         private System.Windows.Forms.ListView listViewVersions;
         private System.Windows.Forms.ColumnHeader columnHeaderComponent;
         private System.Windows.Forms.ColumnHeader columnHeaderVersion;
+        private System.Windows.Forms.RichTextBox richTextBoxCredits;
     }
 }

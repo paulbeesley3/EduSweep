@@ -21,6 +21,7 @@
 using System;
 using System.Reflection;
 using System.Windows.Forms;
+using EdUtils.Helpers;
 using NLog;
 
 namespace EduSweep_2.Forms
@@ -62,6 +63,12 @@ namespace EduSweep_2.Forms
         {
             logger.Info("Form closed");
             Close();
+        }
+
+        private void richTextBoxCredits_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            logger.Debug("Launching web browser to credits link: {0}", e.LinkText);
+            Web.LaunchWebBrowser(e.LinkText);
         }
     }
 }
