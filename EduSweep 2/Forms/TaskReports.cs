@@ -35,7 +35,7 @@ namespace EduSweep_2.Forms
     public partial class TaskReports : Form
     {
         private const string WindowTitleBase = "Report Manager";
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private Logger logger = LogManager.GetCurrentClassLogger();
 
         private List<ScanReport> reports;
 
@@ -56,10 +56,12 @@ namespace EduSweep_2.Forms
             typedReportView = new TypedObjectListView<ScanReport>(this.listViewReports);
 
             LoadReportsList();
+            logger.Info("Form opened");
         }
 
         private void LoadReportsList()
         {
+            logger.Trace("Loading reports list");
             reports = ReportManager.GetReportList();
             listViewReports.SetObjects(reports);
 
@@ -67,6 +69,7 @@ namespace EduSweep_2.Forms
             webBrowserReport.Refresh();
             SetButtonStates(listViewReports.SelectedItems.Count);
             UpdateStatusBarText();
+            logger.Debug("Loaded reports list");
         }
 
         private void SetListViewOverlay()
@@ -77,6 +80,7 @@ namespace EduSweep_2.Forms
             overlay.TextColor = Color.Black;
 
             listViewReports.EmptyListMsg = "No reports available.";
+            logger.Trace("Set overlay for list view");
         }
 
         private void UpdateStatusBarText()
@@ -86,12 +90,14 @@ namespace EduSweep_2.Forms
             toolStripStatusLabelCount.Text = reportCount == 1 ?
                 "1 report available" :
                 string.Format("{0} reports available", reportCount);
+            logger.Trace("Set status bar text");
         }
 
         private void SetButtonStates(int selectedItemCount)
         {
             if (selectedItemCount > 0)
             {
+                logger.Trace("Enabled buttons");
                 toolStripButtonSave.Enabled = true;
                 toolStripButtonPrint.Enabled = true;
                 toolStripButtonPrintPreview.Enabled = true;
@@ -99,6 +105,7 @@ namespace EduSweep_2.Forms
             }
             else
             {
+                logger.Trace("Disabled buttons");
                 toolStripButtonSave.Enabled = false;
                 toolStripButtonDelete.Enabled = false;
                 toolStripButtonPrintPreview.Enabled = false;
@@ -128,6 +135,7 @@ namespace EduSweep_2.Forms
             {
                 try
                 {
+                    logger.Debug("Removing report: {0}", typedReportView.SelectedObject.Name);
                     ReportManager.RemoveReport(typedReportView.SelectedObject);
                 }
                 catch (Exception deleteException)
@@ -156,11 +164,13 @@ namespace EduSweep_2.Forms
 
         private void toolStripButtonPrint_Click(object sender, EventArgs e)
         {
+            logger.Debug("Displaying print dialog");
             webBrowserReport.ShowPrintDialog();
         }
 
         private void toolStripButtonPrintPreview_Click(object sender, EventArgs e)
         {
+            logger.Debug("Displaying print preview dialog");
             webBrowserReport.ShowPrintPreviewDialog();
         }
 
@@ -176,6 +186,11 @@ namespace EduSweep_2.Forms
                 {
                     using (var sw = new StreamWriter(saveFileDialogReport.FileName, false))
                     {
+                        logger.Debug(
+                            "Exporting report {0} to {1}", 
+                            report.Name, 
+                            saveFileDialogReport.FileName);
+
                         sw.Write(webBrowserReport.DocumentText);
                         sw.Flush();
                     }
@@ -199,11 +214,14 @@ namespace EduSweep_2.Forms
         private void TaskReports_FormClosing(object sender, FormClosingEventArgs e)
         {
             FormStatus.ReportManagerOpen = false;
+            logger.Info("Form closed");
         }
 
         private void listViewReports_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedItemCount = listViewReports.SelectedItems.Count;
+
+            logger.Trace("Selected listview item changed");
 
             if (selectedItemCount > 0)
             {
