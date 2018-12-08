@@ -157,12 +157,28 @@ namespace EduSweep_2.Quarantine
         /// <param name="file"></param>
         public static void RemoveFile(QuarantineFileItem file, bool metadataOnly)
         {
-            if (!metadataOnly)
+            try
             {
-                File.Delete(file.AbsolutePath);
+                if (!metadataOnly)
+                {
+                    File.Delete(file.AbsolutePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error deleting file from quarantine: {0}", file.AbsolutePath);
+                throw;
             }
 
-            File.Delete(file.MetadataFilePath);
+            try
+            {
+                File.Delete(file.MetadataFilePath);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error deleting quarantine metadata: {0}", file.MetadataFilePath);
+                throw;
+            }
         }
 
         public static void RestoreFile(QuarantineFileItem file)
@@ -177,6 +193,7 @@ namespace EduSweep_2.Quarantine
                 logger.Error(
                     ex,
                     string.Format("Quarantine removal failed for '{0}'", file.Name));
+                throw;
             }
         }
 
