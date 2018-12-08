@@ -22,11 +22,13 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using EdUtils.Signatures;
+using NLog;
 
 namespace EduSweep_2.Forms
 {
     public partial class AddSignature : Form
     {
+        private Logger logger = LogManager.GetCurrentClassLogger();
         private Signature selectedSignature;
         private List<Signature> availableSignatures = new List<Signature>();
         private SignatureType sigType = SignatureType.ALL;
@@ -38,11 +40,13 @@ namespace EduSweep_2.Forms
 
         public Signature GetSelectedSignature()
         {
+            logger.Trace("Selected signature requested");
             return selectedSignature;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            logger.Debug("Closing with no signature selected");
             selectedSignature = null;
             Close();
         }
@@ -56,8 +60,9 @@ namespace EduSweep_2.Forms
             }
 
             LoadSignatureList();
-
             UpdateUI();
+
+            logger.Info("Form opened");
         }
 
         private void LoadSignatureList()
@@ -68,16 +73,20 @@ namespace EduSweep_2.Forms
             comboBoxSignatures.Items.Clear();
             comboBoxSignatures.DataSource = availableSignatures;
             comboBoxSignatures.DisplayMember = "Name";
+
             UpdateUI();
+            logger.Debug("Signature list reloaded");
         }
 
         private void UpdateUI()
         {
             if (comboBoxSignatures.Items.Count > 0)
             {
+                logger.Trace("Setting UI element states for populated signature list");
                 selectedSignature = (Signature)comboBoxSignatures.SelectedItem;
                 if (selectedSignature == null)
                 {
+                    logger.Trace("No signature selected currently");
                     return;
                 }
 
@@ -88,6 +97,7 @@ namespace EduSweep_2.Forms
             }
             else
             {
+                logger.Trace("Setting UI element states for empty signature list");
                 textBoxDescription.Clear();
                 labelDetectionCount.Text = "No signatures matched the search criteria.";
                 buttonAdd.Enabled = false;
@@ -97,11 +107,13 @@ namespace EduSweep_2.Forms
         private void comboBoxSignatures_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedSignature = (Signature)comboBoxSignatures.SelectedItem;
+            logger.Trace("Selected signature: {0}", selectedSignature.Name);
             UpdateUI();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            logger.Debug("Closing with signature selected");
             Close();
         }
 
@@ -109,6 +121,7 @@ namespace EduSweep_2.Forms
         {
             if (radioButtonAll.Checked)
             {
+                logger.Trace("Loading all signatures");
                 sigType = SignatureType.ALL;
                 LoadSignatureList();
             }
@@ -118,6 +131,7 @@ namespace EduSweep_2.Forms
         {
             if (radioButtonBuiltin.Checked)
             {
+                logger.Trace("Loading only builtin signatures");
                 sigType = SignatureType.BUILTIN;
                 LoadSignatureList();
             }    
@@ -127,9 +141,15 @@ namespace EduSweep_2.Forms
         {
             if (radioButtonCustom.Checked)
             {
+                logger.Trace("Loading only custom signatures");
                 sigType = SignatureType.CUSTOM;
                 LoadSignatureList();
             }
+        }
+
+        private void AddSignature_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logger.Info("Form closed");
         }
     }
 }
