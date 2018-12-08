@@ -114,28 +114,41 @@ namespace EduSweep_2.Quarantine
         {
             var quarantineFile = new QuarantineFileItem(file);
 
-            File.Move(file.FullName, quarantineFile.AbsolutePath);
-
-            if (!File.Exists(file.FullName))
-            {
-                /* Move succeeded: serialize and save the metadata file. */
-                quarantineFile.Save(AppFolders.QuarantineFolder);
-            }
-        }
-
-        public static void ImportFile(FileItem file)
-        {
             try
             {
-                var info = new FileInfo(file.AbsolutePath);
-                ImportFile(info);
+                File.Move(file.FullName, quarantineFile.AbsolutePath);
+                if (!File.Exists(file.FullName))
+                {
+                    /* Move succeeded: serialize and save the metadata file. */
+                    quarantineFile.Save(AppFolders.QuarantineFolder);
+                }
             }
             catch (Exception ex)
             {
                 logger.Error(
                     ex,
-                    string.Format("Quarantine import failed for '{0}'", file.AbsolutePath));
+                    string.Format("Quarantine import failed for '{0}'", file.FullName));
+                throw;
             }
+        }
+
+        public static void ImportFile(FileItem file)
+        {
+            FileInfo info;
+
+            try
+            {
+                info = new FileInfo(file.AbsolutePath);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(
+                    ex,
+                    string.Format("Failed to get FileInfo for '{0}'", file.AbsolutePath));
+                throw;
+            }
+
+            ImportFile(info);
         }
 
         /// <summary>
