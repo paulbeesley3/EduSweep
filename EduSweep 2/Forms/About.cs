@@ -21,12 +21,14 @@
 using System;
 using System.Reflection;
 using System.Windows.Forms;
-using EdUtils.Helpers;
+using NLog;
 
 namespace EduSweep_2.Forms
 {
     public partial class About : Form
     {
+        private Logger logger = LogManager.GetCurrentClassLogger();
+
         public About()
         {
             InitializeComponent();
@@ -52,10 +54,13 @@ namespace EduSweep_2.Forms
             listViewVersions.Items.Add(lviAppVersion);
             listViewVersions.Items.Add(lviLibVersion);
             listViewVersions.Items.Add(lviEngineVersion);
+
+            logger.Info("Form opened");
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            logger.Info("Form closed");
             Close();
         }
     }
