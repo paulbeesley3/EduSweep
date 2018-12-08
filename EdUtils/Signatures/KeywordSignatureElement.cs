@@ -41,6 +41,9 @@ namespace EdUtils.Signatures
     [Serializable]
     public class KeywordSignatureElement : SignatureElement
     {
+        [JsonIgnore]
+        public new string Name => Word;
+
         [JsonProperty]
         public string Word { get; private set; }
 
@@ -54,7 +57,6 @@ namespace EdUtils.Signatures
 
         public KeywordSignatureElement(string keyword) : base(DetectionType.KEYWORD)
         {
-            this.Name = keyword;
             this.Word = keyword;
         }
     }

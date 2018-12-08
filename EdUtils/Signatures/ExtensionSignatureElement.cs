@@ -42,6 +42,9 @@ namespace EdUtils.Signatures
     [Serializable]
     public class ExtensionSignatureElement : SignatureElement
     {
+        [JsonIgnore]
+        public new string Name => Extension.Name;
+
         [JsonProperty]
         public Extension Extension { get; private set; }
 
@@ -55,7 +58,6 @@ namespace EdUtils.Signatures
 
         public ExtensionSignatureElement(Extension extension) : base(DetectionType.EXTENSION)
         {
-            this.Name = extension.Name;
             this.Extension = extension;
         }
     }
