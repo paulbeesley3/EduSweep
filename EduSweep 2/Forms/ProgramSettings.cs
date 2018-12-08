@@ -37,7 +37,7 @@ namespace EduSweep_2.Forms
     {
         private ClamClient clam;
         private CancellationTokenSource clamServerTestCancelToken = new CancellationTokenSource();
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        private Logger logger = LogManager.GetCurrentClassLogger();
         private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
         .UseJsonFile(AppFolders.AppSettingsPath)
         .Build();
@@ -49,6 +49,7 @@ namespace EduSweep_2.Forms
 
         private void ProgramSettings_Load(object sender, EventArgs e)
         {
+            logger.Info("Form opened");
             FormStatus.ProgramSettingsOpen = true;
             UpdateSizeFields();
 
@@ -69,6 +70,8 @@ namespace EduSweep_2.Forms
             checkBoxEnableClamAV.Checked = appSettings.UseClamAV;
             textBoxServer.Text = appSettings.ClamAVServerAddress;
             numericUpDownServerPort.Value = appSettings.ClamAVServerPort;
+
+            logger.Trace("Finished loading settings");
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -85,11 +88,13 @@ namespace EduSweep_2.Forms
             appSettings.ClamAVServerAddress = textBoxServer.Text;
             appSettings.ClamAVServerPort = (long)numericUpDownServerPort.Value;
 
+            logger.Info("Saved settings");
             Close();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            logger.Info("Cancelled. Modified settings will not be saved.");
             Close();
         }
 
@@ -102,11 +107,13 @@ namespace EduSweep_2.Forms
             if ((PurgeMode)e.Argument == PurgeMode.QUARANTINE)
             {
                 // Remove all files from quarantine
+                logger.Info("Purging quarantine folder");
                 dir = new DirectoryInfo(AppFolders.QuarantineFolder);
             }
             else
             {
                 // Remove all files from the reports folder
+                logger.Info("Purging reports folder");
                 dir = new DirectoryInfo(AppFolders.ReportFolder);
             }
 
@@ -114,12 +121,14 @@ namespace EduSweep_2.Forms
             {
                 bytesToDelete += fi.Length;
             }
+            logger.Trace("{0} bytes pending deletion", bytesToDelete);
 
             foreach (FileInfo fi in dir.GetFiles())
             {
                 long fileLength = fi.Length;
                 try
                 {
+                    logger.Trace("Deleting file {0}", fi.FullName);
                     fi.Delete();
                     bytesDeleted += fileLength;
                     backgroundWorkerPurge.ReportProgress(
@@ -163,6 +172,7 @@ namespace EduSweep_2.Forms
             }
 
             UpdateSizeFields();
+            logger.Info("Finished purge operation");
         }
 
         private void UpdateSizeFields()
@@ -178,6 +188,8 @@ namespace EduSweep_2.Forms
 
             labelReportCount.Text = reportCount == 1 ? "1 report in storage" : string.Format("{0} reports in storage", reportCount);
             labelReportSize.Text = string.Format("{0} used for report storage", Utils.GetDynamicFileSize(reportSize));
+
+            logger.Debug("Updated sizes for quarantine and report folders");
         }
 
         private void buttonPurgeReports_Click(object sender, EventArgs e)
@@ -194,12 +206,13 @@ namespace EduSweep_2.Forms
 
         private async void buttonServerTest_Click(object sender, EventArgs e)
         {
-            string version;
+            string version = string.Empty;
 
             clam = new ClamClient(textBoxServer.Text, (int)numericUpDownServerPort.Value);
 
             try
             {
+                logger.Info("Testing ClamAV server connection");
                 version = await clam.GetVersionAsync(clamServerTestCancelToken.Token);
             }
             catch (Exception ex)
@@ -213,12 +226,14 @@ namespace EduSweep_2.Forms
                 textBoxServerPing.Text = "Connection Failed";
                 return;
             }
-            
+
+            logger.Info("ClamAV server response: {0}", version);
             textBoxServerPing.Text = version;
         }
 
         private void ProgramSettings_FormClosing(object sender, FormClosingEventArgs e)
         {
+            logger.Info("Form closed");
             FormStatus.ProgramSettingsOpen = false;
         }
     }
