@@ -449,12 +449,12 @@
             // 
             // timerLocations
             // 
-            this.timerLocations.Interval = 500;
+            this.timerLocations.Interval = 250;
             this.timerLocations.Tick += new System.EventHandler(this.timerLocations_Tick);
             // 
             // timerResults
             // 
-            this.timerResults.Interval = 500;
+            this.timerResults.Interval = 1000;
             this.timerResults.Tick += new System.EventHandler(this.timerResults_Tick);
             // 
             // TaskProgress
