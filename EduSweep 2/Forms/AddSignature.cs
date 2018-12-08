@@ -38,12 +38,7 @@ namespace EduSweep_2.Forms
 
         public Signature GetSelectedSignature()
         {
-            if (selectedSignature != null)
-            {
-                return selectedSignature;
-            }
-
-            return null;
+            return selectedSignature;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
