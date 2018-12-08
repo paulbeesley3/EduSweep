@@ -232,6 +232,7 @@ namespace EduSweep_2.Forms
                 }
 
                 listViewResults.SetObjects(detections);
+                UpdateResultsCount();
             }
         }
 
@@ -256,6 +257,11 @@ namespace EduSweep_2.Forms
             overlay.TextColor = Color.Black;
 
             listViewResults.EmptyListMsg = "No results available. If the scan is running then results will be displayed on completion.";
+        }
+
+        private void UpdateResultsCount()
+        {
+            tabPageResults.Text = string.Format("Scan Results ({0})", detections.Count);
         }
 
         #region Scanner Event Handlers
@@ -403,7 +409,7 @@ namespace EduSweep_2.Forms
         private void timerResults_Tick(object sender, EventArgs e)
         {
             detections = scanner.GetDetectedFiles().ToList();
-            tabPageResults.Text = string.Format("Scan Results ({0})", detections.Count);
+            UpdateResultsCount();
 
             /*
              * The timer must stop itself to avoid a race condition when the scan
