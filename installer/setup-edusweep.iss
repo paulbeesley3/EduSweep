@@ -66,6 +66,8 @@ Source: "..\EduSweep 2\bin\Release\nClam.dll"; DestDir: "{app}"; Flags: ignoreve
 Source: "..\EduSweep 2\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\NLog.Windows.Forms.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\EduSweep 2\bin\Release\ObjectListView.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\EduSweep 2\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\lib\trid\TrIDLib-License.txt"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 
 ; File Inspector Component (insp)
