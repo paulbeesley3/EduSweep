@@ -95,6 +95,12 @@ namespace Signature_Studio.Forms
             textBoxDescription.Text = signature.Description;
             buttonCreate.Text = "Save";
 
+            if (signature.Category.Equals(string.Empty))
+            {
+                signature.Category = "Uncategorised";
+            }
+            textBoxCategory.Text = signature.Category;
+
             foreach (SignatureElement element in signature.Elements)
             {
                 switch (element.Type)
@@ -167,6 +173,12 @@ namespace Signature_Studio.Forms
             SetSaveButtonState();
         }
 
+        private void textBoxCategory_TextChanged(object sender, EventArgs e)
+        {
+            signature.Category = textBoxCategory.Text;
+            modified = true;
+        }
+
         private void SetSaveButtonState()
         {
             int elementCount;
@@ -189,6 +201,11 @@ namespace Signature_Studio.Forms
             {
                 /* Prevent duplicate elements by removing existing ones */
                 signature.Elements.Clear();
+            }
+
+            if (signature.Category.Equals(string.Empty))
+            {
+                signature.Category = "Uncategorised";
             }
 
             foreach (HashSignatureElement file in files)

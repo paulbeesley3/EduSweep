@@ -60,6 +60,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.labelCategory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.groupBoxKeywords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewKeywords)).BeginInit();
@@ -380,10 +382,10 @@
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(15, 130);
+            this.textBoxDescription.Location = new System.Drawing.Point(15, 171);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(388, 67);
+            this.textBoxDescription.Size = new System.Drawing.Size(388, 20);
             this.textBoxDescription.TabIndex = 60;
             this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
@@ -391,17 +393,37 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 112);
+            this.label1.Location = new System.Drawing.Point(12, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 59;
             this.label1.Text = "Description";
+            // 
+            // textBoxCategory
+            // 
+            this.textBoxCategory.Location = new System.Drawing.Point(15, 130);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(388, 20);
+            this.textBoxCategory.TabIndex = 62;
+            this.textBoxCategory.TextChanged += new System.EventHandler(this.textBoxCategory_TextChanged);
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategory.Location = new System.Drawing.Point(12, 112);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(55, 15);
+            this.labelCategory.TabIndex = 61;
+            this.labelCategory.Text = "Category";
             // 
             // SignatureEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 659);
+            this.Controls.Add(this.textBoxCategory);
+            this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
@@ -475,6 +497,8 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxExtension;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxKeyword;
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.Label labelCategory;
     }
 }
 
