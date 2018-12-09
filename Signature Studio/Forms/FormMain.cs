@@ -62,6 +62,8 @@ namespace Signature_Studio.Forms
             toolStripStatusLabel.Text = AppFolders.CustomSignatureFolder;
 
             LoadSignatureList();
+            listViewSignatures.Sort(olvColumnCategory, SortOrder.Ascending);
+
             SetListViewOverlay();
             SetToolstripButtonStates();
         }

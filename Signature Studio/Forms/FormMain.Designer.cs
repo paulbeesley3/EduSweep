@@ -157,7 +157,7 @@
             // olvColumnName
             // 
             this.olvColumnName.AspectName = "Name";
-            this.olvColumnName.MinimumWidth = 150;
+            this.olvColumnName.MinimumWidth = 50;
             this.olvColumnName.Text = "Name";
             this.olvColumnName.UseInitialLetterForGroup = true;
             this.olvColumnName.Width = 302;
