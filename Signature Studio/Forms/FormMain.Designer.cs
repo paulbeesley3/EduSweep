@@ -39,8 +39,9 @@
             this.groupBoxSignatures = new System.Windows.Forms.GroupBox();
             this.listViewSignatures = new BrightIdeasSoftware.ObjectListView();
             this.olvColumnName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumnCreator = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumnCategory = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnElementCount = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumnDescription = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.toolStripRepository = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonEdit = new System.Windows.Forms.ToolStripButton();
@@ -49,7 +50,6 @@
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.statusStripFolder = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.olvColumnDescription = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.menuStripTop.SuspendLayout();
             this.groupBoxSignatures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewSignatures)).BeginInit();
@@ -132,13 +132,13 @@
             // listViewSignatures
             // 
             this.listViewSignatures.AllColumns.Add(this.olvColumnName);
-            this.listViewSignatures.AllColumns.Add(this.olvColumnCreator);
+            this.listViewSignatures.AllColumns.Add(this.olvColumnCategory);
             this.listViewSignatures.AllColumns.Add(this.olvColumnElementCount);
             this.listViewSignatures.AllColumns.Add(this.olvColumnDescription);
             this.listViewSignatures.CellEditUseWholeCell = false;
             this.listViewSignatures.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumnName,
-            this.olvColumnCreator,
+            this.olvColumnCategory,
             this.olvColumnElementCount,
             this.olvColumnDescription});
             this.listViewSignatures.Cursor = System.Windows.Forms.Cursors.Default;
@@ -162,12 +162,12 @@
             this.olvColumnName.UseInitialLetterForGroup = true;
             this.olvColumnName.Width = 302;
             // 
-            // olvColumnCreator
+            // olvColumnCategory
             // 
-            this.olvColumnCreator.AspectName = "Creator";
-            this.olvColumnCreator.MinimumWidth = 25;
-            this.olvColumnCreator.Text = "Creator";
-            this.olvColumnCreator.Width = 120;
+            this.olvColumnCategory.AspectName = "Category";
+            this.olvColumnCategory.MinimumWidth = 25;
+            this.olvColumnCategory.Text = "Category";
+            this.olvColumnCategory.Width = 120;
             // 
             // olvColumnElementCount
             // 
@@ -175,6 +175,16 @@
             this.olvColumnElementCount.MinimumWidth = 50;
             this.olvColumnElementCount.Text = "Elements";
             this.olvColumnElementCount.Width = 64;
+            // 
+            // olvColumnDescription
+            // 
+            this.olvColumnDescription.AspectName = "Description";
+            this.olvColumnDescription.FillsFreeSpace = true;
+            this.olvColumnDescription.Groupable = false;
+            this.olvColumnDescription.MinimumWidth = 200;
+            this.olvColumnDescription.Sortable = false;
+            this.olvColumnDescription.Text = "Description";
+            this.olvColumnDescription.Width = 200;
             // 
             // toolStripRepository
             // 
@@ -251,16 +261,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(88, 17);
             this.toolStripStatusLabel.Text = "Working Folder";
             // 
-            // olvColumnDescription
-            // 
-            this.olvColumnDescription.AspectName = "Description";
-            this.olvColumnDescription.FillsFreeSpace = true;
-            this.olvColumnDescription.Groupable = false;
-            this.olvColumnDescription.MinimumWidth = 200;
-            this.olvColumnDescription.Sortable = false;
-            this.olvColumnDescription.Text = "Description";
-            this.olvColumnDescription.Width = 200;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,7 +305,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonEdit;
         private System.Windows.Forms.ToolStripButton toolStripButtonDelete;
         private BrightIdeasSoftware.OLVColumn olvColumnName;
-        private BrightIdeasSoftware.OLVColumn olvColumnCreator;
+        private BrightIdeasSoftware.OLVColumn olvColumnCategory;
         private BrightIdeasSoftware.OLVColumn olvColumnElementCount;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonRefresh;
