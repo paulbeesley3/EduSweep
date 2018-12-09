@@ -124,7 +124,7 @@
             this.groupBoxSignatures.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSignatures.Location = new System.Drawing.Point(12, 27);
             this.groupBoxSignatures.Name = "groupBoxSignatures";
-            this.groupBoxSignatures.Size = new System.Drawing.Size(751, 170);
+            this.groupBoxSignatures.Size = new System.Drawing.Size(751, 423);
             this.groupBoxSignatures.TabIndex = 1;
             this.groupBoxSignatures.TabStop = false;
             this.groupBoxSignatures.Text = "Custom Signatures";
@@ -148,7 +148,7 @@
             this.listViewSignatures.Location = new System.Drawing.Point(3, 44);
             this.listViewSignatures.MultiSelect = false;
             this.listViewSignatures.Name = "listViewSignatures";
-            this.listViewSignatures.Size = new System.Drawing.Size(745, 123);
+            this.listViewSignatures.Size = new System.Drawing.Size(745, 376);
             this.listViewSignatures.TabIndex = 0;
             this.listViewSignatures.UseCompatibleStateImageBehavior = false;
             this.listViewSignatures.View = System.Windows.Forms.View.Details;
@@ -239,7 +239,7 @@
             // 
             this.statusStripFolder.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStripFolder.Location = new System.Drawing.Point(0, 211);
+            this.statusStripFolder.Location = new System.Drawing.Point(0, 464);
             this.statusStripFolder.Name = "statusStripFolder";
             this.statusStripFolder.Size = new System.Drawing.Size(775, 22);
             this.statusStripFolder.TabIndex = 3;
@@ -265,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 233);
+            this.ClientSize = new System.Drawing.Size(775, 486);
             this.Controls.Add(this.statusStripFolder);
             this.Controls.Add(this.groupBoxSignatures);
             this.Controls.Add(this.menuStripTop);
