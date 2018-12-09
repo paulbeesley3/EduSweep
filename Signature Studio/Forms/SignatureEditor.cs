@@ -19,9 +19,7 @@
 #endregion
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -32,7 +30,6 @@ using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.Signatures;
 using EdUtils.Types;
-using EdUtils.WindowsPlatform;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace Signature_Studio.Forms
