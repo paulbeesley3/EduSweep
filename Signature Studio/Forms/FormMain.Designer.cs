@@ -161,6 +161,7 @@
             // 
             this.olvColumnName.AspectName = "Name";
             this.olvColumnName.Text = "Name";
+            this.olvColumnName.UseInitialLetterForGroup = true;
             this.olvColumnName.Width = 302;
             // 
             // olvColumnCreator
