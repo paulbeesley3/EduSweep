@@ -41,8 +41,6 @@
             this.olvColumnName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnCreator = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnElementCount = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumnCreated = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumnModified = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.toolStripRepository = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonEdit = new System.Windows.Forms.ToolStripButton();
@@ -51,6 +49,7 @@
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.statusStripFolder = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.olvColumnDescription = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.menuStripTop.SuspendLayout();
             this.groupBoxSignatures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewSignatures)).BeginInit();
@@ -135,15 +134,13 @@
             this.listViewSignatures.AllColumns.Add(this.olvColumnName);
             this.listViewSignatures.AllColumns.Add(this.olvColumnCreator);
             this.listViewSignatures.AllColumns.Add(this.olvColumnElementCount);
-            this.listViewSignatures.AllColumns.Add(this.olvColumnCreated);
-            this.listViewSignatures.AllColumns.Add(this.olvColumnModified);
+            this.listViewSignatures.AllColumns.Add(this.olvColumnDescription);
             this.listViewSignatures.CellEditUseWholeCell = false;
             this.listViewSignatures.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumnName,
             this.olvColumnCreator,
             this.olvColumnElementCount,
-            this.olvColumnCreated,
-            this.olvColumnModified});
+            this.olvColumnDescription});
             this.listViewSignatures.Cursor = System.Windows.Forms.Cursors.Default;
             this.listViewSignatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewSignatures.EmptyListMsgFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,6 +157,7 @@
             // olvColumnName
             // 
             this.olvColumnName.AspectName = "Name";
+            this.olvColumnName.MinimumWidth = 150;
             this.olvColumnName.Text = "Name";
             this.olvColumnName.UseInitialLetterForGroup = true;
             this.olvColumnName.Width = 302;
@@ -167,26 +165,16 @@
             // olvColumnCreator
             // 
             this.olvColumnCreator.AspectName = "Creator";
+            this.olvColumnCreator.MinimumWidth = 25;
             this.olvColumnCreator.Text = "Creator";
             this.olvColumnCreator.Width = 120;
             // 
             // olvColumnElementCount
             // 
             this.olvColumnElementCount.AspectName = "Elements.Count";
+            this.olvColumnElementCount.MinimumWidth = 50;
             this.olvColumnElementCount.Text = "Elements";
             this.olvColumnElementCount.Width = 64;
-            // 
-            // olvColumnCreated
-            // 
-            this.olvColumnCreated.AspectName = "CreationTimeAsText";
-            this.olvColumnCreated.Text = "Created";
-            this.olvColumnCreated.Width = 155;
-            // 
-            // olvColumnModified
-            // 
-            this.olvColumnModified.AspectName = "LastWriteTimeAsText";
-            this.olvColumnModified.Text = "Last Modified";
-            this.olvColumnModified.Width = 172;
             // 
             // toolStripRepository
             // 
@@ -263,6 +251,16 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(88, 17);
             this.toolStripStatusLabel.Text = "Working Folder";
             // 
+            // olvColumnDescription
+            // 
+            this.olvColumnDescription.AspectName = "Description";
+            this.olvColumnDescription.FillsFreeSpace = true;
+            this.olvColumnDescription.Groupable = false;
+            this.olvColumnDescription.MinimumWidth = 200;
+            this.olvColumnDescription.Sortable = false;
+            this.olvColumnDescription.Text = "Description";
+            this.olvColumnDescription.Width = 200;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,10 +309,9 @@
         private BrightIdeasSoftware.OLVColumn olvColumnElementCount;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonRefresh;
-        private BrightIdeasSoftware.OLVColumn olvColumnCreated;
-        private BrightIdeasSoftware.OLVColumn olvColumnModified;
         private System.Windows.Forms.ToolStripMenuItem projectHomepageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem;
+        private BrightIdeasSoftware.OLVColumn olvColumnDescription;
     }
 }
