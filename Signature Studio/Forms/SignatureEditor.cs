@@ -369,12 +369,30 @@ namespace Signature_Studio.Forms
 
         private void toolStripButtonRemoveExtension_Click(object sender, EventArgs e)
         {
-            modified = true;
+            ExtensionSignatureElement element = typedExtensionList.SelectedObject;
+
+            if (element != null)
+            {
+                extensions.Remove(element);
+                listViewExtensions.SetObjects(extensions);
+                SetRemoveExtensionButtonState();
+                SetSaveButtonState();
+                modified = true;
+            }
         }
 
         private void toolStripButtonRemoveKeyword_Click(object sender, EventArgs e)
         {
-            modified = true;
+            KeywordSignatureElement element = typedKeywordList.SelectedObject;
+
+            if (element != null)
+            {
+                keywords.Remove(element);
+                listViewKeywords.SetObjects(keywords);
+                SetRemoveKeywordButtonState();
+                SetSaveButtonState();
+                modified = true;
+            }
         }
 
         private void toolStripButtonRemoveFile_Click(object sender, EventArgs e)
