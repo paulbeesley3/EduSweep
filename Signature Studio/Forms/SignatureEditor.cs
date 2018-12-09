@@ -473,6 +473,7 @@ namespace Signature_Studio.Forms
             toolStripTextBoxExtension.Clear();
             SetSaveButtonState();
             toolStripTextBoxExtension.Select();
+            this.ActiveControl = toolStripTextBoxExtension.Control;
 
             modified = true;
         }
@@ -494,6 +495,7 @@ namespace Signature_Studio.Forms
             toolStripTextBoxKeyword.Clear();
             SetSaveButtonState();
             toolStripTextBoxKeyword.Select();
+            this.ActiveControl = toolStripTextBoxKeyword.Control;
 
             modified = true;
         }
