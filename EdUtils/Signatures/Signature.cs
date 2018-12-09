@@ -36,6 +36,9 @@ namespace EdUtils.Signatures
         public string Category { get; set; } = "Uncategorised";
 
         [JsonProperty]
+        public List<string> Tags { get; set; } = new List<string>();
+
+        [JsonProperty]
         public List<SignatureElement> Elements { get; private set; } = new List<SignatureElement>();
 
         public Signature()
