@@ -93,6 +93,7 @@ namespace Signature_Studio.Forms
         {
             textBoxName.Text = signature.Name;
             textBoxDescription.Text = signature.Description;
+            buttonCreate.Text = "Save";
 
             foreach (SignatureElement element in signature.Elements)
             {
