@@ -37,6 +37,7 @@ namespace Signature_Studio.Forms
     public partial class SignatureEditor : Form
     {
         private Signature signature;
+        private bool editing;
         private bool modified;
 
         private List<ExtensionSignatureElement> extensions = new List<ExtensionSignatureElement>();
@@ -73,6 +74,7 @@ namespace Signature_Studio.Forms
             }
             else
             {
+                editing = true;
                 LoadExistingSignature();
             }
 
@@ -82,7 +84,9 @@ namespace Signature_Studio.Forms
 
             SetListViewOverlay();
             SetSaveButtonState();
-            textBoxName.Focus();
+            textBoxName.Select();
+
+            modified = false;
         }
 
         private void LoadExistingSignature()
@@ -180,6 +184,12 @@ namespace Signature_Studio.Forms
         {
             var dialog = new TaskDialog();
 
+            if (editing)
+            {
+                /* Prevent duplicate elements by removing existing ones */
+                signature.Elements.Clear();
+            }
+
             foreach (HashSignatureElement file in files)
             {
                 signature.Elements.Add(file);
@@ -198,29 +208,37 @@ namespace Signature_Studio.Forms
             signature.LastWriteTime = DateTime.Now;
             signature.Save(AppFolders.CustomSignatureFolder);
 
-            TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-            button |= TaskDialogStandardButtons.Yes;
-            button |= TaskDialogStandardButtons.No;
-
-            dialog.Icon = TaskDialogStandardIcon.Information;
-
-            const string Title = "Signature Editor";
-            string instruction = "The signature was saved successfully.";
-            const string Content = "Keep the editor open and create another?";
-
-            dialog.StandardButtons = button;
-            dialog.InstructionText = instruction;
-            dialog.Caption = Title;
-            dialog.Text = Content;
-
-            TaskDialogResult res = dialog.Show();
-            if (res == TaskDialogResult.Yes)
+            if (editing)
             {
-                Reset();
+                /* Don't give the option to create more signatures */
+                Close();
             }
             else
             {
-                Close();
+                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                button |= TaskDialogStandardButtons.Yes;
+                button |= TaskDialogStandardButtons.No;
+
+                dialog.Icon = TaskDialogStandardIcon.Information;
+
+                const string Title = "Signature Editor";
+                string instruction = "Signature saved";
+                const string Content = "Create another?";
+
+                dialog.StandardButtons = button;
+                dialog.InstructionText = instruction;
+                dialog.Caption = Title;
+                dialog.Text = Content;
+
+                TaskDialogResult res = dialog.Show();
+                if (res == TaskDialogResult.Yes)
+                {
+                    Reset();
+                }
+                else
+                {
+                    Close();
+                }
             }
         }
 
@@ -264,9 +282,7 @@ namespace Signature_Studio.Forms
 
         private void Reset()
         {
-            modified = false;
-            signature.Guid = Guid.NewGuid();
-            signature.CreationTime = DateTime.Now;
+            signature = new Signature();
 
             textBoxName.Clear();
             textBoxDescription.Clear();
@@ -282,8 +298,9 @@ namespace Signature_Studio.Forms
             SetRemoveExtensionButtonState();
             SetRemoveKeywordButtonState();
             SetRemoveFileButtonState();
-
             SetSaveButtonState();
+
+            modified = false;
         }
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)
@@ -321,7 +338,6 @@ namespace Signature_Studio.Forms
                 if (cfd.ShowDialog(this.Handle) == CommonFileDialogResult.Ok)
                 {
                     selectedFileNames = new List<string>(cfd.FileNames);
-                    modified = true;
                 }
                 else
                 {
@@ -348,6 +364,7 @@ namespace Signature_Studio.Forms
             }
 
             files = files.Union(elements, new HashSignatureElementComparer()).ToList();
+            modified = true;
         }
 
         private void toolStripButtonRemoveExtension_Click(object sender, EventArgs e)
@@ -435,9 +452,11 @@ namespace Signature_Studio.Forms
 
             listViewExtensions.SetObjects(extensions);
 
-            modified = true;
             toolStripTextBoxExtension.Clear();
             SetSaveButtonState();
+            toolStripTextBoxExtension.Select();
+
+            modified = true;
         }
 
         private void AddKeyword()
@@ -454,9 +473,11 @@ namespace Signature_Studio.Forms
             keywords.Add(word);
             listViewKeywords.SetObjects(keywords);
 
-            modified = true;
             toolStripTextBoxKeyword.Clear();
             SetSaveButtonState();
+            toolStripTextBoxKeyword.Select();
+
+            modified = true;
         }
 
         private void toolStripTextBoxExtension_KeyUp(object sender, KeyEventArgs e)
