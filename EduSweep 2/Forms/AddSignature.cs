@@ -107,8 +107,11 @@ namespace EduSweep_2.Forms
         private void comboBoxSignatures_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedSignature = (Signature)comboBoxSignatures.SelectedItem;
-            logger.Trace("Selected signature: {0}", selectedSignature.Name);
-            UpdateUI();
+            if (selectedSignature != null)
+            {
+                logger.Trace("Selected signature: {0}", selectedSignature.Name);
+                UpdateUI();
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
