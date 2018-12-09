@@ -262,7 +262,7 @@
             this.buttonClose.Location = new System.Drawing.Point(331, 626);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
-            this.buttonClose.TabIndex = 54;
+            this.buttonClose.TabIndex = 4;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -273,7 +273,7 @@
             this.buttonCreate.Location = new System.Drawing.Point(250, 626);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(75, 23);
-            this.buttonCreate.TabIndex = 55;
+            this.buttonCreate.TabIndex = 3;
             this.buttonCreate.Text = "Create";
             this.buttonCreate.UseVisualStyleBackColor = true;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
@@ -293,7 +293,7 @@
             this.textBoxName.Location = new System.Drawing.Point(15, 89);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(388, 20);
-            this.textBoxName.TabIndex = 58;
+            this.textBoxName.TabIndex = 0;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // toolStripButtonAddExtension
@@ -386,7 +386,7 @@
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(388, 20);
-            this.textBoxDescription.TabIndex = 60;
+            this.textBoxDescription.TabIndex = 2;
             this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // label1
@@ -404,7 +404,7 @@
             this.textBoxCategory.Location = new System.Drawing.Point(15, 130);
             this.textBoxCategory.Name = "textBoxCategory";
             this.textBoxCategory.Size = new System.Drawing.Size(388, 20);
-            this.textBoxCategory.TabIndex = 62;
+            this.textBoxCategory.TabIndex = 1;
             this.textBoxCategory.TextChanged += new System.EventHandler(this.textBoxCategory_TextChanged);
             // 
             // labelCategory
