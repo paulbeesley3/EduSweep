@@ -129,7 +129,8 @@ namespace EduSweep_2.Forms
         {
             if (scanStatus == ScanStatus.PAUSED)
             {
-                // engine.resume();
+                scanner.Pause();
+                tokenSource.Cancel();
             }
 
             if (scanStatus == ScanStatus.RUNNING)
@@ -263,13 +264,28 @@ namespace EduSweep_2.Forms
                     toolStripStatuslabelStatus.Text = "Scan task starting...";
                     break;
                 case ScanStatus.RUNNING:
+                    /* 
+                     * If the previous state was PAUSED then the timers will be
+                     * stopped and must be restarted.
+                     */
+                    if (!timerLocations.Enabled)
+                    {
+                        timerLocations.Start();
+                    }
+                    if (!timerResults.Enabled)
+                    {
+                        timerResults.Start();
+                    }
+
                     buttonPause.Text = "Pause";
                     buttonPause.Enabled = true;
                     buttonStop.Enabled = true;
                     break;
                 case ScanStatus.PAUSED:
+                    timerLocations.Stop();
+                    timerResults.Stop();
                     buttonPause.Text = "Resume";
-                    buttonPause.Enabled = false;
+                    buttonPause.Enabled = true;
                     buttonStop.Enabled = true;
                     toolStripStatuslabelStatus.Text = "Scan task paused";
                     break;
