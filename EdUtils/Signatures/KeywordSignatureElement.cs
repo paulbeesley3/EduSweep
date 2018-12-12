@@ -54,7 +54,7 @@ namespace EdUtils.Signatures
 
         public KeywordSignatureElement(string keyword) : base(DetectionType.KEYWORD)
         {
-            this.Word = keyword;
+            this.Word = keyword.ToLower();
         }
     }
 }
