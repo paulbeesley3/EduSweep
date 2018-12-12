@@ -145,26 +145,6 @@ namespace EduSweep_2.Forms
             // engine.stop();
         }
 
-        private void ShowInFileInspector(FileItem item)
-        {
-            try
-            {
-                Inspector.LaunchFileInspector(item.AbsolutePath);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(
-                    string.Format(
-                        "Unable to start the File Inspector. You may need to reinstall EduSweep.{0}Detail: {1}",
-                        Environment.NewLine,
-                        ex.Message),
-                    "Task Progress",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error,
-                    MessageBoxDefaultButton.Button1);
-            }           
-        }
-
         private void HandleRemovalAction(IList<FileItem> selectedItems, RemovalAction action)
         {
             const string DialogInstructionDelete = "The {0} selected file(s) will be permanently deleted.";
@@ -376,7 +356,22 @@ namespace EduSweep_2.Forms
 
         private void buttonResultsDetails_Click(object sender, EventArgs e)
         {
-            ShowInFileInspector(typedResultsView.CheckedObject);
+            try
+            {
+                Inspector.LaunchFileInspector(typedResultsView.CheckedObject.AbsolutePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    string.Format(
+                        "Unable to start the File Inspector. You may need to reinstall EduSweep.{0}Detail: {1}",
+                        Environment.NewLine,
+                        ex.Message),
+                    "Task Progress",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+            }
         }
 
         private void buttonResultsDelete_Click(object sender, EventArgs e)
