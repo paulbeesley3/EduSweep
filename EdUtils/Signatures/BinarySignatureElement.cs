@@ -43,6 +43,9 @@ namespace EdUtils.Signatures
     public class HashSignatureElement : SignatureElement
     {
         [JsonProperty]
+        public new string Name { get; private set; }
+
+        [JsonProperty]
         public long Length { get; private set; }
 
         [JsonProperty]
@@ -50,9 +53,6 @@ namespace EdUtils.Signatures
 
         [JsonProperty]
         public string SHA1 { get; private set; }
-
-        [JsonIgnore]
-        public override string ContentAsText => this.SHA1;
 
         public HashSignatureElement()
         {

@@ -48,9 +48,6 @@ namespace EdUtils.Signatures
         [JsonProperty]
         public Extension Extension { get; private set; }
 
-        [JsonIgnore]
-        public override string ContentAsText => this.Extension.Name;
-
         public ExtensionSignatureElement()
         {
             /* Required for deserialization support */

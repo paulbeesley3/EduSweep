@@ -47,9 +47,6 @@ namespace EdUtils.Signatures
         [JsonProperty]
         public string Word { get; private set; }
 
-        [JsonIgnore]
-        public override string ContentAsText => this.Word;
-
         public KeywordSignatureElement()
         {
             /* Required for deserialization support */

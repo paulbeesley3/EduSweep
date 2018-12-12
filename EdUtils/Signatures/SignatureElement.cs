@@ -41,13 +41,16 @@ namespace EdUtils.Signatures
     }
 
     [Serializable]
-    public class SignatureElement : SerializableObject
+    public class SignatureElement
     {
+        [JsonProperty]
+        public Guid Guid { get; set; } = Guid.NewGuid();
+
         [JsonProperty]
         public DetectionType Type { get; private set; }
 
         [JsonIgnore]
-        public virtual string ContentAsText { get; }
+        public virtual string Name { get; } = string.Empty;
 
         [JsonConstructor]
         public SignatureElement()
@@ -58,7 +61,6 @@ namespace EdUtils.Signatures
         public SignatureElement(DetectionType type) : this()
         {
             this.Type = type;
-            this.Creator = Utils.GetCurrentUserName();
         }
     }
 }
