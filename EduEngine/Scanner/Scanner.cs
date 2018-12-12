@@ -365,10 +365,10 @@ namespace EduEngine.Scanner
         /// </summary>
         private void LoadTargetDirectories()
         {
-            foreach (var folder in scanTask.TargetDirectories)
+            foreach (var dir in scanTask.TargetDirectories)
             {
-                logger.Trace("Adding target directory: {0}", folder.Path);
-                pendingDirectories.Add(new DirectoryItem(folder.Path));
+                logger.Trace("Adding target directory: {0}", dir.Path);
+                pendingDirectories.Add(dir);
             }
         }
 
