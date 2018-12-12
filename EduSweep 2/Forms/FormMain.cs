@@ -26,6 +26,7 @@ using System.Windows.Forms;
 using BrightIdeasSoftware;
 using Config.Net;
 using EduEngine.Scanner;
+using EduEngine.Tasks;
 using EduSweep_2.Common;
 using EduSweep_2.Tasks;
 using EdUtils.Filesystem;
@@ -44,15 +45,15 @@ namespace EduSweep_2.Forms
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
-        private List<CompositeScanTask> tasks = new List<CompositeScanTask>();
+        private List<ScanTask> tasks = new List<ScanTask>();
 
-        private TypedObjectListView<CompositeScanTask> typedTaskList;
+        private TypedObjectListView<ScanTask> typedTaskList;
 
         public FormMain()
         {
             InitializeComponent();
 
-            this.olvColumnStatus.AspectToStringConverter = delegate(object obj)
+            this.olvColumnStatus.AspectToStringConverter = delegate (object obj)
             {
                 var status = (ScanStatus)obj;
 
@@ -94,7 +95,7 @@ namespace EduSweep_2.Forms
             SetListViewOverlay();
             SetToolsMenuItemStates();
 
-            typedTaskList = new TypedObjectListView<CompositeScanTask>(this.listViewTasks);
+            typedTaskList = new TypedObjectListView<ScanTask>(this.listViewTasks);
 
             LoadTaskList();
         }
@@ -103,7 +104,7 @@ namespace EduSweep_2.Forms
 
         private void LoadTaskList()
         {
-            tasks = CompositeScanTaskManager.GetTaskList();
+            tasks = ScanTaskManager.GetTaskList();
             listViewTasks.SetObjects(tasks);
             SetTaskControlStates();
 
@@ -141,7 +142,7 @@ namespace EduSweep_2.Forms
 
         private void SetTaskControlStates()
         {
-            CompositeScanTask task = typedTaskList.SelectedObject;
+            ScanTask task = typedTaskList.SelectedObject;
 
             if (task == null)
             {
@@ -204,13 +205,16 @@ namespace EduSweep_2.Forms
 
         private void TaskControlActionStart()
         {
-            CompositeScanTask selectedTask = typedTaskList.SelectedObject;
+            ScanTask selectedTask = typedTaskList.SelectedObject;
+            var statusChangedHandler = new EventHandler<StatusChangedArgs>(Task_OnStatusChanged);
 
-            logger.Debug("Starting task {0}", selectedTask.Task.Name);
+            logger.Debug("Starting task {0}", selectedTask.Name);
             var tp = new TaskProgress(selectedTask);
-            tp.Show();
 
-            SetTaskControlStates();
+            /* Subscribe to status change events raised by the task */
+            selectedTask.StatusChanged += statusChangedHandler;
+
+            tp.Show();
         }
 
         private void TaskControlActionNew()
@@ -226,10 +230,10 @@ namespace EduSweep_2.Forms
 
         private void TaskControlActionEdit()
         {
-            CompositeScanTask selectedTask = typedTaskList.SelectedObject;
+            ScanTask selectedTask = typedTaskList.SelectedObject;
 
-            logger.Debug("Starting task designer (editing {0})", selectedTask.Task.Name);
-            using (var nt = new TaskDesigner(selectedTask.Task))
+            logger.Debug("Starting task designer (editing {0})", selectedTask.Name);
+            using (var nt = new TaskDesigner(selectedTask))
             {
                 nt.ShowDialog(this);
             }
@@ -239,12 +243,12 @@ namespace EduSweep_2.Forms
 
         private void TaskControlActionClone()
         {
-            CompositeScanTask selectedTask = typedTaskList.SelectedObject;
+            ScanTask selectedTask = typedTaskList.SelectedObject;
 
             try
             {
-                logger.Debug("Cloning task {0}", selectedTask.Task.Name);
-                ScanTaskManager.CloneTask(selectedTask.Task, AppFolders.TaskFolder);
+                logger.Debug("Cloning task {0}", selectedTask.Name);
+                ScanTaskManager.CloneTask(selectedTask, AppFolders.TaskFolder);
                 LoadTaskList();
             }
             catch (Exception ex)
@@ -252,7 +256,7 @@ namespace EduSweep_2.Forms
                 MessageBox.Show(
                     string.Format(
                         "'{0}' could not be cloned.{1}Detail:{2}",
-                        selectedTask.Task.Name,
+                        selectedTask.Name,
                         Environment.NewLine,
                         ex.Message),
                     "Task Manager",
@@ -265,7 +269,7 @@ namespace EduSweep_2.Forms
         private void TaskControlActionDelete()
         {
             TaskDialogResult result;
-            CompositeScanTask selectedTask = typedTaskList.SelectedObject;
+            ScanTask selectedTask = typedTaskList.SelectedObject;
 
             logger.Trace("Displaying task deletion confirmation dialog");
             using (var dialog = new TaskDialog())
@@ -289,13 +293,13 @@ namespace EduSweep_2.Forms
 
                 result = dialog.Show();
             }
-                       
+
             if (result == TaskDialogResult.Yes)
             {
                 try
                 {
-                    logger.Debug("Removing task {0}", selectedTask.Task.Name);
-                    ScanTaskManager.RemoveTask(selectedTask.Task);
+                    logger.Debug("Removing task {0}", selectedTask.Name);
+                    ScanTaskManager.RemoveTask(selectedTask);
                     LoadTaskList();
                 }
                 catch (Exception ex)
@@ -303,7 +307,7 @@ namespace EduSweep_2.Forms
                     MessageBox.Show(
                         string.Format(
                             "'{0}' could not be deleted.{1}Detail:{2}",
-                            selectedTask.Task.Name,
+                            selectedTask.Name,
                             Environment.NewLine,
                             ex.Message),
                         "Task Manager",
@@ -314,7 +318,7 @@ namespace EduSweep_2.Forms
             }
             else
             {
-                logger.Trace("Removal of task '{0}' cancelled by user", selectedTask.Task.Name);
+                logger.Trace("Removal of task '{0}' cancelled by user", selectedTask.Name);
             }
         }
 
@@ -515,6 +519,21 @@ namespace EduSweep_2.Forms
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             logger.Info("Form closed");
+        }
+
+        private void Task_OnStatusChanged(object sender, StatusChangedArgs e)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    Task_OnStatusChanged(sender, e);
+                });
+                return;
+            }
+
+            listViewTasks.UpdateObject(sender);
+            SetTaskControlStates();
         }
     }
 }

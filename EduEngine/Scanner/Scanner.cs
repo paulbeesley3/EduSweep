@@ -45,9 +45,6 @@ namespace EduEngine.Scanner
     {
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        /* Published events */
-        public event EventHandler<StatusChangedArgs> StatusChanged;
-
         /* Scan task and high-level configuration */
         private ScanTask scanTask;
         private ScannerConfiguration scanConfig;
@@ -55,9 +52,6 @@ namespace EduEngine.Scanner
 
         /* Report that is generated after the scan completes */
         private ScanReport scanReport;
-
-        /* Status tracking for the scanner itself */
-        private ScanStatus status;
 
         /* Lists of detectors that are used during the scan and/or post-scan stages */
         private List<IDetector> detectors = new List<IDetector>();
@@ -243,8 +237,7 @@ namespace EduEngine.Scanner
         private void SetScannerStatus(ScanStatus newStatus)
         {
             logger.Trace("Scanner status set to {0}", newStatus.ToString());
-            this.status = newStatus;
-            StatusChanged?.Invoke(this, new StatusChangedArgs(newStatus));
+            scanTask.Status = newStatus;
         }
 
         private void ScanDirectory(DirectoryItem dir)
@@ -252,7 +245,7 @@ namespace EduEngine.Scanner
             dir.Status = DirectoryItemStatus.INPROGRESS;
             logger.Trace("Beginning scan of directory: {0}", dir.Path);
 
-            while (status == ScanStatus.PAUSED)
+            while (scanTask.Status == ScanStatus.PAUSED)
             {
                 logger.Trace("Thread is held in pause loop");
                 Thread.Sleep(10);
@@ -435,11 +428,11 @@ namespace EduEngine.Scanner
         /// </param>
         public void Scan(CancellationToken cancelToken)
         {
-            if (status != ScanStatus.INITIALIZED)
+            if (scanTask.Status != ScanStatus.INITIALIZED)
             {
                 logger.Error(
                     "Attempted to start scan while in an invalid state: ({0})",
-                    status.ToString());
+                    scanTask.Status.ToString());
                 SetScannerStatus(ScanStatus.FAILED);
                 return;
             }
@@ -506,18 +499,18 @@ namespace EduEngine.Scanner
 
         public void Pause()
         {
-            switch (status)
+            switch (scanTask.Status)
             {
                 case ScanStatus.PAUSED:
-                    status = ScanStatus.RUNNING;
+                    scanTask.Status = ScanStatus.RUNNING;
                     break;
                 case ScanStatus.RUNNING:
-                    status = ScanStatus.PAUSED;
+                    scanTask.Status = ScanStatus.PAUSED;
                     break;
                 default:
                     logger.Error(
                     "Scanner is not in a valid state to be paused or resumed ({0})",
-                    status.ToString());
+                    scanTask.Status.ToString());
                     break;
             }
         }

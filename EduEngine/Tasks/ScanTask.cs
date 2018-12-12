@@ -32,6 +32,11 @@ namespace EduEngine.Tasks
     [Serializable]
     public class ScanTask : SerializableObject
     {
+        public event EventHandler<StatusChangedArgs> StatusChanged;
+
+        [JsonIgnore]
+        private ScanStatus _status;
+
         [JsonProperty]
         public DateTime LastStartTime { get; set; }
 
@@ -99,6 +104,20 @@ namespace EduEngine.Tasks
         [JsonProperty]
         public List<string> Tags { get; set; } = new List<string>();
 
+        [JsonIgnore]
+        public ScanStatus Status
+        {
+            get
+            {
+                return this._status;
+            }
+            set
+            {
+                this._status = value;
+                StatusChanged?.Invoke(this, new StatusChangedArgs(value));
+            }
+        }
+
         [JsonConstructor]
         private ScanTask()
         {
@@ -111,6 +130,7 @@ namespace EduEngine.Tasks
             this.Creator = Utils.GetCurrentUserName();
             this.CreationTime = DateTime.Now;
             this.LastWriteTime = DateTime.Now;
+            this._status = ScanStatus.UNINITIALZED;
         }
 
         public ScanTask(string name, List<DirectoryItem> folders) : this(name)

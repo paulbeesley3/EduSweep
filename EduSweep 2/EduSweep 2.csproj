@@ -125,11 +125,9 @@
     </Compile>
     <Compile Include="Common\TaskLogEntry.cs" />
     <Compile Include="Common\TaskLogEntryType.cs" />
-    <Compile Include="Tasks\CompositeScanTask.cs" />
     <Compile Include="Common\RemovalAction.cs" />
     <Compile Include="Quarantine\QuarantineManager.cs" />
     <Compile Include="Reports\ReportManager.cs" />
-    <Compile Include="Tasks\CompositeScanTaskManager.cs" />
     <Compile Include="Tasks\ScanTaskManager.cs" />
     <Compile Include="Common\PurgeMode.cs" />
     <Compile Include="Quarantine\QuarantineFileItem.cs" />

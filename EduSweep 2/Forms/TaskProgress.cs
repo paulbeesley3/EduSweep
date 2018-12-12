@@ -29,8 +29,8 @@ using System.Windows.Forms;
 using BrightIdeasSoftware;
 using Config.Net;
 using EduEngine.Scanner;
+using EduEngine.Tasks;
 using EduSweep_2.Common;
-using EduSweep_2.Tasks;
 using EdUtils.Filesystem;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
@@ -44,7 +44,7 @@ namespace EduSweep_2.Forms
 
         /* Scan task information */
         private List<DirectoryItem> targetDirectories;
-        private CompositeScanTask compositeTask;
+        private ScanTask runningTask;
 
         /* Scanner status tracking and control */
         private Scanner scanner;
@@ -55,9 +55,6 @@ namespace EduSweep_2.Forms
         /* Log entries and detected items from the scan */
         private List<TaskLogEntry> taskLogEntries = new List<TaskLogEntry>();
         private List<FileItem> detections = new List<FileItem>();
-
-        /* Published events */
-        public event EventHandler<StatusChangedArgs> StatusChanged;
      
         private TypedObjectListView<DirectoryItem> typedLocationView;
         private TypedObjectListView<FileItem> typedResultsView;
@@ -68,7 +65,7 @@ namespace EduSweep_2.Forms
         .UseJsonFile(AppFolders.AppSettingsPath)
         .Build();
 
-        public TaskProgress(CompositeScanTask task)
+        public TaskProgress(ScanTask task)
         {
             InitializeComponent();
 
@@ -79,18 +76,20 @@ namespace EduSweep_2.Forms
                 ClamAVServerPort = appSettings.ClamAVServerPort
             };
 
-            this.compositeTask = task;
-            this.targetDirectories = compositeTask.Task.TargetDirectories;
-            this.scanner = new Scanner(compositeTask.Task, scanConfig);
+            this.runningTask = task;
+            this.targetDirectories = runningTask.TargetDirectories;
+            this.scanner = new Scanner(runningTask, scanConfig);
 
             this.Text = string.Format(
                 "{0}: {1}",
                 WindowTitleBase,
-                compositeTask.Task.Name);
+                runningTask.Name);
         }
 
         private void TaskProgress_Load(object sender, EventArgs e)
         {
+            var statusChangedHandler = new EventHandler<StatusChangedArgs>(Task_OnStatusChanged);
+
             typedLocationView = new TypedObjectListView<DirectoryItem>(this.listViewResults);
             typedResultsView = new TypedObjectListView<FileItem>(this.listViewResults);
 
@@ -101,10 +100,8 @@ namespace EduSweep_2.Forms
 
             RichTextBoxTarget.ReInitializeAllTextboxes(this);
 
-            /* Subscribe to Scanner events */
-            var statusChangedHandler = new EventHandler<StatusChangedArgs>(Scanner_OnStatusChanged);
-
-            scanner.StatusChanged += statusChangedHandler;
+            /* Subscribe to ScanTask status changed event */
+            runningTask.StatusChanged += statusChangedHandler;
 
             StartScan();
         }
@@ -214,7 +211,7 @@ namespace EduSweep_2.Forms
         private void UpdateUIProgress(int percentage)
         {
             toolStripProgressBar.Value = percentage;
-            this.Text = string.Format("{0}: {1}%", compositeTask.Task.Name, percentage);
+            this.Text = string.Format("{0}: {1}%", runningTask.Name, percentage);
 
             if (percentage >= 100)
             {
@@ -241,13 +238,13 @@ namespace EduSweep_2.Forms
 
         #region Scanner Event Handlers
 
-        private void Scanner_OnStatusChanged(object sender, StatusChangedArgs e)
+        private void Task_OnStatusChanged(object sender, StatusChangedArgs e)
         {
             if (this.InvokeRequired)
             {
                 this.Invoke((MethodInvoker)delegate
                 {
-                    Scanner_OnStatusChanged(sender, e);
+                    Task_OnStatusChanged(sender, e);
                 });
                 return;
             }
@@ -286,9 +283,6 @@ namespace EduSweep_2.Forms
                     toolStripStatuslabelStatus.Text = "Scan task failed";
                     break;
             }
-
-            /* Raise this form's own event which should be picked up by FormMain */
-            StatusChanged?.Invoke(this, e);
         }
 
         #endregion

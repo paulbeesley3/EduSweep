@@ -148,7 +148,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnName
             // 
-            this.olvColumnName.AspectName = "Task.Name";
+            this.olvColumnName.AspectName = "Name";
             this.olvColumnName.FillsFreeSpace = true;
             this.olvColumnName.MinimumWidth = 50;
             this.olvColumnName.Text = "Name";
@@ -165,7 +165,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnCreator
             // 
-            this.olvColumnCreator.AspectName = "Task.Creator";
+            this.olvColumnCreator.AspectName = "Creator";
             this.olvColumnCreator.FillsFreeSpace = true;
             this.olvColumnCreator.MinimumWidth = 50;
             this.olvColumnCreator.Text = "Creator";
@@ -173,7 +173,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnCreateDate
             // 
-            this.olvColumnCreateDate.AspectName = "Task.CreationTimeAsText";
+            this.olvColumnCreateDate.AspectName = "CreationTimeAsText";
             this.olvColumnCreateDate.FillsFreeSpace = true;
             this.olvColumnCreateDate.MinimumWidth = 50;
             this.olvColumnCreateDate.Text = "Created";
@@ -181,7 +181,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnLastRunDate
             // 
-            this.olvColumnLastRunDate.AspectName = "Task.LastCompletionTimeAsText";
+            this.olvColumnLastRunDate.AspectName = "LastCompletionTimeAsText";
             this.olvColumnLastRunDate.FillsFreeSpace = true;
             this.olvColumnLastRunDate.MinimumWidth = 50;
             this.olvColumnLastRunDate.Text = "Last Completed";

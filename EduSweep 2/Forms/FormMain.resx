@@ -238,16 +238,16 @@
   <data name="toolStripButtonDonate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVDhPzVLLi1JxFL6Bm6E2/gHzL8wuqs0gyNB2aB0T
-        /QPRomi27Zo2zSBUIDTgo4VMWEOIhHp9IuroVXyLr+sL31ouBL3e0zmna22qVYsOfNzr9fu+c37f+Qn/
-        V5VKpb1yuWwtFAqMbDb7UYM1k8lY0+m0NZlM7mn0X4WifRTL9XodxuMxTCYTxnQ65edoNGIMBgPI5/MQ
-        jUblWCy2z2IUGl0ulzqbzWDUbcHVZweI707h04tn8OH5I8blyTGI52eQdF0gpw3D4RDsdrsaiUSMQrFY
-        lEi8Xq+Z+Orw5l9x+fIYFosFm6CBJCQSiW9erxdUVQUFTb68PQHbkwfw+r4Rzu7dZrw5OoD3Tx/yf1Up
-        DvP5nI8kiuJXwWazdfr9PiyXS1AUhZ+r1YpBk/0OlUoFarUaGdQEk8nkAK1oNEwfyHAbHIHGpW+yLEM8
-        HmcxZkcGp4LBYLir6ZmYy+WgWq1Cs9mERqMBtBnqSOmnUikIh8PQarUgGAySwQ1Br9ffITF1JzGJ2u02
-        k6gj/SZD6oh3gb/3ej3w+XwTXqNOp7uFHaTNZsPjkqDb7UKn02GQYDsFvdNRcHPg8XgeswHWDpk4nc4C
-        kSRJYhJha0STUFe6WJQRbk3UtD/rGuK63++/sFgsKnWkVW1vIWVD5mazWUWx44fkD4Up72JQSigUgkAg
-        QEEx8MyK2+3e1Wj/qgThOylPT+B+KREIAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIPSURBVDhPzVJLq1JhFP0CJ1ETf8D9C3cW1eQiSDSNxlH0
+        B6JB0Z026zbpXoQKB4UoDeSGdcmQUI9PRE2P4lt8HV/41nIg6PHs9t4da9Jt1KANi3M8rrX2/tb+xP9V
+        5XJ5v1Kp2IvFIiOXy33QYc9ms/ZMJmNPpVL7Ov13oegAxUqj0YDJZALT6ZQxm834OR6PGcPhEAqFAsRi
+        MSUejx+wGIVmt9utzedzGPfa8PWTE6Q3x/Dx2RN4//QB4+zoEKS3J5D6fIqcDoxGI3A4HFo0GjWLUqkk
+        k3iz2TDxxa0rf8XZ80NYLpdsggaySCaT330+H2iaBiqafHl9BI5H9+DlHTOc3L7GeHX3Brx7fJ//q8kJ
+        WCwWfCRJkr4JHKU7GAxgtVqBqqr8XK/XDJrsT6hWq1Cv18mgLiwWixP0otEwfSDDXXAEGpe+KYoCiUSC
+        xZgdGRwLk8l0U9czMZ/PQ61Wg1arBc1mE2gz1JHST6fTEIlEoN1uQygUIoPLwmg0XicxdScxiTqdDpOo
+        I/0mQ+qId4G/9/t98Pv9U16jwWC4ih3k7XbL45Kg1+tBt9tlkGA3Bb3TUXBz4PV6H7IB1kUycblcRSLJ
+        sswkws6IJqGudLEoI9yapGt/1QXEpUAgcGqz2TTqSKva3ULKhsytVquGYudPyTmFKe9hUGo4HIZgMEhB
+        MfDMqsfj2dNp/6qE+AET9U/U/3+SdQAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="statusStripWorkingDirectory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

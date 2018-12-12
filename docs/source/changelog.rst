@@ -14,6 +14,7 @@ Release notes for each version of EduSweep will be kept in this section.
 Added
 -----
     - Third-generation scan engine
+    - Support for running multiple scan tasks at once
     - Support for virus scanning of detected files using ClamAV
     - Optional portable application mode
     - Signature Studio utility (create and manage custom signatures)
