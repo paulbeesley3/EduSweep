@@ -106,8 +106,6 @@ namespace EduSweep_2.Forms
 
         private void StartScan()
         {
-            toolStripProgressBar.Style = ProgressBarStyle.Marquee;
-
             timerLocations.Start();
             timerResults.Start();
 
@@ -212,13 +210,6 @@ namespace EduSweep_2.Forms
         {
             toolStripProgressBar.Value = percentage;
             this.Text = string.Format("{0}: {1}%", runningTask.Name, percentage);
-
-            if (percentage >= 100)
-            {
-                // The task has finished
-                buttonStop.Enabled = false;
-                buttonPause.Enabled = false;
-            }
         }
 
         private void SetListViewOverlay()
@@ -262,6 +253,7 @@ namespace EduSweep_2.Forms
                     buttonPause.Enabled = false;
                     buttonStop.Enabled = false;
                     toolStripStatuslabelStatus.Text = "Scan task starting...";
+                    toolStripProgressBar.Style = ProgressBarStyle.Marquee;
                     break;
                 case ScanStatus.RUNNING:
                     /* 
@@ -280,6 +272,7 @@ namespace EduSweep_2.Forms
                     buttonPause.Text = "Pause";
                     buttonPause.Enabled = true;
                     buttonStop.Enabled = true;
+                    toolStripProgressBar.Style = ProgressBarStyle.Marquee;
                     break;
                 case ScanStatus.PAUSED:
                     timerLocations.Stop();
@@ -288,6 +281,7 @@ namespace EduSweep_2.Forms
                     buttonPause.Enabled = true;
                     buttonStop.Enabled = true;
                     toolStripStatuslabelStatus.Text = "Scan task paused";
+                    toolStripProgressBar.Style = ProgressBarStyle.Continuous;
                     break;
                 case ScanStatus.COMPLETED:
                     EndScan();
@@ -295,6 +289,10 @@ namespace EduSweep_2.Forms
                 case ScanStatus.FAILED:
                     buttonPause.Enabled = false;
                     buttonStop.Enabled = false;
+                    toolStripProgressBar.Style = ProgressBarStyle.Continuous;
+                    toolStripProgressBar.Value = 0;
+                    timerLocations.Stop();
+                    timerResults.Stop();
                     toolStripStatuslabelStatus.Text = "Scan task failed";
                     break;
             }
@@ -337,6 +335,19 @@ namespace EduSweep_2.Forms
             buttonPause.Enabled = false;
             buttonStop.Enabled = false;
             toolStripStatuslabelStatus.Text = "Cancellation requested. Please wait...";
+
+            /* 
+             * If the previous state was PAUSED then the timers will be
+             * stopped and must be restarted.
+             */
+            if (!timerLocations.Enabled)
+            {
+                timerLocations.Start();
+            }
+            if (!timerResults.Enabled)
+            {
+                timerResults.Start();
+            }
 
             /* Tell the scanner to stop */
             tokenSource.Cancel();
