@@ -23,7 +23,7 @@ Added
 Changed
 -------
     - File Inspector utility can now be run as a standalone application
-    - File type identification database updated to 2018-10-09 build
+    - TrID filetype database updated to 2018-12-11 version
     - Scan tasks can now be cloned (creating a copy with a new name)
     - Folders can now be dragged and dropped onto the target directories list
     - Lists in the UI can now be grouped and sorted
