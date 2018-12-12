@@ -305,6 +305,9 @@ namespace Signature_Studio.Forms
             textBoxName.Clear();
             textBoxDescription.Clear();
 
+            /* Preserve the category when resetting */
+            signature.Category = textBoxCategory.Text;
+
             files.Clear();
             extensions.Clear();
             keywords.Clear();
