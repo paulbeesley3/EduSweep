@@ -66,8 +66,8 @@
             this.toolStripSignatures = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonAddSignature = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonAddExtension = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonAddKeyword = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTextBoxElementName = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonAddFile = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonRemove = new System.Windows.Forms.ToolStripButton();
@@ -76,6 +76,9 @@
             this.timerPathCheck = new System.Windows.Forms.Timer(this.components);
             this.openFileDialogBinary = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButtonAdd = new System.Windows.Forms.ToolStripDropDownButton();
+            this.extensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.keywordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlTask.SuspendLayout();
             this.tabPageInfo.SuspendLayout();
             this.groupBoxAntivirus.SuspendLayout();
@@ -483,8 +486,9 @@
             this.toolStripSignatures.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonAddSignature,
             this.toolStripSeparator2,
-            this.toolStripButtonAddExtension,
-            this.toolStripButtonAddKeyword,
+            this.toolStripTextBoxElementName,
+            this.toolStripButtonAdd,
+            this.toolStripSeparator4,
             this.toolStripButtonAddFile,
             this.toolStripSeparator3,
             this.toolStripButtonRemove});
@@ -509,23 +513,16 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButtonAddExtension
+            // toolStripTextBoxElementName
             // 
-            this.toolStripButtonAddExtension.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAddExtension.Image")));
-            this.toolStripButtonAddExtension.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonAddExtension.Name = "toolStripButtonAddExtension";
-            this.toolStripButtonAddExtension.Size = new System.Drawing.Size(111, 22);
-            this.toolStripButtonAddExtension.Text = "Add Extension...";
-            this.toolStripButtonAddExtension.Click += new System.EventHandler(this.toolStripButtonAddExtension_Click);
+            this.toolStripTextBoxElementName.Name = "toolStripTextBoxElementName";
+            this.toolStripTextBoxElementName.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBoxElementName.TextChanged += new System.EventHandler(this.toolStripTextBoxElementName_TextChanged);
             // 
-            // toolStripButtonAddKeyword
+            // toolStripSeparator4
             // 
-            this.toolStripButtonAddKeyword.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAddKeyword.Image")));
-            this.toolStripButtonAddKeyword.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonAddKeyword.Name = "toolStripButtonAddKeyword";
-            this.toolStripButtonAddKeyword.Size = new System.Drawing.Size(107, 22);
-            this.toolStripButtonAddKeyword.Text = "Add Keyword...";
-            this.toolStripButtonAddKeyword.Click += new System.EventHandler(this.toolStripButtonAddKeyword_Click);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButtonAddFile
             // 
@@ -546,8 +543,8 @@
             this.toolStripButtonRemove.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRemove.Image")));
             this.toolStripButtonRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRemove.Name = "toolStripButtonRemove";
-            this.toolStripButtonRemove.Size = new System.Drawing.Size(70, 22);
-            this.toolStripButtonRemove.Text = "Remove";
+            this.toolStripButtonRemove.Size = new System.Drawing.Size(117, 22);
+            this.toolStripButtonRemove.Text = "Remove Selected";
             this.toolStripButtonRemove.Click += new System.EventHandler(this.toolStripButtonRemove_Click);
             // 
             // buttonBack
@@ -585,6 +582,34 @@
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
+            // 
+            // toolStripButtonAdd
+            // 
+            this.toolStripButtonAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.extensionToolStripMenuItem,
+            this.keywordToolStripMenuItem});
+            this.toolStripButtonAdd.Enabled = false;
+            this.toolStripButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAdd.Image")));
+            this.toolStripButtonAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonAdd.Name = "toolStripButtonAdd";
+            this.toolStripButtonAdd.Size = new System.Drawing.Size(67, 22);
+            this.toolStripButtonAdd.Text = "Add...";
+            // 
+            // extensionToolStripMenuItem
+            // 
+            this.extensionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("extensionToolStripMenuItem.Image")));
+            this.extensionToolStripMenuItem.Name = "extensionToolStripMenuItem";
+            this.extensionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extensionToolStripMenuItem.Text = "Extension";
+            this.extensionToolStripMenuItem.Click += new System.EventHandler(this.extensionToolStripMenuItem_Click);
+            // 
+            // keywordToolStripMenuItem
+            // 
+            this.keywordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("keywordToolStripMenuItem.Image")));
+            this.keywordToolStripMenuItem.Name = "keywordToolStripMenuItem";
+            this.keywordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.keywordToolStripMenuItem.Text = "Keyword";
+            this.keywordToolStripMenuItem.Click += new System.EventHandler(this.keywordToolStripMenuItem_Click);
             // 
             // TaskDesigner
             // 
@@ -670,12 +695,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBoxAntivirus;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButtonAddKeyword;
         private System.Windows.Forms.ToolStripButton toolStripButtonAddFile;
         private BrightIdeasSoftware.ObjectListView listViewElements;
         private BrightIdeasSoftware.OLVColumn olvColumnName;
         private BrightIdeasSoftware.OLVColumn olvColumnType;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButtonAddExtension;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxElementName;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripButtonAdd;
+        private System.Windows.Forms.ToolStripMenuItem extensionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem keywordToolStripMenuItem;
     }
 }

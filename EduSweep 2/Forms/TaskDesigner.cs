@@ -31,6 +31,7 @@ using EdUtils.Detections;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.Signatures;
+using EdUtils.Types;
 using EdUtils.WindowsPlatform;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
@@ -604,20 +605,6 @@ namespace EduSweep_2.Forms
             SetSaveButtonState();
         }
 
-        private void toolStripButtonAddKeyword_Click(object sender, EventArgs e)
-        {
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
-        private void toolStripButtonAddExtension_Click(object sender, EventArgs e)
-        {
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
         private void toolStripButtonRemove_Click(object sender, EventArgs e)
         {
             SignatureElement element = typedListViewSignatures.SelectedObject;
@@ -626,6 +613,30 @@ namespace EduSweep_2.Forms
             listViewElements.SetObjects(task.Elements);
             RefreshElementsPage();
             SetSaveButtonState();
+        }
+
+        private void extensionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            task.Elements.Add(
+                new ExtensionSignatureElement(
+                    new Extension(toolStripTextBoxElementName.Text)));
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
+        private void keywordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            task.Elements.Add(
+                new KeywordSignatureElement(toolStripTextBoxElementName.Text));
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
+        private void toolStripTextBoxElementName_TextChanged(object sender, EventArgs e)
+        {
+            toolStripButtonAdd.Enabled = !string.IsNullOrWhiteSpace(toolStripTextBoxElementName.Text);
         }
     }
 }
