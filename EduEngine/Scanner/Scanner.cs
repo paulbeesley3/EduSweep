@@ -503,9 +503,11 @@ namespace EduEngine.Scanner
             switch (scanTask.Status)
             {
                 case ScanStatus.PAUSED:
+                    logger.Info("Scan resumed");
                     scanTask.Status = ScanStatus.RUNNING;
                     break;
                 case ScanStatus.RUNNING:
+                    logger.Info("Scan paused");
                     scanTask.Status = ScanStatus.PAUSED;
                     break;
                 default:
