@@ -47,7 +47,7 @@ namespace EduSweep_2.Common
                 logger.Debug("Starting File Inspector on file: {0}", path);
                 inspectorProcess = new ProcessStartInfo(
                     AppFolders.FileInspectorPath,
-                    path);
+                    string.Format("\"{0}\"", path));
             }
 
             try
