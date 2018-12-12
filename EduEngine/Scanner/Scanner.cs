@@ -186,7 +186,7 @@ namespace EduEngine.Scanner
             logger.Debug("Pruning post-scan detector list");
             PruneDetectorList(ref postScanDetectors);
 
-            logger.Info("Engine initialization completed");
+            logger.Info("Engine initialised");
             SetScannerStatus(ScanStatus.INITIALIZED);
         }
 
@@ -336,7 +336,7 @@ namespace EduEngine.Scanner
         private void Cleanup()
         {
             /* Save changes to the scan task */
-            logger.Info("Performing post-scan cleanup actions");
+            logger.Info("Performing cleanup actions");
             scanTask.LastCompletionTime = DateTime.Now;
             scanTask.LastWriteTime = DateTime.Now;
             scanTask.LastRunOwner = Utils.GetCurrentUserName();
@@ -439,6 +439,7 @@ namespace EduEngine.Scanner
 
             parallelOptions.CancellationToken = cancelToken;
             scanTask.LastStartTime = DateTime.Now;
+            logger.Info("Scan running...");
             SetScannerStatus(ScanStatus.RUNNING);
 
             while (!pendingDirectories.IsEmpty)
@@ -479,7 +480,7 @@ namespace EduEngine.Scanner
 
             if (!cancelToken.IsCancellationRequested)
             {
-                logger.Info("Performing post-detection actions");
+                logger.Info("Performing post-scan actions");
 
                 try
                 {
