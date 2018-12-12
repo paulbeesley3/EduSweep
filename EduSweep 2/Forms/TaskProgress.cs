@@ -147,27 +147,22 @@ namespace EduSweep_2.Forms
 
         private void ShowInFileInspector(FileItem item)
         {
-            var inspectorProcess = new ProcessStartInfo("finspector.exe", item.AbsolutePath)
-            {
-                UseShellExecute = true
-            };
-
             try
             {
-                Process.Start(inspectorProcess);
+                Inspector.LaunchFileInspector(item.AbsolutePath);
             }
-            catch (Exception err)
+            catch (Exception ex)
             {
                 MessageBox.Show(
                     string.Format(
                         "Unable to start the File Inspector. You may need to reinstall EduSweep.{0}Detail: {1}",
                         Environment.NewLine,
-                        err.Message),
+                        ex.Message),
                     "Task Progress",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
                     MessageBoxDefaultButton.Button1);
-            }
+            }           
         }
 
         private void HandleRemovalAction(IList<FileItem> selectedItems, RemovalAction action)

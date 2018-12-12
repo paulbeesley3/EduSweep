@@ -392,15 +392,13 @@ namespace EduSweep_2.Forms
         {
             try
             {
-                string path = AppFolders.FileInspectorPath;
-                logger.Debug("Starting File Inspector process: {0}", path);
-                var inspectorProcess = new ProcessStartInfo(path);
-                Process.Start(inspectorProcess);
+                /* No file target specified */
+                Inspector.LaunchFileInspector(string.Empty);
             }
-            catch (Exception err)
+            catch (Exception ex)
             {
                 MessageBox.Show(
-                    string.Format("Unable to start File Inspector.{0}Detail: {1}", Environment.NewLine, err.Message),
+                    string.Format("Unable to start File Inspector.{0}Detail: {1}", Environment.NewLine, ex.Message),
                     "File Inspector",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,

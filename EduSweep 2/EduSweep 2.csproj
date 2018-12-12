@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\FormStatus.cs" />
+    <Compile Include="Common\Inspector.cs" />
     <Compile Include="Common\Logging.cs">
       <SubType>Code</SubType>
     </Compile>
