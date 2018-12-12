@@ -206,13 +206,12 @@ namespace EduSweep_2.Forms
         private void TaskControlActionStart()
         {
             ScanTask selectedTask = typedTaskList.SelectedObject;
-            var statusChangedHandler = new EventHandler<StatusChangedArgs>(Task_OnStatusChanged);
 
             logger.Debug("Starting task {0}", selectedTask.Name);
             var tp = new TaskProgress(selectedTask);
 
             /* Subscribe to status change events raised by the task */
-            selectedTask.StatusChanged += statusChangedHandler;
+            selectedTask.StatusChanged += Task_OnStatusChanged;
 
             tp.Show();
         }
@@ -534,6 +533,15 @@ namespace EduSweep_2.Forms
 
             listViewTasks.UpdateObject(sender);
             SetTaskControlStates();
+
+            if (e.Status == ScanStatus.COMPLETED || e.Status ==  ScanStatus.FAILED)
+            {
+                if (sender is ScanTask task)
+                {
+                    /* Remove this handler from the task now that it is finished */
+                    task.StatusChanged -= Task_OnStatusChanged;
+                }
+            }
         }
     }
 }

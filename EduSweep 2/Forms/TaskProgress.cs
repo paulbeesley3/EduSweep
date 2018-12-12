@@ -88,8 +88,6 @@ namespace EduSweep_2.Forms
 
         private void TaskProgress_Load(object sender, EventArgs e)
         {
-            var statusChangedHandler = new EventHandler<StatusChangedArgs>(Task_OnStatusChanged);
-
             typedLocationView = new TypedObjectListView<DirectoryItem>(this.listViewResults);
             typedResultsView = new TypedObjectListView<FileItem>(this.listViewResults);
 
@@ -101,7 +99,7 @@ namespace EduSweep_2.Forms
             RichTextBoxTarget.ReInitializeAllTextboxes(this);
 
             /* Subscribe to ScanTask status changed event */
-            runningTask.StatusChanged += statusChangedHandler;
+            runningTask.StatusChanged += Task_OnStatusChanged;
 
             StartScan();
         }
@@ -139,7 +137,8 @@ namespace EduSweep_2.Forms
                 tokenSource.Cancel();
             }
 
-            // engine.stop();
+            /* Unsubscribe from the task's status change event */
+            runningTask.StatusChanged -= Task_OnStatusChanged;
         }
 
         private void HandleRemovalAction(IList<FileItem> selectedItems, RemovalAction action)
