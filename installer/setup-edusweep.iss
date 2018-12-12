@@ -72,6 +72,7 @@ Source: "..\EduSweep 2\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Fla
 ; File Inspector Component (insp)
 Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 Source: "..\lib\trid\TrIDLib-License.txt"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
+Source: "..\static_resource\trid\triddefs.trd"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 
 ; Default Signatures Component (sig)
 Source: "..\static_resource\signatures\*"; DestDir: "{app}\Signatures"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: sig
