@@ -67,6 +67,9 @@
             this.toolStripButtonAddSignature = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBoxElementName = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButtonAdd = new System.Windows.Forms.ToolStripDropDownButton();
+            this.extensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.keywordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonAddFile = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -76,9 +79,6 @@
             this.timerPathCheck = new System.Windows.Forms.Timer(this.components);
             this.openFileDialogBinary = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripButtonAdd = new System.Windows.Forms.ToolStripDropDownButton();
-            this.extensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keywordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlTask.SuspendLayout();
             this.tabPageInfo.SuspendLayout();
             this.groupBoxAntivirus.SuspendLayout();
@@ -428,7 +428,7 @@
             this.toolStripButtonRecursive.Name = "toolStripButtonRecursive";
             this.toolStripButtonRecursive.Size = new System.Drawing.Size(161, 22);
             this.toolStripButtonRecursive.Text = "Toggle Subdirectory Scan";
-            this.toolStripButtonRecursive.Click += new System.EventHandler(this.toolStripButtonSubdirs_Click);
+            this.toolStripButtonRecursive.Click += new System.EventHandler(this.toolStripButtonRecursive_Click);
             // 
             // tabPageSignatures
             // 
@@ -519,6 +519,34 @@
             this.toolStripTextBoxElementName.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBoxElementName.TextChanged += new System.EventHandler(this.toolStripTextBoxElementName_TextChanged);
             // 
+            // toolStripButtonAdd
+            // 
+            this.toolStripButtonAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.extensionToolStripMenuItem,
+            this.keywordToolStripMenuItem});
+            this.toolStripButtonAdd.Enabled = false;
+            this.toolStripButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAdd.Image")));
+            this.toolStripButtonAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonAdd.Name = "toolStripButtonAdd";
+            this.toolStripButtonAdd.Size = new System.Drawing.Size(67, 22);
+            this.toolStripButtonAdd.Text = "Add...";
+            // 
+            // extensionToolStripMenuItem
+            // 
+            this.extensionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("extensionToolStripMenuItem.Image")));
+            this.extensionToolStripMenuItem.Name = "extensionToolStripMenuItem";
+            this.extensionToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.extensionToolStripMenuItem.Text = "Extension";
+            this.extensionToolStripMenuItem.Click += new System.EventHandler(this.extensionToolStripMenuItem_Click);
+            // 
+            // keywordToolStripMenuItem
+            // 
+            this.keywordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("keywordToolStripMenuItem.Image")));
+            this.keywordToolStripMenuItem.Name = "keywordToolStripMenuItem";
+            this.keywordToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.keywordToolStripMenuItem.Text = "Keyword";
+            this.keywordToolStripMenuItem.Click += new System.EventHandler(this.keywordToolStripMenuItem_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
@@ -582,34 +610,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
-            // 
-            // toolStripButtonAdd
-            // 
-            this.toolStripButtonAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.extensionToolStripMenuItem,
-            this.keywordToolStripMenuItem});
-            this.toolStripButtonAdd.Enabled = false;
-            this.toolStripButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAdd.Image")));
-            this.toolStripButtonAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonAdd.Name = "toolStripButtonAdd";
-            this.toolStripButtonAdd.Size = new System.Drawing.Size(67, 22);
-            this.toolStripButtonAdd.Text = "Add...";
-            // 
-            // extensionToolStripMenuItem
-            // 
-            this.extensionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("extensionToolStripMenuItem.Image")));
-            this.extensionToolStripMenuItem.Name = "extensionToolStripMenuItem";
-            this.extensionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.extensionToolStripMenuItem.Text = "Extension";
-            this.extensionToolStripMenuItem.Click += new System.EventHandler(this.extensionToolStripMenuItem_Click);
-            // 
-            // keywordToolStripMenuItem
-            // 
-            this.keywordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("keywordToolStripMenuItem.Image")));
-            this.keywordToolStripMenuItem.Name = "keywordToolStripMenuItem";
-            this.keywordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.keywordToolStripMenuItem.Text = "Keyword";
-            this.keywordToolStripMenuItem.Click += new System.EventHandler(this.keywordToolStripMenuItem_Click);
             // 
             // TaskDesigner
             // 

@@ -244,12 +244,9 @@ namespace EduSweep_2.Forms
             buttonSave.Enabled = allowSave;
         }
 
-        private void textBoxName_TextChanged(object sender, EventArgs e)
-        {
-            task.Name = textBoxName.Text;
-            SetWindowNameText();
-            SetSaveButtonState();
-        }
+        #endregion
+
+        #region Directory Handling
 
         private void AddDirectoryToTask(string path)
         {
@@ -361,6 +358,81 @@ namespace EduSweep_2.Forms
 
         #endregion
 
+        #region Toolstrip Handlers
+
+        private void toolStripButtonRecursive_Click(object sender, EventArgs e)
+        {
+            var targets = new List<DirectoryItem>(typedListViewTargets.SelectedObjects);
+
+            foreach (DirectoryItem target in targets)
+            {
+                target.Recursive = !target.Recursive;
+            }
+
+            listViewTargets.RefreshSelectedObjects();
+
+            RefreshTargetsPage();
+        }
+
+        private void toolStripButtonAddFile_Click(object sender, EventArgs e)
+        {
+            var selectedFileNames = new List<string>();
+
+            using (var cfd = new CommonOpenFileDialog("Add Files to Scan Task")
+            {
+                EnsureReadOnly = true,
+                IsFolderPicker = false,
+                AllowNonFileSystemItems = false,
+                EnsureFileExists = true,
+                Multiselect = true,
+                NavigateToShortcut = false,
+            })
+            {
+                if (cfd.ShowDialog(this.Handle) == CommonFileDialogResult.Ok)
+                {
+                    selectedFileNames = new List<string>(cfd.FileNames);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            AddFiles(selectedFileNames);
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
+        private void toolStripButtonRemove_Click(object sender, EventArgs e)
+        {
+            SignatureElement element = typedListViewSignatures.SelectedObject;
+
+            task.Elements.Remove(element);
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
+        private void extensionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            task.Elements.Add(
+                new ExtensionSignatureElement(
+                    new Extension(toolStripTextBoxElementName.Text)));
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
+        private void keywordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            task.Elements.Add(
+                new KeywordSignatureElement(toolStripTextBoxElementName.Text));
+            listViewElements.SetObjects(task.Elements);
+            RefreshElementsPage();
+            SetSaveButtonState();
+        }
+
         private void toolStripButtonRemovePath_Click(object sender, EventArgs e)
         {
             var targets = new List<DirectoryItem>(typedListViewTargets.SelectedObjects);
@@ -442,6 +514,48 @@ namespace EduSweep_2.Forms
             timerPathCheck.Start();
         }
 
+        private void comboBoxParallel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            task.ParallelLevel = (ParallelLevel)comboBoxParallel.SelectedIndex;
+        }
+
+        private void toolStripButtonAddKeywordSignature_Click(object sender, EventArgs e)
+        {
+            Signature selectedSignature;
+
+            using (var signatureSelector = new AddSignature())
+            {
+                signatureSelector.ShowDialog(this);
+                selectedSignature = signatureSelector.GetSelectedSignature();
+            }
+
+            if (selectedSignature != null)
+            {
+                task.Elements =
+                    task.Elements.Union(selectedSignature.Elements, new SignatureElementComparer()).ToList();
+
+                listViewElements.SetObjects(task.Elements);
+                RefreshElementsPage();
+                SetSaveButtonState();
+            }
+        }
+
+        private void toolStripTextBoxElementName_TextChanged(object sender, EventArgs e)
+        {
+            toolStripButtonAdd.Enabled = !string.IsNullOrWhiteSpace(toolStripTextBoxElementName.Text);
+        }
+
+        #endregion
+
+        #region Other UI Handlers
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            task.Name = textBoxName.Text;
+            SetWindowNameText();
+            SetSaveButtonState();
+        }
+
         private void timerPathCheck_Tick(object sender, EventArgs e)
         {
             timerPathCheck.Stop();
@@ -482,37 +596,6 @@ namespace EduSweep_2.Forms
             }
         }
 
-        private void listViewBinaries_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
-        }
-
-        private void toolStripButtonSubdirs_Click(object sender, EventArgs e)
-        {
-            var targets = new List<DirectoryItem>(typedListViewTargets.SelectedObjects);
-
-            foreach (DirectoryItem target in targets)
-            {
-                target.Recursive = !target.Recursive;
-            }
-
-            listViewTargets.RefreshSelectedObjects();
-
-            RefreshTargetsPage();
-        }
-
-        private void comboBoxParallel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            task.ParallelLevel = (ParallelLevel)comboBoxParallel.SelectedIndex;
-        }
-
         private void listViewTargets_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -549,94 +632,11 @@ namespace EduSweep_2.Forms
             task.UseClamAV = checkBoxAntivirus.Checked;
         }
 
-        private void toolStripButtonAddKeywordSignature_Click(object sender, EventArgs e)
-        {
-            Signature selectedSignature;
-
-            using (var signatureSelector = new AddSignature())
-            {
-                signatureSelector.ShowDialog(this);
-                selectedSignature = signatureSelector.GetSelectedSignature();
-            }
-
-            if (selectedSignature != null)
-            {
-                task.Elements = 
-                    task.Elements.Union(selectedSignature.Elements, new SignatureElementComparer()).ToList();
-
-                listViewElements.SetObjects(task.Elements);
-                RefreshElementsPage();
-                SetSaveButtonState();
-            }
-        }
-
         private void listViewElements_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshElementsPage();
         }
 
-        private void toolStripButtonAddFile_Click(object sender, EventArgs e)
-        {
-            var selectedFileNames = new List<string>();
-
-            using (var cfd = new CommonOpenFileDialog("Add Files to Scan Task")
-            {
-                EnsureReadOnly = true,
-                IsFolderPicker = false,
-                AllowNonFileSystemItems = false,
-                EnsureFileExists = true,
-                Multiselect = true,
-                NavigateToShortcut = false,
-            })
-            {
-                if (cfd.ShowDialog(this.Handle) == CommonFileDialogResult.Ok)
-                {
-                    selectedFileNames = new List<string>(cfd.FileNames);
-                }
-                else
-                {
-                    return;
-                }
-            }
-
-            AddFiles(selectedFileNames);
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
-        private void toolStripButtonRemove_Click(object sender, EventArgs e)
-        {
-            SignatureElement element = typedListViewSignatures.SelectedObject;
-
-            task.Elements.Remove(element);
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
-        private void extensionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            task.Elements.Add(
-                new ExtensionSignatureElement(
-                    new Extension(toolStripTextBoxElementName.Text)));
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
-        private void keywordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            task.Elements.Add(
-                new KeywordSignatureElement(toolStripTextBoxElementName.Text));
-            listViewElements.SetObjects(task.Elements);
-            RefreshElementsPage();
-            SetSaveButtonState();
-        }
-
-        private void toolStripTextBoxElementName_TextChanged(object sender, EventArgs e)
-        {
-            toolStripButtonAdd.Enabled = !string.IsNullOrWhiteSpace(toolStripTextBoxElementName.Text);
-        }
+        #endregion
     }
 }
