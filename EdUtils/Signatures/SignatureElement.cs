@@ -49,6 +49,7 @@ namespace EdUtils.Signatures
         [JsonIgnore]
         public virtual string ContentAsText { get; }
 
+        [JsonConstructor]
         public SignatureElement()
         {
             /* Used only for deserialization */

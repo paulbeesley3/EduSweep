@@ -41,6 +41,7 @@ namespace EdUtils.Signatures
         [JsonProperty]
         public List<SignatureElement> Elements { get; private set; } = new List<SignatureElement>();
 
+        [JsonConstructor]
         public Signature()
         {
             this.Creator = Utils.GetCurrentUserName();

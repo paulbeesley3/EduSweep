@@ -119,6 +119,7 @@ namespace EdUtils.Filesystem
         [JsonIgnore]
         public string LengthAsText => Utils.GetDynamicFileSize(this.Length);
 
+        [JsonConstructor]
         public FileItem()
         {
             /* Used only for deserialization */
