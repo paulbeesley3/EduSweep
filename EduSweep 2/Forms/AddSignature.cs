@@ -72,7 +72,7 @@ namespace EduSweep_2.Forms
             comboBoxSignatures.DataSource = null;
             comboBoxSignatures.Items.Clear();
             comboBoxSignatures.DataSource = availableSignatures;
-            comboBoxSignatures.DisplayMember = "Name";
+            comboBoxSignatures.DisplayMember = "DisplayName";
 
             UpdateUI();
             logger.Debug("Signature list reloaded");

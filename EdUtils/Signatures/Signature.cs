@@ -35,6 +35,12 @@ namespace EdUtils.Signatures
         [JsonProperty]
         public string Category { get; set; } = "Uncategorised";
 
+        /// <summary>
+        /// Used for combining the Category and Name properties in a bound drop-down list
+        /// </summary>
+        [JsonIgnore]
+        public string DisplayName => string.Format("[{0}] {1}", Category, Name);
+
         [JsonProperty]
         public List<string> Tags { get; set; } = new List<string>();
 
