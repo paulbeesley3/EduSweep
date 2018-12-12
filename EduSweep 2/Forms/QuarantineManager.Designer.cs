@@ -313,7 +313,7 @@
             // 
             this.toolStripMenuItemGoogle.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGoogle.Image")));
             this.toolStripMenuItemGoogle.Name = "toolStripMenuItemGoogle";
-            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemGoogle.Text = "Google";
             this.toolStripMenuItemGoogle.Click += new System.EventHandler(this.toolStripMenuItemGoogle_Click);
             // 
@@ -321,14 +321,15 @@
             // 
             this.toolStripMenuItemBing.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBing.Image")));
             this.toolStripMenuItemBing.Name = "toolStripMenuItemBing";
-            this.toolStripMenuItemBing.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemBing.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemBing.Text = "Bing";
             this.toolStripMenuItemBing.Click += new System.EventHandler(this.toolStripMenuItemBing_Click);
             // 
             // toolStripMenuItemDDG
             // 
+            this.toolStripMenuItemDDG.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemDDG.Image")));
             this.toolStripMenuItemDDG.Name = "toolStripMenuItemDDG";
-            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemDDG.Text = "DuckDuckGo";
             this.toolStripMenuItemDDG.Click += new System.EventHandler(this.toolStripMenuItemDDG_Click);
             // 
