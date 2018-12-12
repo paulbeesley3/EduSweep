@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "OpenDocument Formats",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "odt"
+      },
+      "Guid": "13f3cf56-fc41-4798-accb-daa483694951",
+      "Type": 0
+    }
+  ],
+  "Guid": "8cdfc4bd-6244-43cc-97ca-b083631adecf",
+  "Name": "OpenDocument Text Documents",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:42:53.5044193+00:00",
+  "LastWriteTime": "2018-12-12T19:43:57.3887968+00:00"
+}

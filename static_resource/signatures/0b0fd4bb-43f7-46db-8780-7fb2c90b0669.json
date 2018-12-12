@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "php"
+      },
+      "Guid": "622cd3d3-e357-4008-a77c-5554926f7902",
+      "Type": 0
+    }
+  ],
+  "Guid": "0b0fd4bb-43f7-46db-8780-7fb2c90b0669",
+  "Name": "PHP Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:57:31.5560482+00:00",
+  "LastWriteTime": "2018-12-12T19:57:42.7185795+00:00"
+}

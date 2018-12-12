@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "java"
+      },
+      "Guid": "e1d986cd-48cc-40a3-8359-cb932faff8c2",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "class"
+      },
+      "Guid": "4d8e4eff-7259-4adf-a742-11780b31d93d",
+      "Type": 0
+    }
+  ],
+  "Guid": "8eccb709-b747-481d-9c59-f7c947396414",
+  "Name": "Java Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:58:01.4368342+00:00",
+  "LastWriteTime": "2018-12-12T19:58:46.2389054+00:00"
+}

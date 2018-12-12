@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ccd"
+      },
+      "Guid": "91c1d778-2310-4f6c-a3af-0fd72659ae6f",
+      "Type": 0
+    }
+  ],
+  "Guid": "605e96b6-1528-4317-b96d-d583fbde5723",
+  "Name": "CloneCD Disc Image",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:31:38.9333334+00:00",
+  "LastWriteTime": "2018-12-12T19:31:52.3853161+00:00"
+}

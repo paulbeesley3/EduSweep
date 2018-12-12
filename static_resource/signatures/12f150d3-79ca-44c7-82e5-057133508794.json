@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Remote Connectivity",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vnc"
+      },
+      "Guid": "de94e761-9159-4d18-98de-7eb0a68e5705",
+      "Type": 0
+    }
+  ],
+  "Guid": "12f150d3-79ca-44c7-82e5-057133508794",
+  "Name": "VNC Profiles",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:39:13.9375049+00:00",
+  "LastWriteTime": "2018-12-12T19:39:36.892256+00:00"
+}

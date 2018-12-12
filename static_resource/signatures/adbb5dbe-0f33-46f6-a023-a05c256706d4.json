@@ -1,0 +1,20 @@
+{
+  "Description": "Compressed disc image format created by MagicISO",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "uif"
+      },
+      "Guid": "e98ed7a4-fa90-4757-a6b8-ca80007395ce",
+      "Type": 0
+    }
+  ],
+  "Guid": "adbb5dbe-0f33-46f6-a023-a05c256706d4",
+  "Name": "UDF Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:33:38.7298949+00:00",
+  "LastWriteTime": "2018-12-12T19:38:43.5511956+00:00"
+}

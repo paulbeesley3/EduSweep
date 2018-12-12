@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "OpenDocument Formats",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "odg"
+      },
+      "Guid": "809c6a92-8146-4b45-abaf-a28edf23a378",
+      "Type": 0
+    }
+  ],
+  "Guid": "12bd8dcd-856a-4393-bd65-8312def3cb1b",
+  "Name": "OpenDocument Drawings",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:44:27.4948993+00:00",
+  "LastWriteTime": "2018-12-12T19:44:40.1247797+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "dmg"
+      },
+      "Guid": "8e5857e4-b4f2-4113-8aee-57bcf7b89cfa",
+      "Type": 0
+    }
+  ],
+  "Guid": "ad82dcf2-e6b8-4203-8468-a8bd0473ee52",
+  "Name": "macOS Disk Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:31:06.165867+00:00",
+  "LastWriteTime": "2018-12-12T19:38:34.0645347+00:00"
+}

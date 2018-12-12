@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "OpenDocument Formats",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "odp"
+      },
+      "Guid": "e56f1886-2a91-4aec-95df-fd95f7138259",
+      "Type": 0
+    }
+  ],
+  "Guid": "2c948f8a-a64f-45bf-83b2-578bf488df9d",
+  "Name": "OpenDocument Presentations",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:44:09.276783+00:00",
+  "LastWriteTime": "2018-12-12T19:44:26.3552518+00:00"
+}

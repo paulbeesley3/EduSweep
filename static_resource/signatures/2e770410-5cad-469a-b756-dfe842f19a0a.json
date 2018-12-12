@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "hdd"
+      },
+      "Guid": "7a785995-0a06-4182-ad4e-71a3704434f4",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "hds"
+      },
+      "Guid": "3d82aea9-b082-4e69-9ed1-fa57199fc3c8",
+      "Type": 0
+    }
+  ],
+  "Guid": "2e770410-5cad-469a-b756-dfe842f19a0a",
+  "Name": "Parallels Desktop Disk Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:31:53.372711+00:00",
+  "LastWriteTime": "2018-12-12T19:32:51.761133+00:00"
+}

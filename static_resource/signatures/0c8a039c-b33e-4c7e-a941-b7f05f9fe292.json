@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vb"
+      },
+      "Guid": "71a84eed-447e-437e-92a2-289991c283ec",
+      "Type": 0
+    }
+  ],
+  "Guid": "0c8a039c-b33e-4c7e-a941-b7f05f9fe292",
+  "Name": "Visual Basic Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:01:03.4979007+00:00",
+  "LastWriteTime": "2018-12-12T20:01:19.7679107+00:00"
+}

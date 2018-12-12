@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Remote Connectivity",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "rdp"
+      },
+      "Guid": "38d679db-2080-4c2b-925f-6559b0d1f832",
+      "Type": 0
+    }
+  ],
+  "Guid": "c81b4c16-72e8-4f69-a044-a8e31a79b4c5",
+  "Name": "Remote Desktop Profiles",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:39:38.0343735+00:00",
+  "LastWriteTime": "2018-12-12T19:40:31.5874787+00:00"
+}

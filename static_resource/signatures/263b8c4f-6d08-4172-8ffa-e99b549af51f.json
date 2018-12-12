@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "sln"
+      },
+      "Guid": "3a3da7cd-614d-47da-bfc2-2f919e33743a",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "suo"
+      },
+      "Guid": "a01169eb-c74f-44fe-b9d8-3b0e78a58cb5",
+      "Type": 0
+    }
+  ],
+  "Guid": "263b8c4f-6d08-4172-8ffa-e99b549af51f",
+  "Name": "Visual Studio Solutions",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:59:03.613159+00:00",
+  "LastWriteTime": "2018-12-12T20:01:00.1371075+00:00"
+}

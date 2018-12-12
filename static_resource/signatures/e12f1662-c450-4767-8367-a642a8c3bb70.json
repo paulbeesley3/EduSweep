@@ -1,0 +1,20 @@
+{
+  "Description": "Images storing raw binary data",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "bin"
+      },
+      "Guid": "ec5b94df-5840-45f0-9bcc-e34e8b302918",
+      "Type": 0
+    }
+  ],
+  "Guid": "e12f1662-c450-4767-8367-a642a8c3bb70",
+  "Name": "BIN Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:29:01.4348291+00:00",
+  "LastWriteTime": "2018-12-12T19:30:26.6653385+00:00"
+}

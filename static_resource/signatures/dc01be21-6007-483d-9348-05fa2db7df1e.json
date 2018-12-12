@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "OpenDocument Formats",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ods"
+      },
+      "Guid": "696d3de3-cc6b-4984-bd40-474c272dcbff",
+      "Type": 0
+    }
+  ],
+  "Guid": "dc01be21-6007-483d-9348-05fa2db7df1e",
+  "Name": "OpenDocument Spreadsheets",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:43:58.5820419+00:00",
+  "LastWriteTime": "2018-12-12T19:44:08.1285904+00:00"
+}

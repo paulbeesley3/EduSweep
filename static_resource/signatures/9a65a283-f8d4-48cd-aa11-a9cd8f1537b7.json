@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vbox"
+      },
+      "Guid": "437fb8cf-5b05-408c-bd3c-6edd58e73201",
+      "Type": 0
+    }
+  ],
+  "Guid": "9a65a283-f8d4-48cd-aa11-a9cd8f1537b7",
+  "Name": "VirtualBox Machine Configurations",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:23:55.7551052+00:00",
+  "LastWriteTime": "2018-12-12T19:27:28.5500825+00:00"
+}

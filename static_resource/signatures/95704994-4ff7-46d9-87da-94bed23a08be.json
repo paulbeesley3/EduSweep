@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vmdk"
+      },
+      "Guid": "6bb2cd6a-65eb-4498-8cd8-e29f3fdb8b41",
+      "Type": 0
+    }
+  ],
+  "Guid": "95704994-4ff7-46d9-87da-94bed23a08be",
+  "Name": "VMWare Disk Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:22:46.796101+00:00",
+  "LastWriteTime": "2018-12-12T19:23:03.3406387+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vbox"
+      },
+      "Guid": "2a65a1da-23ef-474d-8178-3513eabefbe7",
+      "Type": 0
+    }
+  ],
+  "Guid": "29fe5222-174b-480a-8b09-b8d69dac3767",
+  "Name": "VirtualBox Disk Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:23:04.3074213+00:00",
+  "LastWriteTime": "2018-12-12T19:27:23.0858118+00:00"
+}

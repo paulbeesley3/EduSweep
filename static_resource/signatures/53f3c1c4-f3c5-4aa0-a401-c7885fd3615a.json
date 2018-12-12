@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ova"
+      },
+      "Guid": "43659f01-2a8c-41af-9488-dc1929a31d05",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ovf"
+      },
+      "Guid": "f4100968-3113-4c04-aa50-8fb8f37da80b",
+      "Type": 0
+    }
+  ],
+  "Guid": "53f3c1c4-f3c5-4aa0-a401-c7885fd3615a",
+  "Name": "Open Virtualization Files",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:24:25.9405251+00:00",
+  "LastWriteTime": "2018-12-12T19:27:17.4737793+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "cs"
+      },
+      "Guid": "965ec4db-474c-42e7-a24d-77fb7b841407",
+      "Type": 0
+    }
+  ],
+  "Guid": "4e0bb061-4b95-44f4-9a0f-44d5a790b6b8",
+  "Name": "C# Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:01:20.8489556+00:00",
+  "LastWriteTime": "2018-12-12T20:01:37.9607622+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "pl"
+      },
+      "Guid": "2eac48ae-0032-4530-8037-0326f33a3103",
+      "Type": 0
+    }
+  ],
+  "Guid": "a4721200-2d82-4658-b968-4712a4ec965f",
+  "Name": "Perl Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:58:47.110557+00:00",
+  "LastWriteTime": "2018-12-12T19:59:02.6618589+00:00"
+}

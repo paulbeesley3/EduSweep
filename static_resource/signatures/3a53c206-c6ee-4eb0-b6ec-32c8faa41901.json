@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "dll"
+      },
+      "Guid": "6070bc09-d6ea-4345-a5cc-625c9939b744",
+      "Type": 0
+    }
+  ],
+  "Guid": "3a53c206-c6ee-4eb0-b6ec-32c8faa41901",
+  "Name": "Dynamic Link Libraries",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:36:48.4379091+00:00",
+  "LastWriteTime": "2018-12-12T19:37:11.9796332+00:00"
+}

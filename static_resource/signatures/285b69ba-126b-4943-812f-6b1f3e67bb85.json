@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "pvm"
+      },
+      "Guid": "098c95e4-aa1c-4803-afb5-69cd1ca65b42",
+      "Type": 0
+    }
+  ],
+  "Guid": "285b69ba-126b-4943-812f-6b1f3e67bb85",
+  "Name": "Parallels Desktop Virtual Machines",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:32:52.8566167+00:00",
+  "LastWriteTime": "2018-12-12T19:33:37.7632214+00:00"
+}

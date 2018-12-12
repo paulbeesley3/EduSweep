@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "OpenDocument Formats",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "odb"
+      },
+      "Guid": "436e4faf-57fc-4a7e-823f-60be291a493b",
+      "Type": 0
+    }
+  ],
+  "Guid": "9498e5b9-f795-4007-98f0-ac6b979295a8",
+  "Name": "OpenDocument Databases",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:44:41.8490568+00:00",
+  "LastWriteTime": "2018-12-12T19:44:56.1777799+00:00"
+}

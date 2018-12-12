@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Virtualization",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vhd"
+      },
+      "Guid": "16c80adc-353a-44e3-87cc-b15d7a93fd0c",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vhdx"
+      },
+      "Guid": "22ec2d35-67fa-4961-81c6-56299ba2c6d0",
+      "Type": 0
+    }
+  ],
+  "Guid": "3977f2f9-bc6d-41aa-9691-03a8b6e45daf",
+  "Name": "Hyper-V Disk Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:20:21.0927456+00:00",
+  "LastWriteTime": "2018-12-12T19:21:38.6630538+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "asp"
+      },
+      "Guid": "636d507e-c3d7-49eb-962c-3dbc32f11a1e",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "aspx"
+      },
+      "Guid": "d77a52b4-b3c3-4f21-9efd-76730c67b0a1",
+      "Type": 0
+    }
+  ],
+  "Guid": "a516096e-b196-4905-a364-2af5ef23721e",
+  "Name": "ASP Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T19:57:43.9203344+00:00",
+  "LastWriteTime": "2018-12-12T19:58:00.5378509+00:00"
+}
