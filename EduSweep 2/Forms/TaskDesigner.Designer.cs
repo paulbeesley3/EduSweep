@@ -225,6 +225,8 @@
             // 
             // comboBoxParallel
             // 
+            this.comboBoxParallel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxParallel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxParallel.FormattingEnabled = true;
             this.comboBoxParallel.Items.AddRange(new object[] {
