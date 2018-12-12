@@ -245,7 +245,8 @@ namespace EduEngine.Scanner
             dir.Status = DirectoryItemStatus.INPROGRESS;
             logger.Trace("Beginning scan of directory: {0}", dir.Path);
 
-            while (scanTask.Status == ScanStatus.PAUSED)
+            while (scanTask.Status == ScanStatus.PAUSED &&
+                !parallelOptions.CancellationToken.IsCancellationRequested)
             {
                 logger.Trace("Thread is held in pause loop");
                 Thread.Sleep(10);
