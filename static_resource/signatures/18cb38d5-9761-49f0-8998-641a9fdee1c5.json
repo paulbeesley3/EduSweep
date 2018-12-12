@@ -9,10 +9,7 @@
         "Name": "rpm"
       },
       "Type": 0,
-      "Guid": "a8315f78-7dd5-40f0-bd61-656ae321aefd",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:35:47.6888235+00:00",
-      "LastWriteTime": "2018-12-09T16:35:47.6888235+00:00"
+      "Guid": "a8315f78-7dd5-40f0-bd61-656ae321aefd"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -21,10 +18,7 @@
         "Name": "deb"
       },
       "Type": 0,
-      "Guid": "80fb735b-b9bd-4007-bfb8-0838943d9083",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:35:48.9619739+00:00",
-      "LastWriteTime": "2018-12-09T16:35:48.9619739+00:00"
+      "Guid": "80fb735b-b9bd-4007-bfb8-0838943d9083"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -33,10 +27,7 @@
         "Name": "snap"
       },
       "Type": 0,
-      "Guid": "908dd779-d270-42f2-b417-148acb2b4d53",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:37:00.0184565+00:00",
-      "LastWriteTime": "2018-12-09T16:37:00.0184565+00:00"
+      "Guid": "908dd779-d270-42f2-b417-148acb2b4d53"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -45,10 +36,7 @@
         "Name": "flatpakref"
       },
       "Type": 0,
-      "Guid": "71043330-751b-474b-9324-160bbe75715d",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:37:39.4806374+00:00",
-      "LastWriteTime": "2018-12-09T16:37:39.4806374+00:00"
+      "Guid": "71043330-751b-474b-9324-160bbe75715d"
     }
   ],
   "Guid": "18cb38d5-9761-49f0-8998-641a9fdee1c5",

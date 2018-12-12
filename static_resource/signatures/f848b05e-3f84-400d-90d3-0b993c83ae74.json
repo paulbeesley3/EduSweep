@@ -10,10 +10,7 @@
         "Name": "swf"
       },
       "Type": 0,
-      "Guid": "5805202c-9050-4796-8779-e9263e09672e",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:33:49.8367422+00:00",
-      "LastWriteTime": "2018-12-08T21:33:49.8367422+00:00"
+      "Guid": "5805202c-9050-4796-8779-e9263e09672e"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "flv"
       },
       "Type": 0,
-      "Guid": "a08a2090-6ae1-493a-a7d6-aafd0cf99ff4",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:33:53.1615624+00:00",
-      "LastWriteTime": "2018-12-08T21:33:53.1615624+00:00"
+      "Guid": "a08a2090-6ae1-493a-a7d6-aafd0cf99ff4"
     }
   ],
   "Guid": "f848b05e-3f84-400d-90d3-0b993c83ae74",

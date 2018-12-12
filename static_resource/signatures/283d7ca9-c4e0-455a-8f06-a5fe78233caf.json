@@ -10,10 +10,7 @@
         "Name": "7z"
       },
       "Type": 0,
-      "Guid": "aaa7bb86-662c-46e5-920a-0bffbbcac18e",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:46:03.5733695+00:00",
-      "LastWriteTime": "2018-12-08T21:46:03.5733695+00:00"
+      "Guid": "aaa7bb86-662c-46e5-920a-0bffbbcac18e"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "7zip"
       },
       "Type": 0,
-      "Guid": "1212bc29-fb47-4bb2-8068-63348bf68581",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:46:07.0436611+00:00",
-      "LastWriteTime": "2018-12-08T21:46:07.0436611+00:00"
+      "Guid": "1212bc29-fb47-4bb2-8068-63348bf68581"
     }
   ],
   "Guid": "283d7ca9-c4e0-455a-8f06-a5fe78233caf",

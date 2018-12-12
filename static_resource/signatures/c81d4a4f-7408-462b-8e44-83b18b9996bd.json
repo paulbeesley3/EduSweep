@@ -9,10 +9,7 @@
         "Name": "tmp"
       },
       "Type": 0,
-      "Guid": "a2706db4-145c-4094-a70a-28327ecc33e8",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:42:45.7406415+00:00",
-      "LastWriteTime": "2018-12-09T16:42:45.7406415+00:00"
+      "Guid": "a2706db4-145c-4094-a70a-28327ecc33e8"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -21,10 +18,7 @@
         "Name": "$$$"
       },
       "Type": 0,
-      "Guid": "836507b8-befa-4ddc-a7b1-5492d5af6db0",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:27:01.9080178+00:00",
-      "LastWriteTime": "2018-12-09T17:27:01.9080178+00:00"
+      "Guid": "836507b8-befa-4ddc-a7b1-5492d5af6db0"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -33,10 +27,7 @@
         "Name": "temp"
       },
       "Type": 0,
-      "Guid": "909f32f4-2ae3-4401-9c53-70c109222417",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:28:24.4852985+00:00",
-      "LastWriteTime": "2018-12-09T17:28:24.4852985+00:00"
+      "Guid": "909f32f4-2ae3-4401-9c53-70c109222417"
     }
   ],
   "Guid": "c81d4a4f-7408-462b-8e44-83b18b9996bd",

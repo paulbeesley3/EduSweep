@@ -10,10 +10,7 @@
         "Name": "aep"
       },
       "Type": 0,
-      "Guid": "c5cbd1bd-f3bf-4feb-89e6-67a01ead57c9",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:16:41.8827202+00:00",
-      "LastWriteTime": "2018-12-09T17:16:41.8827202+00:00"
+      "Guid": "c5cbd1bd-f3bf-4feb-89e6-67a01ead57c9"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "aepx"
       },
       "Type": 0,
-      "Guid": "2712a722-8a28-41a6-b79e-e5d1abcb335f",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:16:57.9306736+00:00",
-      "LastWriteTime": "2018-12-09T17:16:57.9306736+00:00"
+      "Guid": "2712a722-8a28-41a6-b79e-e5d1abcb335f"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -34,10 +28,7 @@
         "Name": "aetx"
       },
       "Type": 0,
-      "Guid": "169434d6-11f6-410c-8fa6-24669cf69743",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:17:00.1652006+00:00",
-      "LastWriteTime": "2018-12-09T17:17:00.1652006+00:00"
+      "Guid": "169434d6-11f6-410c-8fa6-24669cf69743"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -46,10 +37,7 @@
         "Name": "ffx"
       },
       "Type": 0,
-      "Guid": "dcf0da5d-d44b-4ca2-8201-12a26fc3b117",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T17:17:09.3845676+00:00",
-      "LastWriteTime": "2018-12-09T17:17:09.3845676+00:00"
+      "Guid": "dcf0da5d-d44b-4ca2-8201-12a26fc3b117"
     }
   ],
   "Guid": "ff2f5cb4-7535-470f-bdd3-b980166617d0",

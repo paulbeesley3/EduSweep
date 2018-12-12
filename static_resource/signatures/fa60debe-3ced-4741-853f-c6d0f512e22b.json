@@ -10,10 +10,7 @@
         "Name": "ppt"
       },
       "Type": 0,
-      "Guid": "090457fd-ff59-4ad6-b3fe-8a81c062253a",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:32:17.0279708+00:00",
-      "LastWriteTime": "2018-12-08T21:32:17.0279708+00:00"
+      "Guid": "090457fd-ff59-4ad6-b3fe-8a81c062253a"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "pps"
       },
       "Type": 0,
-      "Guid": "cb1f01a2-e29e-4bfe-b6a1-4afffae63c48",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:32:20.271269+00:00",
-      "LastWriteTime": "2018-12-08T21:32:20.271269+00:00"
+      "Guid": "cb1f01a2-e29e-4bfe-b6a1-4afffae63c48"
     }
   ],
   "Guid": "fa60debe-3ced-4741-853f-c6d0f512e22b",

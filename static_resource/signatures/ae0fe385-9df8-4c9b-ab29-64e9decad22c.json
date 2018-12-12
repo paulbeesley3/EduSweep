@@ -9,10 +9,7 @@
         "Name": "com"
       },
       "Type": 0,
-      "Guid": "57ce7509-a156-45d0-98a8-8fa743204b62",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:46:15.3590526+00:00",
-      "LastWriteTime": "2018-12-09T16:46:15.3590526+00:00"
+      "Guid": "57ce7509-a156-45d0-98a8-8fa743204b62"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -21,10 +18,7 @@
         "Name": "exe"
       },
       "Type": 0,
-      "Guid": "f50a18f9-c6e7-45ac-ab64-02e06a484481",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:46:19.1933582+00:00",
-      "LastWriteTime": "2018-12-09T16:46:19.1933582+00:00"
+      "Guid": "f50a18f9-c6e7-45ac-ab64-02e06a484481"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -33,10 +27,7 @@
         "Name": "pe"
       },
       "Type": 0,
-      "Guid": "0fc49edd-a084-4c8f-a64f-746c171fed1b",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:46:21.806237+00:00",
-      "LastWriteTime": "2018-12-09T16:46:21.806237+00:00"
+      "Guid": "0fc49edd-a084-4c8f-a64f-746c171fed1b"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -45,10 +36,7 @@
         "Name": "pif"
       },
       "Type": 0,
-      "Guid": "acdd2aaa-d12c-4bc7-af6b-2394be08fa7f",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:46:25.1519716+00:00",
-      "LastWriteTime": "2018-12-09T16:46:25.1519716+00:00"
+      "Guid": "acdd2aaa-d12c-4bc7-af6b-2394be08fa7f"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -57,10 +45,7 @@
         "Name": "scr"
       },
       "Type": 0,
-      "Guid": "c8b90fcc-51e4-40f9-a5c6-c6ee151b09d5",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-09T16:46:29.7748364+00:00",
-      "LastWriteTime": "2018-12-09T16:46:29.7748364+00:00"
+      "Guid": "c8b90fcc-51e4-40f9-a5c6-c6ee151b09d5"
     }
   ],
   "Guid": "ae0fe385-9df8-4c9b-ab29-64e9decad22c",

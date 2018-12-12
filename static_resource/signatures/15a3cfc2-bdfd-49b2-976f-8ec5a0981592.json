@@ -9,10 +9,7 @@
         "Name": "3g2"
       },
       "Type": 0,
-      "Guid": "0bc47e3d-db5f-45ef-ac6f-6db1464cad41",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:51:31.1317792+00:00",
-      "LastWriteTime": "2018-12-08T21:51:31.1317792+00:00"
+      "Guid": "0bc47e3d-db5f-45ef-ac6f-6db1464cad41"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -21,10 +18,7 @@
         "Name": "3gp"
       },
       "Type": 0,
-      "Guid": "cc14a45d-0b7d-4d77-a3e3-cd9fe7e14fd4",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:51:34.9379186+00:00",
-      "LastWriteTime": "2018-12-08T21:51:34.9379186+00:00"
+      "Guid": "cc14a45d-0b7d-4d77-a3e3-cd9fe7e14fd4"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -33,10 +27,7 @@
         "Name": "3gp2"
       },
       "Type": 0,
-      "Guid": "fdfa20fe-8984-4dae-adae-ae703d13d1ee",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:51:37.6323915+00:00",
-      "LastWriteTime": "2018-12-08T21:51:37.6323915+00:00"
+      "Guid": "fdfa20fe-8984-4dae-adae-ae703d13d1ee"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -45,10 +36,7 @@
         "Name": "3gpp"
       },
       "Type": 0,
-      "Guid": "4c82d6a1-2637-4842-99ed-def67c5367ed",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:51:41.3501093+00:00",
-      "LastWriteTime": "2018-12-08T21:51:41.3501093+00:00"
+      "Guid": "4c82d6a1-2637-4842-99ed-def67c5367ed"
     }
   ],
   "Guid": "15a3cfc2-bdfd-49b2-976f-8ec5a0981592",

@@ -10,10 +10,7 @@
         "Name": "accdb"
       },
       "Type": 0,
-      "Guid": "38288994-3131-40d8-bcbf-2c0334e2adf6",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:50:45.4987284+00:00",
-      "LastWriteTime": "2018-12-08T21:50:45.4987284+00:00"
+      "Guid": "38288994-3131-40d8-bcbf-2c0334e2adf6"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "accde"
       },
       "Type": 0,
-      "Guid": "e9d73911-c32b-41d9-80f5-1ef2e1440ef8",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:50:48.255435+00:00",
-      "LastWriteTime": "2018-12-08T21:50:48.255435+00:00"
+      "Guid": "e9d73911-c32b-41d9-80f5-1ef2e1440ef8"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -34,10 +28,7 @@
         "Name": "accdt"
       },
       "Type": 0,
-      "Guid": "1e778ea1-fc67-4148-814e-2e426dd20725",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:50:52.0306142+00:00",
-      "LastWriteTime": "2018-12-08T21:50:52.0306142+00:00"
+      "Guid": "1e778ea1-fc67-4148-814e-2e426dd20725"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -46,10 +37,7 @@
         "Name": "accdr"
       },
       "Type": 0,
-      "Guid": "b82f3211-76f6-4bbd-b093-2a92b909bf96",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:50:54.7137416+00:00",
-      "LastWriteTime": "2018-12-08T21:50:54.7137416+00:00"
+      "Guid": "b82f3211-76f6-4bbd-b093-2a92b909bf96"
     }
   ],
   "Guid": "2c0d451e-c399-4d65-9a71-c45bdbf2db95",

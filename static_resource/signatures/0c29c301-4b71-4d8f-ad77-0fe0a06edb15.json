@@ -10,10 +10,7 @@
         "Name": "psd"
       },
       "Type": 0,
-      "Guid": "399527ee-ebc3-447f-a03b-bb2aa25321c3",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:47:54.4972587+00:00",
-      "LastWriteTime": "2018-12-08T21:47:54.4972587+00:00"
+      "Guid": "399527ee-ebc3-447f-a03b-bb2aa25321c3"
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
@@ -22,10 +19,7 @@
         "Name": "psb"
       },
       "Type": 0,
-      "Guid": "de9f3552-5327-46f6-9d34-3dd8017e75ec",
-      "Creator": "MICKEY\\Paul",
-      "CreationTime": "2018-12-08T21:47:58.076668+00:00",
-      "LastWriteTime": "2018-12-08T21:47:58.076668+00:00"
+      "Guid": "de9f3552-5327-46f6-9d34-3dd8017e75ec"
     }
   ],
   "Guid": "0c29c301-4b71-4d8f-ad77-0fe0a06edb15",
