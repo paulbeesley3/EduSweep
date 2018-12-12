@@ -51,6 +51,9 @@ namespace EduEngine.Reports
         [JsonIgnore]
         public string AgeAsText => string.Format("{0:%d} day(s)", Age);
 
+        [JsonProperty]
+        public List<string> Tags { get; set; } = new List<string>();
+
         [JsonConstructor]
         private ScanReport()
         {
