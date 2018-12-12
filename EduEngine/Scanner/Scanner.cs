@@ -81,24 +81,11 @@ namespace EduEngine.Scanner
             DirectoryInfo dirInfo;
             var subdirs = new List<DirectoryItem>();
 
-           logger.Debug("Getting subdirectory list for directory: {0}", directory.Path);
+           logger.Trace("Getting subdirectory list for directory: {0}", directory.Path);
 
             try
             {
                 dirInfo = new DirectoryInfo(directory.Path);
-            }
-            catch (Exception ex)
-            {
-                logger.Warn(
-                    ex,
-                    "GetSubDirectories couldn't get directory info for {0}",
-                    directory.Path);
-
-                return subdirs;
-            }
-
-            try
-            {
                 foreach (DirectoryInfo subDirInfo in dirInfo.GetDirectories())
                 {
                     logger.Trace("Discovered subdirectory: {0}", subDirInfo.FullName);
@@ -109,7 +96,7 @@ namespace EduEngine.Scanner
             {
                 logger.Warn(
                     ex,
-                    "GetSubDirectories couldn't get subdirectory list for {0}", 
+                    "Subdirectory enumeration failed: {0}",
                     directory.Path);
             }
 
@@ -123,32 +110,20 @@ namespace EduEngine.Scanner
             FileInfo[] fileInfoArray;
             var files = new List<FileItem>();
 
-            logger.Debug(
+            logger.Trace(
                 "Getting list of files within directory: {0}",
                 directory.Path);
 
             try
             {
                 dirInfo = new DirectoryInfo(directory.Path);
-            }
-            catch (Exception ex)
-            {
-                logger.Warn(
-                    ex,
-                    "GetFiles couldn't get directory info for {0}",
-                    directory.Path);
-                return files;
-            }
-
-            try
-            {
                 fileInfoArray = dirInfo.GetFiles();
             }
             catch (Exception ex)
             {
                 logger.Warn(
                     ex,
-                    "GetFiles couldn't get file list for {0}",
+                    "Content enumeration failed: {0}",
                     directory.Path);
                 return files;
             }
@@ -164,7 +139,7 @@ namespace EduEngine.Scanner
                 {
                     logger.Warn(
                         ex,
-                        "Couldn't get file info for {0}",
+                        "File info retrieval failed for {0}",
                         fileInfo.FullName);
                 }
             }
