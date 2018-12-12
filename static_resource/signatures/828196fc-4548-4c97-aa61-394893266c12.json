@@ -1,0 +1,24 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "iso"
+      },
+      "Type": 0,
+      "Guid": "a05c0fa7-2b29-48a7-bc05-61fef71507ca",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:18:02.9874815+00:00",
+      "LastWriteTime": "2018-12-09T17:18:02.9874815+00:00"
+    }
+  ],
+  "Guid": "828196fc-4548-4c97-aa61-394893266c12",
+  "Name": "Disc Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:17:25.6112121+00:00",
+  "LastWriteTime": "2018-12-09T18:24:04.1730386+00:00"
+}

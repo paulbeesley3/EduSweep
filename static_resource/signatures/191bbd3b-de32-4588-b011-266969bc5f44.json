@@ -1,0 +1,36 @@
+{
+  "Description": "",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "cpp"
+      },
+      "Type": 0,
+      "Guid": "bb18ea33-42cf-4026-8c44-56a2b9349fdd",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:43:58.2505922+00:00",
+      "LastWriteTime": "2018-12-09T16:43:58.2505922+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "c"
+      },
+      "Type": 0,
+      "Guid": "0c762e00-e571-4052-9348-894c2d1bbd0a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:43:58.9727005+00:00",
+      "LastWriteTime": "2018-12-09T16:43:58.9727005+00:00"
+    }
+  ],
+  "Guid": "191bbd3b-de32-4588-b011-266969bc5f44",
+  "Name": "C/C++ Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:43:39.1982473+00:00",
+  "LastWriteTime": "2018-12-09T18:13:16.832864+00:00"
+}

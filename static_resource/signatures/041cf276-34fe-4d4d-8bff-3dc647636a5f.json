@@ -1,0 +1,36 @@
+{
+  "Description": "Documents produced by Microsoft Word 97 - 2003",
+  "Category": "Microsoft Office (Legacy)",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "doc"
+      },
+      "Type": 0,
+      "Guid": "c43922b0-1a39-4be4-9ba4-ddd1fd2bc684",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T15:26:37.6984281+00:00",
+      "LastWriteTime": "2018-12-09T15:26:37.6984281+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "docm"
+      },
+      "Type": 0,
+      "Guid": "fd856fb4-7724-49d4-893c-7e5da1c268ac",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T15:47:31.2786538+00:00",
+      "LastWriteTime": "2018-12-09T15:47:31.2786538+00:00"
+    }
+  ],
+  "Guid": "041cf276-34fe-4d4d-8bff-3dc647636a5f",
+  "Name": "Word Documents",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T15:26:11.9984723+00:00",
+  "LastWriteTime": "2018-12-09T18:17:36.3615533+00:00"
+}

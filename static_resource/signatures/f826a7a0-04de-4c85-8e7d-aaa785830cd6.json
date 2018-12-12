@@ -1,0 +1,36 @@
+{
+  "Description": "",
+  "Category": "Scripts",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "bat"
+      },
+      "Type": 0,
+      "Guid": "36da6509-a207-4453-a7fe-b11cac144a96",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:46:48.8955628+00:00",
+      "LastWriteTime": "2018-12-09T16:46:48.8955628+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "cmd"
+      },
+      "Type": 0,
+      "Guid": "f9ef8753-5e2a-4146-9aa4-e3e0aa9f248c",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:47:02.6674059+00:00",
+      "LastWriteTime": "2018-12-09T16:47:02.6674059+00:00"
+    }
+  ],
+  "Guid": "f826a7a0-04de-4c85-8e7d-aaa785830cd6",
+  "Name": "Windows",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:46:41.7037954+00:00",
+  "LastWriteTime": "2018-12-09T18:11:16.0888271+00:00"
+}

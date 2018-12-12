@@ -1,0 +1,24 @@
+{
+  "Description": "Spreadsheets produced by Microsoft Excel 2007 onwards",
+  "Category": "Microsoft Office",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "xlsx"
+      },
+      "Type": 0,
+      "Guid": "dfc076ed-5081-4d81-bfeb-9937eb422e12",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:15:08.112626+00:00",
+      "LastWriteTime": "2018-12-09T16:15:08.112626+00:00"
+    }
+  ],
+  "Guid": "c49e5af4-10df-4fd9-bfb8-5222d29d3d4c",
+  "Name": "Excel Spreadsheets",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:14:25.281782+00:00",
+  "LastWriteTime": "2018-12-09T18:24:42.9101292+00:00"
+}

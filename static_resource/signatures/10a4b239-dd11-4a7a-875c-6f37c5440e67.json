@@ -1,0 +1,47 @@
+{
+  "Description": "Java applications, including Java Network Launching Protocol (JNLP) applications (Java Web Start).",
+  "Category": "Applications",
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "jar"
+      },
+      "Type": 0,
+      "Guid": "139b17aa-f295-451f-8da3-1028e2cd7511",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:25:46.6683517+00:00",
+      "LastWriteTime": "2018-12-09T16:25:46.6683517+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "jnlp"
+      },
+      "Type": 0,
+      "Guid": "c640f5c5-8ca2-48b0-8db0-f3b89f5e1e6b",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:25:49.2794483+00:00",
+      "LastWriteTime": "2018-12-09T16:25:49.2794483+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "jnp"
+      },
+      "Type": 0,
+      "Guid": "9cfc9f5f-3887-41bf-9831-c28597064ddc",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:26:11.8783888+00:00",
+      "LastWriteTime": "2018-12-09T16:26:11.8783888+00:00"
+    }
+  ],
+  "Guid": "10a4b239-dd11-4a7a-875c-6f37c5440e67",
+  "Name": "Java",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:24:11.6796597+00:00",
+  "LastWriteTime": "2018-12-09T17:43:08.6637026+00:00"
+}

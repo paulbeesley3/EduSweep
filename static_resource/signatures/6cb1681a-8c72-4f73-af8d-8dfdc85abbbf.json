@@ -1,0 +1,168 @@
+{
+  "Description": "",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "epub"
+      },
+      "Type": 0,
+      "Guid": "4a275cac-95c2-4d71-87f6-97ee88b87940",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:24:49.2546603+00:00",
+      "LastWriteTime": "2018-12-09T17:24:49.2546603+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "azw"
+      },
+      "Type": 0,
+      "Guid": "0887ea5e-bf1f-4a97-bd25-5c0773e3d964",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:24:51.3485528+00:00",
+      "LastWriteTime": "2018-12-09T17:24:51.3485528+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "lit"
+      },
+      "Type": 0,
+      "Guid": "5d871871-87d5-4e2d-8292-006b9174509d",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:24:53.6613715+00:00",
+      "LastWriteTime": "2018-12-09T17:24:53.6613715+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "azw1"
+      },
+      "Type": 0,
+      "Guid": "58532241-71cc-41ff-91b1-66a0430535ab",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:06.9433352+00:00",
+      "LastWriteTime": "2018-12-09T17:25:06.9433352+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "azw3"
+      },
+      "Type": 0,
+      "Guid": "95c26042-5216-4ab1-ad0a-65909c721648",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:11.5061506+00:00",
+      "LastWriteTime": "2018-12-09T17:25:11.5061506+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "azw4"
+      },
+      "Type": 0,
+      "Guid": "22f3818b-24a7-4f2d-846a-6dfa4043f6de",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:15.7602796+00:00",
+      "LastWriteTime": "2018-12-09T17:25:15.7602796+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "kfx"
+      },
+      "Type": 0,
+      "Guid": "eef6e3e5-b5b2-4461-a720-a72497ec1ea0",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:38.7618222+00:00",
+      "LastWriteTime": "2018-12-09T17:25:38.7618222+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "tpz"
+      },
+      "Type": 0,
+      "Guid": "ddd034f8-2512-4610-b373-c80fa447e1c9",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:44.0121607+00:00",
+      "LastWriteTime": "2018-12-09T17:25:44.0121607+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "lrf"
+      },
+      "Type": 0,
+      "Guid": "5acf873a-1d2f-4828-a7ef-a5d162e99d14",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:25:58.5131489+00:00",
+      "LastWriteTime": "2018-12-09T17:25:58.5131489+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "lrx"
+      },
+      "Type": 0,
+      "Guid": "63bcd7fd-b74c-4cc8-a87f-eea0f49b8717",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:26:03.9043495+00:00",
+      "LastWriteTime": "2018-12-09T17:26:03.9043495+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "mobi"
+      },
+      "Type": 0,
+      "Guid": "ee5c24e2-d182-45f0-bd07-1d1d4754748c",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:26:10.1545418+00:00",
+      "LastWriteTime": "2018-12-09T17:26:10.1545418+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "tr"
+      },
+      "Type": 0,
+      "Guid": "9ea66096-c907-4437-8a1b-315941933899",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:26:23.3741949+00:00",
+      "LastWriteTime": "2018-12-09T17:26:23.3741949+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "tr3"
+      },
+      "Type": 0,
+      "Guid": "4f182736-cb7a-4741-b1f2-ff76186ceb26",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:26:28.8276854+00:00",
+      "LastWriteTime": "2018-12-09T17:26:28.8276854+00:00"
+    }
+  ],
+  "Guid": "6cb1681a-8c72-4f73-af8d-8dfdc85abbbf",
+  "Name": "eBooks",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:24:27.3156722+00:00",
+  "LastWriteTime": "2018-12-09T18:25:54.5868193+00:00"
+}

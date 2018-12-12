@@ -1,0 +1,24 @@
+{
+  "Description": "Documents produced by Microsoft Publisher 97 - 2003",
+  "Category": "Microsoft Office (Legacy)",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "pub"
+      },
+      "Type": 0,
+      "Guid": "11a73970-5326-4c7b-84ec-14140c2ee7b4",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:34:23.9903367+00:00",
+      "LastWriteTime": "2018-12-08T21:34:23.9903367+00:00"
+    }
+  ],
+  "Guid": "3da91bcf-56e0-42c4-a1a9-118558392d27",
+  "Name": "Publisher Documents",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-08T21:33:58.3000972+00:00",
+  "LastWriteTime": "2018-12-09T18:24:26.4245319+00:00"
+}

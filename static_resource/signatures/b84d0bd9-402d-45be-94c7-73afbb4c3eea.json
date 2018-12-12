@@ -1,0 +1,36 @@
+{
+  "Description": "Scripts written in the Javascript language",
+  "Category": "Code",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "js"
+      },
+      "Type": 0,
+      "Guid": "b9e994bf-47a5-481f-92de-bd12650f15bd",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:22:43.264333+00:00",
+      "LastWriteTime": "2018-12-09T16:22:43.264333+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "jse"
+      },
+      "Type": 0,
+      "Guid": "83b514ca-4d32-4606-86e3-77ad0ae5c1a4",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:22:45.4521728+00:00",
+      "LastWriteTime": "2018-12-09T16:22:45.4521728+00:00"
+    }
+  ],
+  "Guid": "b84d0bd9-402d-45be-94c7-73afbb4c3eea",
+  "Name": "Javascript Source",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:21:25.5491406+00:00",
+  "LastWriteTime": "2018-12-09T18:13:28.5055234+00:00"
+}

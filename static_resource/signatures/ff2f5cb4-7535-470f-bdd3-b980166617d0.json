@@ -1,0 +1,60 @@
+{
+  "Description": "Projects, presets and templates for Adobe After Effects",
+  "Category": "Adobe Products",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "aep"
+      },
+      "Type": 0,
+      "Guid": "c5cbd1bd-f3bf-4feb-89e6-67a01ead57c9",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:16:41.8827202+00:00",
+      "LastWriteTime": "2018-12-09T17:16:41.8827202+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "aepx"
+      },
+      "Type": 0,
+      "Guid": "2712a722-8a28-41a6-b79e-e5d1abcb335f",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:16:57.9306736+00:00",
+      "LastWriteTime": "2018-12-09T17:16:57.9306736+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "aetx"
+      },
+      "Type": 0,
+      "Guid": "169434d6-11f6-410c-8fa6-24669cf69743",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:17:00.1652006+00:00",
+      "LastWriteTime": "2018-12-09T17:17:00.1652006+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "ffx"
+      },
+      "Type": 0,
+      "Guid": "dcf0da5d-d44b-4ca2-8201-12a26fc3b117",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:17:09.3845676+00:00",
+      "LastWriteTime": "2018-12-09T17:17:09.3845676+00:00"
+    }
+  ],
+  "Guid": "ff2f5cb4-7535-470f-bdd3-b980166617d0",
+  "Name": "After Effects",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:16:31.5070244+00:00",
+  "LastWriteTime": "2018-12-09T18:14:45.5888273+00:00"
+}

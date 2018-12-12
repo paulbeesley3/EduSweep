@@ -1,0 +1,36 @@
+{
+  "Description": "Musical Instrument Digital Interface (MIDI) files",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "mid"
+      },
+      "Type": 0,
+      "Guid": "332910e7-b1b9-42da-beca-06b8f46cc1a1",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:44:47.0969812+00:00",
+      "LastWriteTime": "2018-12-09T16:44:47.0969812+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "midi"
+      },
+      "Type": 0,
+      "Guid": "470d4751-824d-4491-966a-81ca2c0274d4",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:44:49.6756634+00:00",
+      "LastWriteTime": "2018-12-09T16:44:49.6756634+00:00"
+    }
+  ],
+  "Guid": "bad3cf38-db0f-4d0c-925d-d41bc5c8041b",
+  "Name": "MIDI Tracks",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:44:15.2558096+00:00",
+  "LastWriteTime": "2018-12-09T18:26:13.6349733+00:00"
+}

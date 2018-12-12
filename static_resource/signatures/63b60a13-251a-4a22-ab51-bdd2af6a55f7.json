@@ -1,0 +1,47 @@
+{
+  "Description": "Software installers based around the Windows Installer format. Includes update and patch files.",
+  "Category": "Installers",
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "msi"
+      },
+      "Type": 0,
+      "Guid": "b582e30e-5ca2-471c-ba72-ba23ccc8835d",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:38:05.6824231+00:00",
+      "LastWriteTime": "2018-12-09T16:38:05.6824231+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "msu"
+      },
+      "Type": 0,
+      "Guid": "0a0e2458-3bbc-4674-b7f4-e6425b3db3cd",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:38:25.9062535+00:00",
+      "LastWriteTime": "2018-12-09T16:38:25.9062535+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "msp"
+      },
+      "Type": 0,
+      "Guid": "d5eeb552-4510-4f73-8b5a-f4637469eb4f",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:38:36.5610769+00:00",
+      "LastWriteTime": "2018-12-09T16:38:36.5610769+00:00"
+    }
+  ],
+  "Guid": "63b60a13-251a-4a22-ab51-bdd2af6a55f7",
+  "Name": "Windows",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:37:54.023598+00:00",
+  "LastWriteTime": "2018-12-09T17:47:31.7047136+00:00"
+}

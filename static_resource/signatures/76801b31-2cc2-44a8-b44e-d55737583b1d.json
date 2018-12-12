@@ -1,0 +1,24 @@
+{
+  "Description": "Documents produced by Microsoft Office 2007 and onwards",
+  "Category": "Microsoft Office",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "docx"
+      },
+      "Type": 0,
+      "Guid": "731b0d59-5642-44df-a37f-9b21199156eb",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:12:19.5424977+00:00",
+      "LastWriteTime": "2018-12-09T16:12:19.5424977+00:00"
+    }
+  ],
+  "Guid": "76801b31-2cc2-44a8-b44e-d55737583b1d",
+  "Name": "Word Documents",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:11:51.5029424+00:00",
+  "LastWriteTime": "2018-12-09T18:24:50.582519+00:00"
+}

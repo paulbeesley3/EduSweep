@@ -1,0 +1,72 @@
+{
+  "Description": "Projects, presets and plugins for Adobe Premiere",
+  "Category": "Adobe Products",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "prproj"
+      },
+      "Type": 0,
+      "Guid": "434e1f68-45db-488e-804e-6e86412a652f",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:15:34.956349+00:00",
+      "LastWriteTime": "2018-12-09T17:15:34.956349+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "ppj"
+      },
+      "Type": 0,
+      "Guid": "5c424046-c173-4599-802d-f9ab7c348383",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:15:37.1752487+00:00",
+      "LastWriteTime": "2018-12-09T17:15:37.1752487+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "prfpset"
+      },
+      "Type": 0,
+      "Guid": "b55ecd11-f898-4601-abc1-0977a9dd1e97",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:15:48.847918+00:00",
+      "LastWriteTime": "2018-12-09T17:15:48.847918+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "prtl"
+      },
+      "Type": 0,
+      "Guid": "13def392-aeba-43b3-9bba-6a6105b01770",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:15:53.0669408+00:00",
+      "LastWriteTime": "2018-12-09T17:15:53.0669408+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "prm"
+      },
+      "Type": 0,
+      "Guid": "92d621ca-3da4-4ebe-8fe4-9884be19d0be",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:16:01.8644069+00:00",
+      "LastWriteTime": "2018-12-09T17:16:01.8644069+00:00"
+    }
+  ],
+  "Guid": "424aff59-184a-4e7f-b8da-6860d692c240",
+  "Name": "Premiere Pro",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:15:03.4229813+00:00",
+  "LastWriteTime": "2018-12-09T18:14:51.3236012+00:00"
+}

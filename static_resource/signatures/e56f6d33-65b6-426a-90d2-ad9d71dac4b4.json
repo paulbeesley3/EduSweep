@@ -1,0 +1,72 @@
+{
+  "Description": "MPEG Layer-4 encoded video. Includes MOV files which are technically a container but, in general use, often contain MP4 video.",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "mp4"
+      },
+      "Type": 0,
+      "Guid": "039d730a-6c8a-4062-9f4b-0c7bcc4bd4f6",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:18:23.5513631+00:00",
+      "LastWriteTime": "2018-12-09T17:18:23.5513631+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "mpeg4"
+      },
+      "Type": 0,
+      "Guid": "cc709a91-33fe-40d9-a1c1-ba2fdac6636c",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:18:27.0203296+00:00",
+      "LastWriteTime": "2018-12-09T17:18:27.0203296+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "h264"
+      },
+      "Type": 0,
+      "Guid": "3a555864-2736-426f-81f0-007fd6dd3dcf",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:18:38.3023523+00:00",
+      "LastWriteTime": "2018-12-09T17:18:38.3023523+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "m4v"
+      },
+      "Type": 0,
+      "Guid": "8472458e-b1ea-4957-8c70-d43baba1208b",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:18:49.099939+00:00",
+      "LastWriteTime": "2018-12-09T17:18:49.099939+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "mov"
+      },
+      "Type": 0,
+      "Guid": "3f4865e9-3120-44f9-92b1-7a10f73f82d8",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:19:04.6478581+00:00",
+      "LastWriteTime": "2018-12-09T17:19:04.6478581+00:00"
+    }
+  ],
+  "Guid": "e56f6d33-65b6-426a-90d2-ad9d71dac4b4",
+  "Name": "MP4 Video",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:18:05.0657299+00:00",
+  "LastWriteTime": "2018-12-09T18:26:20.7760791+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "Description": "Presentations and slideshows produced by Microsoft PowerPoint 97 - 2003",
+  "Category": "Microsoft Office (Legacy)",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "ppt"
+      },
+      "Type": 0,
+      "Guid": "090457fd-ff59-4ad6-b3fe-8a81c062253a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:32:17.0279708+00:00",
+      "LastWriteTime": "2018-12-08T21:32:17.0279708+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "pps"
+      },
+      "Type": 0,
+      "Guid": "cb1f01a2-e29e-4bfe-b6a1-4afffae63c48",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:32:20.271269+00:00",
+      "LastWriteTime": "2018-12-08T21:32:20.271269+00:00"
+    }
+  ],
+  "Guid": "fa60debe-3ced-4741-853f-c6d0f512e22b",
+  "Name": "PowerPoint Presentations",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-08T21:31:19.0766657+00:00",
+  "LastWriteTime": "2018-12-09T18:16:29.46058+00:00"
+}

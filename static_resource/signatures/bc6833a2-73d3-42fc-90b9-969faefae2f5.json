@@ -1,0 +1,35 @@
+{
+  "Description": "Video files taken directly from DVD, without transcoding to another format",
+  "Category": "Media",
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "vob"
+      },
+      "Type": 0,
+      "Guid": "5b71870d-e465-4e87-a2e4-b8cb20d98718",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:49:13.3630442+00:00",
+      "LastWriteTime": "2018-12-08T21:49:13.3630442+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "m2ts"
+      },
+      "Type": 0,
+      "Guid": "9a656e64-bd1f-46f9-8440-16dbf0ac3191",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:49:16.1994096+00:00",
+      "LastWriteTime": "2018-12-08T21:49:16.1994096+00:00"
+    }
+  ],
+  "Guid": "bc6833a2-73d3-42fc-90b9-969faefae2f5",
+  "Name": "DVD Video",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-08T21:48:09.553975+00:00",
+  "LastWriteTime": "2018-12-09T17:46:38.1333374+00:00"
+}

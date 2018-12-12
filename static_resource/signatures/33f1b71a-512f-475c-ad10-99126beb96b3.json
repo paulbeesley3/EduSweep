@@ -1,0 +1,108 @@
+{
+  "Description": "Files containing lists of media to play, from either local or remote sources.",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "m3u"
+      },
+      "Type": 0,
+      "Guid": "cdb4a8f6-aba9-447d-878d-75a2ecbaae7e",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:20:44.636075+00:00",
+      "LastWriteTime": "2018-12-09T17:20:44.636075+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "wpl"
+      },
+      "Type": 0,
+      "Guid": "2dbb568c-a4a0-4d69-9daf-68e3555fe027",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:20:49.0894994+00:00",
+      "LastWriteTime": "2018-12-09T17:20:49.0894994+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "pls"
+      },
+      "Type": 0,
+      "Guid": "ffd160fc-2414-49ea-980f-f6ba5aca24ce",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:20:54.4961126+00:00",
+      "LastWriteTime": "2018-12-09T17:20:54.4961126+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "asx"
+      },
+      "Type": 0,
+      "Guid": "abc7f76c-40bd-44ec-a4a3-e19dcb8a838f",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:22:29.4016372+00:00",
+      "LastWriteTime": "2018-12-09T17:22:29.4016372+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "fpl"
+      },
+      "Type": 0,
+      "Guid": "11028a94-21e8-4de6-876a-530bf066ab2b",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:22:35.3706629+00:00",
+      "LastWriteTime": "2018-12-09T17:22:35.3706629+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "m3u8"
+      },
+      "Type": 0,
+      "Guid": "31d96933-20bb-4e18-9375-407bdfb6781f",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:22:42.1054881+00:00",
+      "LastWriteTime": "2018-12-09T17:22:42.1054881+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "pla"
+      },
+      "Type": 0,
+      "Guid": "20599974-ca93-4e5b-8546-7d62ceb2ba7c",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:22:49.4811361+00:00",
+      "LastWriteTime": "2018-12-09T17:22:49.4811361+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "zpl"
+      },
+      "Type": 0,
+      "Guid": "f1eb1866-6a60-497a-8245-b0848a3ac58a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T17:23:13.1545937+00:00",
+      "LastWriteTime": "2018-12-09T17:23:13.1545937+00:00"
+    }
+  ],
+  "Guid": "33f1b71a-512f-475c-ad10-99126beb96b3",
+  "Name": "Playlists",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T17:20:36.7136691+00:00",
+  "LastWriteTime": "2018-12-09T18:26:31.4955483+00:00"
+}

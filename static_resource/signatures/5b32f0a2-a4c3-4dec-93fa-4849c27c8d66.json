@@ -1,0 +1,108 @@
+{
+  "Description": "Lossless, compressed audio. Usually significantly larger in size than equivalent, lossy-compressed files.",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "flac"
+      },
+      "Type": 0,
+      "Guid": "66e9534c-b105-4898-b749-93e4bdf982bd",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:41:45.6326183+00:00",
+      "LastWriteTime": "2018-12-09T16:41:45.6326183+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "aif"
+      },
+      "Type": 0,
+      "Guid": "e40cb3b7-5d97-4e5f-8815-66e6aaf446d9",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:41:52.0348618+00:00",
+      "LastWriteTime": "2018-12-09T16:41:52.0348618+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "aiff"
+      },
+      "Type": 0,
+      "Guid": "745f7cea-d193-40cc-b0a4-f1aadac3a59a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:41:55.2682347+00:00",
+      "LastWriteTime": "2018-12-09T16:41:55.2682347+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "ape"
+      },
+      "Type": 0,
+      "Guid": "bf7fa747-3d56-4baa-8d6f-bb0f9d07ee4a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:41:58.7263506+00:00",
+      "LastWriteTime": "2018-12-09T16:41:58.7263506+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "snd"
+      },
+      "Type": 0,
+      "Guid": "b2e74cb9-62dc-4662-ac61-22dfc2e3bab9",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:42:01.8405163+00:00",
+      "LastWriteTime": "2018-12-09T16:42:01.8405163+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "wav"
+      },
+      "Type": 0,
+      "Guid": "8be350f6-cf94-4dd9-afbb-6c933a39fec2",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:42:03.0091773+00:00",
+      "LastWriteTime": "2018-12-09T16:42:03.0091773+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "wv"
+      },
+      "Type": 0,
+      "Guid": "0748384e-1d0e-4f87-9c5f-a87912f8dff4",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:42:06.2493882+00:00",
+      "LastWriteTime": "2018-12-09T16:42:06.2493882+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "tak"
+      },
+      "Type": 0,
+      "Guid": "f623e582-0e13-4b14-9f0c-4389d80df084",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:42:08.0551472+00:00",
+      "LastWriteTime": "2018-12-09T16:42:08.0551472+00:00"
+    }
+  ],
+  "Guid": "5b32f0a2-a4c3-4dec-93fa-4849c27c8d66",
+  "Name": "Lossless Audio",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:39:10.7280363+00:00",
+  "LastWriteTime": "2018-12-09T18:26:06.6188774+00:00"
+}

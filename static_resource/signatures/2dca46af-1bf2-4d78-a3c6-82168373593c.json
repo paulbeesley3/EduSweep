@@ -1,0 +1,23 @@
+{
+  "Description": "",
+  "Category": "System",
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "log"
+      },
+      "Type": 0,
+      "Guid": "d8b20ec4-ced5-4f79-8979-845a964d173b",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:43:05.2415071+00:00",
+      "LastWriteTime": "2018-12-09T16:43:05.2415071+00:00"
+    }
+  ],
+  "Guid": "2dca46af-1bf2-4d78-a3c6-82168373593c",
+  "Name": "Logs",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:42:50.8921433+00:00",
+  "LastWriteTime": "2018-12-09T17:42:51.42702+00:00"
+}

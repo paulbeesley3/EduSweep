@@ -1,0 +1,60 @@
+{
+  "Description": "TrueType and OpenType font files",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "fnt"
+      },
+      "Type": 0,
+      "Guid": "8cebe413-ddbf-48a8-af3d-6b2f6de8fc65",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:23:58.5004251+00:00",
+      "LastWriteTime": "2018-12-09T16:23:58.5004251+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "fon"
+      },
+      "Type": 0,
+      "Guid": "6ea610e7-c54b-4f50-af50-cc7428cdfbe8",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:24:02.1230348+00:00",
+      "LastWriteTime": "2018-12-09T16:24:02.1230348+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "otf"
+      },
+      "Type": 0,
+      "Guid": "b3ececac-b2b5-41f4-a44a-60f5e0a72a3c",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:24:06.1312915+00:00",
+      "LastWriteTime": "2018-12-09T16:24:06.1312915+00:00"
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "ttf"
+      },
+      "Type": 0,
+      "Guid": "c7bbc837-9c1f-4be0-bc38-b5768371a7f4",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-09T16:24:09.4419828+00:00",
+      "LastWriteTime": "2018-12-09T16:24:09.4419828+00:00"
+    }
+  ],
+  "Guid": "d04f1050-2715-4ed3-9c29-03f3579b38d8",
+  "Name": "Fonts",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-09T16:23:13.3109926+00:00",
+  "LastWriteTime": "2018-12-09T18:12:01.4825014+00:00"
+}

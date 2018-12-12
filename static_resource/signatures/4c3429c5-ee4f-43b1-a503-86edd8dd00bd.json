@@ -1,0 +1,24 @@
+{
+  "Description": "Paint.NET is image and photo editing software for PCs that run Windows.",
+  "Category": "Media",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Name": "",
+      "Extension": {
+        "Name": "pdn"
+      },
+      "Type": 0,
+      "Guid": "232abb8a-5265-4fbd-9bd3-10758b7e891a",
+      "Creator": "MICKEY\\Paul",
+      "CreationTime": "2018-12-08T21:30:13.4103974+00:00",
+      "LastWriteTime": "2018-12-08T21:30:13.4103974+00:00"
+    }
+  ],
+  "Guid": "4c3429c5-ee4f-43b1-a503-86edd8dd00bd",
+  "Name": "Paint.NET Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-08T21:29:39.0116879+00:00",
+  "LastWriteTime": "2018-12-09T18:25:47.3207055+00:00"
+}
