@@ -33,8 +33,8 @@ namespace EduEngine.Detectors
     public class KeywordDetector : IDetector
     {
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private Regex regexp;
-        private List<KeywordSignatureElement> elements = new List<KeywordSignatureElement>();
+        private List<string> keywords = new List<string>();
+
 
         public string Name => "Keyword";
 
@@ -59,12 +59,14 @@ namespace EduEngine.Detectors
             {
                 foreach (var element in matchingElements)
                 {
-                    logger.Trace("Loading element {0}", element.Name);
-                    this.elements.Add((KeywordSignatureElement)element);
-                }
+                    var keywordElement = element as KeywordSignatureElement;
 
-                regexp = InitializeRegex();
-                logger.Debug("Keyword regex initialized as {0}", regexp.ToString());
+                    if (keywordElement != null)
+                    {
+                        logger.Trace("Loading element {0}", element.Name);
+                        keywords.Add(keywordElement.Word);
+                    }                   
+                }
 
                 this.Status = DetectorStatus.INITIALIZED;
             }
@@ -88,49 +90,15 @@ namespace EduEngine.Detectors
                 throw new Exception(message);
             }
 
-            if (regexp.IsMatch(file.Name.ToLower()))
+            var matches = keywords.Where(x => file.Name.ToLower().Contains(x)).ToList();
+
+            if (matches.Count > 0)
             {
                 logger.Trace("Keyword match on {0}", file.AbsolutePath);
-                return (true, new Detection(this.Type, this.Name));
+                return (true, new Detection(this.Type, this.Name, matches[0]));
             }
 
             return (false, null);
-        }
-
-        /*
-         * Create a single regluar expression from the list of keywords
-         */
-        private Regex InitializeRegex()
-        {
-            string regexString;
-            var builder = new StringBuilder(@".*");
-
-            if (elements.Count == 0)
-            {
-                string message = "Attempted to construct regex without elements";
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
-            foreach (var element in elements)
-            {
-                builder.AppendFormat("{0}|", element.Word);
-            }
-
-            /* Remove trailing pipe character */
-            builder.Remove(builder.Length - 1, 1);
-
-            builder.Append(".+");
-            regexString = builder.ToString();
-            
-            if (regexString.Length < 1 && regexString.Equals(@".*.+"))
-            {
-                string message = "Empty regex constructed despite elements being present";
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
-            return new Regex(regexString, RegexOptions.Compiled | RegexOptions.CultureInvariant);
         }
     }
 }
