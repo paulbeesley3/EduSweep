@@ -101,12 +101,13 @@ namespace EduEngine.Reports
             if (this.DetectedItems.Count > 0)
             {
                 sb.Append(@"<table>");
-                sb.Append(@"<tr><th>File Name</th><th>Detection Type</th><th>Owner</th><th>Size</th><th>Path</th></tr>");
+                sb.Append(@"<tr><th>File Name</th><th>Detection Type</th><th>Details</th><th>Owner</th><th>Size</th><th>Path</th></tr>");
                 foreach (FileItem detectedItem in this.DetectedItems)
                 {
                     sb.Append(@"<tr>");
                     sb.Append(@"<td>" + detectedItem.Name + @"</td>");
-                    sb.Append(@"<td>" + detectedItem.Detections.ToString() + @"</td>");
+                    sb.Append(@"<td>" + detectedItem.Detections[0].DetectorName + @"</td>");
+                    sb.Append(@"<td>" + detectedItem.Detections[0].Detail + @"</td>");
                     sb.Append(@"<td>" + detectedItem.Owner + @"</td>");
                     sb.Append(@"<td>" + detectedItem.LengthAsText + @"</td>");
                     sb.Append(@"<td>" + detectedItem.AbsolutePath + @"</td>");
