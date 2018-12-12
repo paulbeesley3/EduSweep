@@ -431,6 +431,7 @@ namespace EduSweep_2.Forms
                 timerResults.Stop();
                 listViewResults.Enabled = true;
                 listViewResults.SetObjects(detections);
+                listViewResults.Sort(olvResultsColumnExtension, SortOrder.Ascending);
 
                 toolStripStatuslabelStatus.Text = "Scan task complete";
             }

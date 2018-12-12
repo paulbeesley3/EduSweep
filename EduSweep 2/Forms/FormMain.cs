@@ -98,6 +98,7 @@ namespace EduSweep_2.Forms
             typedTaskList = new TypedObjectListView<ScanTask>(this.listViewTasks);
 
             LoadTaskList();
+            listViewTasks.Sort(olvColumnStatus, SortOrder.Ascending);
         }
 
         #region UI Refresh
