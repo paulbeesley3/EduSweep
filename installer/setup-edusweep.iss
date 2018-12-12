@@ -68,10 +68,10 @@ Source: "..\EduSweep 2\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignorever
 Source: "..\EduSweep 2\bin\Release\NLog.Windows.Forms.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\ObjectListView.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\lib\trid\TrIDLib-License.txt"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 
 ; File Inspector Component (insp)
 Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
+Source: "..\lib\trid\TrIDLib-License.txt"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 
 ; Default Signatures Component (sig)
 Source: "..\static_resource\signatures\*"; DestDir: "{app}\Signatures"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: sig
