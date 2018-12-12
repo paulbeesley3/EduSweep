@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ace"
+      },
+      "Guid": "0d90c6c9-4410-4748-af59-3ff20a291931",
+      "Type": 0
+    }
+  ],
+  "Guid": "d1016c3c-487d-47fc-ac27-2502da72adb7",
+  "Name": "WinAce",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:04:08.1916395+00:00",
+  "LastWriteTime": "2018-12-12T21:04:20.8418719+00:00"
+}

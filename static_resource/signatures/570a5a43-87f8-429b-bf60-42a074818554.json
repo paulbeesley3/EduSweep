@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ini"
+      },
+      "Guid": "61bdd9b1-37cb-4360-96c0-2f950a730632",
+      "Type": 0
+    }
+  ],
+  "Guid": "570a5a43-87f8-429b-bf60-42a074818554",
+  "Name": "INI Configuration Files",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:58:48.5847447+00:00",
+  "LastWriteTime": "2018-12-12T20:59:03.4410159+00:00"
+}

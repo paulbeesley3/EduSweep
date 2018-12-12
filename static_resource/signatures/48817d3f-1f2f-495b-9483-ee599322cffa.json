@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Adobe Products",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "pdf"
+      },
+      "Guid": "8aee25e3-3bb5-4b68-a6a1-cf7b7217969f",
+      "Type": 0
+    }
+  ],
+  "Guid": "48817d3f-1f2f-495b-9483-ee599322cffa",
+  "Name": "PDF Documents",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:54:59.5565407+00:00",
+  "LastWriteTime": "2018-12-12T20:56:32.338256+00:00"
+}

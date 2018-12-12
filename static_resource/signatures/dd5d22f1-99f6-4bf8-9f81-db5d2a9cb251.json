@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "gz"
+      },
+      "Guid": "2622edcb-e32a-458f-999d-28325b8d9a51",
+      "Type": 0
+    }
+  ],
+  "Guid": "dd5d22f1-99f6-4bf8-9f81-db5d2a9cb251",
+  "Name": "Gzip",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:05:17.8742155+00:00",
+  "LastWriteTime": "2018-12-12T21:06:05.1938131+00:00"
+}

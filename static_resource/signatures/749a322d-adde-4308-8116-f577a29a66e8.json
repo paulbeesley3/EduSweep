@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "zip"
+      },
+      "Guid": "a974201c-734a-4b34-885b-93bfb0f0a069",
+      "Type": 0
+    }
+  ],
+  "Guid": "749a322d-adde-4308-8116-f577a29a66e8",
+  "Name": "Zip",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:03:51.8152598+00:00",
+  "LastWriteTime": "2018-12-12T21:04:07.1616425+00:00"
+}

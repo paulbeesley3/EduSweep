@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Images",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "png"
+      },
+      "Guid": "18c02b8d-e9e8-4872-9a73-6d0b53650627",
+      "Type": 0
+    }
+  ],
+  "Guid": "38d3ef60-0bfb-4b85-b2ef-5aaa846cf0c4",
+  "Name": "PNG Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:00:12.7823807+00:00",
+  "LastWriteTime": "2018-12-12T21:00:24.432572+00:00"
+}

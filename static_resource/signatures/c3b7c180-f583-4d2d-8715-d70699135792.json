@@ -1,0 +1,44 @@
+{
+  "Description": "",
+  "Category": "Images",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "jpg"
+      },
+      "Guid": "2a3d7fc7-a9a3-4a21-b782-c82678664a5a",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "jpeg"
+      },
+      "Guid": "32d26ba6-bf86-46f9-8d3a-2d8be109b12d",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "jp2"
+      },
+      "Guid": "9b13543f-3dc0-40b6-bf11-5594441fa378",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "jpx"
+      },
+      "Guid": "65e808b1-77b1-4a27-a5cb-2a74dbcebbe5",
+      "Type": 0
+    }
+  ],
+  "Guid": "c3b7c180-f583-4d2d-8715-d70699135792",
+  "Name": "JPEG Pictures",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:59:51.0520393+00:00",
+  "LastWriteTime": "2018-12-12T21:02:01.5244484+00:00"
+}

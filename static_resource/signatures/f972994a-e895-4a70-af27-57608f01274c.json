@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Images",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "gif"
+      },
+      "Guid": "0d1a26fe-fef6-44d9-b4d9-c5bab69b4bcf",
+      "Type": 0
+    }
+  ],
+  "Guid": "f972994a-e895-4a70-af27-57608f01274c",
+  "Name": "GIFs",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:00:25.6925961+00:00",
+  "LastWriteTime": "2018-12-12T21:00:39.0830552+00:00"
+}

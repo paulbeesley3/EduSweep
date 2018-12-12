@@ -1,0 +1,20 @@
+{
+  "Description": "Windows-format icon files",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ico"
+      },
+      "Guid": "828740d4-3323-4618-83f3-a34464e05516",
+      "Type": 0
+    }
+  ],
+  "Guid": "6de5a8a3-051e-4460-8459-195988994560",
+  "Name": "Icons",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T20:53:41.3746422+00:00",
+  "LastWriteTime": "2018-12-12T20:54:58.3563581+00:00"
+}

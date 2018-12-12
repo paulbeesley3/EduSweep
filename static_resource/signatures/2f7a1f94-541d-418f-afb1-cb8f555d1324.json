@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Archives",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "rar"
+      },
+      "Guid": "0d1e521e-7130-4850-b1b6-927ccd53581d",
+      "Type": 0
+    }
+  ],
+  "Guid": "2f7a1f94-541d-418f-afb1-cb8f555d1324",
+  "Name": "WinRAR",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-12T21:04:21.8718596+00:00",
+  "LastWriteTime": "2018-12-12T21:04:40.7964518+00:00"
+}
