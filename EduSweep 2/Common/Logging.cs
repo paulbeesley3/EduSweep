@@ -35,13 +35,15 @@ namespace EduSweep_2.Common
         {
             FileName = Path.Combine(AppFolders.LogFolder, "app.log"),
             FileNameKind = FilePathKind.Absolute,
-            DeleteOldFileOnStartup = true
+            DeleteOldFileOnStartup = true,
+            Layout = "${level:upperCase=true}|${logger}|${threadid}|${message}"
         };
 
         private static readonly FileTarget logfileScan = new FileTarget("scan")
         {
             FileName = Path.Combine(AppFolders.LogFolder, "scans", "${shortdate}.log"),
-            FileNameKind = FilePathKind.Absolute
+            FileNameKind = FilePathKind.Absolute,
+            Layout = "${level:upperCase=true}|${logger}|${threadid}|${message}"
         };
 
         private static readonly RichTextBoxTarget logFormScan = new RichTextBoxTarget()
@@ -75,11 +77,13 @@ namespace EduSweep_2.Common
                 Name = "scan_form_buffer"
             };
 
-        /* Lowest level of event that will be logged to the scan or application log files */
-        LogLevel baseLevel;
+            /* Lowest level of event that will be logged to the scan or application log files */
+            LogLevel baseLevel;
 
             /* Lowest level of event that will be logged to the scan window textbox */
             LogLevel formBaseLevel;
+
+            string enhancedLayout = "${level:upperCase=true}|${logger}|${threadid}|${message}|${exception:format=toString}";
 
             switch (minLevel)
             {
@@ -92,8 +96,10 @@ namespace EduSweep_2.Common
                     formBaseLevel = LogLevel.Info;
                     break;
                 case EdUtils.Settings.LogLevel.ENHANCED:
-                    baseLevel = LogLevel.Trace;
+                    baseLevel = LogLevel.Debug;
                     formBaseLevel = LogLevel.Info;
+                    logfileApp.Layout = enhancedLayout;
+                    logfileScan.Layout = enhancedLayout;
                     break;
                 default:
                     baseLevel = LogLevel.Info;

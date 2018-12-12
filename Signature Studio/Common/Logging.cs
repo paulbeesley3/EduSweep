@@ -33,7 +33,8 @@ namespace Signature_Studio.Common
         {
             FileName = Path.Combine(AppFolders.LogFolder, "studio.log"),
             FileNameKind = FilePathKind.Absolute,
-            DeleteOldFileOnStartup = true
+            DeleteOldFileOnStartup = true,
+            Layout = "${level:upperCase=true}|${logger}:${threadid}|${message}|${exception:format=toString}"
         };
 
         private static LoggingConfiguration config = new LoggingConfiguration();

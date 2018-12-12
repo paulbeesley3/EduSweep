@@ -31,9 +31,10 @@ namespace File_Inspector.Common
         /* NLog configuration */
         private static readonly FileTarget logfileApp = new FileTarget("app")
         {
-            FileName = Path.Combine(AppFolders.LogFolder, "inspector_app.txt"),
+            FileName = Path.Combine(AppFolders.LogFolder, "inspector.log"),
             FileNameKind = FilePathKind.Absolute,
-            DeleteOldFileOnStartup = true
+            DeleteOldFileOnStartup = true,
+            Layout = "${level:upperCase=true}|${logger}:${threadid}|${message}|${exception:format=toString}"
         };
 
         private static LoggingConfiguration config = new LoggingConfiguration();
