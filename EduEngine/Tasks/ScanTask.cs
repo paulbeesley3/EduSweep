@@ -96,6 +96,10 @@ namespace EduEngine.Tasks
         [JsonProperty]
         public List<SignatureElement> Elements { get; set; } = new List<SignatureElement>();
 
+        [JsonProperty]
+        public List<string> Tags { get; set; } = new List<string>();
+
+        [JsonConstructor]
         private ScanTask()
         {
             /* Required for deserialization support */
