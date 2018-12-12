@@ -194,7 +194,7 @@ namespace EduSweep_2.Forms
                         else
                         {
                             logger.Debug("Deleting file: {0}", file.AbsolutePath);
-                            File.Delete(file.AbsolutePath);
+                            Quarantine.QuarantineManager.RemoveFile(file, false);
                         }
                     }
                     catch (Exception err)
