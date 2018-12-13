@@ -59,13 +59,11 @@ namespace EduEngine.Detectors
             {
                 foreach (var element in matchingElements)
                 {
-                    var keywordElement = element as KeywordSignatureElement;
-
-                    if (keywordElement != null)
+                    if (element is KeywordSignatureElement keywordElement)
                     {
                         logger.Trace("Loading element {0}", element.Name);
                         keywords.Add(keywordElement.Word);
-                    }                   
+                    }
                 }
 
                 this.Status = DetectorStatus.INITIALIZED;
