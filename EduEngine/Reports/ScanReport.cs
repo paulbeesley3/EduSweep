@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using EduEngine.Tasks;
 using EdUtils.Filesystem;
@@ -101,13 +102,22 @@ namespace EduEngine.Reports
             if (this.DetectedItems.Count > 0)
             {
                 sb.Append(@"<table>");
-                sb.Append(@"<tr><th>File Name</th><th>Detection Type</th><th>Details</th><th>Owner</th><th>Size</th><th>Path</th></tr>");
+                sb.Append(@"<tr><th>File Name</th><th>Triggered Elements</th><th>Owner</th><th>Size</th><th>Path</th></tr>");
                 foreach (FileItem detectedItem in this.DetectedItems)
                 {
                     sb.Append(@"<tr>");
                     sb.Append(@"<td>" + detectedItem.Name + @"</td>");
-                    sb.Append(@"<td>" + detectedItem.Detections[0].DetectorName + @"</td>");
-                    sb.Append(@"<td>" + detectedItem.Detections[0].Detail + @"</td>");
+
+                    var triggerBuilder = new StringBuilder();
+                    foreach (var detection in detectedItem.Detections)
+                    {
+                        triggerBuilder.Append(string.Format("{0}, ", detection.Detail));
+                    }
+
+                    /* Remove trailing comma and space */
+                    triggerBuilder.Length -= 2;
+                    sb.Append(@"<td>" + triggerBuilder.ToString() + @"</td>");
+
                     sb.Append(@"<td>" + detectedItem.Owner + @"</td>");
                     sb.Append(@"<td>" + detectedItem.LengthAsText + @"</td>");
                     sb.Append(@"<td>" + detectedItem.AbsolutePath + @"</td>");
