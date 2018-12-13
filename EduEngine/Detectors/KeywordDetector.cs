@@ -94,8 +94,9 @@ namespace EduEngine.Detectors
 
             if (matches.Count > 0)
             {
+                var matchSummary = string.Join(",", matches);
                 logger.Trace("Keyword match on {0}", file.AbsolutePath);
-                return (true, new Detection(this.Type, this.Name, matches[0]));
+                return (true, new Detection(this.Type, this.Name, matchSummary));
             }
 
             return (false, null);
