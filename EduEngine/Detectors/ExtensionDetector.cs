@@ -33,8 +33,7 @@ namespace EduEngine.Detectors
     public class ExtensionDetector : IDetector
     {
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private Regex regexp;
-        private List<ExtensionSignatureElement> elements = new List<ExtensionSignatureElement>();
+        private List<string> extensions = new List<string>();
 
         public string Name => "Extension";
 
@@ -61,14 +60,14 @@ namespace EduEngine.Detectors
             }
             else
             {
-                foreach (var signatureElement in matchingElements)
+                foreach (var element in matchingElements)
                 {
-                    logger.Trace("Loading element {0}", signatureElement.Name);
-                    this.elements.Add((ExtensionSignatureElement)signatureElement);
+                    if (element is ExtensionSignatureElement extensionElement)
+                    {
+                        logger.Trace("Loading element {0}", element.Name);
+                        extensions.Add(extensionElement.Extension.Name);
+                    }
                 }
-
-                regexp = InitializeRegex();
-                logger.Debug("Extension regex initialized as {0}", regexp.ToString());
 
                 this.Status = DetectorStatus.INITIALIZED;
             }
@@ -92,49 +91,16 @@ namespace EduEngine.Detectors
                 throw new Exception(message);
             }
 
-            if (regexp.IsMatch(file.Name.ToLower()))
+            var matches = extensions.Where(x => file.Extension.Name.Equals(x)).ToList();
+
+            if (matches.Count > 0)
             {
+                var matchSummary = string.Join(",", matches);
                 logger.Trace("Extension match on {0}", file.AbsolutePath);
-                return (true, new Detection(this.Type, this.Name));
+                return (true, new Detection(this.Type, this.Name, matchSummary));
             }
 
             return (false, null);
-        }
-
-        /*
-         * Create a single regluar expression from the list of extensions
-         */
-        private Regex InitializeRegex()
-        {
-            string regexString;
-            var builder = new StringBuilder(@"^.+\.(");
-
-            if (elements.Count == 0)
-            {
-                string message = "Attempted to construct regex without elements";
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
-            foreach (var element in elements)
-            {
-                builder.AppendFormat("({0})|", element.Extension.Name);
-            }
-
-            /* Remove trailing pipe character */
-            builder.Remove(builder.Length - 1, 1);
-
-            builder.Append(")$");
-            regexString = builder.ToString();
-            
-            if (regexString.Length < 1 && regexString.Equals(@"^.+\.()$"))
-            {
-                string message = "Empty regex constructed despite elements being present";
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
-            return new Regex(regexString, RegexOptions.Compiled | RegexOptions.CultureInvariant);
         }
     }
 }
