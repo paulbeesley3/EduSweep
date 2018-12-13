@@ -270,8 +270,8 @@ namespace EduSweep_2.Forms
             this.toolStripButtonDonate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDonate.Image")));
             this.toolStripButtonDonate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDonate.Name = "toolStripButtonDonate";
-            this.toolStripButtonDonate.Size = new System.Drawing.Size(94, 22);
-            this.toolStripButtonDonate.Text = "Send Coffee!";
+            this.toolStripButtonDonate.Size = new System.Drawing.Size(91, 22);
+            this.toolStripButtonDonate.Text = "Send Coffee";
             this.toolStripButtonDonate.ToolTipText = "Say thanks and support further EduSweep development!";
             this.toolStripButtonDonate.Click += new System.EventHandler(this.toolStripButtonDonate_Click);
             // 
