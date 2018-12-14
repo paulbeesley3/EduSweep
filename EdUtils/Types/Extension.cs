@@ -60,9 +60,20 @@ namespace EdUtils.Types
         /// </param>
         public Extension(string name) : this()
         {
-            string formattedName = name.ToLower();
-            formattedName = formattedName.Replace(".", string.Empty);
-            this.Name = formattedName;
+            var components = name.Trim('.').Split('.');
+
+            if (components.Length == 0)
+            {
+                throw new Exception("Extension name cannot be empty");
+            }
+
+            string last = components[components.Length - 1];
+            if (string.IsNullOrWhiteSpace(last))
+            {
+                throw new Exception("Malformed extension name provided");
+            }
+
+            this.Name = last.ToLower();
         }
     }
 }
