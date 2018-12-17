@@ -60,9 +60,15 @@ namespace EdUtils.Types
         /// </param>
         public Extension(string name) : this()
         {
-            string formattedName = name.ToLower();
-            formattedName = formattedName.Replace(".", string.Empty);
-            this.Name = formattedName;
+            var components = name.Trim('.').Split('.');
+
+            if (components.Length == 0)
+            {
+                this.Name = string.Empty;
+            }
+
+            string last = components[components.Length - 1];
+            this.Name = last.ToLower();
         }
     }
 }
