@@ -131,7 +131,7 @@ namespace EduEngine.Scanner
                 }
                 catch (Exception ex)
                 {
-                    logger.Warn(
+                    logger.Trace(
                         ex,
                         "File info retrieval failed for {0}",
                         fileInfo.FullName);
