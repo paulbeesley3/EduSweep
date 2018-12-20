@@ -5,44 +5,48 @@
   "Elements": [
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "fnt"
       },
-      "Type": 0,
-      "Guid": "8cebe413-ddbf-48a8-af3d-6b2f6de8fc65"
+      "Guid": "8cebe413-ddbf-48a8-af3d-6b2f6de8fc65",
+      "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "fon"
       },
-      "Type": 0,
-      "Guid": "6ea610e7-c54b-4f50-af50-cc7428cdfbe8"
+      "Guid": "6ea610e7-c54b-4f50-af50-cc7428cdfbe8",
+      "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "otf"
       },
-      "Type": 0,
-      "Guid": "b3ececac-b2b5-41f4-a44a-60f5e0a72a3c"
+      "Guid": "b3ececac-b2b5-41f4-a44a-60f5e0a72a3c",
+      "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "ttf"
       },
-      "Type": 0,
-      "Guid": "c7bbc837-9c1f-4be0-bc38-b5768371a7f4"
+      "Guid": "c7bbc837-9c1f-4be0-bc38-b5768371a7f4",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "woff"
+      },
+      "Guid": "d9a039dd-82d7-4ea0-8000-17b6945666ad",
+      "Type": 0
     }
   ],
   "Guid": "d04f1050-2715-4ed3-9c29-03f3579b38d8",
   "Name": "Fonts",
   "Creator": "MICKEY\\Paul",
   "CreationTime": "2018-12-09T16:23:13.3109926+00:00",
-  "LastWriteTime": "2018-12-09T18:12:01.4825014+00:00"
+  "LastWriteTime": "2018-12-13T20:48:29.5120639+00:00"
 }

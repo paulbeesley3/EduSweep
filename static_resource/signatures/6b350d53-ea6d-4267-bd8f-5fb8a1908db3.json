@@ -1,36 +1,36 @@
 {
   "Description": "",
-  "Category": "Code",
+  "Category": "Web",
   "Tags": [],
   "Elements": [
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
       "Extension": {
-        "Name": "cpp"
+        "Name": "htm"
       },
-      "Guid": "bb18ea33-42cf-4026-8c44-56a2b9349fdd",
+      "Guid": "6db5a75c-593d-4118-b1a3-2465f3059bba",
       "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
       "Extension": {
-        "Name": "c"
+        "Name": "html"
       },
-      "Guid": "0c762e00-e571-4052-9348-894c2d1bbd0a",
+      "Guid": "ed172bcd-8e88-47fe-b90e-e48e8379b820",
       "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
       "Extension": {
-        "Name": "h"
+        "Name": "xhtml"
       },
-      "Guid": "d75f8be2-73ad-4fe6-8547-e4ada58cf3d1",
+      "Guid": "226ee834-4df7-4a08-b33a-a0efbb72c327",
       "Type": 0
     }
   ],
-  "Guid": "191bbd3b-de32-4588-b011-266969bc5f44",
-  "Name": "C/C++ Source",
+  "Guid": "6b350d53-ea6d-4267-bd8f-5fb8a1908db3",
+  "Name": "HTML Documents",
   "Creator": "MICKEY\\Paul",
-  "CreationTime": "2018-12-09T16:43:39.1982473+00:00",
-  "LastWriteTime": "2018-12-12T20:01:51.981695+00:00"
+  "CreationTime": "2018-12-13T20:42:18.2275586+00:00",
+  "LastWriteTime": "2018-12-13T20:45:54.1663234+00:00"
 }

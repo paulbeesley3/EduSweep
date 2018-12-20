@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Web",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "xml"
+      },
+      "Guid": "d6afbcc8-c06b-4a1c-b9ef-d83bb2372662",
+      "Type": 0
+    }
+  ],
+  "Guid": "c7343310-df49-46b1-8a35-58affd705fcb",
+  "Name": "XML Files",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:46:11.1740327+00:00",
+  "LastWriteTime": "2018-12-13T20:46:20.8906333+00:00"
+}

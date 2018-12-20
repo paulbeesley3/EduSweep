@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "reg"
+      },
+      "Guid": "d613bade-7acf-4a4e-8bb6-c106c8fb4653",
+      "Type": 0
+    }
+  ],
+  "Guid": "f4ded161-e0fd-4e76-a2b5-ea73ea8b829b",
+  "Name": "Registry Fragments",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:39:06.4630637+00:00",
+  "LastWriteTime": "2018-12-13T20:39:36.9367883+00:00"
+}

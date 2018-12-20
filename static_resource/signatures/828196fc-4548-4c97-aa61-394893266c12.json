@@ -1,21 +1,28 @@
 {
-  "Description": "",
+  "Description": "Disc image format based on the ISO-9660 standard",
   "Category": "Archives",
   "Tags": [],
   "Elements": [
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "iso"
       },
-      "Type": 0,
-      "Guid": "a05c0fa7-2b29-48a7-bc05-61fef71507ca"
+      "Guid": "a05c0fa7-2b29-48a7-bc05-61fef71507ca",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "cso"
+      },
+      "Guid": "15ebed51-3182-4b5d-9426-f34f7a72e74c",
+      "Type": 0
     }
   ],
   "Guid": "828196fc-4548-4c97-aa61-394893266c12",
-  "Name": "Disc Images",
+  "Name": "ISOs",
   "Creator": "MICKEY\\Paul",
   "CreationTime": "2018-12-09T17:17:25.6112121+00:00",
-  "LastWriteTime": "2018-12-09T18:24:04.1730386+00:00"
+  "LastWriteTime": "2018-12-12T19:38:29.8763568+00:00"
 }

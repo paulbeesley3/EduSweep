@@ -1,0 +1,20 @@
+{
+  "Description": "JavaScript Object Notation",
+  "Category": "Web",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "json"
+      },
+      "Guid": "40f04dc1-2e86-4d8e-a076-48280d896510",
+      "Type": 0
+    }
+  ],
+  "Guid": "e8a50423-65fb-4810-bd5d-b086259db73e",
+  "Name": "JSON File",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:46:22.2309792+00:00",
+  "LastWriteTime": "2018-12-13T20:47:16.4945904+00:00"
+}

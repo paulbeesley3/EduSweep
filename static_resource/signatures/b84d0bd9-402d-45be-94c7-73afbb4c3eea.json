@@ -1,30 +1,36 @@
 {
-  "Description": "Scripts written in the Javascript language",
+  "Description": "Scripts written in the Javascript language and languages that compile to it",
   "Category": "Code",
   "Tags": [],
   "Elements": [
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "js"
       },
-      "Type": 0,
-      "Guid": "b9e994bf-47a5-481f-92de-bd12650f15bd"
+      "Guid": "b9e994bf-47a5-481f-92de-bd12650f15bd",
+      "Type": 0
     },
     {
       "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
-      "Name": "",
       "Extension": {
         "Name": "jse"
       },
-      "Type": 0,
-      "Guid": "83b514ca-4d32-4606-86e3-77ad0ae5c1a4"
+      "Guid": "83b514ca-4d32-4606-86e3-77ad0ae5c1a4",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "coffee"
+      },
+      "Guid": "3e65c994-06b3-401e-bd2d-b579abfe10b5",
+      "Type": 0
     }
   ],
   "Guid": "b84d0bd9-402d-45be-94c7-73afbb4c3eea",
   "Name": "Javascript Source",
   "Creator": "MICKEY\\Paul",
   "CreationTime": "2018-12-09T16:21:25.5491406+00:00",
-  "LastWriteTime": "2018-12-09T18:13:28.5055234+00:00"
+  "LastWriteTime": "2018-12-13T21:01:41.6559104+00:00"
 }

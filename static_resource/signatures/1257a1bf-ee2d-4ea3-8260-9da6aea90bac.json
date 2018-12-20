@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Scripts",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "ahk"
+      },
+      "Guid": "ce02af7a-8b36-41b1-8488-33dbfee19b7e",
+      "Type": 0
+    }
+  ],
+  "Guid": "1257a1bf-ee2d-4ea3-8260-9da6aea90bac",
+  "Name": "AutoHotKey",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:59:41.9863341+00:00",
+  "LastWriteTime": "2018-12-13T21:00:19.6911703+00:00"
+}

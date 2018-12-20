@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Web",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "chm"
+      },
+      "Guid": "38961f1d-e699-43e1-91a0-bdcd523bbf05",
+      "Type": 0
+    }
+  ],
+  "Guid": "aabc99c4-96cc-4103-914d-75bd5824476a",
+  "Name": "Compressed HTML Help Files",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:42:34.2065228+00:00",
+  "LastWriteTime": "2018-12-13T20:43:07.5268121+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "Description": "A modern image format designed for the web. Designed by Google.",
+  "Category": "Images",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "webp"
+      },
+      "Guid": "2d8446b6-a918-4ec6-b3f3-b70bb64bf32b",
+      "Type": 0
+    }
+  ],
+  "Guid": "10d863c9-0c10-443b-9d82-ee8b159f48dc",
+  "Name": "WebP Images",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:35:08.0319664+00:00",
+  "LastWriteTime": "2018-12-13T20:36:18.4010572+00:00"
+}

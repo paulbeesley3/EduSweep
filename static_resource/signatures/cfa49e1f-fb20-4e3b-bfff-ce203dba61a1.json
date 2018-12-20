@@ -1,0 +1,36 @@
+{
+  "Description": "Virtual Basic Scripts",
+  "Category": "Scripts",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vbs"
+      },
+      "Guid": "4572e707-a7be-4792-979c-916c857b81a0",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "vbe"
+      },
+      "Guid": "205ff8a6-8637-404e-8e6f-28e6f800214b",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "wsf"
+      },
+      "Guid": "d620f022-d465-4f17-8fe5-740b0a9b293f",
+      "Type": 0
+    }
+  ],
+  "Guid": "cfa49e1f-fb20-4e3b-bfff-ce203dba61a1",
+  "Name": "VB Scripts",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:58:32.9474715+00:00",
+  "LastWriteTime": "2018-12-13T20:59:40.3614274+00:00"
+}

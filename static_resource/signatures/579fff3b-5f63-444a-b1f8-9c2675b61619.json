@@ -1,0 +1,28 @@
+{
+  "Description": "",
+  "Category": "Web",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "xslt"
+      },
+      "Guid": "c68070cd-2875-4496-ad81-15ea4cfe062e",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "xsl"
+      },
+      "Guid": "24d9ce23-694e-40e2-b8a4-64c3c9a0d9c8",
+      "Type": 0
+    }
+  ],
+  "Guid": "579fff3b-5f63-444a-b1f8-9c2675b61619",
+  "Name": "XML Transforms",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:57:52.9818372+00:00",
+  "LastWriteTime": "2018-12-13T20:58:10.9112818+00:00"
+}

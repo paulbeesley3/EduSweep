@@ -1,0 +1,20 @@
+{
+  "Description": "",
+  "Category": "Web",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "css"
+      },
+      "Guid": "ad40b2bf-7de1-4e94-a016-19b638889633",
+      "Type": 0
+    }
+  ],
+  "Guid": "e492d818-48ee-4cdc-bbb0-e16ccf88fc8c",
+  "Name": "Style Sheets",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:48:54.9869252+00:00",
+  "LastWriteTime": "2018-12-13T20:49:12.9400156+00:00"
+}

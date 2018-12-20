@@ -1,0 +1,28 @@
+{
+  "Description": "Shortcuts to files or websites",
+  "Category": "System",
+  "Tags": [],
+  "Elements": [
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "lnk"
+      },
+      "Guid": "32c83bdf-ed78-412d-81a3-0ce14d6fbdad",
+      "Type": 0
+    },
+    {
+      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "Extension": {
+        "Name": "url"
+      },
+      "Guid": "d988afc3-2580-4803-a0f0-026c544da268",
+      "Type": 0
+    }
+  ],
+  "Guid": "00587fca-e567-4c34-bc1f-31453bf68899",
+  "Name": "Shortcuts",
+  "Creator": "MICKEY\\Paul",
+  "CreationTime": "2018-12-13T20:19:21.2952661+00:00",
+  "LastWriteTime": "2018-12-13T20:19:47.4694228+00:00"
+}
