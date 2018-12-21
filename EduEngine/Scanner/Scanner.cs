@@ -327,6 +327,10 @@ namespace EduEngine.Scanner
                     logger.Trace("Added {0} to detected files bag", file.AbsolutePath);
                 }
             }
+            else
+            {
+                file.Detections = file.Detections.Union(detections).ToList();
+            }
         }
 
         private void ScanDetectedFile(FileItem file)
