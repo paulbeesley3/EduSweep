@@ -86,19 +86,18 @@ namespace EduEngine.Reports
             sb.Append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> ");
             sb.Append("<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><head><title>\"Task Results - " + Name +
                       "\"</title><meta http-equiv=\"Content-Type\" " + "content=\"text/html;charset=utf-8\"/><style type=\"text/css\">");
-            sb.Append("h2{color:#fff;font-weight:Normal;font-size:100%;background-color:#0f77de;text-indent:.1cm}div.one{color:#000;font-family:\"Segoe UI\";font-size:80%;background-color:#f1f1f1}table,th,td{border:1px solid black;text-align:center;font-family:\"Segoe UI\";}table{width:100%;border-collapse:collapse}th{color:#fff;font-weight:Normal;font-size:100%;background-color:#325c74;height:20px}");
+            sb.Append("h2{color:#fff;font-weight:Normal;font-size:100%;background-color:#000000;text-indent:.1cm}div.one{color:#000;font-family:\"Segoe UI\";font-size:80%;}table,th,td{border:1px solid black;font-family:\"Segoe UI\";}table{width:100%;border-collapse:collapse}th{color:#fff;font-weight:Normal;font-size:100%;background-color:#000000;height:30px}");
             sb.Append("</style></head><body>");
 
             /* Content */
             sb.Append("<div class=\"one\"><h2>Task Summary</h2>");
-            sb.Append(@"Task Started: " + this.Task.LastStartTime.ToShortDateString() + " at " + this.Task.LastStartTime.ToShortTimeString() + "<br/>");
-            sb.Append(@"Task Completed: " + this.Task.LastCompletionTime.ToShortDateString() + " at " + this.Task.LastCompletionTime.ToShortTimeString() + "<br/>");
-            sb.Append(@"Time Taken: " + this.Task.Duration.Hours + " hours, " + this.Task.Duration.Minutes + " minutes, " + this.Task.Duration.Seconds + " seconds<br/>");
+            sb.Append(@"Started: " + this.Task.LastStartTime.ToShortDateString() + " at " + this.Task.LastStartTime.ToShortTimeString() + "<br/>");
+            sb.Append(@"Completed: " + this.Task.LastCompletionTime.ToShortDateString() + " at " + this.Task.LastCompletionTime.ToShortTimeString() + "<br/>");
+            sb.Append(@"Duration: " + this.Task.Duration.Hours + " hours, " + this.Task.Duration.Minutes + " minutes, " + this.Task.Duration.Seconds + " seconds<br/>");
             sb.Append(@"Started By: " + this.Task.LastRunOwner + "<br/>");
-            sb.Append(@"Detected Items: " + this.DetectedItems.Count + "<br/>");
 
             /* For each item that was flagged in the scan, write its path */
-            sb.Append(@"<h2>Detected Items</h2>");
+            sb.Append(@"<h2>Detected Items (" + this.DetectedItems.Count + @")</h2>");
             if (this.DetectedItems.Count > 0)
             {
                 sb.Append(@"<table>");
@@ -120,7 +119,7 @@ namespace EduEngine.Reports
 
                     sb.Append(@"<td>" + detectedItem.Owner + @"</td>");
                     sb.Append(@"<td>" + detectedItem.LengthAsText + @"</td>");
-                    sb.Append(@"<td>" + detectedItem.AbsolutePath + @"</td>");
+                    sb.Append(@"<td>" + detectedItem.ParentDirectoryPath + @"</td>");
                     sb.Append(@"</tr>");
                 }
 
