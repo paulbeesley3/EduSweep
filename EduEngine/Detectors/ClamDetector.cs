@@ -100,7 +100,7 @@ namespace EduEngine.Detectors
                     {
                         string virusName = result.InfectedFiles.Count > 0 ? result.InfectedFiles[0].VirusName : "Unknown";
                         logger.Error("ClamAV reports {0} is infected with {1}", file.AbsolutePath, virusName);
-                        return (true, new Detection(this.Type, this.Name, virusName));
+                        return (true, new Detection(this.Type, this.Name, string.Format("Virus: {0}", virusName)));
                     }
                 } 
             }

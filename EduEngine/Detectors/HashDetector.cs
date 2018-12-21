@@ -106,7 +106,7 @@ namespace EduEngine.Detectors
                     {
                         logger.Trace("Exact match: {0} matches hash of {1}", file.AbsolutePath, element.Name);
                         logger.Trace("Matching SHA1 sum was {0}", sha1);
-                        return (true, new Detection(this.Type, this.Name, element.Name));
+                        return (true, new Detection(this.Type, this.Name, string.Format("Hash matches {0}", element.Name)));
                     }
                 }
             }
