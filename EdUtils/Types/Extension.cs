@@ -61,10 +61,10 @@ namespace EdUtils.Types
         public Extension(string name) : this()
         {
             var components = name.Trim('.').Split('.');
-
             if (components.Length == 0)
             {
                 this.Name = string.Empty;
+                return;
             }
 
             string last = components[components.Length - 1];
