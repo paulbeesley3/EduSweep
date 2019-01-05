@@ -1,2 +1,0 @@
-Introducing the Application Windows
-###################################

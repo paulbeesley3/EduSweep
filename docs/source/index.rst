@@ -6,7 +6,6 @@ EduSweep 2 User Documentation
    :caption: Contents:
 
    install/index
-   beginner/index
    application/index
    perf
    requirements
