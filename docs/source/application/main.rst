@@ -10,6 +10,8 @@ older versions were designed for quickly setting up and running one scan the
 focus is now on creating reusable scan tasks that can be saved and run many
 times with no extra effort.
 
+.. image:: ../../screenshots/main/mainwindow.png
+
 Toolbar Functionality
 ---------------------
 The main toolbar is located just below the window’s title bar, underneath the
