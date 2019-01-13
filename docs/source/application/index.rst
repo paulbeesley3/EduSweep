@@ -1,8 +1,8 @@
-Comprehensive Guides
+Application Guides
 ####################
 
-The **Comprehensive Guides** provide detailed descriptions of each of the windows
-that you will encounter while using EduSweep, as well as notes on their role within the
+The **Application Windows** provide descriptions of each of the windows that you will
+encounter while using EduSweep, as well as notes on their role within the
 overall workflow.
 
 .. toctree::
