@@ -7,6 +7,7 @@ interfaces. This creates a new installer (usually in MSI format) that gets deplo
 workstations instead of the application's original installer.
 
 EduSweep has been designed to accommodate repackaging as far as possible:
+
     - The installer does not create any registry entries beyond those necessary to register
       the application and its uninstaller entry in Windows' list of applications.
 
