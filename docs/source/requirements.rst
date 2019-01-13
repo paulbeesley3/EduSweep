@@ -28,7 +28,7 @@ Windows Server 2008  No            None
 Other Requirements
 ==================
 
-- .NET Framework 4.6 or higher. Included with Windows 10. See the `Microsoft .NET Framework Version Table`_
+- .NET Framework 4.6.2 or higher. Included with Windows 10. See the `Microsoft .NET Framework Version Table`_
   for details of supported OS configurations.
 
 .. _Microsoft .NET Framework Version Table: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies
