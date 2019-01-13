@@ -1,5 +1,5 @@
-Scan Task Management
-####################
+Scan Task Editor
+################
 
 Tasks are a key concept when using EduSweep; they define the directories
 that will be scanned as well as the signatures that will be used to detect unwanted
