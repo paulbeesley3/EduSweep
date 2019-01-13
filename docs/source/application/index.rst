@@ -9,9 +9,8 @@ overall workflow.
    :maxdepth: 1
 
    main
-   scan
    tasks
+   scan
    quarantine
    reports
    inspector
-   tweaks
