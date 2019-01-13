@@ -545,7 +545,7 @@ namespace EduSweep_2.Forms
             this.MainMenuStrip = this.menuStripTop;
             this.MinimumSize = new System.Drawing.Size(718, 250);
             this.Name = "FormMain";
-            this.Text = "EduSweep Beta";
+            this.Text = "EduSweep";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBoxTasks.ResumeLayout(false);
