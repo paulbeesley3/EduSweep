@@ -7,6 +7,7 @@ EduSweep 2 User Documentation
 
    install/index
    application/index
+   concepts/index
    perf
    requirements
    glossary

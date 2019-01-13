@@ -11,9 +11,7 @@ overall workflow.
    main
    scan
    tasks
-   signatures
    quarantine
    reports
    inspector
-   clam
    tweaks

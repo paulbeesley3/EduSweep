@@ -16,8 +16,7 @@ its antivirus scanning functionality.
     files with additional anti-malware software if there is any doubt about their
     security status.
 
-This approach is used for EduSweep
-because it presents three main advantages:
+This approach is used for EduSweep because it presents three main advantages:
 
 - EduSweep does not need to incorporate an antivirus scan engine into its codebase, or
   link against a ClamAV library. This would be quite a heavyweight solution.
@@ -38,7 +37,7 @@ Antivirus Behaviour
 With ClamAV integration enabled EduSweep gains the ability to pass files to the ClamAV
 server for scanning, and to receive information about their state (clean / infected).
 
-When running a scan, only files that have been detected by one or more signatures are
+When running a scan, only files that have been detected by one or more detectors are
 passed to ClamAV for inspection. The EduSweep scan engine does not use ClamAV to check
 every encountered file for viruses.
 
