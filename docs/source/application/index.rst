@@ -14,3 +14,4 @@ overall workflow.
    quarantine
    reports
    inspector
+   settings
