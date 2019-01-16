@@ -1,53 +1,65 @@
 Main Window
 ###########
 
-Once EduSweep has been started, you will be presented with its main window
-(shown below). It is divided into three sections: the toolbar, the task list and
-the tools area; we will look at each of these in turn later.
-First of all, a note for users of the older EduSweep 1.0 releases: you will notice
-that the interface is substantially different to previous versions. While these
-older versions were designed for quickly setting up and running one scan the
-focus is now on creating reusable scan tasks that can be saved and run many
-times with no extra effort.
+Once EduSweep has been started, you will be presented with its main window as
+shown below. This window is used for managing and starting existing Scan Tasks,
+and for accessing other parts of the application such as reports or the Settings
+window.
 
 .. image:: ../../screenshots/main/mainwindow.png
 
-Toolbar Functionality
----------------------
-The main toolbar is located just below the window’s title bar, underneath the
-“Scan Tasks” heading. The toolbar provides a single location for managing
-and starting your scan tasks and (on the right hand side) for accessing more
-information about the software.
+Scan Tasks
+----------
+The scan tasks list displays all existing scan tasks. When EduSweep is first
+installed this list will be empty as no tasks have been created yet. The *New*
+button on the toolbar is used to create a new task that will then be available
+from the list.
 
-These are the most important buttons on the toolbar:
+When a task is selected from the list the *Start Task*, *Edit* and *Delete*
+buttons on the toolbar will be enabled, as long as the task is not currently
+running.
 
-- Start Task: Runs the task that is currently highlighted in the list below.
+.. note::
+  A new task can be created at any time, but a task cannot be started, edited
+  or deleted while it is running.
 
-- New: Opens the New Task window where you can create a new task to use many times.
+The buttons on the toolbar provide the following functionality:
 
-- Edit: Opens the Edit Task window so that the currently selected task can  be modified.
+- Start Task: Opens the *Task Progress* window to run the selected scan task.
 
-- Delete: Removes the currently selected scan task from the list.
+- New: Opens the *New Task* window to create a new scan task.
 
-Task List
----------
-The task list displays your scan tasks; select one from the list and the Start
-Task, Edit and Delete buttons on the toolbar and their corresponding functions
-will become available.
+- Edit: Opens the *Edit Task* window to modify the selected scan task.
 
-A new task can be created at any time, while a task cannot be started, edited or deleted
-while it is running.
+- Clone: Creates a copy of the selected task. The cloned task will be created
+  with a name in the format: *<OldTaskName> (Copy)*. Once cloned, the
+  two tasks are not linked in any way.
 
-Since 2.1.2 scan tasks support ’profile roaming’, that is, your scan tasks will
-be stored within your user profile so that they are available on any computer
-where EduSweep is installed. Changes you make on one computer will be
-seamlessly transferred to any other computer you log on to.
+- Delete: Removes and permanently deletes the selected scan task.
 
-Toolbar
--------
-EduSweep has far more functionality than just basic scanning, however none
-of it should get in the way of what it does best and so the additional features
-have been grouped together at the bottom of the window.
+Menu Bar
+--------
+The main menu bar at the top of the window is used to access other EduSweep
+features.
+
+- File: Just the standard Exit menu item for closing EduSweep.
+- Scan Tasks: Provides the same functionality as the Scan Tasks toolbar buttons.
+- Reports: Access the Report Manager to view and edit reports.
+- Quarantine: Access the Quarantine Manager to view, analyse, remove and restore
+  quarantined files.
+- Tools: Launch the File Inspector and Signature Studio utilities and access
+  application settings.
+- Help: Get information about EduSweep and the project.
+
+.. note::
+  If utilities were not selected during the EduSweep installation then their
+  menu items will be disabled. Reinstall EduSweep to make these available.
+
 
 Status Bar
 ----------
+The status bar at the bottom of the window displays the working directory - the
+location that EduSweep is using for storing its scan tasks, reports, quarantine
+files, settings, logs and custom signatures. By default this will be within the
+roaming profile of the current user. In a portable installation this will be the
+directory containing the main EduSweep executable.
