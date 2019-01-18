@@ -7,9 +7,6 @@
 #define StudioAppName "sigstudio.exe"
 
 [Setup]
-; NOTE: The value of AppId uniquely identifies this application.
-; Do not use the same AppId value in installers for other applications.
-; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{E1D73445-9DBE-42FB-921B-BF68487363FC}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
@@ -28,6 +25,9 @@ SetupIconFile=..\static_resource\edusweep2.ico
 Compression=lzma
 SolidCompression=yes
 
+; Only add install references if not in portable mode
+Uninstallable=not IsTaskSelected('portable')
+
 ; Windows 7 / Server 2008 R2
 MinVersion=6.1.7600
 
@@ -35,7 +35,8 @@ MinVersion=6.1.7600
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked exclusive
+Name: "portable"; Description: "Make installation portable"; Flags: unchecked exclusive
 
 [Types]
 Name: "full"; Description: "Full installation"
@@ -81,11 +82,11 @@ Source: "..\static_resource\signatures\*"; DestDir: "{app}\Signatures"; Flags: i
 Source: "..\Signature Studio\bin\Release\sigstudio.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: studio
 
 [Icons]
-Name: "{group}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"
-Name: "{group}\File Inspector"; Filename: "{app}\{#InspectorAppName}"; Flags: createonlyiffileexists
-Name: "{group}\Signature Studio"; Filename: "{app}\{#StudioAppName}"; Flags: createonlyiffileexists
-Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: not portable
+Name: "{group}\File Inspector"; Filename: "{app}\{#InspectorAppName}"; Flags: createonlyiffileexists; Tasks: not portable
+Name: "{group}\Signature Studio"; Filename: "{app}\{#StudioAppName}"; Flags: createonlyiffileexists; Tasks: not portable
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; Tasks: not portable
+Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon; Tasks: not portable
 
 [Run]
 Filename: "{app}\{#CoreAppName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
