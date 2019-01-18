@@ -1,34 +1,49 @@
 Scan Task Editor
 ################
 
-Tasks are a key concept when using EduSweep; they define the directories
-that will be scanned as well as the signatures that will be used to detect unwanted
-files.Each tasks is self-contained so, for example, several tasks could
-be created with each scanning the same folder yet searching for different file
-types.
+Before scanning a directory with EduSweep a *Scan Task* must be created. The *Task Editor*
+is used for creating tasks that can be reused multiple times. Refer to the `Scan Tasks`_
+document for more information about scan tasks and how they are used in EduSweep.
 
-Since every network has a different layout, EduSweep comes with no tasks
-and one of the first steps taken when setting up the software is to create one.
-This is achieved through the New Task window, accessible from the toolbar on
-the main window.
+Creating a scan task can be broken down into three steps:
 
-Creating a scan task requires 3 pieces of information from you: a name for the
-task, a list of directories to scan and a list of signatures that will be used to
-detect files while the scan is running.
+1. Selecting a name for the task and checking the general settings
+2. Adding one or more directories to scan
+3. Adding one or more *elements* that will be used for detecting files
 
-Naming
-------
-The task’s name is used to uniquely identify it. It does not affect the software in
-any way so give it a name that works for you such as “Year 10 Home Folders”
-so that its purpose is immediately obvious. Once the task has been created,
-it can be selected from the task list on the main window using the name it has
-been given here.
-EduSweep does not currently support tasks with duplicate names. If you give
-the new task the same name as an existing task then the existing task will be
-overwritten.
+Once the task has been created it will be availble from the task list on
+the Main Window.
 
-Scan Locations
---------------
+General Settings
+----------------
+
+.. image:: ../../screenshots/tasks/new-general.png
+
+This first tab is used for setting the name of the task, adjusting the
+parallel scanning modes and choosing whether to enable antivirus
+integration or not.
+
+The task’s name is used to help identify it. Choose a descriptive name such
+as “Year 10 Home Folders” so that its purpose is clear and explains loosely
+which files will be scanned. This name is also used in the title of the report
+that is created after running the task.
+
+The *Parallel Scanning* setting governs the number of threads that EduSweep can use
+while scanning directories. Depending on the structure of the directory tree being
+scanned and the type of storage, this feature can provide a significant speed increase.
+Refer to the `Performance Tuning`_ document for more details on the perrformance considerations
+of this feature.
+
+Antivirus Integration controls the state of virus scanning at the scan task level. There is also
+a global setting for this which works in combination with the task-level setting. This feature
+will only function properly if EduSweep has been configured to communicate with a ClamAV server
+(clamd) instance. Refer to the `ClamAV (Antivirus) Integration`_ document for details.
+
+Target Directories
+------------------
+
+.. image:: ../../screenshots/tasks/new-targets.png
+
 The locations list contains the directories that will be scanned when running
 the task. Directories are scanned recursively - that is, all sub-directories of the
 parent directory will be scanned. If this is not what you want then you can either
@@ -44,3 +59,12 @@ that EduSweep will ignore while scanning. A good example of an exclusion
 would be a very large folder that only administrators have access to because
 the contents are secure and ignoring it will speed up the scan. Tip: You can
 double click a location to edit its path.
+
+Signatures and Elements
+-----------------------
+
+.. image:: ../../screenshots/tasks/new-elements.png
+
+.. _Scan Tasks : ../concepts/tasks.rst
+.. _ClamAV (Antivirus) Integration: ../concepts/clam.rst
+.. _Performance Tuning: ../perf.rst
