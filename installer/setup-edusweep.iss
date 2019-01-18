@@ -86,7 +86,7 @@ Name: "{group}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: not porta
 Name: "{group}\File Inspector"; Filename: "{app}\{#InspectorAppName}"; Flags: createonlyiffileexists; Tasks: not portable
 Name: "{group}\Signature Studio"; Filename: "{app}\{#StudioAppName}"; Flags: createonlyiffileexists; Tasks: not portable
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; Tasks: not portable
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon; Tasks: not portable
+Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\{#CoreAppName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
