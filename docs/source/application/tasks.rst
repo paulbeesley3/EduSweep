@@ -44,21 +44,18 @@ Target Directories
 
 .. image:: ../../screenshots/tasks/new-targets.png
 
-The locations list contains the directories that will be scanned when running
-the task. Directories are scanned recursively - that is, all sub-directories of the
-parent directory will be scanned. If this is not what you want then you can either
-select individual folders within the parent directory or use an exclusion if there
-are only a handful of folders you wish to ignore.
+This tab shows the list of directories that will be scanned when the scan task is
+run.
+
 To add a directory to the list, choose “Add Location” from the toolbar immediately
 above the locations list and a folder browser dialog will be presented so
 that you can select the folder to be scanned. Once you have navigated to the
 desired folder, press “OK” on the dialog (“Select Folder” on Windows Vista and
 above) and it will be added to the list.
-Optionally, you can add some exclusions to the task. An exclusion is a location
-that EduSweep will ignore while scanning. A good example of an exclusion
-would be a very large folder that only administrators have access to because
-the contents are secure and ignoring it will speed up the scan. Tip: You can
-double click a location to edit its path.
+
+By default, any directory added to the list will be scanned recursively; all sub-directories of
+the directory will be scanned, and their sub-directories, and so on. Use the *Toggle Subdirectory
+Scan* button to enable or disable this behaviour.
 
 Signatures and Elements
 -----------------------
