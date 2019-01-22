@@ -35,8 +35,7 @@ MinVersion=6.1.7600
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked exclusive
-Name: "portable"; Description: "Make installation portable"; Flags: unchecked exclusive
+Name: "portable"; Description: "Make installation portable"; Flags: unchecked
 
 [Types]
 Name: "full"; Description: "Full installation"
@@ -69,6 +68,7 @@ Source: "..\EduSweep 2\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignorever
 Source: "..\EduSweep 2\bin\Release\NLog.Windows.Forms.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\ObjectListView.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\static_resource\PORTABLE"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portable
 
 ; File Inspector Component (insp)
 Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
@@ -86,7 +86,6 @@ Name: "{group}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: not porta
 Name: "{group}\File Inspector"; Filename: "{app}\{#InspectorAppName}"; Flags: createonlyiffileexists; Tasks: not portable
 Name: "{group}\Signature Studio"; Filename: "{app}\{#StudioAppName}"; Flags: createonlyiffileexists; Tasks: not portable
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; Tasks: not portable
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#CoreAppName}"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\{#CoreAppName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
