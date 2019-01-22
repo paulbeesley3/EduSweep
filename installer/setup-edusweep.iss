@@ -73,6 +73,7 @@ Source: "..\static_resource\PORTABLE"; DestDir: "{app}"; Flags: ignoreversion; T
 ; File Inspector Component (insp)
 Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 Source: "..\lib\trid\TrIDLib-License.txt"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
+Source: "..\lib\trid\TrIDLib.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 Source: "..\static_resource\trid\triddefs.trd"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
 
 ; Default Signatures Component (sig)
