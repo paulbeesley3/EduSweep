@@ -51,16 +51,14 @@ By default the installer will create Start Menu shortcuts for the EduSweep appli
 any utilities that were selected in the previous step. You may clear the checkbox in order
 to prevent the creation of these shortcuts.
 
-Desktop Shortcut
-----------------
+Portable Installation
+---------------------
 .. image:: ../../screenshots/installer/5.png
 
-The installer offers to create a desktop shortcut for the EduSweep application. This
-option is not enabled by default and the checkbox must be checked manually to enable
-shortcut creation.
-
-Desktop shortcuts for any utilities (e.g. the File Inspector) will not be created even if
-the checkbox is checked.
+The installer offers to install in portable mode. This option is not enabled by default.
+Portable mode will install to the specified folder but without registering the application
+with Windows. Application data will be stored within the install folder instead of in the
+users' roaming profile.
 
 Review Installation Options
 ---------------------------

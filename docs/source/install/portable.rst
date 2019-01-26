@@ -1,5 +1,5 @@
-Creating a Portable Install
-###########################
+Converting to a Portable Install
+################################
 
 A standard installation can be quickly converted to a portable installation.
 

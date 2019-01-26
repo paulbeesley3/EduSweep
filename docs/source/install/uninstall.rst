@@ -26,5 +26,5 @@ the EduSweep application files are installed. For example,
 if the install path is D:\Apps\EduSweep then deleting the EduSweep directory is
 sufficient to completely remov e all program files and user data.
 
-Because user data in a portable installation is stored in the same directory as the
+Because user data in a portable installation is stored under the same directory as the
 program files this data will be completely removed as well.
