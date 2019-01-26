@@ -264,6 +264,7 @@ namespace EduSweep_2.Forms
                     {
                         timerLocations.Start();
                     }
+
                     if (!timerResults.Enabled)
                     {
                         timerResults.Start();
@@ -344,6 +345,7 @@ namespace EduSweep_2.Forms
             {
                 timerLocations.Start();
             }
+
             if (!timerResults.Enabled)
             {
                 timerResults.Start();

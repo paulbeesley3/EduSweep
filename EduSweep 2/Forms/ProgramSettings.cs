@@ -121,6 +121,7 @@ namespace EduSweep_2.Forms
             {
                 bytesToDelete += fi.Length;
             }
+
             logger.Trace("{0} bytes pending deletion", bytesToDelete);
 
             foreach (FileInfo fi in dir.GetFiles())

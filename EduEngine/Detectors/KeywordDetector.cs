@@ -35,7 +35,6 @@ namespace EduEngine.Detectors
         private readonly Logger logger = LogManager.GetCurrentClassLogger();
         private List<string> keywords = new List<string>();
 
-
         public string Name => "Keyword";
 
         public DetectionType Type { get; } = DetectionType.KEYWORD;

@@ -53,7 +53,7 @@ namespace EduSweep_2.Forms
         {
             InitializeComponent();
 
-            this.olvColumnStatus.AspectToStringConverter = delegate (object obj)
+            this.olvColumnStatus.AspectToStringConverter = delegate(object obj)
             {
                 var status = (ScanStatus)obj;
 
@@ -535,7 +535,7 @@ namespace EduSweep_2.Forms
             listViewTasks.UpdateObject(sender);
             SetTaskControlStates();
 
-            if (e.Status == ScanStatus.COMPLETED || e.Status ==  ScanStatus.FAILED)
+            if (e.Status == ScanStatus.COMPLETED || e.Status == ScanStatus.FAILED)
             {
                 if (sender is ScanTask task)
                 {

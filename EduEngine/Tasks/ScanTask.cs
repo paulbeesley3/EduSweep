@@ -111,6 +111,7 @@ namespace EduEngine.Tasks
             {
                 return this._status;
             }
+
             set
             {
                 this._status = value;

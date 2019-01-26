@@ -99,6 +99,7 @@ namespace Signature_Studio.Forms
             {
                 signature.Category = "Uncategorised";
             }
+
             textBoxCategory.Text = signature.Category;
 
             foreach (SignatureElement element in signature.Elements)
