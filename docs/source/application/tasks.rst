@@ -62,6 +62,22 @@ Signatures and Elements
 
 .. image:: ../../screenshots/tasks/new-elements.png
 
+This tab controls what will be detected during the scan, using `Signatures`_ and
+`Signature Elements`_.
+
+The three types of elements (file extensions, filename keywords and specific
+files) can be added to the scan task directly using the toolbar buttons. You can
+also add groups of elements from signatures using the *Browse Signatures...*
+button.
+
+As an example, to detect .exe files and files containing the word "vpn" in their
+name we can add one extension-type element with the value "exe" and one
+keyword-type element with the value "vpn". Alternatively, we could add the
+*Windows Executables* signatures instead of the extension-type element to scan
+for a wider range of executable files all at once.
+
 .. _Scan Tasks : ../concepts/tasks.rst
+.. _Signatures: ../concepts/signatures.rst
+.. _Signature Elements: ../concepts/signatures.rst
 .. _ClamAV (Antivirus) Integration: ../concepts/clam.rst
 .. _Performance Tuning: ../perf.rst
