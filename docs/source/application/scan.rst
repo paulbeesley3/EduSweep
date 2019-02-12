@@ -1,57 +1,60 @@
-Running & Monitoring Scans
-##########################
+Scan Task Progress
+##################
 
-Running a scan task is as easy as selecting it from the list on the main window
-and either clicking the “Start Task” button on the toolbar or double-clicking the
-list entry. The scan window will appear and the scan will begin to run immediately.
-You can pause or stop the scan at any point using the buttons on the
-bottom-right side of the window.
+The Task Progress window displays both the state of a running scan task and the
+results of the scan task when it has completed. When a scan task is started from
+the main window, this scan window will appear and the scan task will begin to
+run immediately.
 
-If you are using Windows 7 then EduSweep will report the progress of the scan
-task in the Windows taskbar. While the task is starting, the taskbar will display
-an indeterminate (marquee) progress bar and when the scan has started a
-regular progress bar is used to inform you of the scan progress even when
-EduSweep is minimised.
+The status bar at the bottom of the window displays the overall status of the
+scan and, when the scan is running, the path of the most recently scanned
+directory. You can use this to check that the scan is proceeding properly and
+is not stalled.
 
-The scan window is made up of four tabs - Overview, Locations, Results and
-Log. The most often used tabs are Overview and Results since these allow the
-scan progress to be observed and the results to be dealt with.
+You can pause or cancel the scan at any point before the target directories have
+all been scanned and the results are being collated for display.
 
-Overview Tab
+The window is made up of three tabs - Task Log, Target Locations and
+Scan Results, with Task Log being the default.
+
+Task Log Tab
 ------------
-This tab contains a list of folders that have been examined during the scan; it
-is useful for tracking the progress of the scan while it is running. By default,
-the list will not scroll automatically but this can be enabled by checking the
-“Automatically scroll this list” checkbox at the bottom of the tab.
+This tab provides logging information about the scan process. Warnings are
+highlighted in an orange font, while critical errors are shown in a
+bold, red font.
 
-Locations Tab
--------------
-The locations tab displays a list of the targeted directories that were chosen
-when creating the scan task. The status of each directory is shown (either Not
-Started, Scanning or Completed) along with the location of the directory which
-will be either on the local machine or a network location.
+The log entries shown here are filtered according to the logging level that is
+configured from the ``Logging`` tab of the ``Settings`` window. When a more
+detailed logging level is selected the log file may contain more entries than
+the log displayed here, to prevent the sheer volume of log output potentially
+slowing down the user interface.
 
-Results Tab
------------
-While the scan is running, EduSweep will add results to the list on this tab in
-real-time. Files shown in this list have matched one or more criteria specified
-by the task’s signatures.
+The log scrolls automatically during the scan as events occur.
+
+Target Locations Tab
+--------------------
+The locations tab displays a list of the top-level directories chosen for
+scanning. This list of directories comes from the scan task.
+
+Each top-level directory also shows whether it will be scanned recursively or
+not.
+
+The locations are shown as a reminder of what was specified in the scan task;
+there are no actions that can be taken from this tab.
+
+Scan Results Tab
+----------------
+Files shown in this list have been marked as detected by one or more detectors
+during the scan process. A file may be detected by more than one detector (for
+example, the extension and filename keyword detectors) but it will be shown only
+once in the list.
+
+For performance reasons, the list is not populated until the scan process has
+completed.
+
 The strip of buttons along the bottom of the tab give you the option of moving
-the currently selected files into quarantine or deleting them. When a single file
-is selected, the “Show File” and “Details” buttons are enabled. These open the
-file’s location in Explorer and show the file inspector for the given file, respectively.
-It is worth noting that while all detected files have matched some portion of a
-signature they should still be reviewed manually before moving them to quarantine
-or deleting them. The software will inevitably detect ’false positives’ when
-keywords are being used. For example, the pornography signature detects
-file names containing the word ’sex’ but this will also match a Word document
-named ’An Investigation into UK Sexual Health Policies’, which could well be a
-piece of coursework. Signatures that detect files based on extension only will
-not return false positives, however.
+the currently selected files into quarantine or deleting them.
 
-Log Tab
--------
-This tab provides detailed information about the scan process. In normal use
-there should be no need to view the information logged here (unless you’re
-curious, of course). The scan log is appended to the end of each report that is
-produced and can be helpful for debugging issues should the need arise.
+When only a single file is selected, the “Show File” and “Details” buttons are
+enabled. These open the file’s location in Explorer and open the File Inspector
+utility, respectively.
