@@ -272,7 +272,6 @@ namespace File_Inspector
             }
 
             toolStripInspector.Enabled = true;
-            toolStripButtonQuarantine.Enabled = true;
             toolStripButtonRefresh.Enabled = true;
             toolStripButtonSums.Enabled = true;
             toolStripButtonDelete.Enabled = true;
@@ -286,39 +285,6 @@ namespace File_Inspector
         {
             OpenFile(fileItem.AbsolutePath);
             ScanFile();
-        }
-
-        private void toolStripButtonQuarantine_Click(object sender, EventArgs e)
-        {
-            var td = new TaskDialog();
-
-            TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-            button |= TaskDialogStandardButtons.Yes;
-            button |= TaskDialogStandardButtons.No;
-            td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-            td.OwnerWindowHandle = this.Handle;
-
-            td.Icon = TaskDialogStandardIcon.Information;
-
-            const string Title = "Quarantine File";
-            string instruction = "The file '" + fileItem.Name + "' will be moved into quarantine";
-            const string Content = "Do you want to continue?";
-
-            td.StandardButtons = button;
-            td.InstructionText = instruction;
-            td.Caption = Title;
-            td.Text = Content;
-
-            TaskDialogResult res = td.Show();
-            if (res == TaskDialogResult.Yes)
-            {
-                if (File.Exists(fileItem.AbsolutePath))
-                {
-                    // Quarantine.Quarantine.moveFileToQuarantine(filePath);
-                }
-
-                Close();
-            }
         }
 
         private void toolStripButtonDelete_Click(object sender, EventArgs e)

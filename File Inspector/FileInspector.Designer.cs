@@ -39,17 +39,16 @@
             this.toolStripButtonOpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonQuarantine = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonDelete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButtonview = new System.Windows.Forms.ToolStripSplitButton();
             this.openWithNotepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSums = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listViewFileTypes = new System.Windows.Forms.ListView();
-            this.columnHeaderExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderConfidence = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStripInspector = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelScan = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpacer = new System.Windows.Forms.ToolStripStatusLabel();
@@ -57,7 +56,6 @@
             this.labelMajorStatus = new System.Windows.Forms.Label();
             this.labelMinorStatus = new System.Windows.Forms.Label();
             this.pictureBoxSummary = new System.Windows.Forms.PictureBox();
-            this.columnHeaderDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxAnalysis.SuspendLayout();
             this.toolStripInspector.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,9 +112,7 @@
             this.toolStripButtonOpen,
             this.toolStripButtonRefresh,
             this.toolStripSeparator1,
-            this.toolStripButtonQuarantine,
             this.toolStripButtonDelete,
-            this.toolStripSeparator2,
             this.toolStripSplitButtonview,
             this.toolStripSeparator3,
             this.toolStripButtonSums});
@@ -151,30 +147,15 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButtonQuarantine
-            // 
-            this.toolStripButtonQuarantine.Enabled = false;
-            this.toolStripButtonQuarantine.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonQuarantine.Image")));
-            this.toolStripButtonQuarantine.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonQuarantine.Name = "toolStripButtonQuarantine";
-            this.toolStripButtonQuarantine.Size = new System.Drawing.Size(86, 22);
-            this.toolStripButtonQuarantine.Text = "Quarantine";
-            this.toolStripButtonQuarantine.Click += new System.EventHandler(this.toolStripButtonQuarantine_Click);
-            // 
             // toolStripButtonDelete
             // 
             this.toolStripButtonDelete.Enabled = false;
             this.toolStripButtonDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDelete.Image")));
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButtonDelete.Text = "Delete";
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(81, 22);
+            this.toolStripButtonDelete.Text = "Delete File";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSplitButtonview
             // 
@@ -192,7 +173,7 @@
             // 
             this.openWithNotepadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openWithNotepadToolStripMenuItem.Image")));
             this.openWithNotepadToolStripMenuItem.Name = "openWithNotepadToolStripMenuItem";
-            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openWithNotepadToolStripMenuItem.Text = "View with Notepad";
             this.openWithNotepadToolStripMenuItem.Click += new System.EventHandler(this.openWithNotepadToolStripMenuItem_Click);
             // 
@@ -238,15 +219,20 @@
             this.listViewFileTypes.UseCompatibleStateImageBehavior = false;
             this.listViewFileTypes.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeaderConfidence
+            // 
+            this.columnHeaderConfidence.Text = "Confidence";
+            this.columnHeaderConfidence.Width = 76;
+            // 
             // columnHeaderExtension
             // 
             this.columnHeaderExtension.Text = "Extension";
             this.columnHeaderExtension.Width = 82;
             // 
-            // columnHeaderConfidence
+            // columnHeaderDescription
             // 
-            this.columnHeaderConfidence.Text = "Confidence";
-            this.columnHeaderConfidence.Width = 76;
+            this.columnHeaderDescription.Text = "Description";
+            this.columnHeaderDescription.Width = 367;
             // 
             // statusStripInspector
             // 
@@ -309,11 +295,6 @@
             this.pictureBoxSummary.TabIndex = 50;
             this.pictureBoxSummary.TabStop = false;
             // 
-            // columnHeaderDescription
-            // 
-            this.columnHeaderDescription.Text = "Description";
-            this.columnHeaderDescription.Width = 367;
-            // 
             // FileInspector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,7 +334,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonOpen;
         private System.Windows.Forms.ToolStripButton toolStripButtonRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButtonQuarantine;
         private System.Windows.Forms.ToolStripButton toolStripButtonDelete;
         private System.Windows.Forms.ListView listViewAnalysis;
         private System.Windows.Forms.ColumnHeader columnHeaderProperty;
@@ -368,7 +348,6 @@
         private System.Windows.Forms.ToolStripProgressBar progressBarTaskProgress;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelScan;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpacer;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Label labelMajorStatus;
         private System.Windows.Forms.Label labelMinorStatus;
         private System.Windows.Forms.PictureBox pictureBoxSummary;
