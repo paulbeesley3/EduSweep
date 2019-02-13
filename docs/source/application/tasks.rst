@@ -72,9 +72,12 @@ button.
 
 As an example, to detect .exe files and files containing the word "vpn" in their
 name we can add one extension-type element with the value "exe" and one
-keyword-type element with the value "vpn". Alternatively, we could add the
-*Windows Executables* signatures instead of the extension-type element to scan
-for a wider range of executable files all at once.
+keyword-type element with the value "vpn".
+
+Alternatively, we could add the *Windows Executables* signatures instead of the
+extension-type element to scan for a wider range of executable files all at once.
+
+.. image:: ../../screenshots/tasks/new-signatures.png
 
 .. _Scan Tasks : ../concepts/tasks.rst
 .. _Signatures: ../concepts/signatures.rst

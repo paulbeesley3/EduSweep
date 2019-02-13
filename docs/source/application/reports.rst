@@ -1,7 +1,7 @@
 Report Manager
 ##############
 
-.. image:: ../../screenshots/reports/reports.png
+.. image:: ../../screenshots/reports/report-viewer.png
 
 A report is produced each time a scan task completes. The report contains a summary of
 the task (start time, duration, etc) along with a list of detected files, if any were

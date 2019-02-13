@@ -7,6 +7,8 @@ Manager lists files that have been stored in quarantine following a scan, or tho
 have been added manually. It also provides functions for deleting and restoring these
 files, as well as local and online resources for finding out more information about them.
 
+.. image:: ../../screenshots/quarantine/quarantine.png
+
 Quarantining Files
 ------------------
 When adding a file to quarantine EduSweep will attempt to move it from its original

@@ -23,6 +23,8 @@ This tab provides logging information about the scan process. Warnings are
 highlighted in an orange font, while critical errors are shown in a
 bold, red font.
 
+.. image:: ../../screenshots/scan/scan-log.png
+
 The log entries shown here are filtered according to the logging level that is
 configured from the ``Logging`` tab of the ``Settings`` window. When a more
 detailed logging level is selected the log file may contain more entries than
@@ -36,6 +38,8 @@ Target Locations Tab
 The locations tab displays a list of the top-level directories chosen for
 scanning. This list of directories comes from the scan task.
 
+.. image:: ../../screenshots/scan/scan-locations.png
+
 Each top-level directory also shows whether it will be scanned recursively or
 not.
 
@@ -48,6 +52,8 @@ Files shown in this list have been marked as detected by one or more detectors
 during the scan process. A file may be detected by more than one detector (for
 example, the extension and filename keyword detectors) but it will be shown only
 once in the list.
+
+.. image:: ../../screenshots/scan/scan-results.png
 
 For performance reasons, the list is not populated until the scan process has
 completed.
