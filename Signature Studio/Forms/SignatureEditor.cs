@@ -196,8 +196,6 @@ namespace Signature_Studio.Forms
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            var dialog = new TaskDialog();
-
             if (editing)
             {
                 /* Prevent duplicate elements by removing existing ones */
@@ -234,22 +232,27 @@ namespace Signature_Studio.Forms
             }
             else
             {
-                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-                button |= TaskDialogStandardButtons.Yes;
-                button |= TaskDialogStandardButtons.No;
+                TaskDialogResult res;
+                using (var dialog = new TaskDialog())
+                {
+                    TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                    button |= TaskDialogStandardButtons.Yes;
+                    button |= TaskDialogStandardButtons.No;
 
-                dialog.Icon = TaskDialogStandardIcon.Information;
+                    dialog.Icon = TaskDialogStandardIcon.Information;
 
-                const string Title = "Signature Editor";
-                string instruction = "Signature saved";
-                const string Content = "Create another?";
+                    const string Title = "Signature Editor";
+                    string instruction = "Signature saved";
+                    const string Content = "Create another?";
 
-                dialog.StandardButtons = button;
-                dialog.InstructionText = instruction;
-                dialog.Caption = Title;
-                dialog.Text = Content;
+                    dialog.StandardButtons = button;
+                    dialog.InstructionText = instruction;
+                    dialog.Caption = Title;
+                    dialog.Text = Content;
 
-                TaskDialogResult res = dialog.Show();
+                    res = dialog.Show();
+                }
+
                 if (res == TaskDialogResult.Yes)
                 {
                     Reset();
@@ -265,29 +268,32 @@ namespace Signature_Studio.Forms
         {
             if (modified)
             {
-                var dialog = new TaskDialog();
+                TaskDialogResult res;
+                using (var dialog = new TaskDialog())
+                {
+                    TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                    button |= TaskDialogStandardButtons.Yes;
+                    button |= TaskDialogStandardButtons.No;
+                    dialog.StartupLocation = TaskDialogStartupLocation.CenterOwner;
+                    dialog.OwnerWindowHandle = this.Handle;
 
-                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-                button |= TaskDialogStandardButtons.Yes;
-                button |= TaskDialogStandardButtons.No;
-                dialog.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-                dialog.OwnerWindowHandle = this.Handle;
+                    dialog.Icon = TaskDialogStandardIcon.Warning;
 
-                dialog.Icon = TaskDialogStandardIcon.Warning;
+                    const string Title = "Signature Editor";
+                    string instruction = "The current signature has unsaved changes which will be " +
+                        "discarded if this window is closed.";
+                    const string Content = "Close the editor and discard these changes?";
 
-                const string Title = "Signature Editor";
-                string instruction = "The current signature has unsaved changes which will be " +
-                    "discarded if this window is closed.";
-                const string Content = "Close the editor and discard these changes?";
+                    dialog.StandardButtons = button;
+                    dialog.InstructionText = instruction;
+                    dialog.Caption = Title;
+                    dialog.Text = Content;
+                    dialog.StartupLocation = TaskDialogStartupLocation.CenterOwner;
+                    dialog.OwnerWindowHandle = this.Handle;
 
-                dialog.StandardButtons = button;
-                dialog.InstructionText = instruction;
-                dialog.Caption = Title;
-                dialog.Text = Content;
-                dialog.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-                dialog.OwnerWindowHandle = this.Handle;
+                    res = dialog.Show();
+                }
 
-                TaskDialogResult res = dialog.Show();
                 if (res == TaskDialogResult.Yes)
                 {
                     Close();

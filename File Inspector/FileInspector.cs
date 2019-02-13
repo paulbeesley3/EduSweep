@@ -289,26 +289,30 @@ namespace File_Inspector
 
         private void toolStripButtonDelete_Click(object sender, EventArgs e)
         {
-            var td = new TaskDialog();
+            TaskDialogResult res;
 
-            TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-            button |= TaskDialogStandardButtons.Yes;
-            button |= TaskDialogStandardButtons.No;
-            td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-            td.OwnerWindowHandle = this.Handle;
+            using (var td = new TaskDialog())
+            {
+                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                button |= TaskDialogStandardButtons.Yes;
+                button |= TaskDialogStandardButtons.No;
+                td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
+                td.OwnerWindowHandle = this.Handle;
 
-            td.Icon = TaskDialogStandardIcon.Information;
+                td.Icon = TaskDialogStandardIcon.Information;
 
-            const string Title = "Delete File";
-            string instruction = "The file '" + fileItem.Name + "' will be permanently deleted";
-            const string Content = "Do you want to continue?";
+                const string Title = "Delete File";
+                string instruction = "The file '" + fileItem.Name + "' will be permanently deleted";
+                const string Content = "Do you want to continue?";
 
-            td.StandardButtons = button;
-            td.InstructionText = instruction;
-            td.Caption = Title;
-            td.Text = Content;
+                td.StandardButtons = button;
+                td.InstructionText = instruction;
+                td.Caption = Title;
+                td.Text = Content;
 
-            TaskDialogResult res = td.Show();
+                res = td.Show();
+            }
+
             if (res == TaskDialogResult.Yes)
             {
                 try

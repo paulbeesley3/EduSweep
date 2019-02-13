@@ -113,24 +113,28 @@ namespace EduSweep_2.Forms
             }
         }
 
-        private void toolStripButtonDelete_Click_1(object sender, EventArgs e)
+        private void toolStripButtonDelete_Click(object sender, EventArgs e)
         {
-            var td = new TaskDialog();
+            TaskDialogResult res;
 
-            TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-            button |= TaskDialogStandardButtons.Yes;
-            button |= TaskDialogStandardButtons.No;
-            td.StandardButtons = button;
-            td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-            td.OwnerWindowHandle = this.Handle;
+            using (var td = new TaskDialog())
+            {
+                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                button |= TaskDialogStandardButtons.Yes;
+                button |= TaskDialogStandardButtons.No;
+                td.StandardButtons = button;
+                td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
+                td.OwnerWindowHandle = this.Handle;
 
-            td.Icon = TaskDialogStandardIcon.Information;
+                td.Icon = TaskDialogStandardIcon.Information;
 
-            td.Caption = "Delete Selected Report?";
-            td.InstructionText = "The selected report will be permanently deleted.";
-            td.Text = "Do you want to continue?";
+                td.Caption = "Delete Selected Report?";
+                td.InstructionText = "The selected report will be permanently deleted.";
+                td.Text = "Do you want to continue?";
 
-            TaskDialogResult res = td.Show();
+                res = td.Show();
+            }
+
             if (res == TaskDialogResult.Yes)
             {
                 try

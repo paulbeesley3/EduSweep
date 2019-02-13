@@ -154,28 +154,32 @@ namespace EduSweep_2.Forms
             const string ErrorMessageDelete = "Unable to delete '{0}.'{1}Detail:{2}";
             const string ErrorMessageRestore = "Unable to restore '{0}'.{1}Detail:{2}";
 
-            var td = new TaskDialog();
+            TaskDialogResult res;
 
-            TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
-            button |= TaskDialogStandardButtons.Yes;
-            button |= TaskDialogStandardButtons.No;
-            td.StandardButtons = button;
-            td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
-            td.OwnerWindowHandle = this.Handle;
+            using (var td = new TaskDialog())
+            {
+                TaskDialogStandardButtons button = TaskDialogStandardButtons.None;
+                button |= TaskDialogStandardButtons.Yes;
+                button |= TaskDialogStandardButtons.No;
+                td.StandardButtons = button;
+                td.StartupLocation = TaskDialogStartupLocation.CenterOwner;
+                td.OwnerWindowHandle = this.Handle;
 
-            td.Icon = TaskDialogStandardIcon.Information;
+                td.Icon = TaskDialogStandardIcon.Information;
 
-            td.InstructionText = action == RemovalAction.DELETE ?
-                string.Format(DialogInstructionDelete, selectedItems.Count) :
-                string.Format(DialogInstructionRestore, selectedItems.Count);
+                td.InstructionText = action == RemovalAction.DELETE ?
+                    string.Format(DialogInstructionDelete, selectedItems.Count) :
+                    string.Format(DialogInstructionRestore, selectedItems.Count);
 
-            td.Caption = action == RemovalAction.DELETE ?
-                "Delete Selected Files?" :
-                "Quarantine Selected Files?";
+                td.Caption = action == RemovalAction.DELETE ?
+                    "Delete Selected Files?" :
+                    "Quarantine Selected Files?";
 
-            td.Text = "Do you want to continue?";
+                td.Text = "Do you want to continue?";
 
-            TaskDialogResult res = td.Show();
+                res = td.Show();
+            }
+
             if (res == TaskDialogResult.Yes)
             {
                 foreach (QuarantineFileItem file in selectedItems)
