@@ -115,9 +115,9 @@ namespace EduEngine.Scanner
             }
             catch (Exception ex)
             {
-                logger.Warn(
+                logger.Trace(
                     ex,
-                    "Content enumeration failed: {0}",
+                    "Cannot list files in {0}",
                     directory.Path);
                 return files;
             }
