@@ -127,49 +127,49 @@ namespace EdUtils.Settings
         /// <summary>
         /// Last-used width of the Report Manager form
         /// </summary>
-        [Option(DefaultValue = 700)]
+        [Option(DefaultValue = 700U)]
         uint TaskReportsWidth { get; set; }
 
         /// <summary>
         /// Last-used height of the Report Manager form
         /// </summary>
-        [Option(DefaultValue = 660)]
+        [Option(DefaultValue = 660U)]
         uint TaskReportsHeight { get; set; }
 
         /// <summary>
         /// Last-used width of the FormMain form
         /// </summary>
-        [Option(DefaultValue = 720)]
+        [Option(DefaultValue = 720U)]
         uint FormMainWidth { get; set; }
 
         /// <summary>
         /// Last-used height of the FormMain form
         /// </summary>
-        [Option(DefaultValue = 340)]
+        [Option(DefaultValue = 340U)]
         uint FormMainHeight { get; set; }
 
         /// <summary>
         /// Last-used width of the Quarantine Manager form
         /// </summary>
-        [Option(DefaultValue = 840)]
+        [Option(DefaultValue = 840U)]
         uint QuarantineManagerWidth { get; set; }
 
         /// <summary>
         /// Last-used height of the Quarantine Manager form
         /// </summary>
-        [Option(DefaultValue = 400)]
+        [Option(DefaultValue = 400U)]
         uint QuarantineManagerHeight { get; set; }
 
         /// <summary>
         /// Last-used width of the Task Progress form
         /// </summary>
-        [Option(DefaultValue = 725)]
+        [Option(DefaultValue = 725U)]
         uint TaskProgressWidth { get; set; }
 
         /// <summary>
         /// Last-used height of the Task Progress form
         /// </summary>
-        [Option(DefaultValue = 470)]
+        [Option(DefaultValue = 470U)]
         uint TaskProgressHeight { get; set; }
 
         #endregion

@@ -90,6 +90,14 @@ namespace EduSweep_2.Forms
         {
             logger.Info("Form opened");
 
+            logger.Trace("Set width to {0}", appSettings.FormMainWidth);
+            logger.Trace("Set height to {0}", appSettings.FormMainHeight);
+            this.Size = new Size()
+            {
+                Width = (int)appSettings.FormMainWidth,
+                Height = (int)appSettings.FormMainHeight
+            };
+
             toolStripStatusLabelWorkDirectory.Text = AppFolders.BaseWorkingFolder;
 
             SetListViewOverlay();

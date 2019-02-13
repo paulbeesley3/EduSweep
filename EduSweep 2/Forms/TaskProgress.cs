@@ -34,6 +34,7 @@ using EduSweep_2.Common;
 using EdUtils.Filesystem;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using NLog;
 using NLog.Windows.Forms;
 
 namespace EduSweep_2.Forms
@@ -60,6 +61,8 @@ namespace EduSweep_2.Forms
         private TypedObjectListView<FileItem> typedResultsView;
 
         private bool resultsTimerStopping = false;
+
+        private Logger logger = LogManager.GetCurrentClassLogger();
 
         private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
         .UseJsonFile(AppFolders.AppSettingsPath)
@@ -90,6 +93,14 @@ namespace EduSweep_2.Forms
         {
             typedLocationView = new TypedObjectListView<DirectoryItem>(this.listViewResults);
             typedResultsView = new TypedObjectListView<FileItem>(this.listViewResults);
+
+            logger.Trace("Set width to {0}", appSettings.TaskProgressWidth);
+            logger.Trace("Set height to {0}", appSettings.TaskProgressHeight);
+            this.Size = new Size()
+            {
+                Width = (int)appSettings.TaskProgressWidth,
+                Height = (int)appSettings.TaskProgressHeight
+            };
 
             listViewLocations.SetObjects(targetDirectories);
             listViewResults.SetObjects(detections);

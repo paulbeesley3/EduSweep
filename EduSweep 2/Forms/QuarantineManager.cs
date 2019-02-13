@@ -70,6 +70,14 @@ namespace EduSweep_2.Forms
             logger.Info("Form opened");
             FormStatus.QuarantineManagerOpen = true;
 
+            logger.Trace("Set width to {0}", appSettings.QuarantineManagerWidth);
+            logger.Trace("Set height to {0}", appSettings.QuarantineManagerHeight);
+            this.Size = new Size()
+            {
+                Width = (int)appSettings.QuarantineManagerWidth,
+                Height = (int)appSettings.QuarantineManagerHeight
+            };
+
             SetListViewOverlay();
 
             typedFileView =

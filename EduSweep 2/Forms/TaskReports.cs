@@ -58,6 +58,14 @@ namespace EduSweep_2.Forms
             FormStatus.ReportManagerOpen = true;
             this.Text = WindowTitleBase;
 
+            logger.Trace("Set width to {0}", appSettings.TaskReportsWidth);
+            logger.Trace("Set height to {0}", appSettings.TaskReportsHeight);
+            this.Size = new Size()
+            {
+                Width = (int)appSettings.TaskReportsWidth,
+                Height = (int)appSettings.TaskReportsHeight
+            };
+
             SetListViewOverlay();
 
             typedReportView = new TypedObjectListView<ScanReport>(this.listViewReports);
