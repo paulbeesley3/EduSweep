@@ -88,9 +88,9 @@ namespace EduEngine.Scanner
             }
             catch (Exception ex)
             {
-                logger.Warn(
+                logger.Info(
                     ex,
-                    "Subdirectory enumeration failed: {0}",
+                    "Subdirectory list could not be obtained for {0}. Any subdirectories will be skipped.",
                     directory.Path);
             }
 
