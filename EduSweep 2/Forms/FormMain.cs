@@ -544,5 +544,11 @@ namespace EduSweep_2.Forms
                 }
             }
         }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            appSettings.FormMainWidth = (uint)Width;
+            appSettings.FormMainHeight = (uint)Height;
+        }
     }
 }

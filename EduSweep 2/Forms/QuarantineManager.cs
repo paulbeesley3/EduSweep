@@ -226,6 +226,9 @@ namespace EduSweep_2.Forms
 
         private void QuarantineManager_FormClosing(object sender, FormClosingEventArgs e)
         {
+            appSettings.QuarantineManagerWidth = (uint)Width;
+            appSettings.QuarantineManagerHeight = (uint)Height;
+
             logger.Info("Form closed");
             FormStatus.QuarantineManagerOpen = false;
         }

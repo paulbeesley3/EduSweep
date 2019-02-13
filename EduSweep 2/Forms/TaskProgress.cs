@@ -138,6 +138,9 @@ namespace EduSweep_2.Forms
 
             /* Unsubscribe from the task's status change event */
             runningTask.StatusChanged -= Task_OnStatusChanged;
+
+            appSettings.TaskProgressWidth = (uint)Width;
+            appSettings.TaskProgressHeight = (uint)Height;
         }
 
         private void HandleRemovalAction(IList<FileItem> selectedItems, RemovalAction action)

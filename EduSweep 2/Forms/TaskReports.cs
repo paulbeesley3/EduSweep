@@ -24,9 +24,12 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using Config.Net;
 using EduEngine.Reports;
 using EduSweep_2.Common;
 using EduSweep_2.Reports;
+using EdUtils.Filesystem;
+using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
 
@@ -40,6 +43,10 @@ namespace EduSweep_2.Forms
         private List<ScanReport> reports;
 
         private TypedObjectListView<ScanReport> typedReportView;
+
+        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
+            .UseJsonFile(AppFolders.AppSettingsPath)
+            .Build();
 
         public TaskReports()
         {
@@ -217,6 +224,8 @@ namespace EduSweep_2.Forms
 
         private void TaskReports_FormClosing(object sender, FormClosingEventArgs e)
         {
+            appSettings.TaskReportsWidth = (uint)Width;
+            appSettings.TaskReportsHeight = (uint)Height;
             FormStatus.ReportManagerOpen = false;
             logger.Info("Form closed");
         }
