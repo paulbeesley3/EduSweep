@@ -7,6 +7,4 @@ elements, ClamAV integration and advanced settings.
 .. toctree::
    :maxdepth: 1
 
-   tasks
-   signatures
    clam
