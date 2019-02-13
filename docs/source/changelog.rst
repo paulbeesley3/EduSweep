@@ -8,8 +8,8 @@ Release notes for each version of EduSweep will be kept in this section.
     were either beta-only or private. This changelog considers 2.2.0 to be its base and
     consequently picks up from 2.2.0 -> 2.6.0.
 
-[2.6.0] - 2018-11-30
-====================
+[2.6.0] - 2019-02
+=================
 
 Added
 -----
