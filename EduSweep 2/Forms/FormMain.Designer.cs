@@ -111,7 +111,7 @@ namespace EduSweep_2.Forms
             this.groupBoxTasks.Controls.Add(this.toolStripScanTasks);
             this.groupBoxTasks.Location = new System.Drawing.Point(12, 70);
             this.groupBoxTasks.Name = "groupBoxTasks";
-            this.groupBoxTasks.Size = new System.Drawing.Size(678, 203);
+            this.groupBoxTasks.Size = new System.Drawing.Size(680, 203);
             this.groupBoxTasks.TabIndex = 2;
             this.groupBoxTasks.TabStop = false;
             this.groupBoxTasks.Text = "Scan Tasks";
@@ -139,7 +139,7 @@ namespace EduSweep_2.Forms
             this.listViewTasks.Location = new System.Drawing.Point(3, 41);
             this.listViewTasks.MultiSelect = false;
             this.listViewTasks.Name = "listViewTasks";
-            this.listViewTasks.Size = new System.Drawing.Size(672, 159);
+            this.listViewTasks.Size = new System.Drawing.Size(674, 159);
             this.listViewTasks.TabIndex = 2;
             this.listViewTasks.UseCompatibleStateImageBehavior = false;
             this.listViewTasks.View = System.Windows.Forms.View.Details;
@@ -201,7 +201,7 @@ namespace EduSweep_2.Forms
             this.toolStripScanTasks.Location = new System.Drawing.Point(3, 16);
             this.toolStripScanTasks.Name = "toolStripScanTasks";
             this.toolStripScanTasks.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripScanTasks.Size = new System.Drawing.Size(672, 25);
+            this.toolStripScanTasks.Size = new System.Drawing.Size(674, 25);
             this.toolStripScanTasks.TabIndex = 1;
             this.toolStripScanTasks.Text = "toolStrip1";
             // 
@@ -281,7 +281,7 @@ namespace EduSweep_2.Forms
             this.toolStripStatusLabelWorkDirectory});
             this.statusStripWorkingDirectory.Location = new System.Drawing.Point(0, 279);
             this.statusStripWorkingDirectory.Name = "statusStripWorkingDirectory";
-            this.statusStripWorkingDirectory.Size = new System.Drawing.Size(702, 22);
+            this.statusStripWorkingDirectory.Size = new System.Drawing.Size(704, 22);
             this.statusStripWorkingDirectory.TabIndex = 4;
             this.statusStripWorkingDirectory.Text = "statusStrip1";
             // 
@@ -304,7 +304,7 @@ namespace EduSweep_2.Forms
             this.menuStripTop.Location = new System.Drawing.Point(0, 0);
             this.menuStripTop.Name = "menuStripTop";
             this.menuStripTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStripTop.Size = new System.Drawing.Size(702, 24);
+            this.menuStripTop.Size = new System.Drawing.Size(704, 24);
             this.menuStripTop.TabIndex = 5;
             this.menuStripTop.Text = "menuStrip1";
             // 
@@ -526,7 +526,7 @@ namespace EduSweep_2.Forms
             // 
             this.pictureBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxHeader.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHeader.Image")));
-            this.pictureBoxHeader.Location = new System.Drawing.Point(0, 28);
+            this.pictureBoxHeader.Location = new System.Drawing.Point(2, 28);
             this.pictureBoxHeader.Name = "pictureBoxHeader";
             this.pictureBoxHeader.Size = new System.Drawing.Size(702, 40);
             this.pictureBoxHeader.TabIndex = 6;
@@ -536,14 +536,14 @@ namespace EduSweep_2.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 301);
+            this.ClientSize = new System.Drawing.Size(704, 301);
             this.Controls.Add(this.pictureBoxHeader);
             this.Controls.Add(this.statusStripWorkingDirectory);
             this.Controls.Add(this.menuStripTop);
             this.Controls.Add(this.groupBoxTasks);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripTop;
-            this.MinimumSize = new System.Drawing.Size(718, 250);
+            this.MinimumSize = new System.Drawing.Size(720, 250);
             this.Name = "FormMain";
             this.Text = "EduSweep";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);

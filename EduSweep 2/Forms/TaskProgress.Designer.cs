@@ -88,7 +88,7 @@
             this.tabControlTask.Location = new System.Drawing.Point(0, 12);
             this.tabControlTask.Name = "tabControlTask";
             this.tabControlTask.SelectedIndex = 0;
-            this.tabControlTask.Size = new System.Drawing.Size(711, 396);
+            this.tabControlTask.Size = new System.Drawing.Size(706, 394);
             this.tabControlTask.TabIndex = 1;
             // 
             // tabPageLog
@@ -102,7 +102,7 @@
             this.tabPageLog.Location = new System.Drawing.Point(4, 22);
             this.tabPageLog.Name = "tabPageLog";
             this.tabPageLog.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLog.Size = new System.Drawing.Size(703, 370);
+            this.tabPageLog.Size = new System.Drawing.Size(698, 368);
             this.tabPageLog.TabIndex = 0;
             this.tabPageLog.Text = "Task Log";
             this.tabPageLog.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.richTextBoxLog.Location = new System.Drawing.Point(13, 74);
             this.richTextBoxLog.Name = "richTextBoxLog";
             this.richTextBoxLog.ReadOnly = true;
-            this.richTextBoxLog.Size = new System.Drawing.Size(679, 260);
+            this.richTextBoxLog.Size = new System.Drawing.Size(674, 258);
             this.richTextBoxLog.TabIndex = 29;
             this.richTextBoxLog.Text = "";
             // 
@@ -123,7 +123,7 @@
             // 
             this.buttonPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPause.Enabled = false;
-            this.buttonPause.Location = new System.Drawing.Point(488, 340);
+            this.buttonPause.Location = new System.Drawing.Point(483, 338);
             this.buttonPause.Name = "buttonPause";
             this.buttonPause.Size = new System.Drawing.Size(99, 23);
             this.buttonPause.TabIndex = 13;
@@ -144,7 +144,7 @@
             // 
             this.buttonStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStop.Enabled = false;
-            this.buttonStop.Location = new System.Drawing.Point(593, 340);
+            this.buttonStop.Location = new System.Drawing.Point(588, 338);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(99, 23);
             this.buttonStop.TabIndex = 14;
@@ -159,7 +159,7 @@
             this.labelLogMinor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogMinor.Location = new System.Drawing.Point(67, 36);
             this.labelLogMinor.Name = "labelLogMinor";
-            this.labelLogMinor.Size = new System.Drawing.Size(606, 32);
+            this.labelLogMinor.Size = new System.Drawing.Size(601, 32);
             this.labelLogMinor.TabIndex = 17;
             this.labelLogMinor.Text = resources.GetString("labelLogMinor.Text");
             // 
@@ -183,7 +183,7 @@
             this.tabPageTargets.Location = new System.Drawing.Point(4, 22);
             this.tabPageTargets.Name = "tabPageTargets";
             this.tabPageTargets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTargets.Size = new System.Drawing.Size(703, 370);
+            this.tabPageTargets.Size = new System.Drawing.Size(698, 368);
             this.tabPageTargets.TabIndex = 1;
             this.tabPageTargets.Text = "Target Locations";
             this.tabPageTargets.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.listViewLocations.FullRowSelect = true;
             this.listViewLocations.Location = new System.Drawing.Point(13, 74);
             this.listViewLocations.Name = "listViewLocations";
-            this.listViewLocations.Size = new System.Drawing.Size(684, 290);
+            this.listViewLocations.Size = new System.Drawing.Size(679, 288);
             this.listViewLocations.TabIndex = 30;
             this.listViewLocations.UseCompatibleStateImageBehavior = false;
             this.listViewLocations.View = System.Windows.Forms.View.Details;
@@ -241,7 +241,7 @@
             this.labelTargetsMinor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTargetsMinor.Location = new System.Drawing.Point(67, 36);
             this.labelTargetsMinor.Name = "labelTargetsMinor";
-            this.labelTargetsMinor.Size = new System.Drawing.Size(625, 32);
+            this.labelTargetsMinor.Size = new System.Drawing.Size(620, 32);
             this.labelTargetsMinor.TabIndex = 19;
             this.labelTargetsMinor.Text = resources.GetString("labelTargetsMinor.Text");
             // 
@@ -268,7 +268,7 @@
             this.tabPageResults.Controls.Add(this.labelResultsMajor);
             this.tabPageResults.Location = new System.Drawing.Point(4, 22);
             this.tabPageResults.Name = "tabPageResults";
-            this.tabPageResults.Size = new System.Drawing.Size(703, 370);
+            this.tabPageResults.Size = new System.Drawing.Size(698, 368);
             this.tabPageResults.TabIndex = 2;
             this.tabPageResults.Text = "Scan Results";
             this.tabPageResults.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.listViewResults.Location = new System.Drawing.Point(13, 74);
             this.listViewResults.MultiSelect = false;
             this.listViewResults.Name = "listViewResults";
-            this.listViewResults.Size = new System.Drawing.Size(679, 252);
+            this.listViewResults.Size = new System.Drawing.Size(674, 250);
             this.listViewResults.TabIndex = 31;
             this.listViewResults.UseCompatibleStateImageBehavior = false;
             this.listViewResults.View = System.Windows.Forms.View.Details;
@@ -339,7 +339,7 @@
             // 
             this.buttonShowFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonShowFile.Enabled = false;
-            this.buttonShowFile.Location = new System.Drawing.Point(223, 332);
+            this.buttonShowFile.Location = new System.Drawing.Point(223, 330);
             this.buttonShowFile.Name = "buttonShowFile";
             this.buttonShowFile.Size = new System.Drawing.Size(99, 23);
             this.buttonShowFile.TabIndex = 7;
@@ -360,7 +360,7 @@
             // 
             this.buttonResultsDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonResultsDetails.Enabled = false;
-            this.buttonResultsDetails.Location = new System.Drawing.Point(593, 332);
+            this.buttonResultsDetails.Location = new System.Drawing.Point(588, 330);
             this.buttonResultsDetails.Name = "buttonResultsDetails";
             this.buttonResultsDetails.Size = new System.Drawing.Size(99, 23);
             this.buttonResultsDetails.TabIndex = 8;
@@ -372,7 +372,7 @@
             // 
             this.buttonResultsDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonResultsDelete.Enabled = false;
-            this.buttonResultsDelete.Location = new System.Drawing.Point(118, 332);
+            this.buttonResultsDelete.Location = new System.Drawing.Point(118, 330);
             this.buttonResultsDelete.Name = "buttonResultsDelete";
             this.buttonResultsDelete.Size = new System.Drawing.Size(99, 23);
             this.buttonResultsDelete.TabIndex = 6;
@@ -384,7 +384,7 @@
             // 
             this.buttonResultsQuarantine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonResultsQuarantine.Enabled = false;
-            this.buttonResultsQuarantine.Location = new System.Drawing.Point(13, 332);
+            this.buttonResultsQuarantine.Location = new System.Drawing.Point(13, 330);
             this.buttonResultsQuarantine.Name = "buttonResultsQuarantine";
             this.buttonResultsQuarantine.Size = new System.Drawing.Size(99, 23);
             this.buttonResultsQuarantine.TabIndex = 5;
@@ -399,7 +399,7 @@
             this.labelResultsMinor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultsMinor.Location = new System.Drawing.Point(67, 36);
             this.labelResultsMinor.Name = "labelResultsMinor";
-            this.labelResultsMinor.Size = new System.Drawing.Size(625, 35);
+            this.labelResultsMinor.Size = new System.Drawing.Size(620, 35);
             this.labelResultsMinor.TabIndex = 19;
             this.labelResultsMinor.Text = resources.GetString("labelResultsMinor.Text");
             // 
@@ -419,15 +419,15 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatuslabelStatus,
             this.toolStripProgressBar});
-            this.statusStrip.Location = new System.Drawing.Point(0, 411);
+            this.statusStrip.Location = new System.Drawing.Point(0, 409);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(714, 22);
+            this.statusStrip.Size = new System.Drawing.Size(709, 22);
             this.statusStrip.TabIndex = 15;
             // 
             // toolStripStatuslabelStatus
             // 
             this.toolStripStatuslabelStatus.Name = "toolStripStatuslabelStatus";
-            this.toolStripStatuslabelStatus.Size = new System.Drawing.Size(597, 17);
+            this.toolStripStatuslabelStatus.Size = new System.Drawing.Size(592, 17);
             this.toolStripStatuslabelStatus.Spring = true;
             this.toolStripStatuslabelStatus.Text = "Status Text";
             this.toolStripStatuslabelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -462,11 +462,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(714, 433);
+            this.ClientSize = new System.Drawing.Size(709, 431);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.tabControlTask);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(724, 472);
+            this.MinimumSize = new System.Drawing.Size(725, 470);
             this.Name = "TaskProgress";
             this.Text = "Task Name";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TaskProgress_FormClosing);

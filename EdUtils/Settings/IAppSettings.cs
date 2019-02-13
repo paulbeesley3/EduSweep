@@ -121,5 +121,57 @@ namespace EdUtils.Settings
         string ProjectDonationLink { get; set; }
 
         #endregion
+
+        #region Forms
+
+        /// <summary>
+        /// Last-used width of the Report Manager form
+        /// </summary>
+        [Option(DefaultValue = 700)]
+        uint TaskReportsWidth { get; set; }
+
+        /// <summary>
+        /// Last-used height of the Report Manager form
+        /// </summary>
+        [Option(DefaultValue = 660)]
+        uint TaskReportsHeight { get; set; }
+
+        /// <summary>
+        /// Last-used width of the FormMain form
+        /// </summary>
+        [Option(DefaultValue = 720)]
+        uint FormMainWidth { get; set; }
+
+        /// <summary>
+        /// Last-used height of the FormMain form
+        /// </summary>
+        [Option(DefaultValue = 340)]
+        uint FormMainHeight { get; set; }
+
+        /// <summary>
+        /// Last-used width of the Quarantine Manager form
+        /// </summary>
+        [Option(DefaultValue = 840)]
+        uint QuarantineManagerWidth { get; set; }
+
+        /// <summary>
+        /// Last-used height of the Quarantine Manager form
+        /// </summary>
+        [Option(DefaultValue = 400)]
+        uint QuarantineManagerHeight { get; set; }
+
+        /// <summary>
+        /// Last-used width of the Task Progress form
+        /// </summary>
+        [Option(DefaultValue = 725)]
+        uint TaskProgressWidth { get; set; }
+
+        /// <summary>
+        /// Last-used height of the Task Progress form
+        /// </summary>
+        [Option(DefaultValue = 470)]
+        uint TaskProgressHeight { get; set; }
+
+        #endregion
     }
 }

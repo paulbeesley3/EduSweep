@@ -71,9 +71,9 @@
             this.statusStripQuarantine.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCount,
             this.toolStripStatusLabelSpacer});
-            this.statusStripQuarantine.Location = new System.Drawing.Point(0, 363);
+            this.statusStripQuarantine.Location = new System.Drawing.Point(0, 339);
             this.statusStripQuarantine.Name = "statusStripQuarantine";
-            this.statusStripQuarantine.Size = new System.Drawing.Size(819, 22);
+            this.statusStripQuarantine.Size = new System.Drawing.Size(824, 22);
             this.statusStripQuarantine.TabIndex = 0;
             this.statusStripQuarantine.Text = "statusStrip1";
             // 
@@ -86,7 +86,7 @@
             // toolStripStatusLabelSpacer
             // 
             this.toolStripStatusLabelSpacer.Name = "toolStripStatusLabelSpacer";
-            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(765, 17);
+            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(770, 17);
             this.toolStripStatusLabelSpacer.Spring = true;
             // 
             // objectListViewFiles
@@ -113,7 +113,7 @@
             this.objectListViewFiles.HasCollapsibleGroups = false;
             this.objectListViewFiles.Location = new System.Drawing.Point(3, 41);
             this.objectListViewFiles.Name = "objectListViewFiles";
-            this.objectListViewFiles.Size = new System.Drawing.Size(789, 250);
+            this.objectListViewFiles.Size = new System.Drawing.Size(794, 226);
             this.objectListViewFiles.TabIndex = 2;
             this.objectListViewFiles.UseCompatibleStateImageBehavior = false;
             this.objectListViewFiles.View = System.Windows.Forms.View.Details;
@@ -176,7 +176,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(741, 30);
+            this.label2.Size = new System.Drawing.Size(746, 30);
             this.label2.TabIndex = 50;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -211,7 +211,7 @@
             this.groupBoxQuarantine.Controls.Add(this.toolStripQuarantine);
             this.groupBoxQuarantine.Location = new System.Drawing.Point(12, 66);
             this.groupBoxQuarantine.Name = "groupBoxQuarantine";
-            this.groupBoxQuarantine.Size = new System.Drawing.Size(795, 294);
+            this.groupBoxQuarantine.Size = new System.Drawing.Size(800, 270);
             this.groupBoxQuarantine.TabIndex = 51;
             this.groupBoxQuarantine.TabStop = false;
             this.groupBoxQuarantine.Text = "Quarantine Files";
@@ -232,7 +232,7 @@
             this.toolStripQuarantine.Location = new System.Drawing.Point(3, 16);
             this.toolStripQuarantine.Name = "toolStripQuarantine";
             this.toolStripQuarantine.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripQuarantine.Size = new System.Drawing.Size(789, 25);
+            this.toolStripQuarantine.Size = new System.Drawing.Size(794, 25);
             this.toolStripQuarantine.TabIndex = 3;
             this.toolStripQuarantine.Text = "toolStrip1";
             // 
@@ -313,7 +313,7 @@
             // 
             this.toolStripMenuItemGoogle.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGoogle.Image")));
             this.toolStripMenuItemGoogle.Name = "toolStripMenuItemGoogle";
-            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(143, 22);
             this.toolStripMenuItemGoogle.Text = "Google";
             this.toolStripMenuItemGoogle.Click += new System.EventHandler(this.toolStripMenuItemGoogle_Click);
             // 
@@ -321,7 +321,7 @@
             // 
             this.toolStripMenuItemBing.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBing.Image")));
             this.toolStripMenuItemBing.Name = "toolStripMenuItemBing";
-            this.toolStripMenuItemBing.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemBing.Size = new System.Drawing.Size(143, 22);
             this.toolStripMenuItemBing.Text = "Bing";
             this.toolStripMenuItemBing.Click += new System.EventHandler(this.toolStripMenuItemBing_Click);
             // 
@@ -329,7 +329,7 @@
             // 
             this.toolStripMenuItemDDG.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemDDG.Image")));
             this.toolStripMenuItemDDG.Name = "toolStripMenuItemDDG";
-            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(143, 22);
             this.toolStripMenuItemDDG.Text = "DuckDuckGo";
             this.toolStripMenuItemDDG.Click += new System.EventHandler(this.toolStripMenuItemDDG_Click);
             // 
@@ -374,14 +374,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 385);
+            this.ClientSize = new System.Drawing.Size(824, 361);
             this.Controls.Add(this.groupBoxQuarantine);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStripQuarantine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(829, 415);
+            this.MinimumSize = new System.Drawing.Size(840, 400);
             this.Name = "QuarantineManager";
             this.Text = "Quarantine Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuarantineManager_FormClosing);
