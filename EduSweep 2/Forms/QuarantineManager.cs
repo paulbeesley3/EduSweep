@@ -81,6 +81,14 @@ namespace EduSweep_2.Forms
                 new TypedObjectListView<QuarantineFileItem>(this.objectListViewFiles);
 
             LoadFilesList();
+
+            if (!string.IsNullOrWhiteSpace(settingsManager.app.QuarantineManagerListViewState))
+            {
+                logger.Debug("Restoring saved list view state");
+                byte[] stateData =
+                    Utils.HexStringToByteArray(settingsManager.app.QuarantineManagerListViewState);
+                objectListViewFiles.RestoreState(stateData);
+            }
         }
 
         private void SetListViewOverlay()
@@ -233,6 +241,11 @@ namespace EduSweep_2.Forms
         {
             settingsManager.app.QuarantineManagerWidth = (uint)Width;
             settingsManager.app.QuarantineManagerHeight = (uint)Height;
+
+            logger.Debug("Storing list view state");
+            byte[] stateData = objectListViewFiles.SaveState();
+            settingsManager.app.QuarantineManagerListViewState =
+                Utils.ByteArrayToHexString(stateData);
 
             logger.Info("Form closed");
             FormStatus.QuarantineManagerOpen = false;

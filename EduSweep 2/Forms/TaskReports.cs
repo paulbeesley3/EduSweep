@@ -27,6 +27,7 @@ using BrightIdeasSoftware;
 using EduEngine.Reports;
 using EduSweep_2.Common;
 using EduSweep_2.Reports;
+using EdUtils.Helpers;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
@@ -67,6 +68,15 @@ namespace EduSweep_2.Forms
             typedReportView = new TypedObjectListView<ScanReport>(this.listViewReports);
 
             LoadReportsList();
+
+            if (!string.IsNullOrWhiteSpace(settingsManager.app.TaskReportsListViewState))
+            {
+                logger.Debug("Restoring saved list view state");
+                byte[] stateData =
+                    Utils.HexStringToByteArray(settingsManager.app.TaskReportsListViewState);
+                listViewReports.RestoreState(stateData);
+            }
+
             logger.Info("Form opened");
         }
 
@@ -230,6 +240,12 @@ namespace EduSweep_2.Forms
         {
             settingsManager.app.TaskReportsWidth = (uint)Width;
             settingsManager.app.TaskReportsHeight = (uint)Height;
+
+            logger.Debug("Storing list view state");
+            byte[] stateData = listViewReports.SaveState();
+            settingsManager.app.TaskReportsListViewState =
+                Utils.ByteArrayToHexString(stateData);
+
             FormStatus.ReportManagerOpen = false;
             logger.Info("Form closed");
         }

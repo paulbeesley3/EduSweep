@@ -102,7 +102,18 @@ namespace EduSweep_2.Forms
             typedTaskList = new TypedObjectListView<ScanTask>(this.listViewTasks);
 
             LoadTaskList();
-            listViewTasks.Sort(olvColumnStatus, SortOrder.Ascending);
+
+            if (!string.IsNullOrWhiteSpace(settingsManager.app.FormMainListViewState))
+            {
+                logger.Debug("Restoring saved list view state");
+                byte[] stateData = 
+                    Utils.HexStringToByteArray(settingsManager.app.FormMainListViewState);
+                listViewTasks.RestoreState(stateData);
+            }
+            else
+            {
+                listViewTasks.Sort(olvColumnStatus, SortOrder.Ascending);
+            }
         }
 
         #region UI Refresh
@@ -553,6 +564,11 @@ namespace EduSweep_2.Forms
         {
             settingsManager.app.FormMainWidth = (uint)Width;
             settingsManager.app.FormMainHeight = (uint)Height;
+
+            logger.Debug("Storing list view state");
+            byte[] stateData = listViewTasks.SaveState();
+            settingsManager.app.FormMainListViewState =
+                Utils.ByteArrayToHexString(stateData);
         }
     }
 }

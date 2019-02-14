@@ -20,6 +20,7 @@
 
 using System;
 using System.IO;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Principal;
 using Config.Net;
 using EdUtils.Filesystem;
@@ -129,6 +130,16 @@ namespace EdUtils.Helpers
             }
 
             return identity.Name;
+        }
+
+        public static byte[] HexStringToByteArray(string str)
+        {
+            return SoapHexBinary.Parse(str).Value;
+        }
+
+        public static string ByteArrayToHexString(byte[] value)
+        {
+            return new SoapHexBinary(value).ToString();
         }
     }
 }

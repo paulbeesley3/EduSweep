@@ -172,6 +172,27 @@ namespace EdUtils.Settings
         [Option(DefaultValue = 470U)]
         uint TaskProgressHeight { get; set; }
 
+        /// <summary>
+        /// State data for tasks list view on FormMain, encoded as a
+        /// hexadecimal string.
+        /// </summary>
+        [Option(DefaultValue = "")]
+        string FormMainListViewState { get; set; }
+
+        /// <summary>
+        /// State data for reports list view in TaskReports, encoded as a
+        /// hexadecimal string.
+        /// </summary>
+        [Option(DefaultValue = "")]
+        string TaskReportsListViewState { get; set; }
+
+        /// <summary>
+        /// State data for files list view in QuarantineManager, encoded
+        /// as a hexadecimal string.
+        /// </summary>
+        [Option(DefaultValue = "")]
+        string QuarantineManagerListViewState { get; set; }
+
         #endregion
     }
 }
