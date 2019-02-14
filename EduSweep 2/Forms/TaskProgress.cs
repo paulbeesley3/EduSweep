@@ -27,7 +27,6 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
-using Config.Net;
 using EduEngine.Scanner;
 using EduEngine.Tasks;
 using EduSweep_2.Common;
@@ -64,9 +63,7 @@ namespace EduSweep_2.Forms
 
         private Logger logger = LogManager.GetCurrentClassLogger();
 
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
+        private SettingsManager settingsManager = SettingsManager.Instance;
 
         public TaskProgress(ScanTask task)
         {
@@ -74,9 +71,9 @@ namespace EduSweep_2.Forms
 
             var scanConfig = new ScannerConfiguration()
             {
-                UseClamAV = appSettings.UseClamAV,
-                ClamAVServerAddress = appSettings.ClamAVServerAddress,
-                ClamAVServerPort = appSettings.ClamAVServerPort
+                UseClamAV = settingsManager.app.UseClamAV,
+                ClamAVServerAddress = settingsManager.app.ClamAVServerAddress,
+                ClamAVServerPort = settingsManager.app.ClamAVServerPort
             };
 
             this.runningTask = task;
@@ -94,12 +91,12 @@ namespace EduSweep_2.Forms
             typedLocationView = new TypedObjectListView<DirectoryItem>(this.listViewResults);
             typedResultsView = new TypedObjectListView<FileItem>(this.listViewResults);
 
-            logger.Trace("Set width to {0}", appSettings.TaskProgressWidth);
-            logger.Trace("Set height to {0}", appSettings.TaskProgressHeight);
+            logger.Trace("Set width to {0}", settingsManager.app.TaskProgressWidth);
+            logger.Trace("Set height to {0}", settingsManager.app.TaskProgressHeight);
             this.Size = new Size()
             {
-                Width = (int)appSettings.TaskProgressWidth,
-                Height = (int)appSettings.TaskProgressHeight
+                Width = (int)settingsManager.app.TaskProgressWidth,
+                Height = (int)settingsManager.app.TaskProgressHeight
             };
 
             listViewLocations.SetObjects(targetDirectories);
@@ -150,8 +147,8 @@ namespace EduSweep_2.Forms
             /* Unsubscribe from the task's status change event */
             runningTask.StatusChanged -= Task_OnStatusChanged;
 
-            appSettings.TaskProgressWidth = (uint)Width;
-            appSettings.TaskProgressHeight = (uint)Height;
+            settingsManager.app.TaskProgressWidth = (uint)Width;
+            settingsManager.app.TaskProgressHeight = (uint)Height;
         }
 
         private void HandleRemovalAction(IList<FileItem> selectedItems, RemovalAction action)

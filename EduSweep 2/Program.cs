@@ -36,7 +36,7 @@ namespace EduSweep_2
     public static class Program
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        private static IAppSettings appSettings;
+        private static SettingsManager settingsManager;
 
         [STAThread]
         public static void Main(string[] args)
@@ -51,9 +51,7 @@ namespace EduSweep_2
             /* Load application-level settings */
             try
             {
-                appSettings = new ConfigurationBuilder<IAppSettings>()
-                    .UseJsonFile(AppFolders.AppSettingsPath)
-                    .Build();
+                settingsManager = SettingsManager.Instance;
             }
             catch (Exception ex)
             {
@@ -71,7 +69,7 @@ namespace EduSweep_2
             }
 
             /* Re-initialize the logger now that the desired log level is known */
-            Logging.Initialize(appSettings.LoggingLevel);
+            Logging.Initialize(settingsManager.app.LoggingLevel);
 
             /* Log some machine info */
             logger.Info("App Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
@@ -96,17 +94,17 @@ namespace EduSweep_2
             AppFolders.CreateWorkingFolders();
 
             /* Remove outdated reports */
-            if (appSettings.ReportCleanupEnabled)
+            if (settingsManager.app.ReportCleanupEnabled)
             {
-                ReportManager.PurgeExpiredReports(appSettings.MaxReportAgeDays);
+                ReportManager.PurgeExpiredReports(settingsManager.app.MaxReportAgeDays);
             }
 
             Quarantine.QuarantineManager.PurgeUntrackedFiles();
 
             /* Remove outdated files from quarantine */
-            if (appSettings.QuarantineCleanupEnabled)
+            if (settingsManager.app.QuarantineCleanupEnabled)
             {
-                Quarantine.QuarantineManager.PurgeExpiredFiles(appSettings.MaxQuarantineFileAgeDays);
+                Quarantine.QuarantineManager.PurgeExpiredFiles(settingsManager.app.MaxQuarantineFileAgeDays);
             }
 
             logger.Info("Launching main user interface");

@@ -24,11 +24,9 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
-using Config.Net;
 using EduEngine.Reports;
 using EduSweep_2.Common;
 using EduSweep_2.Reports;
-using EdUtils.Filesystem;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
@@ -44,9 +42,7 @@ namespace EduSweep_2.Forms
 
         private TypedObjectListView<ScanReport> typedReportView;
 
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-            .UseJsonFile(AppFolders.AppSettingsPath)
-            .Build();
+        private SettingsManager settingsManager = SettingsManager.Instance;
 
         public TaskReports()
         {
@@ -58,12 +54,12 @@ namespace EduSweep_2.Forms
             FormStatus.ReportManagerOpen = true;
             this.Text = WindowTitleBase;
 
-            logger.Trace("Set width to {0}", appSettings.TaskReportsWidth);
-            logger.Trace("Set height to {0}", appSettings.TaskReportsHeight);
+            logger.Trace("Set width to {0}", settingsManager.app.TaskReportsWidth);
+            logger.Trace("Set height to {0}", settingsManager.app.TaskReportsHeight);
             this.Size = new Size()
             {
-                Width = (int)appSettings.TaskReportsWidth,
-                Height = (int)appSettings.TaskReportsHeight
+                Width = (int)settingsManager.app.TaskReportsWidth,
+                Height = (int)settingsManager.app.TaskReportsHeight
             };
 
             SetListViewOverlay();
@@ -232,8 +228,8 @@ namespace EduSweep_2.Forms
 
         private void TaskReports_FormClosing(object sender, FormClosingEventArgs e)
         {
-            appSettings.TaskReportsWidth = (uint)Width;
-            appSettings.TaskReportsHeight = (uint)Height;
+            settingsManager.app.TaskReportsWidth = (uint)Width;
+            settingsManager.app.TaskReportsHeight = (uint)Height;
             FormStatus.ReportManagerOpen = false;
             logger.Info("Form closed");
         }

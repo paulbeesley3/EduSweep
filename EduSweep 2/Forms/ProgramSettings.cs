@@ -22,7 +22,6 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using Config.Net;
 using EduSweep_2.Common;
 using EduSweep_2.Reports;
 using EdUtils.Filesystem;
@@ -38,9 +37,7 @@ namespace EduSweep_2.Forms
         private ClamClient clam;
         private CancellationTokenSource clamServerTestCancelToken = new CancellationTokenSource();
         private Logger logger = LogManager.GetCurrentClassLogger();
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
+        private SettingsManager settingsManager = SettingsManager.Instance;
 
         public ProgramSettings()
         {
@@ -56,37 +53,37 @@ namespace EduSweep_2.Forms
             comboBoxLanguage.SelectedIndex = 0;
 
             /* Set loaded values for logging */
-            comboBoxLogLevel.SelectedIndex = (int)appSettings.LoggingLevel;
+            comboBoxLogLevel.SelectedIndex = (int)settingsManager.app.LoggingLevel;
 
             /* Set loaded values for quarantine */
-            checkBoxQuarantineCleanup.Checked = appSettings.QuarantineCleanupEnabled;
-            quarantineAgeLimit.Value = appSettings.MaxQuarantineFileAgeDays;
+            checkBoxQuarantineCleanup.Checked = settingsManager.app.QuarantineCleanupEnabled;
+            quarantineAgeLimit.Value = settingsManager.app.MaxQuarantineFileAgeDays;
 
             /* Set loaded values for reports */
-            checkBoxReportCleanup.Checked = appSettings.ReportCleanupEnabled;
-            reportAgeLimit.Value = appSettings.MaxReportAgeDays;
+            checkBoxReportCleanup.Checked = settingsManager.app.ReportCleanupEnabled;
+            reportAgeLimit.Value = settingsManager.app.MaxReportAgeDays;
 
             /* Set loaded values for antivirus */
-            checkBoxEnableClamAV.Checked = appSettings.UseClamAV;
-            textBoxServer.Text = appSettings.ClamAVServerAddress;
-            numericUpDownServerPort.Value = appSettings.ClamAVServerPort;
+            checkBoxEnableClamAV.Checked = settingsManager.app.UseClamAV;
+            textBoxServer.Text = settingsManager.app.ClamAVServerAddress;
+            numericUpDownServerPort.Value = settingsManager.app.ClamAVServerPort;
 
             logger.Trace("Finished loading settings");
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            appSettings.LoggingLevel = (EdUtils.Settings.LogLevel)comboBoxLogLevel.SelectedIndex;
+            settingsManager.app.LoggingLevel = (EdUtils.Settings.LogLevel)comboBoxLogLevel.SelectedIndex;
 
-            appSettings.QuarantineCleanupEnabled = checkBoxQuarantineCleanup.Checked;
-            appSettings.MaxQuarantineFileAgeDays = (int)quarantineAgeLimit.Value;
+            settingsManager.app.QuarantineCleanupEnabled = checkBoxQuarantineCleanup.Checked;
+            settingsManager.app.MaxQuarantineFileAgeDays = (int)quarantineAgeLimit.Value;
 
-            appSettings.ReportCleanupEnabled = checkBoxReportCleanup.Checked;
-            appSettings.MaxReportAgeDays = (int)reportAgeLimit.Value;
+            settingsManager.app.ReportCleanupEnabled = checkBoxReportCleanup.Checked;
+            settingsManager.app.MaxReportAgeDays = (int)reportAgeLimit.Value;
 
-            appSettings.UseClamAV = checkBoxEnableClamAV.Checked;
-            appSettings.ClamAVServerAddress = textBoxServer.Text;
-            appSettings.ClamAVServerPort = (long)numericUpDownServerPort.Value;
+            settingsManager.app.UseClamAV = checkBoxEnableClamAV.Checked;
+            settingsManager.app.ClamAVServerAddress = textBoxServer.Text;
+            settingsManager.app.ClamAVServerPort = (long)numericUpDownServerPort.Value;
 
             logger.Info("Saved settings");
             Close();

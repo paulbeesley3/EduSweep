@@ -24,7 +24,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
-using Config.Net;
 using EduEngine.Scanner;
 using EduEngine.Tasks;
 using EduSweep_2.Common;
@@ -39,10 +38,7 @@ namespace EduSweep_2.Forms
 {
     public partial class FormMain : Form
     {
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
-
+        private SettingsManager settingsManager = SettingsManager.Instance;
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         private List<ScanTask> tasks = new List<ScanTask>();
@@ -90,12 +86,12 @@ namespace EduSweep_2.Forms
         {
             logger.Info("Form opened");
 
-            logger.Trace("Set width to {0}", appSettings.FormMainWidth);
-            logger.Trace("Set height to {0}", appSettings.FormMainHeight);
+            logger.Trace("Set width to {0}", settingsManager.app.FormMainWidth);
+            logger.Trace("Set height to {0}", settingsManager.app.FormMainHeight);
             this.Size = new Size()
             {
-                Width = (int)appSettings.FormMainWidth,
-                Height = (int)appSettings.FormMainHeight
+                Width = (int)settingsManager.app.FormMainWidth,
+                Height = (int)settingsManager.app.FormMainHeight
             };
 
             toolStripStatusLabelWorkDirectory.Text = AppFolders.BaseWorkingFolder;
@@ -362,7 +358,7 @@ namespace EduSweep_2.Forms
         private void toolStripButtonDonate_Click(object sender, EventArgs e)
         {
             logger.Debug("Launching web browser for donation (thanks!)");
-            Web.LaunchWebBrowser(appSettings.ProjectDonationLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectDonationLink);
         }
 
         #endregion
@@ -441,25 +437,25 @@ namespace EduSweep_2.Forms
         private void toolStripMenuItemHomepage_Click(object sender, EventArgs e)
         {
             logger.Debug("Launching web browser for project home");
-            Web.LaunchWebBrowser(appSettings.ProjectHomeLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectHomeLink);
         }
 
         private void toolStripMenuItemDocs_Click(object sender, EventArgs e)
         {
             logger.Debug("Launching web browser for documentation");
-            Web.LaunchWebBrowser(appSettings.ProjectDocsLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectDocsLink);
         }
 
         private void toolStripMenuItemIssue_Click(object sender, EventArgs e)
         {
             logger.Debug("Launching web browser for issue reporting");
-            Web.LaunchWebBrowser(appSettings.ProjectIssueLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectIssueLink);
         }
 
         private void toolStripMenuItemUpdates_Click(object sender, EventArgs e)
         {
             logger.Debug("Launching web browser for version check");
-            Web.LaunchWebBrowser(appSettings.ProjectReleasesLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectReleasesLink);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -555,8 +551,8 @@ namespace EduSweep_2.Forms
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            appSettings.FormMainWidth = (uint)Width;
-            appSettings.FormMainHeight = (uint)Height;
+            settingsManager.app.FormMainWidth = (uint)Width;
+            settingsManager.app.FormMainHeight = (uint)Height;
         }
     }
 }

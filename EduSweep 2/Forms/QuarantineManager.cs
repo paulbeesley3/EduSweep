@@ -25,7 +25,6 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
-using Config.Net;
 using EduSweep_2.Common;
 using EduSweep_2.Quarantine;
 using EdUtils.Filesystem;
@@ -39,9 +38,7 @@ namespace EduSweep_2.Forms
 {
     public partial class QuarantineManager : Form
     {
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-            .UseJsonFile(AppFolders.AppSettingsPath)
-            .Build();
+        private SettingsManager settingsManager = SettingsManager.Instance;
 
         private Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -70,12 +67,12 @@ namespace EduSweep_2.Forms
             logger.Info("Form opened");
             FormStatus.QuarantineManagerOpen = true;
 
-            logger.Trace("Set width to {0}", appSettings.QuarantineManagerWidth);
-            logger.Trace("Set height to {0}", appSettings.QuarantineManagerHeight);
+            logger.Trace("Set width to {0}", settingsManager.app.QuarantineManagerWidth);
+            logger.Trace("Set height to {0}", settingsManager.app.QuarantineManagerHeight);
             this.Size = new Size()
             {
-                Width = (int)appSettings.QuarantineManagerWidth,
-                Height = (int)appSettings.QuarantineManagerHeight
+                Width = (int)settingsManager.app.QuarantineManagerWidth,
+                Height = (int)settingsManager.app.QuarantineManagerHeight
             };
 
             SetListViewOverlay();
@@ -234,8 +231,8 @@ namespace EduSweep_2.Forms
 
         private void QuarantineManager_FormClosing(object sender, FormClosingEventArgs e)
         {
-            appSettings.QuarantineManagerWidth = (uint)Width;
-            appSettings.QuarantineManagerHeight = (uint)Height;
+            settingsManager.app.QuarantineManagerWidth = (uint)Width;
+            settingsManager.app.QuarantineManagerHeight = (uint)Height;
 
             logger.Info("Form closed");
             FormStatus.QuarantineManagerOpen = false;

@@ -23,7 +23,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
-using Config.Net;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.Settings;
@@ -36,9 +35,7 @@ namespace Signature_Studio.Forms
     {
         private Logger logger = LogManager.GetCurrentClassLogger();
 
-        private static IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
+        private SettingsManager settingsManager = SettingsManager.Instance;
 
         private List<Signature> availableSignatures = new List<Signature>();
 
@@ -119,17 +116,17 @@ namespace Signature_Studio.Forms
 
         private void projectHomepageToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Web.LaunchWebBrowser(appSettings.ProjectHomeLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectHomeLink);
         }
 
         private void reportAnIssueToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Web.LaunchWebBrowser(appSettings.ProjectIssueLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectIssueLink);
         }
 
         private void documentationToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Web.LaunchWebBrowser(appSettings.ProjectDocsLink);
+            Web.LaunchWebBrowser(settingsManager.app.ProjectDocsLink);
         }
 
         private void toolStripButtonEdit_Click(object sender, System.EventArgs e)

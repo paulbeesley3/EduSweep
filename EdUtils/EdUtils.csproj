@@ -92,6 +92,7 @@
     <Compile Include="Settings\IAppSettings.cs" />
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Settings\LogLevel.cs" />
+    <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Signatures\BinarySignatureElement.cs" />
     <Compile Include="Signatures\ExtensionSignatureElement.cs" />
     <Compile Include="Signatures\KeywordSignatureElement.cs" />
