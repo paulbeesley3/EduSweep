@@ -32,8 +32,6 @@ namespace EdUtils.WindowsPlatform
     /// </summary>
     public static class Icons
     {
-        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-
         [DllImport("shell32.dll")]
         private static extern IntPtr ExtractAssociatedIcon(IntPtr handle, StringBuilder iconPath, out ushort iconPointer);
 

@@ -33,9 +33,6 @@ namespace EdUtils.Helpers
     public class Utils
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private static readonly IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
 
         public enum FileSizes
         {

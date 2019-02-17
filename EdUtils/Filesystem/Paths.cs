@@ -30,9 +30,6 @@ namespace EdUtils.Filesystem
     public static class Paths
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private static readonly IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
 
         public static bool IsDirectory(string path)
         {
