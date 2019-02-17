@@ -44,7 +44,6 @@ Developer Notes
     - Pruned some dead code
     - Config.Net library updated to version 4.13.2
     - Castle.Core library updated to version 4.3.1
-    - NewtonSoft.Json library updated to version 12.0.1
 
 [2.6.0] - 2019-02
 =================
