@@ -1,12 +1,50 @@
 Changelog
 #########
 
-Release notes for each version of EduSweep will be kept in this section.
+Release notes for each stable, released version of EduSweep.
 
-.. note::
-    Prior to 2.6.0 the last public EduSweep release was 2.2.0 and all other releases
-    were either beta-only or private. This changelog considers 2.2.0 to be its base and
-    consequently picks up from 2.2.0 -> 2.6.0.
+[2.6.1] - 2019-02
+=================
+
+Added
+-----
+    - Overview documentation for Signature Studio and File Inspector utilities
+
+Changed
+-------
+    - Automatic cleanup of reports now defaults to OFF (new installs only)
+    - Automatic cleanup of quarantine now defaults to OFF (new installs only)
+    - [Issue #7] List views now remember column sizes, sort order, etc across sessions
+      * This affects the main window, Quarantine Manager and Report Manager
+    - [Issue #10] Resizeable windows now remember their sizes across sessions
+    - Inaccessible directory log entry is now INFO type instead of WARN
+    - Clarified portable mode checkbox actions in installer
+    - Minor interface improvements for Signature Studio tool
+    - Updated and corrected Performance Tuning document
+
+Removed
+-------
+    - File Inspector quarantine button (pending review of how it integrates with main app)
+    - File Inspector "Root Location" info (will be restored in a File Inspector overhaul)
+
+Fixed
+-----
+    - Crash when attempting to save a task, report or signature to a read-only directory
+    - Task Editor "Remove" button for elements does nothing if multiple elements are selected
+    - File Inspector "Quarantine" menu button is broken
+    - Potential configuration file corruption due to race condition
+    - Doubled-up warning messages if a directory is inaccessible
+    - [Issue #2] TaskDialogs are not wrapped with the 'using' directive
+    - Outdated information in installer documentation
+    - Missing screenshots in some documentation pages
+
+Developer Notes
+---------------
+    - Added VS Code Analysis rules to run on build
+    - Pruned some dead code
+    - Config.Net library updated to version 4.13.2
+    - Castle.Core library updated to version 4.3.1
+    - NewtonSoft.Json library updated to version 12.0.1
 
 [2.6.0] - 2019-02
 =================
