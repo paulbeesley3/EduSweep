@@ -9,6 +9,7 @@ EduSweep 2 User Documentation
    application/index
    concepts/index
    inspector/index
+   studio/index
    perf
    requirements
    glossary
