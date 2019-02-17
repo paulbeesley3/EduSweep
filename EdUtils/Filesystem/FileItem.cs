@@ -26,7 +26,6 @@ using EdUtils.Helpers;
 using EdUtils.TrID;
 using EdUtils.Types;
 using Newtonsoft.Json;
-using NLog;
 
 namespace EdUtils.Filesystem
 {

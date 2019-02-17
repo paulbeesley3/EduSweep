@@ -18,15 +18,10 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EduSweep_2.Common
 {
-   public static class FormStatus
+    public static class FormStatus
     {
         public static bool FormMainOpen { get; set; } = false;
         public static bool ProgramSettingsOpen { get; set; } = false;

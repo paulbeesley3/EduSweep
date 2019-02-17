@@ -23,7 +23,6 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using EdUtils.Filesystem;
-using NLog;
 
 namespace EdUtils.WindowsPlatform
 {

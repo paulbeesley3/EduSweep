@@ -21,7 +21,6 @@
 using System;
 using System.IO;
 using Newtonsoft.Json;
-using NLog;
 
 namespace EdUtils.Types
 {

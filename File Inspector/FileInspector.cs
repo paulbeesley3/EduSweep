@@ -2,14 +2,12 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.TrID;
 using EdUtils.WindowsPlatform;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using nClam;
 
 namespace File_Inspector
 {

@@ -22,7 +22,6 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Config.Net;
 using EduSweep_2.Common;
 using EduSweep_2.Forms;
 using EduSweep_2.Reports;

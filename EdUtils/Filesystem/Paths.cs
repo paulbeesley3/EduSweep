@@ -21,8 +21,6 @@
 using System;
 using System.IO;
 using System.Security.Principal;
-using Config.Net;
-using EdUtils.Settings;
 using NLog;
 
 namespace EdUtils.Filesystem

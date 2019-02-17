@@ -22,7 +22,6 @@ using System;
 using System.IO;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
-using EdUtils.Types;
 using Newtonsoft.Json;
 
 namespace EduSweep_2.Quarantine

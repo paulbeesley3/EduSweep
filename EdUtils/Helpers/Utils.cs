@@ -22,9 +22,6 @@ using System;
 using System.IO;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Principal;
-using Config.Net;
-using EdUtils.Filesystem;
-using EdUtils.Settings;
 using NLog;
 
 namespace EdUtils.Helpers

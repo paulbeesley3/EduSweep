@@ -125,6 +125,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\RemovalAction.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Quarantine\QuarantineManager.cs" />
     <Compile Include="Reports\ReportManager.cs" />
     <Compile Include="Tasks\ScanTaskManager.cs" />

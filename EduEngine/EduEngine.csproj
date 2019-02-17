@@ -79,6 +79,7 @@
     <Compile Include="Detectors\KeywordDetector.cs" />
     <Compile Include="Detectors\ExtensionDetector.cs" />
     <Compile Include="Detectors\IDetector.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Scanner\DetectionArgs.cs" />
     <Compile Include="Scanner\EventArgsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

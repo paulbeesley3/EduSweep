@@ -20,14 +20,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
 using EduEngine.Tasks;
 using EdUtils.Filesystem;
 using EdUtils.Types;
 using Newtonsoft.Json;
-using NLog;
 
 namespace EduEngine.Reports
 {

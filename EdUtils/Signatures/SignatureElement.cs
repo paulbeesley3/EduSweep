@@ -21,8 +21,6 @@
 using System;
 using System.Collections.Generic;
 using EdUtils.Detections;
-using EdUtils.Helpers;
-using EdUtils.Types;
 using Newtonsoft.Json;
 
 namespace EdUtils.Signatures
