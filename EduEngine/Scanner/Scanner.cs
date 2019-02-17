@@ -90,7 +90,7 @@ namespace EduEngine.Scanner
             {
                 logger.Info(
                     ex,
-                    "Subdirectory list could not be obtained for {0}. Any subdirectories will be skipped.",
+                    "Subdirectory list could not be obtained for {0}",
                     directory.Path);
             }
 
