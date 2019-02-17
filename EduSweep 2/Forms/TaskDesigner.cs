@@ -421,10 +421,11 @@ namespace EduSweep_2.Forms
 
         private void toolStripButtonRemove_Click(object sender, EventArgs e)
         {
-            SignatureElement element = typedListViewSignatures.SelectedObject;
+            var elements = new List<SignatureElement>(typedListViewSignatures.SelectedObjects);
 
-            task.Elements.Remove(element);
+            task.Elements = task.Elements.Except(elements).ToList();
             listViewElements.SetObjects(task.Elements);
+
             RefreshElementsPage();
             SetSaveButtonState();
         }
