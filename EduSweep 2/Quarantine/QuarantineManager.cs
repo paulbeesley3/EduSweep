@@ -68,9 +68,9 @@ namespace EduSweep_2.Quarantine
         /// <returns></returns>
         public static List<QuarantineFileItem> GetFileItemList()
         {
-            List<QuarantineFileItem> quarantineFiles = new List<QuarantineFileItem>();
+            var quarantineFiles = new List<QuarantineFileItem>();
 
-            DirectoryInfo di = new DirectoryInfo(AppFolders.QuarantineFolder);
+            var di = new DirectoryInfo(AppFolders.QuarantineFolder);
             foreach (FileInfo file in di.GetFiles("*.json", SearchOption.TopDirectoryOnly))
             {
                 quarantineFiles.Add(LoadFileItem(file));
@@ -93,7 +93,7 @@ namespace EduSweep_2.Quarantine
                 logger.Warn(string.Format("Multiple matches ({0}) for '{1}' in quarantine.", matchingFiles.Count(), name));
             }
 
-            DirectoryInfo di = new DirectoryInfo(AppFolders.QuarantineFolder);
+            var di = new DirectoryInfo(AppFolders.QuarantineFolder);
             foreach (FileInfo file in di.GetFiles("*.json", SearchOption.TopDirectoryOnly))
             {
                 if (file.Name.ToLower().Equals(name.ToLower() + ".json"))
@@ -235,7 +235,7 @@ namespace EduSweep_2.Quarantine
         {
             string json;
 
-            using (StreamReader fileReader = new StreamReader(file.FullName, true))
+            using (var fileReader = new StreamReader(file.FullName, true))
             {
                 json = fileReader.ReadToEnd();
             }
