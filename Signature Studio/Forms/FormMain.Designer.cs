@@ -78,8 +78,9 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -95,22 +96,25 @@
             // 
             // projectHomepageToolStripMenuItem
             // 
+            this.projectHomepageToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("projectHomepageToolStripMenuItem.Image")));
             this.projectHomepageToolStripMenuItem.Name = "projectHomepageToolStripMenuItem";
-            this.projectHomepageToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.projectHomepageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.projectHomepageToolStripMenuItem.Text = "Project Homepage";
             this.projectHomepageToolStripMenuItem.Click += new System.EventHandler(this.projectHomepageToolStripMenuItem_Click);
             // 
             // documentationToolStripMenuItem
             // 
+            this.documentationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("documentationToolStripMenuItem.Image")));
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
             this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // reportAnIssueToolStripMenuItem
             // 
+            this.reportAnIssueToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportAnIssueToolStripMenuItem.Image")));
             this.reportAnIssueToolStripMenuItem.Name = "reportAnIssueToolStripMenuItem";
-            this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reportAnIssueToolStripMenuItem.Text = "Report an Issue";
             this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIssueToolStripMenuItem_Click);
             // 
