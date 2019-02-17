@@ -227,7 +227,7 @@ namespace EduEngine.Scanner
                     break;
                 case ParallelLevel.NONE:
                     logger.Info("Operating in single-threaded mode");
-                    parallelOptions.MaxDegreeOfParallelism = (int)Math.Max(1, physicalCores / 2.0);
+                    parallelOptions.MaxDegreeOfParallelism = 1;
                     break;
             }
 
