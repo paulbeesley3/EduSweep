@@ -50,11 +50,6 @@ namespace EdUtils.Filesystem
             this.Path = path;
         }
 
-        public Uri ToUri()
-        {
-            return new Uri(Path);
-        }
-
         public bool Equals(DirectoryItem other)
         {
             return other.Path == this.Path;
