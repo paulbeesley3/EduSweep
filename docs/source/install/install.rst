@@ -60,6 +60,9 @@ Portable mode will install to the specified folder but without registering the a
 with Windows. Application data will be stored within the install folder instead of in the
 users' roaming profile.
 
+Note that the portable mode option also overrides the Start Menu option from the previous
+page. If portable mode is enabled then no shortcuts will be created in the Start Menu.
+
 Review Installation Options
 ---------------------------
 .. image:: ../../screenshots/installer/6.png
