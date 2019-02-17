@@ -66,28 +66,6 @@ namespace EdUtils.Filesystem
             }
         }
 
-        [JsonIgnore]
-        public string RootLocation
-        {
-            get
-            {
-                try
-                {
-                    var root = new Uri(string.Format("file://{0}", AbsolutePath));
-                    if (root.Host != string.Empty)
-                    {
-                        return root.Host;
-                    }
-
-                    return Environment.MachineName;
-                }
-                catch
-                {
-                    return "Indeterminate";
-                }
-            }
-        }
-
         [JsonProperty]
         public DateTime LastAccessTime { get; private set; }
 

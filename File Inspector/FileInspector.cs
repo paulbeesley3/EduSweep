@@ -168,16 +168,6 @@ namespace File_Inspector
             attributes.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { attributes });
 
-            /* Root */
-            var pathRoot = new ListViewItem("Host");
-            var pathRootValue = new ListViewItem.ListViewSubItem
-                                                             {
-                                                                 Text = fileItem.RootLocation
-                                                             };
-            pathRoot.SubItems.Add(pathRootValue);
-            pathRoot.SubItems.Add("No");
-            BeginInvoke(addListViewItemDelegate, new object[] { pathRoot });
-
             /* Owner */
             var owner = new ListViewItem("Owner");
             var ownerValue = new ListViewItem.ListViewSubItem
