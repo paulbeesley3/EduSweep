@@ -44,8 +44,18 @@ namespace EduSweep_2
             Application.SetCompatibleTextRenderingDefault(false);
 
             /* Set up the logging framework */
-            Logging.Initialize(EdUtils.Settings.LogLevel.STANDARD);
+            Logging.Initialize(EdUtils.Settings.LogLevel.ENHANCED);
             logger.Info("Application started");
+
+            /* Make sure there is write access to the working folder */
+            if (!AppFolders.WorkingFolderIsWritable())
+            {
+                logger.Error("Working directory was not writable. Terminating...");
+                return;
+            }
+
+            /* Ensure that required working folders are present */
+            AppFolders.CreateWorkingFolders();
 
             /* Load application-level settings */
             try
@@ -81,16 +91,6 @@ namespace EduSweep_2
             logger.Info("System Memory: {0}", WMI.QueryInstalledMemory());
             logger.Info("BIOS ID: {0}", WMI.QueryInstalledBIOS());
             logger.Info("System Role: {0}", WMI.QueryDomainRole());
-
-            /* Make sure there is write access to the working folder */
-            if (!AppFolders.WorkingFolderIsWritable())
-            {
-                logger.Error("Working directory was not writable. Terminating...");
-                return;
-            }
-
-            /* Ensure that required working folders are present */
-            AppFolders.CreateWorkingFolders();
 
             /* Remove outdated reports */
             if (settingsManager.app.ReportCleanupEnabled)
