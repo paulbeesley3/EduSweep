@@ -31,7 +31,7 @@ that is created after running the task.
 The *Parallel Scanning* setting governs the number of threads that EduSweep can use
 while scanning directories. Depending on the structure of the directory tree being
 scanned and the type of storage, this feature can provide a significant speed increase.
-Refer to the `Performance Tuning`_ document for more details on the perrformance considerations
+Refer to the `Performance Tuning`_ document for more details on the performance considerations
 of this feature.
 
 Antivirus Integration controls the state of virus scanning at the scan task level. There is also
