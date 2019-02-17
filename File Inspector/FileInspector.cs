@@ -5,7 +5,6 @@ using System.IO;
 using System.Windows.Forms;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
-using EdUtils.TrID;
 using EdUtils.WindowsPlatform;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
@@ -73,8 +72,6 @@ namespace File_Inspector
         {
             addLVI addListViewItemDelegate = AddListViewItem;
 
-            TrIDLib.AnalyseFile(fileItem);
-
             /* Full path */
             var fullPath = new ListViewItem("Location");
             var fullPathValue = new ListViewItem.ListViewSubItem
@@ -99,14 +96,7 @@ namespace File_Inspector
             var detectedExtension = new ListViewItem("Detected Extension");
             var detectedExtensionValue = new ListViewItem.ListViewSubItem();
 
-            if (fileItem.TridExtensions.Count > 0)
-            {
-                detectedExtensionValue.Text = fileItem.TridExtensions[0].DottedName;
-            }
-            else
-            {
-                detectedExtensionValue.Text = "Unknown";
-            }
+            detectedExtensionValue.Text = fileItem.MIMEType;
 
             detectedExtension.SubItems.Add(detectedExtensionValue);
             detectedExtension.SubItems.Add("No");
@@ -223,36 +213,6 @@ namespace File_Inspector
 
         private void backgroundWorkerPopulate_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            double totalPoints = 0;
-
-            /* The total number of points must be summed first so that percentages can be used later */
-            foreach (var extension in fileItem.TridExtensions)
-            {
-                totalPoints += extension.Points;
-            }
-
-            foreach (var extension in fileItem.TridExtensions)
-            {
-                var lvi = new ListViewItem();
-                double percentage = (extension.Points * 100) / totalPoints;
-                double roundedPercentage = Math.Round(percentage, 1);
-                lvi.Text = string.Format("{0}%", roundedPercentage);
-
-                var lvsiExt = new ListViewItem.ListViewSubItem
-                {
-                    Text = extension.Name
-                };
-                lvi.SubItems.Add(lvsiExt);
-
-                var lvsiDescription = new ListViewItem.ListViewSubItem
-                {
-                    Text = extension.Description
-                };
-                lvi.SubItems.Add(lvsiDescription);
-
-                listViewFileTypes.Items.Add(lvi);
-            }
-
             toolStripInspector.Enabled = true;
             toolStripButtonRefresh.Enabled = true;
             toolStripButtonSums.Enabled = true;

@@ -23,7 +23,6 @@ using System.Collections.Generic;
 using System.IO;
 using EdUtils.Detections;
 using EdUtils.Helpers;
-using EdUtils.TrID;
 using EdUtils.Types;
 using Newtonsoft.Json;
 
@@ -38,10 +37,6 @@ namespace EdUtils.Filesystem
     {
         [JsonProperty]
         public Extension Extension { get; set; }
-
-        /* Information from analysis via TrID */
-        [JsonProperty]
-        public List<TridExtension> TridExtensions { get; set; } = new List<TridExtension>();
 
         /* List of detections from detectors that found a match for the file */
         [JsonProperty]
