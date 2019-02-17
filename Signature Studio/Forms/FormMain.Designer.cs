@@ -210,8 +210,8 @@
             this.toolStripButtonNew.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonNew.Image")));
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Name = "toolStripButtonNew";
-            this.toolStripButtonNew.Size = new System.Drawing.Size(123, 22);
-            this.toolStripButtonNew.Text = "Create Signature...";
+            this.toolStripButtonNew.Size = new System.Drawing.Size(113, 22);
+            this.toolStripButtonNew.Text = "New Signature...";
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripButtonEdit

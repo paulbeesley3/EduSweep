@@ -81,8 +81,8 @@
             this.labelMinor.Name = "labelMinor";
             this.labelMinor.Size = new System.Drawing.Size(340, 30);
             this.labelMinor.TabIndex = 50;
-            this.labelMinor.Text = "Add items to your signature here. Specific files that you add will be recognised " +
-    "regardless of their location.";
+            this.labelMinor.Text = "Build your signature by adding signature elements. Set a name and, optionally, a " +
+    "category and description before saving.";
             // 
             // labelMajor
             // 
@@ -395,9 +395,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(124, 15);
             this.label1.TabIndex = 59;
-            this.label1.Text = "Description";
+            this.label1.Text = "Description (Optional)";
             // 
             // textBoxCategory
             // 
@@ -413,9 +413,9 @@
             this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.Location = new System.Drawing.Point(12, 112);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(55, 15);
+            this.labelCategory.Size = new System.Drawing.Size(112, 15);
             this.labelCategory.TabIndex = 61;
-            this.labelCategory.Text = "Category";
+            this.labelCategory.Text = "Category (Optional)";
             // 
             // SignatureEditor
             // 
