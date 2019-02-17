@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signature Studio", "Signatu
 		{A5A905E6-1548-42CA-A157-5D8382B820B8} = {A5A905E6-1548-42CA-A157-5D8382B820B8}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CFBD1321-68E4-4BD3-8B79-6098BFF1C746}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E97C0041-1D3C-4F2A-8783-4D548C2D3072}"
 	ProjectSection(SolutionItems) = preProject
 		CodeAnalysis.ruleset = CodeAnalysis.ruleset
 	EndProjectSection
