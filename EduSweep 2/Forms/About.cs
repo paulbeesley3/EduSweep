@@ -44,9 +44,17 @@ namespace EduSweep_2.Forms
             AssemblyName libName = typeof(EdUtils.Filesystem.AppFolders).Assembly.GetName();
             AssemblyName engineName = typeof(EduEngine.Scanner.Scanner).Assembly.GetName();
 
-            var lvsiApp = new ListViewItem.ListViewSubItem(lviAppVersion, Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            var lvsiLib = new ListViewItem.ListViewSubItem(lviLibVersion, libName.Version.ToString());
-            var lvsiEngine = new ListViewItem.ListViewSubItem(lviEngineVersion, engineName.Version.ToString());
+            var lvsiApp = new ListViewItem.ListViewSubItem(
+                lviAppVersion,
+                trimTrailingSubVersion(Assembly.GetExecutingAssembly().GetName().Version.ToString()));
+
+            var lvsiLib = new ListViewItem.ListViewSubItem(
+                lviLibVersion,
+                trimTrailingSubVersion(libName.Version.ToString()));
+
+            var lvsiEngine = new ListViewItem.ListViewSubItem(
+                lviEngineVersion,
+                trimTrailingSubVersion(engineName.Version.ToString()));
 
             lviAppVersion.SubItems.Add(lvsiApp);
             lviLibVersion.SubItems.Add(lvsiLib);
@@ -57,6 +65,17 @@ namespace EduSweep_2.Forms
             listViewVersions.Items.Add(lviEngineVersion);
 
             logger.Info("Form opened");
+        }
+
+        private string trimTrailingSubVersion(string version)
+        {
+            if (version.Length < 3)
+            {
+                return version;
+            }
+
+            /* Trim the last two chars: .0 */
+            return version.Substring(0, version.Length - 2);
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
