@@ -35,7 +35,7 @@ namespace EduEngine.Tasks
         public event EventHandler<StatusChangedArgs> StatusChanged;
 
         [JsonIgnore]
-        private ScanStatus _status;
+        private ScanStatus privateStatus;
 
         [JsonProperty]
         public DateTime LastStartTime { get; set; }
@@ -109,12 +109,12 @@ namespace EduEngine.Tasks
         {
             get
             {
-                return this._status;
+                return this.privateStatus;
             }
 
             set
             {
-                this._status = value;
+                this.privateStatus = value;
                 StatusChanged?.Invoke(this, new StatusChangedArgs(value));
             }
         }
@@ -131,7 +131,7 @@ namespace EduEngine.Tasks
             this.Creator = Utils.GetCurrentUserName();
             this.CreationTime = DateTime.Now;
             this.LastWriteTime = DateTime.Now;
-            this._status = ScanStatus.UNINITIALZED;
+            this.privateStatus = ScanStatus.UNINITIALZED;
         }
 
         public ScanTask(string name, List<DirectoryItem> folders) : this(name)

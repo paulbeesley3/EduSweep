@@ -18,7 +18,6 @@
  */
 #endregion
 
-
 namespace EduSweep_2.Common
 {
     public enum PurgeMode
