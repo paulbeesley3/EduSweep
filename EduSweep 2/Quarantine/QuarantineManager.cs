@@ -116,17 +116,30 @@ namespace EduSweep_2.Quarantine
             try
             {
                 File.Move(file.FullName, quarantineFile.AbsolutePath);
-                if (!File.Exists(file.FullName))
-                {
-                    /* Move succeeded: serialize and save the metadata file. */
-                    quarantineFile.Save(AppFolders.QuarantineFolder);
-                }
             }
             catch (Exception ex)
             {
                 logger.Error(
                     ex,
-                    string.Format("Quarantine import failed for '{0}'", file.FullName));
+                    string.Format("Quarantine file move failed for '{0}'", file.FullName));
+                throw;
+            }
+
+            try
+            {
+                /* Serialize and save the metadata file. */
+                quarantineFile.Save(AppFolders.QuarantineFolder);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(
+                    ex,
+                    string.Format("Quarantine metadata file creation failed in '{0}'", AppFolders.QuarantineFolder));
+
+                logger.Debug("Moving file back to {0}", file.FullName);
+                File.Move(quarantineFile.AbsolutePath, file.FullName);
+                logger.Debug("File restore succeeded");
+
                 throw;
             }
         }

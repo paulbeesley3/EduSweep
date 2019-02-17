@@ -345,12 +345,28 @@ namespace EduEngine.Scanner
             scanTask.LastCompletionTime = DateTime.Now;
             scanTask.LastWriteTime = DateTime.Now;
             scanTask.LastRunOwner = Utils.GetCurrentUserName();
-            scanTask.Save(AppFolders.TaskFolder);
+
+            try
+            {
+                scanTask.Save(AppFolders.TaskFolder);
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex, "Failed to update scan task");
+            }
 
             /* Produce the report */
             logger.Info("Storing scan report");
             scanReport = new ScanReport(scanTask, detectedFiles.ToList(), scannedDirectories.Count);
-            scanReport.Save(AppFolders.ReportFolder);
+
+            try
+            {
+                scanReport.Save(AppFolders.ReportFolder);
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex, "Failed to store scan report");
+            }
 
             logger.Info("Scan completed");
             SetScannerStatus(ScanStatus.COMPLETED);

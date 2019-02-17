@@ -301,8 +301,23 @@ namespace EduSweep_2.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            task.Save(AppFolders.TaskFolder);
-            Close();
+            try
+            {
+                task.Save(AppFolders.TaskFolder);
+                Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                    string.Format(
+                        "Unable to save the task to the tasks directory.{0}Detail: {1}",
+                        Environment.NewLine,
+                        AppFolders.TaskFolder),
+                    "Task Save Failed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

@@ -223,7 +223,24 @@ namespace Signature_Studio.Forms
             }
 
             signature.LastWriteTime = DateTime.Now;
-            signature.Save(AppFolders.CustomSignatureFolder);
+
+            try
+            {
+                signature.Save(AppFolders.CustomSignatureFolder);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                    string.Format(
+                        "Unable to save the signature file to custom signature directory.{0}Detail: {1}",
+                        Environment.NewLine,
+                        AppFolders.CustomSignatureFolder),
+                    "Signature Editor",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+                Close();
+            }
 
             if (editing)
             {

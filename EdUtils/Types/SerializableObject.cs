@@ -21,6 +21,7 @@
 using System;
 using System.IO;
 using Newtonsoft.Json;
+using NLog;
 
 namespace EdUtils.Types
 {
@@ -30,6 +31,9 @@ namespace EdUtils.Types
     [Serializable]
     public abstract class SerializableObject
     {
+        [JsonIgnore]
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Unique identifier for the object. Used for naming when
         /// serializing the object to a file.
@@ -119,9 +123,17 @@ namespace EdUtils.Types
         {
             string savePath = Path.Combine(path, string.Format("{0}.json", this.Guid));
 
-            using (var fileWriter = new StreamWriter(savePath, false))
+            try
             {
-                fileWriter.Write(this.Serialize());
+                using (var fileWriter = new StreamWriter(savePath, false))
+                {
+                    fileWriter.Write(this.Serialize());
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Failed to save serialized object");
+                throw;
             }
         }
 

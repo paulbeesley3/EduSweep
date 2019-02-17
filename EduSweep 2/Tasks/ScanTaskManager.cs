@@ -104,7 +104,15 @@ namespace EduSweep_2.Tasks
 
             if (!string.IsNullOrEmpty(path))
             {
-                clone.Save(path);
+                try
+                {
+                    clone.Save(path);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex, "Failed to save cloned task");
+                    throw;
+                }
             }
             
             return clone;
