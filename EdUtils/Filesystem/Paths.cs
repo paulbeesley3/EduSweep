@@ -40,11 +40,6 @@ namespace EdUtils.Filesystem
             return (attributes & FileAttributes.Directory) == FileAttributes.Directory;
         }
 
-        public static bool IsFile(string path)
-        {
-            return !IsDirectory(path);
-        }
-
         public static bool IsAccessible(string path)
         {
             path = path.Trim();
