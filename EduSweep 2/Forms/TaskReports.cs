@@ -238,8 +238,11 @@ namespace EduSweep_2.Forms
 
         private void TaskReports_FormClosing(object sender, FormClosingEventArgs e)
         {
-            settingsManager.app.TaskReportsWidth = (uint)Width;
-            settingsManager.app.TaskReportsHeight = (uint)Height;
+            if (WindowState == FormWindowState.Normal)
+            {
+                settingsManager.app.TaskReportsWidth = (uint)Width;
+                settingsManager.app.TaskReportsHeight = (uint)Height;
+            }
 
             logger.Debug("Storing list view state");
             byte[] stateData = listViewReports.SaveState();

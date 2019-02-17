@@ -239,8 +239,11 @@ namespace EduSweep_2.Forms
 
         private void QuarantineManager_FormClosing(object sender, FormClosingEventArgs e)
         {
-            settingsManager.app.QuarantineManagerWidth = (uint)Width;
-            settingsManager.app.QuarantineManagerHeight = (uint)Height;
+            if (WindowState == FormWindowState.Normal)
+            {
+                settingsManager.app.QuarantineManagerWidth = (uint)Width;
+                settingsManager.app.QuarantineManagerHeight = (uint)Height;
+            }
 
             logger.Debug("Storing list view state");
             byte[] stateData = objectListViewFiles.SaveState();
