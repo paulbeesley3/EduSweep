@@ -16,9 +16,6 @@ namespace File_Inspector
     public partial class FileInspector : Form
     {
         private FileItem fileItem;
-        private Regex officeExtensions = new Regex(
-            @".((xls)|(xlsx)|(ppt)|(pptx)|(pps)|(pub)|(doc)|(docx))$",
-            RegexOptions.Compiled | RegexOptions.RightToLeft | RegexOptions.CultureInvariant);
 
         public FileInspector()
         {
@@ -116,9 +113,6 @@ namespace File_Inspector
             detectedExtension.SubItems.Add(detectedExtensionValue);
             detectedExtension.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { detectedExtension });
-
-            string replacedWindowsExtensionValue = windowsExtensionValue.Text.Replace(".", string.Empty);
-            string replacedDetectedExtensionValue = detectedExtensionValue.Text.Replace(".", string.Empty);
 
             /* MIME Type */
             var mimeType = new ListViewItem("Detected MIME Type");
