@@ -39,7 +39,7 @@ namespace EdUtils.Settings
         /// <summary>
         /// Enables and disables automatic deletion after reports reach a certain age.
         /// </summary>
-        [Option(DefaultValue = true)]
+        [Option(DefaultValue = false)]
         bool ReportCleanupEnabled { get; set; }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace EdUtils.Settings
         /// <summary>
         /// Enables and disables automatic deletion after quarantine items reach a certain age.
         /// </summary>
-        [Option(DefaultValue = true)]
+        [Option(DefaultValue = false)]
         bool QuarantineCleanupEnabled { get; set; }
 
         /// <summary>
