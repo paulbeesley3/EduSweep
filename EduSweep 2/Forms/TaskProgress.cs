@@ -55,7 +55,6 @@ namespace EduSweep_2.Forms
         /* Detected items from the scan */
         private List<FileItem> detections = new List<FileItem>();
      
-        private TypedObjectListView<DirectoryItem> typedLocationView;
         private TypedObjectListView<FileItem> typedResultsView;
 
         private bool resultsTimerStopping = false;
@@ -87,7 +86,6 @@ namespace EduSweep_2.Forms
 
         private void TaskProgress_Load(object sender, EventArgs e)
         {
-            typedLocationView = new TypedObjectListView<DirectoryItem>(this.listViewResults);
             typedResultsView = new TypedObjectListView<FileItem>(this.listViewResults);
 
             logger.Trace("Set width to {0}", settingsManager.app.TaskProgressWidth);

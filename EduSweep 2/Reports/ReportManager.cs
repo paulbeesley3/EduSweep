@@ -39,9 +39,6 @@ namespace EduSweep_2.Reports
     public static class ReportManager
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private static readonly IAppSettings appSettings = new ConfigurationBuilder<IAppSettings>()
-        .UseJsonFile(AppFolders.AppSettingsPath)
-        .Build();
 
         /// <summary>
         /// Get the number of stored reports.

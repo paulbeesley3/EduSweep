@@ -77,7 +77,6 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.timerPathCheck = new System.Windows.Forms.Timer(this.components);
-            this.openFileDialogBinary = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlTask.SuspendLayout();
             this.tabPageInfo.SuspendLayout();
@@ -682,7 +681,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonRecursive;
         private System.Windows.Forms.TabPage tabPageSignatures;
         private System.Windows.Forms.Timer timerPathCheck;
-        private System.Windows.Forms.OpenFileDialog openFileDialogBinary;
         private System.Windows.Forms.ToolStrip toolStripSignatures;
         private System.Windows.Forms.ToolStripButton toolStripButtonAddSignature;
         private System.Windows.Forms.ToolStripButton toolStripButtonRemove;
