@@ -13,5 +13,4 @@ overall workflow.
    scan
    quarantine
    reports
-   inspector
    settings

@@ -1,5 +1,5 @@
-File Inspector Utility
-######################
+Overview
+########
 
 The File Inspector is used to gather detailed information about a selected file.
 It provides file system information, such as creation and modification dates for
