@@ -1,5 +1,5 @@
 #define MyAppName "EduSweep"
-#define MyAppVersion "2.6.0"
+#define MyAppVersion "2.6.1"
 #define MyAppPublisher "Paul Beesley"
 #define MyAppURL "https://github.com/paulbeesley3/EduSweep"
 #define CoreAppName "EduSweep.exe"
