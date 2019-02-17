@@ -52,8 +52,7 @@ namespace EduSweep_2.Forms
         private ScanStatus scanStatus;
         private List<DirectoryItem> scannedDirectories = new List<DirectoryItem>();
 
-        /* Log entries and detected items from the scan */
-        private List<TaskLogEntry> taskLogEntries = new List<TaskLogEntry>();
+        /* Detected items from the scan */
         private List<FileItem> detections = new List<FileItem>();
      
         private TypedObjectListView<DirectoryItem> typedLocationView;

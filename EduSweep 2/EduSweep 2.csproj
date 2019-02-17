@@ -124,8 +124,6 @@
     <Compile Include="Common\Logging.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Common\TaskLogEntry.cs" />
-    <Compile Include="Common\TaskLogEntryType.cs" />
     <Compile Include="Common\RemovalAction.cs" />
     <Compile Include="Quarantine\QuarantineManager.cs" />
     <Compile Include="Reports\ReportManager.cs" />
