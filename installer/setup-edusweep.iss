@@ -35,7 +35,7 @@ MinVersion=6.1.7600
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "portable"; Description: "Make installation portable"; Flags: unchecked
+Name: "portable"; Description: "Portable install (Stores app data in install directory. No shortcuts or uninstall entry created.)"; Flags: unchecked
 
 [Types]
 Name: "full"; Description: "Full installation"
