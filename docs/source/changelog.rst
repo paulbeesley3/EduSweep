@@ -30,6 +30,7 @@ Removed
 Fixed
 -----
     - Crash when attempting to save a task, report or signature to a read-only directory
+    - Disabling parallel scanning does not limit engine to a single thread
     - Task Editor "Remove" button for elements does nothing if multiple elements are selected
     - File Inspector "Quarantine" menu button is broken
     - Potential configuration file corruption due to race condition
