@@ -20,7 +20,7 @@
         <img src="https://www.codefactor.io/repository/github/paulbeesley3/edusweep/badge"
             alt="CodeFactor Score">
     </a>
-    <a href="https://edusweep.readthedocs.io/en/latest/">
+    <a href="https://edusweep.readthedocs.io/en/stable/">
         <img src="https://img.shields.io/readthedocs/edusweep.svg"
             alt="Documentation">
     </a>
