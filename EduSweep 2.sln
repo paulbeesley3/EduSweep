@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CodeAnalysis.ruleset = CodeAnalysis.ruleset
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdUtilsTests", "EdUtilsTests\EdUtilsTests.csproj", "{50314140-CC62-4183-AC32-FE437A5D94EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D78DEA41-9023-40F1-B1F1-7FE72A9C4CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50314140-CC62-4183-AC32-FE437A5D94EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50314140-CC62-4183-AC32-FE437A5D94EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50314140-CC62-4183-AC32-FE437A5D94EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50314140-CC62-4183-AC32-FE437A5D94EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
