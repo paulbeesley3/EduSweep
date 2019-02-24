@@ -79,12 +79,6 @@ namespace EdUtils.Filesystem
         [JsonProperty]
         public string Owner { get; set; }
 
-        [JsonIgnore]
-        public string MIMEType
-        {
-            get { return MIMETypes.GetMIMEType(AbsolutePath); }
-        }
-
         [JsonProperty]
         public long Length { get; private set; }
 

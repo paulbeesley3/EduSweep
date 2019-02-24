@@ -96,7 +96,7 @@ namespace File_Inspector
             var detectedExtension = new ListViewItem("Detected Extension");
             var detectedExtensionValue = new ListViewItem.ListViewSubItem();
 
-            detectedExtensionValue.Text = fileItem.MIMEType;
+            //detectedExtensionValue.Text = fileItem.MIMEType;
 
             detectedExtension.SubItems.Add(detectedExtensionValue);
             detectedExtension.SubItems.Add("No");
@@ -104,8 +104,7 @@ namespace File_Inspector
 
             /* MIME Type */
             var mimeType = new ListViewItem("Detected MIME Type");
-            var mimeTypeValue = new ListViewItem.ListViewSubItem
-                 { Text = fileItem.MIMEType };
+            var mimeTypeValue = new ListViewItem.ListViewSubItem();
             mimeType.SubItems.Add(mimeTypeValue);
             mimeType.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { mimeType });
