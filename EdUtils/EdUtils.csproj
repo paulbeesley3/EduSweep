@@ -109,6 +109,7 @@
     <Compile Include="Signatures\SignatureElement.cs" />
     <Compile Include="Signatures\SignatureManager.cs" />
     <Compile Include="Signatures\SignatureType.cs" />
+    <Compile Include="Signatures\SizeSignatureElement.cs" />
     <Compile Include="Types\Extension.cs" />
     <Compile Include="Filesystem\FileItem.cs" />
     <Compile Include="Filesystem\DirectoryItem.cs" />

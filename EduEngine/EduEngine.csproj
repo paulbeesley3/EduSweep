@@ -79,6 +79,7 @@
     <Compile Include="Detectors\KeywordDetector.cs" />
     <Compile Include="Detectors\ExtensionDetector.cs" />
     <Compile Include="Detectors\IDetector.cs" />
+    <Compile Include="Detectors\SizeDetector.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Scanner\DetectionArgs.cs" />
     <Compile Include="Scanner\EventArgsBase.cs" />
@@ -101,6 +102,9 @@
       <Project>{a5a905e6-1548-42ca-a157-5d8382b820b8}</Project>
       <Name>EdUtils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Analyzers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
