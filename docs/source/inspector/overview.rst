@@ -8,7 +8,7 @@ used to check if the purported file type matches its actual content; an innocent
 JPEG file may in fact be an executable with a modified extension and the file inspector
 can help to detect this kind of scenario.
 
-.. image:: ../../screenshots/inspector/inspector.png
+.. image:: ../../screenshots/inspector/inspector.PNG
 
 Inspecting Files
 ----------------
@@ -37,4 +37,4 @@ Generating Checksums
 The File Inspector can also generate checksums (hashes) for the loaded file using three,
 popular hash functions: CRC32, MD5 and SHA-1.
 
-.. image:: ../../screenshots/inspector/sums.png
+.. image:: ../../screenshots/inspector/sums.PNG
