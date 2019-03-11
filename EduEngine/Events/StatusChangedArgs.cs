@@ -18,13 +18,16 @@
  */
 #endregion
 
+using System;
 using EduEngine.Scanner;
 
 namespace EduEngine.Events
 {
-    public class StatusChangedArgs : EventArgsBase
+    public class StatusChangedArgs : EventArgs
     {
         public ScanStatus Status { get; } = ScanStatus.UNINITIALZED;
+
+        public DateTime RaisedTime { get; private set; } = DateTime.Now;
 
         public StatusChangedArgs(ScanStatus status)
         {
