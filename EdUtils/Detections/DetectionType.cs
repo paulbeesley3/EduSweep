@@ -25,6 +25,6 @@ namespace EdUtils.Detections
     [Serializable]
     public enum DetectionType
     {
-        EXTENSION, KEYWORD, HASH, CLAMAV, SIZE
+        EXTENSION, KEYWORD, HASH, CLAMAV, SIZE, FLASH
     }
 }

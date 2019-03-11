@@ -92,7 +92,6 @@
     <Compile Include="Detections\Detection.cs" />
     <Compile Include="Detections\DetectionType.cs" />
     <Compile Include="Filesystem\PathType.cs" />
-    <Compile Include="Helpers\FlashDetector.cs" />
     <Compile Include="Filesystem\AppFolders.cs" />
     <Compile Include="Helpers\Checksums.cs" />
     <Compile Include="Filesystem\Paths.cs" />

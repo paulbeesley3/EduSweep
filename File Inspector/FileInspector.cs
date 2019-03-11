@@ -170,25 +170,6 @@ namespace File_Inspector
             /* Flash */
             var flash = new ListViewItem("Embedded Flash");
 
-            if (FlashDetector.ContainsEmbeddedFlash(fileItem.AbsolutePath))
-            {
-                var flashValue = new ListViewItem.ListViewSubItem
-                {
-                    Text = "Embedded Flash Detected"
-                };
-
-                flash.SubItems.Add(flashValue);
-            }
-            else
-            {
-                var flashValue = new ListViewItem.ListViewSubItem
-                {
-                    Text = "Clean"
-                };
-
-                flash.SubItems.Add(flashValue);
-            }
-
             BeginInvoke(addListViewItemDelegate, new object[] { flash });
         }
 

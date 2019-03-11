@@ -77,6 +77,7 @@
     <Compile Include="Analyzers\IAnalyzer.cs" />
     <Compile Include="Detectors\DetectorStatus.cs" />
     <Compile Include="Detectors\ClamDetector.cs" />
+    <Compile Include="Detectors\FlashDetector.cs" />
     <Compile Include="Detectors\HashDetector.cs" />
     <Compile Include="Detectors\KeywordDetector.cs" />
     <Compile Include="Detectors\ExtensionDetector.cs" />
