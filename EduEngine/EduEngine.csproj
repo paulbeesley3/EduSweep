@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analyzers\AnalyzerResult.cs" />
-    <Compile Include="Analyzers\ChecksumAnalyser.cs" />
+    <Compile Include="Analyzers\ChecksumAnalyzer.cs" />
     <Compile Include="Analyzers\IAnalyzer.cs" />
     <Compile Include="Analyzers\MIMEAnalyzer.cs" />
     <Compile Include="Detectors\DetectorStatus.cs" />
