@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analyzers\AnalyzerResult.cs" />
+    <Compile Include="Analyzers\IAnalyzer.cs" />
     <Compile Include="Detectors\DetectorStatus.cs" />
     <Compile Include="Detectors\ClamDetector.cs" />
     <Compile Include="Detectors\HashDetector.cs" />
@@ -103,8 +105,6 @@
       <Name>EdUtils</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Analyzers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
