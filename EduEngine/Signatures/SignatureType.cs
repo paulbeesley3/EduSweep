@@ -20,7 +20,7 @@
 
 using System;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
     /// <summary>
     /// Represents the type of a Signature

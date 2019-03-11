@@ -21,44 +21,46 @@
 using System;
 using System.Collections.Generic;
 using EdUtils.Detections;
+using EdUtils.Helpers;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
-    public class SignatureElementComparer : IEqualityComparer<SignatureElement>
+    public class SizeSignatureElementComparer : IEqualityComparer<SizeSignatureElement>
     {
-        public bool Equals(SignatureElement x, SignatureElement y)
+        public bool Equals(SizeSignatureElement x, SizeSignatureElement y)
         {
-            return x.Guid.Equals(y.Guid);
+            return x.Limit.Equals(y.Limit);
         }
 
-        public int GetHashCode(SignatureElement obj)
+        public int GetHashCode(SizeSignatureElement obj)
         {
-            return obj.Guid.GetHashCode();
+            return (int)obj.Limit;
         }
     }
 
     [Serializable]
-    public class SignatureElement
+    public class SizeSignatureElement : SignatureElement
     {
-        [JsonProperty]
-        public Guid Guid { get; set; } = Guid.NewGuid();
-
-        [JsonProperty]
-        public DetectionType Type { get; private set; }
-
         [JsonIgnore]
-        public virtual string Name { get; } = string.Empty;
-
-        [JsonConstructor]
-        public SignatureElement()
-        {
-            /* Used only for deserialization */
+        public new string Name {
+            get
+            {
+                return string.Format("Files >{0}", Utils.GetDynamicFileSize(Limit));
+            }
         }
 
-        public SignatureElement(DetectionType type) : this()
+        [JsonProperty]
+        public long Limit { get; private set; }
+
+        public SizeSignatureElement()
         {
-            this.Type = type;
+            /* Required for deserialization support */
+        }
+
+        public SizeSignatureElement(long limit) : base(DetectionType.SIZE)
+        {
+            this.Limit = limit;
         }
     }
 }

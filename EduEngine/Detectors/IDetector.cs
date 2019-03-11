@@ -19,9 +19,9 @@
 #endregion
 
 using System.Collections.Generic;
+using EduEngine.Signatures;
 using EdUtils.Detections;
 using EdUtils.Filesystem;
-using EdUtils.Signatures;
 
 namespace EduEngine.Detectors
 {

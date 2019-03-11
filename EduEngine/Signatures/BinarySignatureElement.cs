@@ -21,41 +21,50 @@
 using System;
 using System.Collections.Generic;
 using EdUtils.Detections;
-using EdUtils.Types;
+using EdUtils.Filesystem;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
-    public class ExtensionSignatureElementComparer : IEqualityComparer<ExtensionSignatureElement>
+    public class HashSignatureElementComparer : IEqualityComparer<HashSignatureElement>
     {
-        public bool Equals(ExtensionSignatureElement x, ExtensionSignatureElement y)
+        public bool Equals(HashSignatureElement x, HashSignatureElement y)
         {
-            return x.Extension.Name.Equals(y.Extension.Name);
+            return x.SHA1.Equals(y.SHA1);
         }
 
-        public int GetHashCode(ExtensionSignatureElement obj)
+        public int GetHashCode(HashSignatureElement obj)
         {
-            return obj.Extension.GetHashCode();
+            return obj.SHA1.GetHashCode();
         }
     }
 
     [Serializable]
-    public class ExtensionSignatureElement : SignatureElement
+    public class HashSignatureElement : SignatureElement
     {
-        [JsonIgnore]
-        public new string Name => Extension.Name;
+        [JsonProperty]
+        public new string Name { get; private set; }
 
         [JsonProperty]
-        public Extension Extension { get; private set; }
+        public long Length { get; private set; }
 
-        public ExtensionSignatureElement()
+        [JsonProperty]
+        public string AbsolutePath { get; private set; }
+
+        [JsonProperty]
+        public string SHA1 { get; private set; }
+
+        public HashSignatureElement()
         {
             /* Required for deserialization support */
         }
 
-        public ExtensionSignatureElement(Extension extension) : base(DetectionType.EXTENSION)
+        public HashSignatureElement(FileItem item, string hashSHA1) : base(DetectionType.HASH)
         {
-            this.Extension = extension;
+            this.Name = item.Name;
+            this.AbsolutePath = item.AbsolutePath;
+            this.Length = item.Length;
+            this.SHA1 = hashSHA1;
         }
     }
 }

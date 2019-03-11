@@ -21,50 +21,44 @@
 using System;
 using System.Collections.Generic;
 using EdUtils.Detections;
-using EdUtils.Filesystem;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
-    public class HashSignatureElementComparer : IEqualityComparer<HashSignatureElement>
+    public class SignatureElementComparer : IEqualityComparer<SignatureElement>
     {
-        public bool Equals(HashSignatureElement x, HashSignatureElement y)
+        public bool Equals(SignatureElement x, SignatureElement y)
         {
-            return x.SHA1.Equals(y.SHA1);
+            return x.Guid.Equals(y.Guid);
         }
 
-        public int GetHashCode(HashSignatureElement obj)
+        public int GetHashCode(SignatureElement obj)
         {
-            return obj.SHA1.GetHashCode();
+            return obj.Guid.GetHashCode();
         }
     }
 
     [Serializable]
-    public class HashSignatureElement : SignatureElement
+    public class SignatureElement
     {
         [JsonProperty]
-        public new string Name { get; private set; }
+        public Guid Guid { get; set; } = Guid.NewGuid();
 
         [JsonProperty]
-        public long Length { get; private set; }
+        public DetectionType Type { get; private set; }
 
-        [JsonProperty]
-        public string AbsolutePath { get; private set; }
+        [JsonIgnore]
+        public virtual string Name { get; } = string.Empty;
 
-        [JsonProperty]
-        public string SHA1 { get; private set; }
-
-        public HashSignatureElement()
+        [JsonConstructor]
+        public SignatureElement()
         {
-            /* Required for deserialization support */
+            /* Used only for deserialization */
         }
 
-        public HashSignatureElement(FileItem item, string hashSHA1) : base(DetectionType.HASH)
+        public SignatureElement(DetectionType type) : this()
         {
-            this.Name = item.Name;
-            this.AbsolutePath = item.AbsolutePath;
-            this.Length = item.Length;
-            this.SHA1 = hashSHA1;
+            this.Type = type;
         }
     }
 }

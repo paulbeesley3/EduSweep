@@ -28,7 +28,7 @@ using EdUtils.Types;
 using Newtonsoft.Json;
 using NLog;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
     public static class SignatureManager
     {

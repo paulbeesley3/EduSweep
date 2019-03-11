@@ -21,10 +21,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using EduEngine.Signatures;
 using EdUtils.Detections;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
-using EdUtils.Signatures;
 using NLog;
 
 namespace EduEngine.Detectors

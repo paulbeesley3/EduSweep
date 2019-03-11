@@ -106,6 +106,14 @@
     <Compile Include="Events\StatusChangedArgs.cs" />
     <Compile Include="Scanner\Scanner.cs" />
     <Compile Include="Scanner\ScannerConfiguration.cs" />
+    <Compile Include="Signatures\BinarySignatureElement.cs" />
+    <Compile Include="Signatures\ExtensionSignatureElement.cs" />
+    <Compile Include="Signatures\KeywordSignatureElement.cs" />
+    <Compile Include="Signatures\Signature.cs" />
+    <Compile Include="Signatures\SignatureElement.cs" />
+    <Compile Include="Signatures\SignatureManager.cs" />
+    <Compile Include="Signatures\SignatureType.cs" />
+    <Compile Include="Signatures\SizeSignatureElement.cs" />
     <Compile Include="Tasks\ScanTask.cs" />
   </ItemGroup>
   <ItemGroup>

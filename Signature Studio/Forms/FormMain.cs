@@ -23,10 +23,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using EduEngine.Signatures;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.Settings;
-using EdUtils.Signatures;
 using NLog;
 
 namespace Signature_Studio.Forms

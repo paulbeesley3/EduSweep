@@ -25,10 +25,10 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using EduEngine.Signatures;
 using EdUtils.Detections;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
-using EdUtils.Signatures;
 using EdUtils.Types;
 using Microsoft.WindowsAPICodePack.Dialogs;
 

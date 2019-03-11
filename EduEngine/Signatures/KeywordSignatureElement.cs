@@ -23,7 +23,7 @@ using System.Collections.Generic;
 using EdUtils.Detections;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
     public class KeywordSignatureElementComparer : IEqualityComparer<KeywordSignatureElement>
     {

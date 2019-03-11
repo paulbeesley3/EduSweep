@@ -21,46 +21,41 @@
 using System;
 using System.Collections.Generic;
 using EdUtils.Detections;
-using EdUtils.Helpers;
+using EdUtils.Types;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
-    public class SizeSignatureElementComparer : IEqualityComparer<SizeSignatureElement>
+    public class ExtensionSignatureElementComparer : IEqualityComparer<ExtensionSignatureElement>
     {
-        public bool Equals(SizeSignatureElement x, SizeSignatureElement y)
+        public bool Equals(ExtensionSignatureElement x, ExtensionSignatureElement y)
         {
-            return x.Limit.Equals(y.Limit);
+            return x.Extension.Name.Equals(y.Extension.Name);
         }
 
-        public int GetHashCode(SizeSignatureElement obj)
+        public int GetHashCode(ExtensionSignatureElement obj)
         {
-            return (int)obj.Limit;
+            return obj.Extension.GetHashCode();
         }
     }
 
     [Serializable]
-    public class SizeSignatureElement : SignatureElement
+    public class ExtensionSignatureElement : SignatureElement
     {
         [JsonIgnore]
-        public new string Name {
-            get
-            {
-                return string.Format("Files >{0}", Utils.GetDynamicFileSize(Limit));
-            }
-        }
+        public new string Name => Extension.Name;
 
         [JsonProperty]
-        public long Limit { get; private set; }
+        public Extension Extension { get; private set; }
 
-        public SizeSignatureElement()
+        public ExtensionSignatureElement()
         {
             /* Required for deserialization support */
         }
 
-        public SizeSignatureElement(long limit) : base(DetectionType.SIZE)
+        public ExtensionSignatureElement(Extension extension) : base(DetectionType.EXTENSION)
         {
-            this.Limit = limit;
+            this.Extension = extension;
         }
     }
 }

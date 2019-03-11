@@ -21,7 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using EdUtils.Signatures;
+using EduEngine.Signatures;
 using NLog;
 
 namespace EduSweep_2.Forms

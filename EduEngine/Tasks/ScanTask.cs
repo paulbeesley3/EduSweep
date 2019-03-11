@@ -22,9 +22,9 @@ using System;
 using System.Collections.Generic;
 using EduEngine.Events;
 using EduEngine.Scanner;
+using EduEngine.Signatures;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
-using EdUtils.Signatures;
 using EdUtils.Types;
 using Newtonsoft.Json;
 

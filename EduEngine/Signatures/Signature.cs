@@ -24,7 +24,7 @@ using EdUtils.Helpers;
 using EdUtils.Types;
 using Newtonsoft.Json;
 
-namespace EdUtils.Signatures
+namespace EduEngine.Signatures
 {
     [Serializable]
     public class Signature : SerializableObject

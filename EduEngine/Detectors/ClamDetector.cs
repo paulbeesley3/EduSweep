@@ -22,9 +22,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using EduEngine.Signatures;
 using EdUtils.Detections;
 using EdUtils.Filesystem;
-using EdUtils.Signatures;
 using nClam;
 using NLog;
 
