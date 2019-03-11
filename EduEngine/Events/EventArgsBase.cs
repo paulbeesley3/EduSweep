@@ -18,15 +18,18 @@
  */
 #endregion
 
-namespace EduEngine.Scanner
-{
-    public class StatusChangedArgs : EventArgsBase
-    {
-        public ScanStatus Status { get; } = ScanStatus.UNINITIALZED;
+using System;
+using Newtonsoft.Json;
 
-        public StatusChangedArgs(ScanStatus status)
-        {
-            this.Status = status;
-        }
+namespace EduEngine.Events
+{
+    /// <summary>
+    /// Base class containing common data for events raised by a scanner instance.
+    /// </summary>
+    [Serializable]
+    public abstract class EventArgsBase : EventArgs
+    {
+        [JsonProperty]
+        public DateTime RaisedTime { get; private set; } = DateTime.Now;
     }
 }

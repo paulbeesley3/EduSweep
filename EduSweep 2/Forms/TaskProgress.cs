@@ -27,6 +27,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using EduEngine.Events;
 using EduEngine.Scanner;
 using EduEngine.Tasks;
 using EduSweep_2.Common;

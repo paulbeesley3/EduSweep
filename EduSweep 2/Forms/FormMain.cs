@@ -24,6 +24,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
+using EduEngine.Events;
 using EduEngine.Scanner;
 using EduEngine.Tasks;
 using EduSweep_2.Common;

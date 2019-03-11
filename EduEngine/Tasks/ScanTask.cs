@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using EduEngine.Events;
 using EduEngine.Scanner;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;

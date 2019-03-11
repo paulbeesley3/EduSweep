@@ -98,16 +98,16 @@
     <Compile Include="Detectors\IDetector.cs" />
     <Compile Include="Detectors\SizeDetector.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Scanner\DetectionArgs.cs" />
-    <Compile Include="Scanner\EventArgsBase.cs" />
+    <Compile Include="Events\DetectionArgs.cs" />
+    <Compile Include="Events\EventArgsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\ScanReport.cs" />
     <Compile Include="Scanner\FileScanMode.cs" />
     <Compile Include="Scanner\ParallelLevel.cs" />
     <Compile Include="Scanner\ScanStatus.cs" />
-    <Compile Include="Scanner\StatusChangedArgs.cs" />
+    <Compile Include="Events\StatusChangedArgs.cs" />
     <Compile Include="Scanner\Scanner.cs" />
-    <Compile Include="Scanner\DirectoryChangedArgs.cs" />
+    <Compile Include="Events\DirectoryChangedArgs.cs" />
     <Compile Include="Scanner\ScannerConfiguration.cs" />
     <Compile Include="Tasks\ScanTask.cs" />
   </ItemGroup>

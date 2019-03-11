@@ -20,15 +20,15 @@
 
 using EdUtils.Filesystem;
 
-namespace EduEngine.Scanner
+namespace EduEngine.Events
 {
-    public class DetectionArgs : EventArgsBase
+    public class DirectoryChangedArgs : EventArgsBase
     {
-        public FileItem DetectedFileItem { get; }
+        public DirectoryItem Directory { get; }
 
-        public DetectionArgs(FileItem file)
+        public DirectoryChangedArgs(DirectoryItem dir)
         {
-            this.DetectedFileItem = file;
+            this.Directory = dir;
         }
     }
 }
