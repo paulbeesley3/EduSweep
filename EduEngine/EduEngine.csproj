@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Analyzers\AnalyzerResult.cs" />
     <Compile Include="Analyzers\IAnalyzer.cs" />
+    <Compile Include="Analyzers\MIMEAnalyzer.cs" />
     <Compile Include="Detectors\DetectorStatus.cs" />
     <Compile Include="Detectors\ClamDetector.cs" />
     <Compile Include="Detectors\FlashDetector.cs" />
