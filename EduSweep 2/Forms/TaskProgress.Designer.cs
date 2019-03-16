@@ -206,6 +206,7 @@
             this.listViewLocations.Size = new System.Drawing.Size(679, 288);
             this.listViewLocations.TabIndex = 30;
             this.listViewLocations.UseCompatibleStateImageBehavior = false;
+            this.listViewLocations.UseExplorerTheme = true;
             this.listViewLocations.View = System.Windows.Forms.View.Details;
             // 
             // olvLocationColumnPath

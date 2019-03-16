@@ -116,6 +116,7 @@
             this.objectListViewFiles.Size = new System.Drawing.Size(794, 226);
             this.objectListViewFiles.TabIndex = 2;
             this.objectListViewFiles.UseCompatibleStateImageBehavior = false;
+            this.objectListViewFiles.UseExplorerTheme = true;
             this.objectListViewFiles.View = System.Windows.Forms.View.Details;
             this.objectListViewFiles.SelectedIndexChanged += new System.EventHandler(this.objectListViewFiles_SelectedIndexChanged);
             this.objectListViewFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.objectListViewFiles_DragDrop);

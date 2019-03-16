@@ -97,6 +97,7 @@
             this.listViewReports.Size = new System.Drawing.Size(657, 150);
             this.listViewReports.TabIndex = 6;
             this.listViewReports.UseCompatibleStateImageBehavior = false;
+            this.listViewReports.UseExplorerTheme = true;
             this.listViewReports.View = System.Windows.Forms.View.Details;
             this.listViewReports.SelectedIndexChanged += new System.EventHandler(this.listViewReports_SelectedIndexChanged);
             // 

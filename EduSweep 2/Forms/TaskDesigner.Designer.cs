@@ -323,6 +323,7 @@
             this.listViewTargets.Size = new System.Drawing.Size(595, 219);
             this.listViewTargets.TabIndex = 56;
             this.listViewTargets.UseCompatibleStateImageBehavior = false;
+            this.listViewTargets.UseExplorerTheme = true;
             this.listViewTargets.View = System.Windows.Forms.View.Details;
             this.listViewTargets.SelectedIndexChanged += new System.EventHandler(this.listViewTargets_SelectedIndexChanged);
             this.listViewTargets.DragDrop += new System.Windows.Forms.DragEventHandler(this.listViewTargets_DragDrop);
@@ -461,6 +462,7 @@
             this.listViewElements.Size = new System.Drawing.Size(601, 251);
             this.listViewElements.TabIndex = 78;
             this.listViewElements.UseCompatibleStateImageBehavior = false;
+            this.listViewElements.UseExplorerTheme = true;
             this.listViewElements.View = System.Windows.Forms.View.Details;
             this.listViewElements.SelectedIndexChanged += new System.EventHandler(this.listViewElements_SelectedIndexChanged);
             // 
