@@ -85,6 +85,17 @@ namespace EdUtils.Filesystem
         [JsonIgnore]
         public string LengthAsText => Utils.GetDynamicFileSize(this.Length);
 
+        public override string Serialize()
+        {
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+
+            return JsonConvert.SerializeObject(this, serializerSettings);
+        }
+
         [JsonConstructor]
         public FileItem()
         {

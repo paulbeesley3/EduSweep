@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using EduEngine.Helpers;
 using EdUtils.Filesystem;
 using EdUtils.Types;
 using Newtonsoft.Json;
@@ -252,7 +253,14 @@ namespace EduSweep_2.Quarantine
                 json = fileReader.ReadToEnd();
             }
 
-            return JsonConvert.DeserializeObject<QuarantineFileItem>(json, SerializerSettings.Settings);
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto,
+                SerializationBinder = new EngineSerializationBinder()
+            };
+
+            return JsonConvert.DeserializeObject<QuarantineFileItem>(json, serializerSettings);
         }
     }
 }

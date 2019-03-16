@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using EduEngine.Helpers;
 using EdUtils.Detections;
 using EdUtils.Filesystem;
 using EdUtils.Types;
@@ -176,7 +177,15 @@ namespace EduEngine.Signatures
                     json = fileReader.ReadToEnd();
                 }
 
-                return JsonConvert.DeserializeObject<Signature>(json, SerializerSettings.Settings);
+                return JsonConvert.DeserializeObject<Signature>(
+                    json,
+                    new JsonSerializerSettings
+                    {
+                        Formatting = Formatting.Indented,
+                        TypeNameHandling = TypeNameHandling.Auto,
+                        SerializationBinder = new EngineSerializationBinder()
+                    }
+                );
             }
             catch (Exception ex)
             {

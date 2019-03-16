@@ -109,10 +109,7 @@ namespace EdUtils.Types
         /// Convert the object to a JSON, text-based representation
         /// </summary>
         /// <returns>String containing the JSON-serialized object data</returns>
-        public string Serialize()
-        {
-            return JsonConvert.SerializeObject(this, SerializerSettings.Settings);
-        }
+        public abstract string Serialize();
 
         /// <summary>
         /// Serialize the object and save it to the provided directory path with a unique name.

@@ -115,6 +115,7 @@
     <Compile Include="Signatures\SignatureType.cs" />
     <Compile Include="Signatures\SizeSignatureElement.cs" />
     <Compile Include="Tasks\ScanTask.cs" />
+    <Compile Include="Helpers\EngineSerializationBinder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

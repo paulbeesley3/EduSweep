@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using EduEngine.Helpers;
 using EduEngine.Tasks;
 using EdUtils.Filesystem;
 using EdUtils.Types;
@@ -132,7 +133,14 @@ namespace EduSweep_2.Tasks
                 json = fileReader.ReadToEnd();
             }
 
-            return JsonConvert.DeserializeObject<ScanTask>(json, SerializerSettings.Settings);
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto,
+                SerializationBinder = new EngineSerializationBinder()
+            };
+
+            return JsonConvert.DeserializeObject<ScanTask>(json, serializerSettings);
         }
     }
 }

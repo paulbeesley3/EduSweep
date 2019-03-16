@@ -52,6 +52,17 @@ namespace EduEngine.Reports
         [JsonProperty]
         public List<string> Tags { get; set; } = new List<string>();
 
+        public override string Serialize()
+        {
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+
+            return JsonConvert.SerializeObject(this, serializerSettings);
+        }
+
         [JsonConstructor]
         private ScanReport()
         {

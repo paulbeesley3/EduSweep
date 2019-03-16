@@ -47,6 +47,17 @@ namespace EduEngine.Signatures
         [JsonProperty]
         public List<SignatureElement> Elements { get; private set; } = new List<SignatureElement>();
 
+        public override string Serialize()
+        {
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+
+            return JsonConvert.SerializeObject(this, serializerSettings);
+        }
+
         [JsonConstructor]
         public Signature()
         {

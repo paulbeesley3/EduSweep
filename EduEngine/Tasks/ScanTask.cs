@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using EduEngine.Events;
+using EduEngine.Helpers;
 using EduEngine.Scanner;
 using EduEngine.Signatures;
 using EdUtils.Filesystem;
@@ -105,6 +106,17 @@ namespace EduEngine.Tasks
         [JsonProperty]
         public List<string> Tags { get; set; } = new List<string>();
 
+        public override string Serialize()
+        {
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+
+            return JsonConvert.SerializeObject(this, serializerSettings);
+        }
+
         [JsonIgnore]
         public ScanStatus Status
         {
@@ -142,8 +154,15 @@ namespace EduEngine.Tasks
 
         public ScanTask Clone()
         {
-           string jsonCopy = JsonConvert.SerializeObject(this, SerializerSettings.Settings);
-           return JsonConvert.DeserializeObject<ScanTask>(jsonCopy, SerializerSettings.Settings);
+            var serializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.Auto,
+                SerializationBinder = new EngineSerializationBinder()
+            };
+
+            string jsonCopy = JsonConvert.SerializeObject(this, serializerSettings);
+            return JsonConvert.DeserializeObject<ScanTask>(jsonCopy, serializerSettings);
         }
     }
 }
