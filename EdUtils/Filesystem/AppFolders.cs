@@ -150,15 +150,6 @@ namespace EdUtils.Filesystem
             }
         }
 
-        public static string TridFolder
-        {
-            get
-            {
-                logger.Trace("Property read on TridFolder");
-                return Path.Combine(ProgramFolder, "Definitions");
-            }
-        }
-
         public static string FileInspectorPath
         {
             get
