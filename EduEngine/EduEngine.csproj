@@ -106,7 +106,7 @@
     <Compile Include="Events\StatusChangedArgs.cs" />
     <Compile Include="Scanner\Scanner.cs" />
     <Compile Include="Scanner\ScannerConfiguration.cs" />
-    <Compile Include="Signatures\BinarySignatureElement.cs" />
+    <Compile Include="Signatures\HashSignatureElement.cs" />
     <Compile Include="Signatures\ExtensionSignatureElement.cs" />
     <Compile Include="Signatures\KeywordSignatureElement.cs" />
     <Compile Include="Signatures\Signature.cs" />
