@@ -308,6 +308,8 @@ namespace EduSweep_2.Forms
                     toolStripProgressBar.Style = ProgressBarStyle.Continuous;
                     break;
                 case ScanStatus.COMPLETED:
+                    /* Unsubscribe from the task's status change event */
+                    runningTask.StatusChanged -= Task_OnStatusChanged;
                     EndScan();
                     break;
                 case ScanStatus.FAILED:
@@ -317,6 +319,8 @@ namespace EduSweep_2.Forms
                     toolStripProgressBar.Value = 0;
                     timerLocations.Stop();
                     timerResults.Stop();
+                    /* Unsubscribe from the task's status change event */
+                    runningTask.StatusChanged -= Task_OnStatusChanged;
                     toolStripStatuslabelStatus.Text = "Scan task failed";
                     break;
             }
