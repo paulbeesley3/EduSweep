@@ -99,7 +99,6 @@
     <Compile Include="Filesystem\DirectoryItem.cs" />
     <Compile Include="Types\OnlineSearchProvider.cs" />
     <Compile Include="Types\SerializableObject.cs" />
-    <Compile Include="Filesystem\DirectoryItemStatus.cs" />
     <Compile Include="WindowsPlatform\Icons.cs" />
     <Compile Include="WindowsPlatform\PromptText.cs" />
     <Compile Include="WindowsPlatform\WMI.cs" />

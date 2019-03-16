@@ -25,9 +25,6 @@ namespace EdUtils.Filesystem
 {
     public class DirectoryItem : IEquatable<DirectoryItem>
     {
-        [JsonIgnore]
-        public DirectoryItemStatus Status { get; set; } = DirectoryItemStatus.QUEUED;
-
         [JsonProperty]
         public string Path { get; private set; } = string.Empty;
 

@@ -242,7 +242,6 @@ namespace EduEngine.Scanner
 
         private void ScanDirectory(DirectoryItem dir)
         {
-            dir.Status = DirectoryItemStatus.INPROGRESS;
             logger.Trace("Beginning scan of directory: {0}", dir.Path);
 
             while (scanTask.Status == ScanStatus.PAUSED &&
@@ -274,7 +273,6 @@ namespace EduEngine.Scanner
 
             logger.Trace("Finished scan of directory: {0}", dir.Path);
             scannedDirectories.Add(dir);
-            dir.Status = DirectoryItemStatus.COMPLETED;
         }
 
         private void ScanFile(FileItem file, FileScanMode mode)
