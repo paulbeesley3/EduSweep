@@ -3,7 +3,7 @@
   "Category": "Applications",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "com"
@@ -12,7 +12,7 @@
       "Guid": "57ce7509-a156-45d0-98a8-8fa743204b62"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "exe"
@@ -21,7 +21,7 @@
       "Guid": "f50a18f9-c6e7-45ac-ab64-02e06a484481"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "pe"
@@ -30,7 +30,7 @@
       "Guid": "0fc49edd-a084-4c8f-a64f-746c171fed1b"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "pif"
@@ -39,7 +39,7 @@
       "Guid": "acdd2aaa-d12c-4bc7-af6b-2394be08fa7f"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "scr"

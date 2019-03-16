@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "psd"
@@ -13,7 +13,7 @@
       "Guid": "399527ee-ebc3-447f-a03b-bb2aa25321c3"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "psb"

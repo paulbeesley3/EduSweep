@@ -3,7 +3,7 @@
   "Category": "Installers",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "msi"
@@ -12,7 +12,7 @@
       "Guid": "b582e30e-5ca2-471c-ba72-ba23ccc8835d"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "msu"
@@ -21,7 +21,7 @@
       "Guid": "0a0e2458-3bbc-4674-b7f4-e6425b3db3cd"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "msp"

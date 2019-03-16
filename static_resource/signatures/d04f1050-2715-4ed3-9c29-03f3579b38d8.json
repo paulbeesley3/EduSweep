@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Extension": {
         "Name": "fnt"
       },
@@ -12,7 +12,7 @@
       "Type": 0
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Extension": {
         "Name": "fon"
       },
@@ -20,7 +20,7 @@
       "Type": 0
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Extension": {
         "Name": "otf"
       },
@@ -28,7 +28,7 @@
       "Type": 0
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Extension": {
         "Name": "ttf"
       },
@@ -36,7 +36,7 @@
       "Type": 0
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Extension": {
         "Name": "woff"
       },

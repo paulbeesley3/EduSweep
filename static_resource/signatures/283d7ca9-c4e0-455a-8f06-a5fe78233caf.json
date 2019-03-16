@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "7z"
@@ -13,7 +13,7 @@
       "Guid": "aaa7bb86-662c-46e5-920a-0bffbbcac18e"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "7zip"

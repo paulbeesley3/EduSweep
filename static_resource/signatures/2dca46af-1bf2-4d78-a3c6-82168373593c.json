@@ -3,7 +3,7 @@
   "Category": "System",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "log"

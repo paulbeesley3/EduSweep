@@ -3,7 +3,7 @@
   "Category": "Applications",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "jar"
@@ -12,7 +12,7 @@
       "Guid": "139b17aa-f295-451f-8da3-1028e2cd7511"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "jnlp"
@@ -21,7 +21,7 @@
       "Guid": "c640f5c5-8ca2-48b0-8db0-f3b89f5e1e6b"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "jnp"

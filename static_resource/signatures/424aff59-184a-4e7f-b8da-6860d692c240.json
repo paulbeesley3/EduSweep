@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "prproj"
@@ -13,7 +13,7 @@
       "Guid": "434e1f68-45db-488e-804e-6e86412a652f"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "ppj"
@@ -22,7 +22,7 @@
       "Guid": "5c424046-c173-4599-802d-f9ab7c348383"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "prfpset"
@@ -31,7 +31,7 @@
       "Guid": "b55ecd11-f898-4601-abc1-0977a9dd1e97"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "prtl"
@@ -40,7 +40,7 @@
       "Guid": "13def392-aeba-43b3-9bba-6a6105b01770"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "prm"

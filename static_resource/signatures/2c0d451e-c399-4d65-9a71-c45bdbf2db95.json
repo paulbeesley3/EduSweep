@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "accdb"
@@ -13,7 +13,7 @@
       "Guid": "38288994-3131-40d8-bcbf-2c0334e2adf6"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "accde"
@@ -22,7 +22,7 @@
       "Guid": "e9d73911-c32b-41d9-80f5-1ef2e1440ef8"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "accdt"
@@ -31,7 +31,7 @@
       "Guid": "1e778ea1-fc67-4148-814e-2e426dd20725"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "accdr"

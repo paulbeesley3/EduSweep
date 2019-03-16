@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "flac"
@@ -13,7 +13,7 @@
       "Guid": "66e9534c-b105-4898-b749-93e4bdf982bd"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "aif"
@@ -22,7 +22,7 @@
       "Guid": "e40cb3b7-5d97-4e5f-8815-66e6aaf446d9"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "aiff"
@@ -31,7 +31,7 @@
       "Guid": "745f7cea-d193-40cc-b0a4-f1aadac3a59a"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "ape"
@@ -40,7 +40,7 @@
       "Guid": "bf7fa747-3d56-4baa-8d6f-bb0f9d07ee4a"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "snd"
@@ -49,7 +49,7 @@
       "Guid": "b2e74cb9-62dc-4662-ac61-22dfc2e3bab9"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "wav"
@@ -58,7 +58,7 @@
       "Guid": "8be350f6-cf94-4dd9-afbb-6c933a39fec2"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "wv"
@@ -67,7 +67,7 @@
       "Guid": "0748384e-1d0e-4f87-9c5f-a87912f8dff4"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "tak"

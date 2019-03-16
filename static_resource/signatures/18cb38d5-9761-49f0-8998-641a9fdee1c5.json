@@ -3,7 +3,7 @@
   "Category": "Installers",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "rpm"
@@ -12,7 +12,7 @@
       "Guid": "a8315f78-7dd5-40f0-bd61-656ae321aefd"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "deb"
@@ -21,7 +21,7 @@
       "Guid": "80fb735b-b9bd-4007-bfb8-0838943d9083"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "snap"
@@ -30,7 +30,7 @@
       "Guid": "908dd779-d270-42f2-b417-148acb2b4d53"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "flatpakref"

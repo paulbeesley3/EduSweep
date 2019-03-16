@@ -4,7 +4,7 @@
   "Tags": [],
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "m3u"
@@ -16,7 +16,7 @@
       "LastWriteTime": "2018-12-09T17:20:44.636075+00:00"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "wpl"
@@ -28,7 +28,7 @@
       "LastWriteTime": "2018-12-09T17:20:49.0894994+00:00"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "pls"
@@ -40,7 +40,7 @@
       "LastWriteTime": "2018-12-09T17:20:54.4961126+00:00"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "asx"
@@ -52,7 +52,7 @@
       "LastWriteTime": "2018-12-09T17:22:29.4016372+00:00"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "fpl"
@@ -61,7 +61,7 @@
       "Guid": "11028a94-21e8-4de6-876a-530bf066ab2b"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "m3u8"
@@ -70,7 +70,7 @@
       "Guid": "31d96933-20bb-4e18-9375-407bdfb6781f"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "pla"
@@ -79,7 +79,7 @@
       "Guid": "20599974-ca93-4e5b-8546-7d62ceb2ba7c"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "zpl"

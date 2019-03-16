@@ -3,7 +3,7 @@
   "Category": "Media",
   "Elements": [
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "3g2"
@@ -12,7 +12,7 @@
       "Guid": "0bc47e3d-db5f-45ef-ac6f-6db1464cad41"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "3gp"
@@ -21,7 +21,7 @@
       "Guid": "cc14a45d-0b7d-4d77-a3e3-cd9fe7e14fd4"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "3gp2"
@@ -30,7 +30,7 @@
       "Guid": "fdfa20fe-8984-4dae-adae-ae703d13d1ee"
     },
     {
-      "$type": "EdUtils.Signatures.ExtensionSignatureElement, EdUtils",
+      "$type": "EduEngine.Signatures.ExtensionSignatureElement, EduEngine",
       "Name": "",
       "Extension": {
         "Name": "3gpp"
