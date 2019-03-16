@@ -23,7 +23,7 @@ using EdUtils.Filesystem;
 
 namespace EduEngine.Analyzers
 {
-    interface IAnalyzer
+    public interface IAnalyzer
     {
         /// <summary>
         /// The name of the analyzer.
