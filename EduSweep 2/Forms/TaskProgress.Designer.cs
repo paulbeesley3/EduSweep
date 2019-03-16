@@ -58,6 +58,10 @@
             this.buttonResultsQuarantine = new System.Windows.Forms.Button();
             this.labelResultsMinor = new System.Windows.Forms.Label();
             this.labelResultsMajor = new System.Windows.Forms.Label();
+            this.contextMenuStripResults = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemSelect = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemClearSelection = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatuslabelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
@@ -74,6 +78,7 @@
             this.tabPageResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResults)).BeginInit();
+            this.contextMenuStripResults.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -293,19 +298,26 @@
             this.listViewResults.Cursor = System.Windows.Forms.Cursors.Default;
             this.listViewResults.EmptyListMsgFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewResults.FullRowSelect = true;
+            this.listViewResults.HasCollapsibleGroups = false;
             this.listViewResults.Location = new System.Drawing.Point(13, 74);
             this.listViewResults.MultiSelect = false;
             this.listViewResults.Name = "listViewResults";
             this.listViewResults.Size = new System.Drawing.Size(674, 250);
             this.listViewResults.TabIndex = 31;
             this.listViewResults.UseCompatibleStateImageBehavior = false;
+            this.listViewResults.UseExplorerTheme = true;
             this.listViewResults.View = System.Windows.Forms.View.Details;
+            this.listViewResults.CellRightClick += new System.EventHandler<BrightIdeasSoftware.CellRightClickEventArgs>(this.listViewResults_CellRightClick);
+            this.listViewResults.HeaderCheckBoxChanging += new System.EventHandler<BrightIdeasSoftware.HeaderCheckBoxChangingEventArgs>(this.listViewResults_HeaderCheckBoxChanging);
+            this.listViewResults.GroupTaskClicked += new System.EventHandler<BrightIdeasSoftware.GroupTaskClickedEventArgs>(this.listViewResults_GroupTaskClicked);
             this.listViewResults.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.objectListViewResults_ItemChecked);
             // 
             // olvResultsColumnName
             // 
             this.olvResultsColumnName.AspectName = "Name";
             this.olvResultsColumnName.FillsFreeSpace = true;
+            this.olvResultsColumnName.HeaderCheckBox = true;
+            this.olvResultsColumnName.HeaderCheckBoxUpdatesRowCheckBoxes = false;
             this.olvResultsColumnName.MinimumWidth = 200;
             this.olvResultsColumnName.Text = "File Name";
             this.olvResultsColumnName.Width = 200;
@@ -415,6 +427,34 @@
             this.labelResultsMajor.TabIndex = 18;
             this.labelResultsMajor.Text = "Scan Results";
             // 
+            // contextMenuStripResults
+            // 
+            this.contextMenuStripResults.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSelect,
+            this.toolStripSeparator,
+            this.toolStripMenuItemClearSelection});
+            this.contextMenuStripResults.Name = "contextMenuStripResults";
+            this.contextMenuStripResults.Size = new System.Drawing.Size(181, 76);
+            // 
+            // toolStripMenuItemSelect
+            // 
+            this.toolStripMenuItemSelect.Name = "toolStripMenuItemSelect";
+            this.toolStripMenuItemSelect.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemSelect.Text = "Select All";
+            this.toolStripMenuItemSelect.Click += new System.EventHandler(this.toolStripMenuItemSelect_Click);
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripMenuItemClearSelection
+            // 
+            this.toolStripMenuItemClearSelection.Name = "toolStripMenuItemClearSelection";
+            this.toolStripMenuItemClearSelection.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemClearSelection.Text = "Clear Selection";
+            this.toolStripMenuItemClearSelection.Click += new System.EventHandler(this.toolStripMenuItemClearSelection_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -484,6 +524,7 @@
             this.tabPageResults.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResults)).EndInit();
+            this.contextMenuStripResults.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -528,5 +569,9 @@
         private System.Windows.Forms.Timer timerLocations;
         private System.Windows.Forms.Timer timerResults;
         private System.Windows.Forms.RichTextBox richTextBoxLog;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripResults;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSelect;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemClearSelection;
     }
 }

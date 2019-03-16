@@ -83,6 +83,14 @@ namespace EduSweep_2.Forms
                 "{0}: {1}",
                 WindowTitleBase,
                 runningTask.Name);
+
+            foreach (var column in listViewResults.AllColumns)
+            {
+                column.GroupFormatter = delegate (OLVGroup group, GroupingParameters parms)
+                {
+                    group.Task = "Select Group";
+                };
+            }
         }
 
         private void TaskProgress_Load(object sender, EventArgs e)
@@ -320,6 +328,11 @@ namespace EduSweep_2.Forms
 
         private void objectListViewResults_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
+            updateResultButtonStatus();
+        }
+
+        private void updateResultButtonStatus()
+        {
             int count = listViewResults.CheckedItems.Count;
 
             /* Testing to see if at least one item is selected */
@@ -459,6 +472,57 @@ namespace EduSweep_2.Forms
             scannedDirectories = scanner.GetScannedDirectories().ToList();
 
             toolStripStatuslabelStatus.Text = string.Format("Scanning... ({0} directories processed)", scannedDirectories.Count);
+        }
+
+        private void listViewResults_HeaderCheckBoxChanging(object sender, HeaderCheckBoxChangingEventArgs e)
+        {
+            listViewResults.ItemChecked -= this.objectListViewResults_ItemChecked;
+
+            if (e.NewCheckState == CheckState.Checked)
+            {
+                listViewResults.CheckAll();
+            }
+            else if (e.NewCheckState == CheckState.Unchecked)
+            {
+                listViewResults.UncheckAll();
+            }
+
+            listViewResults.ItemChecked += this.objectListViewResults_ItemChecked;
+            updateResultButtonStatus();
+        }
+
+        private void toolStripMenuItemSelect_Click(object sender, EventArgs e)
+        {
+            listViewResults.CheckHeaderCheckBox(olvResultsColumnName);
+        }
+
+        private void toolStripMenuItemClearSelection_Click(object sender, EventArgs e)
+        {
+            listViewResults.UncheckHeaderCheckBox(olvResultsColumnName);
+        }
+
+        private void listViewResults_CellRightClick(object sender, CellRightClickEventArgs e)
+        {
+            if (e.Model == null)
+            {
+                /* Clicked on background */
+                return;
+            }
+
+            e.MenuStrip = contextMenuStripResults;
+        }
+
+        private void listViewResults_GroupTaskClicked(object sender, GroupTaskClickedEventArgs e)
+        {
+            listViewResults.ItemChecked -= this.objectListViewResults_ItemChecked;
+
+            foreach (var groupItem in e.Group.Items)
+            {
+                groupItem.Checked = !groupItem.Checked;
+            }
+
+            listViewResults.ItemChecked += this.objectListViewResults_ItemChecked;
+            updateResultButtonStatus();
         }
     }
 }
