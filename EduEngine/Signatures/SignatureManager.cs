@@ -149,7 +149,7 @@ namespace EduEngine.Signatures
         {
             string path = Path.Combine(
                 AppFolders.CustomSignatureFolder,
-                string.Format("{0}.json", sig.Guid));
+                sig.FileName);
             try
             {
                 File.Delete(path);

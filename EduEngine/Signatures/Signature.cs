@@ -41,6 +41,9 @@ namespace EduEngine.Signatures
         [JsonIgnore]
         public string DisplayName => string.Format("[{0}] {1}", Category, Name);
 
+        [JsonIgnore]
+        public string FileName => string.Format("{0}{1}", this.Guid, ".json");
+
         [JsonProperty]
         public List<string> Tags { get; set; } = new List<string>();
 
