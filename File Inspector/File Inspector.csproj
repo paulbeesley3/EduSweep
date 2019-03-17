@@ -67,9 +67,6 @@
     <Reference Include="Microsoft.WindowsAPICodePack">
       <HintPath>..\lib\ms\Microsoft.WindowsAPICodePack.dll</HintPath>
     </Reference>
-    <Reference Include="nClam, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\nClam.4.0.1\lib\net45\nClam.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
