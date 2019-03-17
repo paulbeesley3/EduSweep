@@ -226,6 +226,7 @@ namespace EduSweep_2.Forms
 
                 listViewResults.SetObjects(detections);
                 UpdateResultsCount();
+                updateResultButtonStatus();
             }
         }
 
