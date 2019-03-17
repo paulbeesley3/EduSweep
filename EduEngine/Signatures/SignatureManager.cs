@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using EduEngine.Helpers;
 using EdUtils.Detections;
@@ -161,10 +162,29 @@ namespace EduEngine.Signatures
             }
         }
 
+        public static void ExportAllSignaturesToZip(string zipPath)
+        {
+            ExportSignaturesToZip(zipPath, GetSignatureList(SignatureType.ALL));
+        }
+
+        public static void ExportSignaturesToZip(string zipPath, IList<Signature> signatures)
+        {
+            using (var zipFile = new FileStream(zipPath, FileMode.Create))
+            {
+                using (var archive = new ZipArchive(zipFile, ZipArchiveMode.Create))
+                {
+                    foreach (var signature in signatures)
+                    {
+                        archive.CreateEntryFromFile(signature.FileName, signature.FileName, CompressionLevel.Fastest);
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Create a Signature instance by deserializing a JSON representation on disk.
         /// </summary>
-        /// <param name="file">Signature instance representing the serialized Signature on disk.</param>
+        /// <param name="file">FileInfo instance representing the serialized Signature on disk.</param>
         /// <returns>A deserialized Signature instance.</returns>
         private static Signature LoadSignature(FileInfo file)
         {
