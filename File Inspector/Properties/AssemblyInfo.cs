@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("EduSweep File Inspector")]
-[assembly: AssemblyDescription("EduSweep File Content Analyser (LifeTime eXtension Edition)")]
+[assembly: AssemblyDescription("EduSweep File Content Analyser")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Paul Beesley")]
-[assembly: AssemblyProduct("EduSweep File Inspector LTX (LifeTime eXtension Edition)")]
+[assembly: AssemblyProduct("EduSweep File Inspector")]
 [assembly: AssemblyCopyright("Paul Beesley 2008 - 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.7.0.0")]
-[assembly: AssemblyFileVersion("2.7.0.0")]
+[assembly: AssemblyVersion("2.6.2.0")]
+[assembly: AssemblyFileVersion("2.6.2.0")]
 [assembly: NeutralResourcesLanguageAttribute("en-GB")]
