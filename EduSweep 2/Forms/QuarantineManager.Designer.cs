@@ -156,7 +156,7 @@
             // 
             // olvColumnSize
             // 
-            this.olvColumnSize.AspectName = "LengthAsText";
+            this.olvColumnSize.AspectName = "Length";
             this.olvColumnSize.FillsFreeSpace = true;
             this.olvColumnSize.MinimumWidth = 50;
             this.olvColumnSize.Text = "Size";

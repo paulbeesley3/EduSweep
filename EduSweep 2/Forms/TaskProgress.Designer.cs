@@ -333,7 +333,7 @@
             // 
             // olvResultsColumnSize
             // 
-            this.olvResultsColumnSize.AspectName = "LengthAsText";
+            this.olvResultsColumnSize.AspectName = "Length";
             this.olvResultsColumnSize.FillsFreeSpace = true;
             this.olvResultsColumnSize.MaximumWidth = 125;
             this.olvResultsColumnSize.MinimumWidth = 50;

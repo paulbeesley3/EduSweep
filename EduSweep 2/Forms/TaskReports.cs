@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using EduEngine.Reports;
@@ -64,6 +65,7 @@ namespace EduSweep_2.Forms
             };
 
             SetListViewOverlay();
+            SetListViewStringConverters();
 
             typedReportView = new TypedObjectListView<ScanReport>(this.listViewReports);
 
@@ -91,6 +93,93 @@ namespace EduSweep_2.Forms
             SetButtonStates(listViewReports.SelectedItems.Count);
             UpdateStatusBarText();
             logger.Debug("Loaded reports list");
+        }
+
+        private void SetListViewStringConverters()
+        {
+            olvColumnDate.AspectToStringConverter = delegate (object x)
+            {
+                var date = (DateTime)x;
+
+                return string.Format(
+                "{0} at {1}",
+                date.ToShortDateString(),
+                date.ToShortTimeString());
+            };
+
+            olvColumnDate.GroupKeyGetter = delegate (object x) {
+                var report = (ScanReport)x;
+                return report.Task.LastCompletionTime.Date;
+            };
+
+            olvColumnDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                var date = (DateTime)groupKey;
+                return date.ToShortDateString();
+            };
+
+            olvColumnDuration.AspectToStringConverter = delegate (object x)
+            {
+                var duration = (TimeSpan)x;
+                var builder = new StringBuilder();
+
+                if (duration.Hours >= 1)
+                {
+                    builder.Append(string.Format("{0} hour(s) ", duration.Hours));
+                }
+                if (duration.Minutes >= 1)
+                {
+                    builder.Append(string.Format("{0} min(s) ", duration.Minutes));
+                }
+                if (duration.Seconds >= 1)
+                {
+                    builder.Append(string.Format("{0} sec(s) ", duration.Seconds));
+                }
+
+                if (builder.Length == 0)
+                {
+                    return "Near-instant";
+                }
+
+                return builder.ToString();
+            };
+
+            olvColumnDuration.GroupKeyGetter = delegate (object x) {
+                var report = (ScanReport)x;
+                return (long)report.Task.Duration.TotalMinutes;
+            };
+
+            olvColumnDuration.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                var minutes = (long)groupKey;
+
+                if (minutes < 1)
+                {
+                    return "Less than a minute";
+                }
+
+                if (minutes < 5)
+                {
+                    return "Less than 5 minutes";
+                }
+
+                if (minutes < 10)
+                {
+                    return "Less than 10 minutes";
+                }
+
+                if (minutes < 30)
+                {
+                    return "Less than half an hour";
+                }
+
+                if (minutes < 60)
+                {
+                    return "Less than an hour";
+                }
+
+                return "More than one hour";
+            };
         }
 
         private void SetListViewOverlay()

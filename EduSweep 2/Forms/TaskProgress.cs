@@ -32,6 +32,7 @@ using EduEngine.Scanner;
 using EduEngine.Tasks;
 using EduSweep_2.Common;
 using EdUtils.Filesystem;
+using EdUtils.Helpers;
 using EdUtils.Settings;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
@@ -84,6 +85,8 @@ namespace EduSweep_2.Forms
                 WindowTitleBase,
                 runningTask.Name);
 
+            SetListViewStringConverters();
+
             foreach (var column in listViewResults.AllColumns)
             {
                 column.GroupFormatter = delegate (OLVGroup group, GroupingParameters parms)
@@ -91,6 +94,38 @@ namespace EduSweep_2.Forms
                     group.Task = "Select Group";
                 };
             }
+        }
+
+        private void SetListViewStringConverters()
+        {
+            olvResultsColumnSize.AspectToStringConverter = delegate (object obj)
+            {
+                return Utils.GetDynamicFileSize((long)obj);
+            };
+
+            olvResultsColumnSize.GroupKeyGetter = delegate (object x) {
+                var file = (FileItem)x;
+                return Utils.GetFileSizeClass(file.Length);
+            };
+
+            olvResultsColumnSize.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                var sizeClass = (FileSizeClass)groupKey;
+
+                switch (sizeClass)
+                {
+                    case FileSizeClass.BYTE:
+                        return "Less than 1KB";
+                    case FileSizeClass.KBYTE:
+                        return "Less than 1MB";
+                    case FileSizeClass.MBYTE:
+                        return "Less than 1GB";
+                    case FileSizeClass.GBYTE:
+                        return "Over 1GB";
+                    default:
+                        return "Unknown size class";
+                }
+            };
         }
 
         private void TaskProgress_Load(object sender, EventArgs e)

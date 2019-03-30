@@ -67,7 +67,7 @@
             this.groupBox2.Controls.Add(this.toolStripReports);
             this.groupBox2.Location = new System.Drawing.Point(12, 66);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(663, 194);
+            this.groupBox2.Size = new System.Drawing.Size(663, 285);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Available Reports";
@@ -94,7 +94,7 @@
             this.listViewReports.Location = new System.Drawing.Point(3, 41);
             this.listViewReports.MultiSelect = false;
             this.listViewReports.Name = "listViewReports";
-            this.listViewReports.Size = new System.Drawing.Size(657, 150);
+            this.listViewReports.Size = new System.Drawing.Size(657, 241);
             this.listViewReports.TabIndex = 6;
             this.listViewReports.UseCompatibleStateImageBehavior = false;
             this.listViewReports.UseExplorerTheme = true;
@@ -111,14 +111,14 @@
             // 
             // olvColumnDate
             // 
-            this.olvColumnDate.AspectName = "Task.LastCompletionTimeAsText";
+            this.olvColumnDate.AspectName = "Task.LastCompletionTime";
             this.olvColumnDate.FillsFreeSpace = true;
             this.olvColumnDate.MinimumWidth = 50;
             this.olvColumnDate.Text = "Completed";
             // 
             // olvColumnDuration
             // 
-            this.olvColumnDuration.AspectName = "Task.DurationAsText";
+            this.olvColumnDuration.AspectName = "Task.Duration";
             this.olvColumnDuration.FillsFreeSpace = true;
             this.olvColumnDuration.MinimumWidth = 50;
             this.olvColumnDuration.Text = "Duration";
@@ -228,9 +228,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.webBrowserReport);
-            this.groupBox1.Location = new System.Drawing.Point(12, 266);
+            this.groupBox1.Location = new System.Drawing.Point(12, 357);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(663, 323);
+            this.groupBox1.Size = new System.Drawing.Size(663, 232);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Contents";
@@ -244,7 +244,7 @@
             this.webBrowserReport.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserReport.Name = "webBrowserReport";
             this.webBrowserReport.ScriptErrorsSuppressed = true;
-            this.webBrowserReport.Size = new System.Drawing.Size(657, 304);
+            this.webBrowserReport.Size = new System.Drawing.Size(657, 213);
             this.webBrowserReport.TabIndex = 2;
             this.webBrowserReport.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowserReport.WebBrowserShortcutsEnabled = false;

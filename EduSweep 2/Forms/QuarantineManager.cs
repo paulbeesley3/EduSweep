@@ -49,6 +49,39 @@ namespace EduSweep_2.Forms
         public QuarantineManager()
         {
             InitializeComponent();
+            SetListViewStringConverters();
+        }
+
+        private void SetListViewStringConverters()
+        {
+            olvColumnSize.AspectToStringConverter = delegate (object obj)
+            {
+                return Utils.GetDynamicFileSize((long)obj);
+            };
+
+            olvColumnSize.GroupKeyGetter = delegate (object x) {
+                var file = (FileItem)x;
+                return Utils.GetFileSizeClass(file.Length);
+            };
+
+            olvColumnSize.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                var sizeClass = (FileSizeClass)groupKey;
+
+                switch (sizeClass)
+                {
+                    case FileSizeClass.BYTE:
+                        return "Less than 1KB";
+                    case FileSizeClass.KBYTE:
+                        return "Less than 1MB";
+                    case FileSizeClass.MBYTE:
+                        return "Less than 1GB";
+                    case FileSizeClass.GBYTE:
+                        return "Over 1GB";
+                    default:
+                        return "Unknown size class";
+                }
+            };
         }
 
         private void LoadFilesList()
