@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
 using EdUtils.WindowsPlatform;
+using HeyRed.Mime;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace File_Inspector
@@ -94,9 +95,10 @@ namespace File_Inspector
 
             /* Detected extension */
             var detectedExtension = new ListViewItem("Detected Extension");
-            var detectedExtensionValue = new ListViewItem.ListViewSubItem();
-
-            //detectedExtensionValue.Text = fileItem.MIMEType;
+            var detectedExtensionValue = new ListViewItem.ListViewSubItem
+            {
+                Text = MimeGuesser.GuessExtension(fileItem.AbsolutePath)
+            };
 
             detectedExtension.SubItems.Add(detectedExtensionValue);
             detectedExtension.SubItems.Add("No");
@@ -104,7 +106,12 @@ namespace File_Inspector
 
             /* MIME Type */
             var mimeType = new ListViewItem("Detected MIME Type");
-            var mimeTypeValue = new ListViewItem.ListViewSubItem();
+            var mimeTypeValue = new ListViewItem.ListViewSubItem
+            {
+                Text = MimeGuesser.GuessMimeType(fileItem.AbsolutePath)
+            };
+
+
             mimeType.SubItems.Add(mimeTypeValue);
             mimeType.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { mimeType });
@@ -166,11 +173,6 @@ namespace File_Inspector
             owner.SubItems.Add(ownerValue);
             owner.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { owner });
-
-            /* Flash */
-            var flash = new ListViewItem("Embedded Flash");
-
-            BeginInvoke(addListViewItemDelegate, new object[] { flash });
         }
 
         public delegate void addLVI(ListViewItem lvi);
