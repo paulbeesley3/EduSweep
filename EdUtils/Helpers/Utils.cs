@@ -22,6 +22,7 @@ using System;
 using System.IO;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Security.Principal;
+using EdUtils.Filesystem;
 using NLog;
 
 namespace EdUtils.Helpers
@@ -30,11 +31,6 @@ namespace EdUtils.Helpers
     public class Utils
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-
-        public enum FileSizeClass
-        {
-            BYTE, KBYTE, MBYTE, GBYTE
-        }
 
         public static double BytesFromArbitrarySize(long size, FileSizeClass type)
         {

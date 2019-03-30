@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Detections\Detection.cs" />
     <Compile Include="Detections\DetectionType.cs" />
+    <Compile Include="Filesystem\FileSizeClass.cs" />
     <Compile Include="Filesystem\PathType.cs" />
     <Compile Include="Filesystem\AppFolders.cs" />
     <Compile Include="Helpers\Checksums.cs" />
