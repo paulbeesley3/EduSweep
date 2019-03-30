@@ -259,7 +259,10 @@ namespace EduSweep_2.Forms
                     }
                 }
 
+                listViewResults.Freeze();
                 listViewResults.SetObjects(detections);
+                listViewResults.Unfreeze();
+
                 UpdateResultsCount();
                 updateResultButtonStatus();
             }
@@ -500,8 +503,11 @@ namespace EduSweep_2.Forms
             {
                 timerResults.Stop();
                 listViewResults.Enabled = true;
+
+                listViewResults.Freeze();
                 listViewResults.SetObjects(detections);
                 listViewResults.Sort(olvResultsColumnExtension, SortOrder.Ascending);
+                listViewResults.Unfreeze();
 
                 toolStripStatuslabelStatus.Text = "Scan task complete";
             }
@@ -517,6 +523,7 @@ namespace EduSweep_2.Forms
         private void listViewResults_HeaderCheckBoxChanging(object sender, HeaderCheckBoxChangingEventArgs e)
         {
             listViewResults.ItemChecked -= this.objectListViewResults_ItemChecked;
+            listViewResults.Freeze();
 
             if (e.NewCheckState == CheckState.Checked)
             {
@@ -528,6 +535,7 @@ namespace EduSweep_2.Forms
             }
 
             listViewResults.ItemChecked += this.objectListViewResults_ItemChecked;
+            listViewResults.Unfreeze();
             updateResultButtonStatus();
         }
 
@@ -555,6 +563,7 @@ namespace EduSweep_2.Forms
         private void listViewResults_GroupTaskClicked(object sender, GroupTaskClickedEventArgs e)
         {
             listViewResults.ItemChecked -= this.objectListViewResults_ItemChecked;
+            listViewResults.Freeze();
 
             foreach (var groupItem in e.Group.Items)
             {
@@ -562,6 +571,7 @@ namespace EduSweep_2.Forms
             }
 
             listViewResults.ItemChecked += this.objectListViewResults_ItemChecked;
+            listViewResults.Unfreeze();
             updateResultButtonStatus();
         }
     }

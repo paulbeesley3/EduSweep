@@ -86,7 +86,10 @@ namespace EduSweep_2.Forms
         {
             logger.Trace("Loading reports list");
             reports = ReportManager.GetReportList();
+
+            listViewReports.Freeze();
             listViewReports.SetObjects(reports);
+            listViewReports.Unfreeze();
 
             webBrowserReport.Navigate("about:blank");
             webBrowserReport.Refresh();

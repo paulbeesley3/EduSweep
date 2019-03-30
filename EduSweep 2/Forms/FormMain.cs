@@ -173,7 +173,11 @@ namespace EduSweep_2.Forms
         private void LoadTaskList()
         {
             tasks = ScanTaskManager.GetTaskList();
+
+            listViewTasks.Freeze();
             listViewTasks.SetObjects(tasks);
+            listViewTasks.Unfreeze();
+
             SetTaskControlStates();
 
             logger.Debug("Loaded task list");

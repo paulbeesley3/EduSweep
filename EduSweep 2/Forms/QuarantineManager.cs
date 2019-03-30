@@ -89,7 +89,9 @@ namespace EduSweep_2.Forms
             logger.Debug("Reloading quarantine file list");
             files = Quarantine.QuarantineManager.GetFileItemList();
 
+            objectListViewFiles.Freeze();
             objectListViewFiles.SetObjects(files);
+            objectListViewFiles.Unfreeze();
 
             SetStatusBarText();
             SetButtonStates(objectListViewFiles.SelectedItems.Count);
