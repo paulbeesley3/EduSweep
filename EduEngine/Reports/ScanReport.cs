@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Text;
 using EduEngine.Tasks;
 using EdUtils.Filesystem;
+using EdUtils.Helpers;
 using EdUtils.Types;
 using Newtonsoft.Json;
 
@@ -126,7 +127,7 @@ namespace EduEngine.Reports
                     sb.Append(@"<td>" + triggerBuilder.ToString() + @"</td>");
 
                     sb.Append(@"<td>" + detectedItem.Owner + @"</td>");
-                    sb.Append(@"<td>" + detectedItem.LengthAsText + @"</td>");
+                    sb.Append(@"<td>" + Utils.GetDynamicFileSize(detectedItem.Length) + @"</td>");
                     sb.Append(@"<td>" + detectedItem.ParentDirectoryPath + @"</td>");
                     sb.Append(@"</tr>");
                 }
