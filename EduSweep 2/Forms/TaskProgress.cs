@@ -523,7 +523,7 @@ namespace EduSweep_2.Forms
 
             foreach (var groupItem in e.Group.Items)
             {
-                groupItem.Checked = !groupItem.Checked;
+                groupItem.Checked = true;
             }
 
             listViewResults.ItemChecked += this.objectListViewResults_ItemChecked;

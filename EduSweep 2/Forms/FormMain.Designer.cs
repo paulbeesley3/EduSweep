@@ -173,7 +173,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnCreateDate
             // 
-            this.olvColumnCreateDate.AspectName = "CreationTimeAsText";
+            this.olvColumnCreateDate.AspectName = "CreationTime";
             this.olvColumnCreateDate.FillsFreeSpace = true;
             this.olvColumnCreateDate.MinimumWidth = 50;
             this.olvColumnCreateDate.Text = "Created";
@@ -181,7 +181,7 @@ namespace EduSweep_2.Forms
             // 
             // olvColumnLastRunDate
             // 
-            this.olvColumnLastRunDate.AspectName = "LastCompletionTimeAsText";
+            this.olvColumnLastRunDate.AspectName = "LastCompletionTime";
             this.olvColumnLastRunDate.FillsFreeSpace = true;
             this.olvColumnLastRunDate.MinimumWidth = 50;
             this.olvColumnLastRunDate.Text = "Last Completed";

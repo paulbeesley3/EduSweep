@@ -50,7 +50,12 @@ namespace EduSweep_2.Forms
         {
             InitializeComponent();
 
-            this.olvColumnStatus.AspectToStringConverter = delegate(object obj)
+            SetListViewStringConverters();
+        }
+
+        private void SetListViewStringConverters()
+        {
+            olvColumnStatus.AspectToStringConverter = delegate (object obj)
             {
                 var status = (ScanStatus)obj;
 
@@ -70,6 +75,52 @@ namespace EduSweep_2.Forms
                     default:
                         return "Unknown";
                 }
+            };
+
+            olvColumnCreateDate.AspectToStringConverter = delegate (object x)
+            {
+                var createDate = (DateTime)x;
+
+                return string.Format(
+                "{0} at {1}",
+                createDate.ToShortDateString(),
+                createDate.ToShortTimeString());
+            };
+
+            olvColumnCreateDate.GroupKeyGetter = delegate (object x) {
+                var task = (ScanTask)x;
+                return task.CreationTime.Date;
+            };
+
+            olvColumnCreateDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                var createDate = (DateTime)groupKey;
+                return createDate.ToShortDateString();
+            };
+
+            olvColumnLastRunDate.AspectToStringConverter = delegate (object x)
+            {
+                var runDate = (DateTime)x;
+
+                return string.Format(
+                "{0} at {1}",
+                runDate.ToShortDateString(),
+                runDate.ToShortTimeString());
+            };
+
+            olvColumnLastRunDate.GroupKeyGetter = delegate (object x) {
+                var task = (ScanTask)x;
+                return task.LastCompletionTime.Date;
+            };
+
+            olvColumnLastRunDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            {
+                if ((DateTime)groupKey == DateTime.MinValue)
+                {
+                    return "Never Completed";
+                }
+
+                return ((DateTime)groupKey).ToShortDateString();
             };
         }
 
