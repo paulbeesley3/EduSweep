@@ -31,22 +31,22 @@ namespace EdUtils.Helpers
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        public enum FileSizes
+        public enum FileSizeClass
         {
             BYTE, KBYTE, MBYTE, GBYTE
         }
 
-        public static double BytesFromArbitrarySize(long size, FileSizes type)
+        public static double BytesFromArbitrarySize(long size, FileSizeClass type)
         {
             switch (type)
             {
-                case FileSizes.BYTE:
+                case FileSizeClass.BYTE:
                     return size;
-                case FileSizes.KBYTE:
+                case FileSizeClass.KBYTE:
                     return size * 1024d;
-                case FileSizes.MBYTE:
+                case FileSizeClass.MBYTE:
                     return size * 1024d * 1024d;
-                case FileSizes.GBYTE:
+                case FileSizeClass.GBYTE:
                     return size * 1024d * 1024d * 1024d;
                 default:
                     return 0;
@@ -66,24 +66,46 @@ namespace EdUtils.Helpers
             return intProgress;
         }
 
+        public static FileSizeClass GetFileSizeClass(long sizeInBytes)
+        {
+            if (sizeInBytes >= Math.Pow(1024, 3))
+            {
+                return FileSizeClass.GBYTE;
+            }
+
+            if (sizeInBytes >= Math.Pow(1024, 2))
+            {
+                return FileSizeClass.MBYTE;
+            }
+
+            if (sizeInBytes >= 1024)
+            {
+                return FileSizeClass.KBYTE;
+            }
+            
+            return FileSizeClass.BYTE;
+        }
+
         public static string GetDynamicFileSize(long sizeInBytes)
         {
-            if (sizeInBytes >= 1073741824)
+            var sizeClass = GetFileSizeClass(sizeInBytes);
+
+            if (sizeClass == FileSizeClass.GBYTE)
             {
                 double sizeInGB = sizeInBytes / Math.Pow(1024, 3);
                 return sizeInGB.ToString("n2") + " GB";
             }
 
-            if (sizeInBytes >= 1048576)
+            if (sizeClass == FileSizeClass.MBYTE)
             {
                 double sizeInMB = sizeInBytes / Math.Pow(1024, 2);
-                return sizeInMB.ToString("n2") + " MB";
+                return sizeInMB.ToString("n1") + " MB";
             }
 
-            if (sizeInBytes >= 1024)
+            if (sizeClass == FileSizeClass.KBYTE)
             {
-                double sizeInKB = sizeInBytes / Math.Pow(1024, 1);
-                return sizeInKB.ToString("n2") + " KB";
+                double sizeInKB = sizeInBytes / 1024;
+                return sizeInKB.ToString("n0") + " KB";
             }
 
             /* No conversion needed */
