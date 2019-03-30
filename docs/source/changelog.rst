@@ -3,6 +3,41 @@ Changelog
 
 Release notes for each stable, released version of EduSweep.
 
+[2.6.2] - 2019-04
+=================
+
+Added
+-----
+    - "Select Group" buttons in the scan results list
+    - Right click menu to select or clear all scan results
+
+Changed
+-------
+    - File Inspector is using new libraries to determine MIME type and real file extension
+    - Grouping behaviour is improved in list views across the application
+    - Slightly improved performance when loading large lists of files
+    - Use monochrome logo on main window
+
+Fixed
+-----
+    - The main window shows incorrect scan status information when running parallel scans
+    - Buttons on the task results tab have an incorrect state after deleting file(s)
+    - Default documentation link points to trunk version instead of stable
+    - Broken File Inspector images in documentation
+
+Developer Notes
+---------------
+    - Added EdUtilsTests project and some basic tests
+    - Added MIME library
+    - Added Analyzer interface
+    - Added MIMEAnalyzer analyzer
+    - Added ChecksumAnalyzer analyzer
+    - Added SizeDetector detector (not yet used)
+    - Removed TrID library
+    - Removed some unused code
+    - Signatures are now part of the EduEngine project instead of EdUtils
+    - Applications are now built with 64-bit targets
+
 [2.6.1] - 2019-02
 =================
 
