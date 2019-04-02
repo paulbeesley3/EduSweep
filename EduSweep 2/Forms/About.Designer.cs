@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.buttonClose = new System.Windows.Forms.Button();
             this.groupBoxLicenseInfo = new System.Windows.Forms.GroupBox();
+            this.richTextBoxCredits = new System.Windows.Forms.RichTextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBoxVersions = new System.Windows.Forms.GroupBox();
             this.listViewVersions = new System.Windows.Forms.ListView();
             this.columnHeaderComponent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.richTextBoxCredits = new System.Windows.Forms.RichTextBox();
             this.groupBoxLicenseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.groupBoxVersions.SuspendLayout();
@@ -61,6 +61,19 @@
             this.groupBoxLicenseInfo.TabIndex = 65;
             this.groupBoxLicenseInfo.TabStop = false;
             this.groupBoxLicenseInfo.Text = "Credits and License Information";
+            // 
+            // richTextBoxCredits
+            // 
+            this.richTextBoxCredits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxCredits.Location = new System.Drawing.Point(3, 16);
+            this.richTextBoxCredits.Name = "richTextBoxCredits";
+            this.richTextBoxCredits.ReadOnly = true;
+            this.richTextBoxCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxCredits.ShortcutsEnabled = false;
+            this.richTextBoxCredits.Size = new System.Drawing.Size(564, 167);
+            this.richTextBoxCredits.TabIndex = 0;
+            this.richTextBoxCredits.Text = resources.GetString("richTextBoxCredits.Text");
+            this.richTextBoxCredits.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxCredits_LinkClicked);
             // 
             // pictureBoxLogo
             // 
@@ -108,19 +121,6 @@
             // 
             this.columnHeaderVersion.Text = "Version";
             this.columnHeaderVersion.Width = 97;
-            // 
-            // richTextBoxCredits
-            // 
-            this.richTextBoxCredits.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxCredits.Location = new System.Drawing.Point(3, 16);
-            this.richTextBoxCredits.Name = "richTextBoxCredits";
-            this.richTextBoxCredits.ReadOnly = true;
-            this.richTextBoxCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxCredits.ShortcutsEnabled = false;
-            this.richTextBoxCredits.Size = new System.Drawing.Size(564, 167);
-            this.richTextBoxCredits.TabIndex = 0;
-            this.richTextBoxCredits.Text = resources.GetString("richTextBoxCredits.Text");
-            this.richTextBoxCredits.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxCredits_LinkClicked);
             // 
             // About
             // 

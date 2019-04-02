@@ -175,13 +175,13 @@ NLog.Windows.Forms Library
 
 ObjectListView Library
     Author: Phillip Piper
-    Web: http://http://objectlistview.sourceforge.net
+    Web: http://objectlistview.sourceforge.net
     License: GNU GPL 3.0
 
-TrIDLib Library
-    Author: Marco Pontello
-    Web: http://mark0.net/code-tridlib-e.html
-    License: see TrIDLib-License.txt
+MIME Library
+    Author: HeyRed
+    Web: https://github.com/hey-red/Mime
+    License: MIT
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
