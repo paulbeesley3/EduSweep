@@ -177,6 +177,15 @@ namespace EdUtils.Filesystem
             }
         }
 
+        public static string MagicDBPath
+        {
+            get
+            {
+                logger.Trace("Property read on MagicDBPath");
+                return Path.Combine(ProgramFolder, "magic.mgc");
+            }
+        }
+
         public static bool WorkingFolderIsWritable()
         {
             logger.Debug("Testing writability of working folder");
