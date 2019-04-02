@@ -62,7 +62,6 @@ Source: "..\EduSweep 2\bin\Release\EduEngine.dll"; DestDir: "{app}"; Flags: igno
 Source: "..\EduSweep 2\bin\Release\EdUtils.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\libgnurx-0.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\libmagic-1.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\EduSweep 2\bin\Release\magic.mgc"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\Microsoft.WindowsAPICodePack.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\Mime.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
@@ -75,7 +74,7 @@ Source: "..\EduSweep 2\bin\Release\ObjectListView.dll"; DestDir: "{app}"; Flags:
 Source: "..\EduSweep 2\bin\Release\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\EduSweep 2\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\static_resource\PORTABLE"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portable
-
+Source: "..\static_resource\magic.mgc"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 
 ; File Inspector Component (insp)
 Source: "..\File Inspector\bin\Release\finspector.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: insp
