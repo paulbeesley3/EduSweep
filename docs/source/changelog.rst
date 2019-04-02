@@ -8,12 +8,14 @@ Release notes for each stable, released version of EduSweep.
 
 Added
 -----
+    - File Inspector now shows file content analysis for known file types
     - "Select Group" buttons in the scan results list
     - Right click menu to select or clear all scan results
+    - Check box at top left of scan results list to select or clear all scan results
 
 Changed
 -------
-    - File Inspector is using new libraries to determine MIME type and real file extension
+    - File Inspector is using new libraries to determine MIME type and file extension
     - Grouping behaviour is improved in list views across the application
     - Slightly improved performance when loading large lists of files
     - Use monochrome logo on main window
