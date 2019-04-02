@@ -58,7 +58,7 @@ namespace EduEngine.Helpers
         public void BindToName(Type serializedType, out string assemblyName, out string typeName)
         {
             assemblyName = null;
-            typeName = serializedType.Name;
+            typeName = serializedType.FullName;
         }
     }
 }
