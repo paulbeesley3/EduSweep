@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using EdUtils.Filesystem;
 using EdUtils.Helpers;
@@ -14,6 +15,14 @@ namespace File_Inspector
     public partial class FileInspector : Form
     {
         private FileItem fileItem;
+
+        private const MagicOpenFlags detailFlags =
+            MagicOpenFlags.MAGIC_CONTINUE |
+            MagicOpenFlags.MAGIC_COMPRESS_TRANSP |
+            MagicOpenFlags.MAGIC_ERROR |
+            MagicOpenFlags.MAGIC_RAW;
+
+        private Magic detailMagic = new Magic(detailFlags, AppFolders.MagicDBPath);
 
         public FileInspector()
         {
@@ -47,7 +56,7 @@ namespace File_Inspector
             };
 
             listViewAnalysis.Items.Clear();
-            listViewFileTypes.Items.Clear();
+            richTextBoxDetails.Clear();
 
             Text = string.Format("{0} - File Inspector", fileItem.Name);
             labelMajorStatus.Text = fileItem.Name;
@@ -72,6 +81,7 @@ namespace File_Inspector
         private void backgroundWorkerPopulate_DoWork(object sender, DoWorkEventArgs e)
         {
             addLVI addListViewItemDelegate = AddListViewItem;
+            setDetailText setDetailTextDelegate = SetDetailText;
 
             /* Full path */
             var fullPath = new ListViewItem("Location");
@@ -111,10 +121,24 @@ namespace File_Inspector
                 Text = MimeGuesser.GuessMimeType(fileItem.AbsolutePath)
             };
 
-
             mimeType.SubItems.Add(mimeTypeValue);
             mimeType.SubItems.Add("No");
             BeginInvoke(addListViewItemDelegate, new object[] { mimeType });
+
+            /* MIME Details */
+            var builder = new StringBuilder();
+            string details = detailMagic.Read(fileItem.AbsolutePath);
+            details = details.Replace("- data", "");
+
+            foreach (var component in details.Split(','))
+            {
+                if (!component.Equals("- data"))
+                {
+                    builder.AppendLine(component.Trim());
+                }
+            }
+
+            BeginInvoke(setDetailTextDelegate, new object[] { builder.ToString() });
 
             /* Size */
             var size = new ListViewItem("Size");
@@ -180,6 +204,13 @@ namespace File_Inspector
         private void AddListViewItem(ListViewItem lvi)
         {
             listViewAnalysis.Items.Add(lvi);
+        }
+
+        public delegate void setDetailText(string details);
+
+        private void SetDetailText(string details)
+        {
+            richTextBoxDetails.Text = details;
         }
 
         private void toolStripButtonOpen_Click(object sender, EventArgs e)

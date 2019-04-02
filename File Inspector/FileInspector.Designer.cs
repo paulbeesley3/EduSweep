@@ -45,10 +45,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSums = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listViewFileTypes = new System.Windows.Forms.ListView();
-            this.columnHeaderConfidence = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.richTextBoxDetails = new System.Windows.Forms.RichTextBox();
             this.statusStripInspector = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelScan = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpacer = new System.Windows.Forms.ToolStripStatusLabel();
@@ -173,7 +170,7 @@
             // 
             this.openWithNotepadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openWithNotepadToolStripMenuItem.Image")));
             this.openWithNotepadToolStripMenuItem.Name = "openWithNotepadToolStripMenuItem";
-            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.openWithNotepadToolStripMenuItem.Text = "View with Notepad";
             this.openWithNotepadToolStripMenuItem.Click += new System.EventHandler(this.openWithNotepadToolStripMenuItem_Click);
             // 
@@ -194,45 +191,25 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listViewFileTypes);
+            this.groupBox2.Controls.Add(this.richTextBoxDetails);
             this.groupBox2.Location = new System.Drawing.Point(12, 375);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(550, 139);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "File Type Analysis";
+            this.groupBox2.Text = "File Analysis";
             // 
-            // listViewFileTypes
+            // richTextBoxDetails
             // 
-            this.listViewFileTypes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderConfidence,
-            this.columnHeaderExtension,
-            this.columnHeaderDescription});
-            this.listViewFileTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewFileTypes.FullRowSelect = true;
-            this.listViewFileTypes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewFileTypes.Location = new System.Drawing.Point(3, 16);
-            this.listViewFileTypes.MultiSelect = false;
-            this.listViewFileTypes.Name = "listViewFileTypes";
-            this.listViewFileTypes.Size = new System.Drawing.Size(544, 120);
-            this.listViewFileTypes.TabIndex = 6;
-            this.listViewFileTypes.UseCompatibleStateImageBehavior = false;
-            this.listViewFileTypes.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderConfidence
-            // 
-            this.columnHeaderConfidence.Text = "Confidence";
-            this.columnHeaderConfidence.Width = 76;
-            // 
-            // columnHeaderExtension
-            // 
-            this.columnHeaderExtension.Text = "Extension";
-            this.columnHeaderExtension.Width = 82;
-            // 
-            // columnHeaderDescription
-            // 
-            this.columnHeaderDescription.Text = "Description";
-            this.columnHeaderDescription.Width = 367;
+            this.richTextBoxDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxDetails.Location = new System.Drawing.Point(3, 16);
+            this.richTextBoxDetails.Name = "richTextBoxDetails";
+            this.richTextBoxDetails.ReadOnly = true;
+            this.richTextBoxDetails.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxDetails.ShortcutsEnabled = false;
+            this.richTextBoxDetails.Size = new System.Drawing.Size(544, 120);
+            this.richTextBoxDetails.TabIndex = 1;
+            this.richTextBoxDetails.Text = "";
             // 
             // statusStripInspector
             // 
@@ -339,9 +316,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderProperty;
         private System.Windows.Forms.ColumnHeader columnHeaderValue;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listViewFileTypes;
-        private System.Windows.Forms.ColumnHeader columnHeaderExtension;
-        private System.Windows.Forms.ColumnHeader columnHeaderConfidence;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButtonview;
         private System.Windows.Forms.ToolStripMenuItem openWithNotepadToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStripInspector;
@@ -353,6 +327,6 @@
         private System.Windows.Forms.PictureBox pictureBoxSummary;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButtonSums;
-        private System.Windows.Forms.ColumnHeader columnHeaderDescription;
+        private System.Windows.Forms.RichTextBox richTextBoxDetails;
     }
 }
