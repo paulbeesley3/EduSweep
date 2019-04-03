@@ -43,7 +43,8 @@ namespace EduEngine.Signatures
     public class SizeSignatureElement : SignatureElement
     {
         [JsonIgnore]
-        public new string Name {
+        public new string Name
+        {
             get
             {
                 return string.Format("Files >{0}", Utils.GetDynamicFileSize(Limit));

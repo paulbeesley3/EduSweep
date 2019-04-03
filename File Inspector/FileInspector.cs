@@ -16,13 +16,13 @@ namespace File_Inspector
     {
         private FileItem fileItem;
 
-        private const MagicOpenFlags detailFlags =
+        private const MagicOpenFlags DetailFlags =
             MagicOpenFlags.MAGIC_CONTINUE |
             MagicOpenFlags.MAGIC_COMPRESS_TRANSP |
             MagicOpenFlags.MAGIC_ERROR |
             MagicOpenFlags.MAGIC_RAW;
 
-        private Magic detailMagic = new Magic(detailFlags, AppFolders.MagicDBPath);
+        private Magic detailMagic = new Magic(DetailFlags, AppFolders.MagicDBPath);
 
         public FileInspector()
         {
@@ -128,7 +128,7 @@ namespace File_Inspector
             /* MIME Details */
             var builder = new StringBuilder();
             string details = detailMagic.Read(fileItem.AbsolutePath);
-            details = details.Replace("- data", "");
+            details = details.Replace("- data", string.Empty);
 
             foreach (var component in details.Split(','))
             {

@@ -29,7 +29,6 @@ namespace EduEngine.Analyzers
 
         public void Initialize()
         {
-
         }
 
         public AnalyzerResult Analyze(FileItem file)

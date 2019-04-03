@@ -54,17 +54,18 @@ namespace EduSweep_2.Forms
 
         private void SetListViewStringConverters()
         {
-            olvColumnSize.AspectToStringConverter = delegate (object obj)
+            olvColumnSize.AspectToStringConverter = delegate(object obj)
             {
                 return Utils.GetDynamicFileSize((long)obj);
             };
 
-            olvColumnSize.GroupKeyGetter = delegate (object x) {
+            olvColumnSize.GroupKeyGetter = delegate(object x)
+            {
                 var file = (FileItem)x;
                 return Utils.GetFileSizeClass(file.Length);
             };
 
-            olvColumnSize.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvColumnSize.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 var sizeClass = (FileSizeClass)groupKey;
 

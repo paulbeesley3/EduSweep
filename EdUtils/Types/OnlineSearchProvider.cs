@@ -18,7 +18,6 @@
  */
 #endregion
 
-
 namespace EdUtils.Types
 {
     /// <summary>

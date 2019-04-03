@@ -55,7 +55,7 @@ namespace EduSweep_2.Forms
 
         private void SetListViewStringConverters()
         {
-            olvColumnStatus.AspectToStringConverter = delegate (object obj)
+            olvColumnStatus.AspectToStringConverter = delegate(object obj)
             {
                 var status = (ScanStatus)obj;
 
@@ -77,7 +77,7 @@ namespace EduSweep_2.Forms
                 }
             };
 
-            olvColumnCreateDate.AspectToStringConverter = delegate (object x)
+            olvColumnCreateDate.AspectToStringConverter = delegate(object x)
             {
                 var createDate = (DateTime)x;
 
@@ -87,18 +87,19 @@ namespace EduSweep_2.Forms
                 createDate.ToShortTimeString());
             };
 
-            olvColumnCreateDate.GroupKeyGetter = delegate (object x) {
+            olvColumnCreateDate.GroupKeyGetter = delegate(object x)
+            {
                 var task = (ScanTask)x;
                 return task.CreationTime.Date;
             };
 
-            olvColumnCreateDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvColumnCreateDate.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 var createDate = (DateTime)groupKey;
                 return createDate.ToShortDateString();
             };
 
-            olvColumnLastRunDate.AspectToStringConverter = delegate (object x)
+            olvColumnLastRunDate.AspectToStringConverter = delegate(object x)
             {
                 var runDate = (DateTime)x;
 
@@ -108,12 +109,13 @@ namespace EduSweep_2.Forms
                 runDate.ToShortTimeString());
             };
 
-            olvColumnLastRunDate.GroupKeyGetter = delegate (object x) {
+            olvColumnLastRunDate.GroupKeyGetter = delegate(object x)
+            {
                 var task = (ScanTask)x;
                 return task.LastCompletionTime.Date;
             };
 
-            olvColumnLastRunDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvColumnLastRunDate.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 if ((DateTime)groupKey == DateTime.MinValue)
                 {

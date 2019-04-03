@@ -100,7 +100,7 @@ namespace EduSweep_2.Forms
 
         private void SetListViewStringConverters()
         {
-            olvColumnDate.AspectToStringConverter = delegate (object x)
+            olvColumnDate.AspectToStringConverter = delegate(object x)
             {
                 var date = (DateTime)x;
 
@@ -110,18 +110,19 @@ namespace EduSweep_2.Forms
                 date.ToShortTimeString());
             };
 
-            olvColumnDate.GroupKeyGetter = delegate (object x) {
+            olvColumnDate.GroupKeyGetter = delegate(object x)
+            {
                 var report = (ScanReport)x;
                 return report.Task.LastCompletionTime.Date;
             };
 
-            olvColumnDate.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvColumnDate.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 var date = (DateTime)groupKey;
                 return date.ToShortDateString();
             };
 
-            olvColumnDuration.AspectToStringConverter = delegate (object x)
+            olvColumnDuration.AspectToStringConverter = delegate(object x)
             {
                 var duration = (TimeSpan)x;
                 var builder = new StringBuilder();
@@ -130,10 +131,12 @@ namespace EduSweep_2.Forms
                 {
                     builder.Append(string.Format("{0} hour(s) ", duration.Hours));
                 }
+
                 if (duration.Minutes >= 1)
                 {
                     builder.Append(string.Format("{0} min(s) ", duration.Minutes));
                 }
+
                 if (duration.Seconds >= 1)
                 {
                     builder.Append(string.Format("{0} sec(s) ", duration.Seconds));
@@ -147,12 +150,13 @@ namespace EduSweep_2.Forms
                 return builder.ToString();
             };
 
-            olvColumnDuration.GroupKeyGetter = delegate (object x) {
+            olvColumnDuration.GroupKeyGetter = delegate(object x)
+            {
                 var report = (ScanReport)x;
                 return (long)report.Task.Duration.TotalMinutes;
             };
 
-            olvColumnDuration.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvColumnDuration.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 var minutes = (long)groupKey;
 

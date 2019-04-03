@@ -89,7 +89,7 @@ namespace EduSweep_2.Forms
 
             foreach (var column in listViewResults.AllColumns)
             {
-                column.GroupFormatter = delegate (OLVGroup group, GroupingParameters parms)
+                column.GroupFormatter = delegate(OLVGroup group, GroupingParameters parms)
                 {
                     group.Task = "Select Group";
                 };
@@ -98,17 +98,18 @@ namespace EduSweep_2.Forms
 
         private void SetListViewStringConverters()
         {
-            olvResultsColumnSize.AspectToStringConverter = delegate (object obj)
+            olvResultsColumnSize.AspectToStringConverter = delegate(object obj)
             {
                 return Utils.GetDynamicFileSize((long)obj);
             };
 
-            olvResultsColumnSize.GroupKeyGetter = delegate (object x) {
+            olvResultsColumnSize.GroupKeyGetter = delegate(object x)
+            {
                 var file = (FileItem)x;
                 return Utils.GetFileSizeClass(file.Length);
             };
 
-            olvResultsColumnSize.GroupKeyToTitleConverter = delegate (object groupKey)
+            olvResultsColumnSize.GroupKeyToTitleConverter = delegate(object groupKey)
             {
                 var sizeClass = (FileSizeClass)groupKey;
 

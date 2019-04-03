@@ -32,7 +32,7 @@ namespace EdUtils.Helpers
 {
     public class FlashDetector : IDetector
     {
-        private const int contentLengthLimit = 1024 * 64;
+        private const int ContentLengthLimit = 1024 * 64;
 
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -77,17 +77,16 @@ namespace EdUtils.Helpers
 
         private bool ContainsEmbeddedFlash(FileItem file)
         {
-            
             bool buf1Filled = false;
-            byte[] buf1 = new byte[contentLengthLimit];
-            byte[] buf2 = new byte[contentLengthLimit];
-            byte[] compareBuf = new byte[contentLengthLimit * 2];
+            byte[] buf1 = new byte[ContentLengthLimit];
+            byte[] buf2 = new byte[ContentLengthLimit];
+            byte[] compareBuf = new byte[ContentLengthLimit * 2];
 
             logger.Trace("Opening {0} to check for Flash content", file.AbsolutePath);
             using (FileStream fs = File.OpenRead(file.AbsolutePath))
             {
                 var temp = new UTF8Encoding(true);
-                while (fs.Read(buf2, 0, contentLengthLimit) > 0)
+                while (fs.Read(buf2, 0, ContentLengthLimit) > 0)
                 {
                     if (!buf1Filled)
                     {
@@ -96,7 +95,7 @@ namespace EdUtils.Helpers
                     }
 
                     buf1.CopyTo(compareBuf, 0);
-                    buf2.CopyTo(compareBuf, contentLengthLimit - 1);
+                    buf2.CopyTo(compareBuf, ContentLengthLimit - 1);
                     if (temp.GetString(compareBuf).Contains("ShockwaveFlash"))
                     {
                         return true;

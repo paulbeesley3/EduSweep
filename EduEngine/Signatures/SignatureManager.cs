@@ -204,8 +204,7 @@ namespace EduEngine.Signatures
                         Formatting = Formatting.Indented,
                         TypeNameHandling = TypeNameHandling.Auto,
                         SerializationBinder = new EngineSerializationBinder()
-                    }
-                );
+                    });
             }
             catch (Exception ex)
             {
