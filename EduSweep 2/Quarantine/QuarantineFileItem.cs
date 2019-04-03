@@ -44,6 +44,15 @@ namespace EduSweep_2.Quarantine
         [JsonProperty]
         public string OriginalAbsolutePath { get; private set; }
 
+        [JsonIgnore]
+        public string OriginalName
+        {
+            get
+            {
+                return Path.GetFileName(this.OriginalAbsolutePath);
+            }
+        }
+
         [JsonProperty]
         public string OriginalDirectoryPath { get; private set; }
 
@@ -96,42 +105,8 @@ namespace EduSweep_2.Quarantine
             this.Creator = Utils.GetCurrentUserName();
             this.Owner = this.Creator;
 
-            this.Name = GenerateUniqueFilename(info);
+            this.Name = string.Format("{0}{1}", this.Guid.ToString(), this.Extension.DottedName);
             this.AbsolutePath = Path.Combine(AppFolders.QuarantineFolder, this.Name);
-        }
-
-        /// <summary>
-        /// Create a unique filename for a file being added to quarantine.
-        /// </summary>
-        /// <param name="file">FileInfo instance representing the file being moved to quarantine.</param>
-        /// <returns></returns>
-        private static string GenerateUniqueFilename(FileInfo file)
-        {
-            int count = 1;
-            string nameSubString;
-            string proposedFileName;
-
-            /*
-             * If the file name does not conflict with those of any existing files in
-             * quarantine then just use the name as-is.
-             */
-            if (!File.Exists(Path.Combine(AppFolders.QuarantineFolder, file.Name)))
-            {
-                return file.Name;
-            }
-
-            /* Strip the extension to get the name alone */
-            nameSubString = Path.GetFileNameWithoutExtension(file.Name);
-
-            proposedFileName = string.Format("{0}({1}){2}", nameSubString, count, file.Extension);
-
-            while (File.Exists(Path.Combine(AppFolders.QuarantineFolder, nameSubString)))
-            {
-                proposedFileName = string.Format("{0}_{1}{2}", nameSubString, count, file.Extension);
-                count++;
-            }
-
-            return proposedFileName;
         }
     }
 }

@@ -124,7 +124,7 @@
             // 
             // olvColumnName
             // 
-            this.olvColumnName.AspectName = "Name";
+            this.olvColumnName.AspectName = "OriginalName";
             this.olvColumnName.FillsFreeSpace = true;
             this.olvColumnName.MinimumWidth = 50;
             this.olvColumnName.Text = "Name";
