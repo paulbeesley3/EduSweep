@@ -3,6 +3,17 @@ Changelog
 
 Release notes for each stable, released version of EduSweep.
 
+[2.6.3] - 2019-05
+=================
+
+Fixed
+-----
+    - Moving files into quarantine may fail with an error about a file already existing
+
+Developer Notes
+---------------
+    - Fixed a few StyleCop issues
+
 [2.6.2] - 2019-04
 =================
 
