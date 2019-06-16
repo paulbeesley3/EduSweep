@@ -314,7 +314,7 @@ namespace EduSweep_2.Forms
             this.menuStripTop.Location = new System.Drawing.Point(0, 0);
             this.menuStripTop.Name = "menuStripTop";
             this.menuStripTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStripTop.Size = new System.Drawing.Size(1056, 35);
+            this.menuStripTop.Size = new System.Drawing.Size(1056, 33);
             this.menuStripTop.TabIndex = 5;
             this.menuStripTop.Text = "menuStrip1";
             // 
@@ -536,7 +536,7 @@ namespace EduSweep_2.Forms
             // 
             this.pictureBoxHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxHeader.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHeader.Image")));
-            this.pictureBoxHeader.Location = new System.Drawing.Point(0, 35);
+            this.pictureBoxHeader.Location = new System.Drawing.Point(0, 33);
             this.pictureBoxHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxHeader.Name = "pictureBoxHeader";
             this.pictureBoxHeader.Size = new System.Drawing.Size(1056, 62);
