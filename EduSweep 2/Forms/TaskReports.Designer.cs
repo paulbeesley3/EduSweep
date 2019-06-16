@@ -65,9 +65,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.listViewReports);
             this.groupBox2.Controls.Add(this.toolStripReports);
-            this.groupBox2.Location = new System.Drawing.Point(12, 66);
+            this.groupBox2.Location = new System.Drawing.Point(18, 102);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(663, 285);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(994, 438);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Available Reports";
@@ -91,10 +93,12 @@
             this.listViewReports.EmptyListMsgFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewReports.FullRowSelect = true;
             this.listViewReports.HasCollapsibleGroups = false;
-            this.listViewReports.Location = new System.Drawing.Point(3, 41);
+            this.listViewReports.HideSelection = false;
+            this.listViewReports.Location = new System.Drawing.Point(4, 58);
+            this.listViewReports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewReports.MultiSelect = false;
             this.listViewReports.Name = "listViewReports";
-            this.listViewReports.Size = new System.Drawing.Size(657, 241);
+            this.listViewReports.Size = new System.Drawing.Size(986, 375);
             this.listViewReports.TabIndex = 6;
             this.listViewReports.UseCompatibleStateImageBehavior = false;
             this.listViewReports.UseExplorerTheme = true;
@@ -140,16 +144,18 @@
             // toolStripReports
             // 
             this.toolStripReports.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripReports.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripReports.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonPrint,
             this.toolStripButtonPrintPreview,
             this.toolStripSeparator2,
             this.toolStripButtonDelete,
             this.toolStripButtonSave});
-            this.toolStripReports.Location = new System.Drawing.Point(3, 16);
+            this.toolStripReports.Location = new System.Drawing.Point(4, 24);
             this.toolStripReports.Name = "toolStripReports";
+            this.toolStripReports.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStripReports.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripReports.Size = new System.Drawing.Size(657, 25);
+            this.toolStripReports.Size = new System.Drawing.Size(986, 34);
             this.toolStripReports.TabIndex = 5;
             this.toolStripReports.Text = "toolStrip1";
             // 
@@ -159,7 +165,7 @@
             this.toolStripButtonPrint.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPrint.Image")));
             this.toolStripButtonPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPrint.Name = "toolStripButtonPrint";
-            this.toolStripButtonPrint.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButtonPrint.Size = new System.Drawing.Size(76, 29);
             this.toolStripButtonPrint.Text = "Print";
             this.toolStripButtonPrint.Click += new System.EventHandler(this.toolStripButtonPrint_Click);
             // 
@@ -169,14 +175,14 @@
             this.toolStripButtonPrintPreview.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPrintPreview.Image")));
             this.toolStripButtonPrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPrintPreview.Name = "toolStripButtonPrintPreview";
-            this.toolStripButtonPrintPreview.Size = new System.Drawing.Size(96, 22);
+            this.toolStripButtonPrintPreview.Size = new System.Drawing.Size(141, 29);
             this.toolStripButtonPrintPreview.Text = "Print Preview";
             this.toolStripButtonPrintPreview.Click += new System.EventHandler(this.toolStripButtonPrintPreview_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripButtonDelete
             // 
@@ -184,7 +190,7 @@
             this.toolStripButtonDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDelete.Image")));
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(90, 29);
             this.toolStripButtonDelete.Text = "Delete";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
@@ -195,31 +201,33 @@
             this.toolStripButtonSave.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSave.Image")));
             this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSave.Name = "toolStripButtonSave";
-            this.toolStripButtonSave.Size = new System.Drawing.Size(121, 22);
+            this.toolStripButtonSave.Size = new System.Drawing.Size(183, 29);
             this.toolStripButtonSave.Text = "Save as Web Page";
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonBrowser_Click);
             // 
             // statusStripReports
             // 
+            this.statusStripReports.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStripReports.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCount,
             this.toolStripStatusLabelSpacer});
-            this.statusStripReports.Location = new System.Drawing.Point(0, 599);
+            this.statusStripReports.Location = new System.Drawing.Point(0, 923);
             this.statusStripReports.Name = "statusStripReports";
-            this.statusStripReports.Size = new System.Drawing.Size(684, 22);
+            this.statusStripReports.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStripReports.Size = new System.Drawing.Size(1026, 32);
             this.statusStripReports.TabIndex = 2;
             this.statusStripReports.Text = "statusStrip1";
             // 
             // toolStripStatusLabelCount
             // 
             this.toolStripStatusLabelCount.Name = "toolStripStatusLabelCount";
-            this.toolStripStatusLabelCount.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelCount.Size = new System.Drawing.Size(60, 25);
             this.toolStripStatusLabelCount.Text = "Ready";
             // 
             // toolStripStatusLabelSpacer
             // 
             this.toolStripStatusLabelSpacer.Name = "toolStripStatusLabelSpacer";
-            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(630, 17);
+            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(943, 25);
             this.toolStripStatusLabelSpacer.Spring = true;
             // 
             // groupBox1
@@ -228,9 +236,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.webBrowserReport);
-            this.groupBox1.Location = new System.Drawing.Point(12, 357);
+            this.groupBox1.Location = new System.Drawing.Point(18, 549);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(663, 232);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(994, 357);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report Contents";
@@ -240,11 +250,12 @@
             this.webBrowserReport.AllowWebBrowserDrop = false;
             this.webBrowserReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowserReport.IsWebBrowserContextMenuEnabled = false;
-            this.webBrowserReport.Location = new System.Drawing.Point(3, 16);
-            this.webBrowserReport.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserReport.Location = new System.Drawing.Point(4, 24);
+            this.webBrowserReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.webBrowserReport.MinimumSize = new System.Drawing.Size(30, 31);
             this.webBrowserReport.Name = "webBrowserReport";
             this.webBrowserReport.ScriptErrorsSuppressed = true;
-            this.webBrowserReport.Size = new System.Drawing.Size(657, 213);
+            this.webBrowserReport.Size = new System.Drawing.Size(986, 328);
             this.webBrowserReport.TabIndex = 2;
             this.webBrowserReport.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowserReport.WebBrowserShortcutsEnabled = false;
@@ -260,9 +271,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 30);
+            this.label2.Location = new System.Drawing.Point(99, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(609, 30);
+            this.label2.Size = new System.Drawing.Size(914, 46);
             this.label2.TabIndex = 53;
             this.label2.Text = "A report is produced each time a scan task completes. Reports contain information" +
     " about the scan and details of any detected items.";
@@ -274,26 +286,29 @@
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.labelHeader.Location = new System.Drawing.Point(65, 9);
+            this.labelHeader.Location = new System.Drawing.Point(98, 14);
+            this.labelHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(123, 21);
+            this.labelHeader.Size = new System.Drawing.Size(187, 32);
             this.labelHeader.TabIndex = 52;
             this.labelHeader.Text = "Report Manager";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
             // TaskReports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 621);
+            this.ClientSize = new System.Drawing.Size(1026, 955);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.pictureBox1);
@@ -301,7 +316,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStripReports);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(700, 660);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1039, 985);
             this.Name = "TaskReports";
             this.Text = "Report Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TaskReports_FormClosing);

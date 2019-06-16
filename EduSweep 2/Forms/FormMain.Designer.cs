@@ -109,9 +109,11 @@ namespace EduSweep_2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxTasks.Controls.Add(this.listViewTasks);
             this.groupBoxTasks.Controls.Add(this.toolStripScanTasks);
-            this.groupBoxTasks.Location = new System.Drawing.Point(12, 70);
+            this.groupBoxTasks.Location = new System.Drawing.Point(18, 108);
+            this.groupBoxTasks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxTasks.Name = "groupBoxTasks";
-            this.groupBoxTasks.Size = new System.Drawing.Size(680, 203);
+            this.groupBoxTasks.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxTasks.Size = new System.Drawing.Size(1020, 312);
             this.groupBoxTasks.TabIndex = 2;
             this.groupBoxTasks.TabStop = false;
             this.groupBoxTasks.Text = "Scan Tasks";
@@ -136,10 +138,12 @@ namespace EduSweep_2.Forms
             this.listViewTasks.EmptyListMsgFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewTasks.FullRowSelect = true;
             this.listViewTasks.HasCollapsibleGroups = false;
-            this.listViewTasks.Location = new System.Drawing.Point(3, 41);
+            this.listViewTasks.HideSelection = false;
+            this.listViewTasks.Location = new System.Drawing.Point(4, 58);
+            this.listViewTasks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewTasks.MultiSelect = false;
             this.listViewTasks.Name = "listViewTasks";
-            this.listViewTasks.Size = new System.Drawing.Size(674, 159);
+            this.listViewTasks.Size = new System.Drawing.Size(1012, 249);
             this.listViewTasks.TabIndex = 2;
             this.listViewTasks.UseCompatibleStateImageBehavior = false;
             this.listViewTasks.View = System.Windows.Forms.View.Details;
@@ -190,6 +194,7 @@ namespace EduSweep_2.Forms
             // toolStripScanTasks
             // 
             this.toolStripScanTasks.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripScanTasks.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripScanTasks.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonStartTask,
             this.toolStripSeparator1,
@@ -198,10 +203,11 @@ namespace EduSweep_2.Forms
             this.toolStripButtonClone,
             this.toolStripButtonDeleteTask,
             this.toolStripButtonDonate});
-            this.toolStripScanTasks.Location = new System.Drawing.Point(3, 16);
+            this.toolStripScanTasks.Location = new System.Drawing.Point(4, 24);
             this.toolStripScanTasks.Name = "toolStripScanTasks";
+            this.toolStripScanTasks.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStripScanTasks.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripScanTasks.Size = new System.Drawing.Size(674, 25);
+            this.toolStripScanTasks.Size = new System.Drawing.Size(1012, 34);
             this.toolStripScanTasks.TabIndex = 1;
             this.toolStripScanTasks.Text = "toolStrip1";
             // 
@@ -211,7 +217,7 @@ namespace EduSweep_2.Forms
             this.toolStripButtonStartTask.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonStartTask.Image")));
             this.toolStripButtonStartTask.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonStartTask.Name = "toolStripButtonStartTask";
-            this.toolStripButtonStartTask.Size = new System.Drawing.Size(77, 22);
+            this.toolStripButtonStartTask.Size = new System.Drawing.Size(114, 29);
             this.toolStripButtonStartTask.Text = "Start Task";
             this.toolStripButtonStartTask.ToolTipText = "Run an existing scan task";
             this.toolStripButtonStartTask.Click += new System.EventHandler(this.toolStripButtonStartTask_Click);
@@ -219,14 +225,14 @@ namespace EduSweep_2.Forms
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripButtonNewTask
             // 
             this.toolStripButtonNewTask.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonNewTask.Image")));
             this.toolStripButtonNewTask.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNewTask.Name = "toolStripButtonNewTask";
-            this.toolStripButtonNewTask.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButtonNewTask.Size = new System.Drawing.Size(87, 29);
             this.toolStripButtonNewTask.Text = "New...";
             this.toolStripButtonNewTask.ToolTipText = "Create a new scan task";
             this.toolStripButtonNewTask.Click += new System.EventHandler(this.toolStripButtonNewTask_Click);
@@ -237,7 +243,7 @@ namespace EduSweep_2.Forms
             this.toolStripButtonEditTask.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonEditTask.Image")));
             this.toolStripButtonEditTask.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonEditTask.Name = "toolStripButtonEditTask";
-            this.toolStripButtonEditTask.Size = new System.Drawing.Size(56, 22);
+            this.toolStripButtonEditTask.Size = new System.Drawing.Size(82, 29);
             this.toolStripButtonEditTask.Text = "Edit...";
             this.toolStripButtonEditTask.ToolTipText = "Edit an existing scan task";
             this.toolStripButtonEditTask.Click += new System.EventHandler(this.toolStripButtonEditTask_Click);
@@ -248,7 +254,7 @@ namespace EduSweep_2.Forms
             this.toolStripButtonClone.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonClone.Image")));
             this.toolStripButtonClone.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonClone.Name = "toolStripButtonClone";
-            this.toolStripButtonClone.Size = new System.Drawing.Size(67, 22);
+            this.toolStripButtonClone.Size = new System.Drawing.Size(97, 29);
             this.toolStripButtonClone.Text = "Clone...";
             this.toolStripButtonClone.ToolTipText = "Create a copy of an existing scan task";
             this.toolStripButtonClone.Click += new System.EventHandler(this.toolStripButtonClone_Click);
@@ -259,7 +265,7 @@ namespace EduSweep_2.Forms
             this.toolStripButtonDeleteTask.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDeleteTask.Image")));
             this.toolStripButtonDeleteTask.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDeleteTask.Name = "toolStripButtonDeleteTask";
-            this.toolStripButtonDeleteTask.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButtonDeleteTask.Size = new System.Drawing.Size(90, 29);
             this.toolStripButtonDeleteTask.Text = "Delete";
             this.toolStripButtonDeleteTask.ToolTipText = "Delete an existing scan task";
             this.toolStripButtonDeleteTask.Click += new System.EventHandler(this.toolStripButtonDeleteTask_Click);
@@ -270,30 +276,34 @@ namespace EduSweep_2.Forms
             this.toolStripButtonDonate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDonate.Image")));
             this.toolStripButtonDonate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDonate.Name = "toolStripButtonDonate";
-            this.toolStripButtonDonate.Size = new System.Drawing.Size(91, 22);
+            this.toolStripButtonDonate.Size = new System.Drawing.Size(137, 29);
             this.toolStripButtonDonate.Text = "Send Coffee";
             this.toolStripButtonDonate.ToolTipText = "Say thanks and support further EduSweep development!";
             this.toolStripButtonDonate.Click += new System.EventHandler(this.toolStripButtonDonate_Click);
             // 
             // statusStripWorkingDirectory
             // 
+            this.statusStripWorkingDirectory.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStripWorkingDirectory.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelWorkDirectory});
-            this.statusStripWorkingDirectory.Location = new System.Drawing.Point(0, 279);
+            this.statusStripWorkingDirectory.Location = new System.Drawing.Point(0, 431);
             this.statusStripWorkingDirectory.Name = "statusStripWorkingDirectory";
-            this.statusStripWorkingDirectory.Size = new System.Drawing.Size(704, 22);
+            this.statusStripWorkingDirectory.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStripWorkingDirectory.Size = new System.Drawing.Size(1056, 32);
             this.statusStripWorkingDirectory.TabIndex = 4;
             this.statusStripWorkingDirectory.Text = "statusStrip1";
             // 
             // toolStripStatusLabelWorkDirectory
             // 
             this.toolStripStatusLabelWorkDirectory.Name = "toolStripStatusLabelWorkDirectory";
-            this.toolStripStatusLabelWorkDirectory.Size = new System.Drawing.Size(190, 17);
+            this.toolStripStatusLabelWorkDirectory.Size = new System.Drawing.Size(285, 25);
             this.toolStripStatusLabelWorkDirectory.Text = "C:\\Example Directory\\Subdirectory";
             this.toolStripStatusLabelWorkDirectory.ToolTipText = "The working directory where EduSweep stores its files and settings";
             // 
             // menuStripTop
             // 
+            this.menuStripTop.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStripTop.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.scanTasksToolStripMenuItem,
@@ -304,7 +314,7 @@ namespace EduSweep_2.Forms
             this.menuStripTop.Location = new System.Drawing.Point(0, 0);
             this.menuStripTop.Name = "menuStripTop";
             this.menuStripTop.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStripTop.Size = new System.Drawing.Size(704, 24);
+            this.menuStripTop.Size = new System.Drawing.Size(1056, 35);
             this.menuStripTop.TabIndex = 5;
             this.menuStripTop.Text = "menuStrip1";
             // 
@@ -313,14 +323,14 @@ namespace EduSweep_2.Forms
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quitToolStripMenuItem.Image")));
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(141, 34);
             this.quitToolStripMenuItem.Text = "Exit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -334,28 +344,28 @@ namespace EduSweep_2.Forms
             this.cloneToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.scanTasksToolStripMenuItem.Name = "scanTasksToolStripMenuItem";
-            this.scanTasksToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.scanTasksToolStripMenuItem.Size = new System.Drawing.Size(111, 29);
             this.scanTasksToolStripMenuItem.Text = "Scan Tasks";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.newToolStripMenuItem.Text = "New Task...";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(130, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(196, 6);
             // 
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Enabled = false;
             this.startToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("startToolStripMenuItem.Image")));
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
@@ -364,7 +374,7 @@ namespace EduSweep_2.Forms
             this.editToolStripMenuItem.Enabled = false;
             this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.editToolStripMenuItem.Text = "Edit...";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -373,7 +383,7 @@ namespace EduSweep_2.Forms
             this.cloneToolStripMenuItem.Enabled = false;
             this.cloneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cloneToolStripMenuItem.Image")));
             this.cloneToolStripMenuItem.Name = "cloneToolStripMenuItem";
-            this.cloneToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.cloneToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.cloneToolStripMenuItem.Text = "Clone...";
             this.cloneToolStripMenuItem.Click += new System.EventHandler(this.cloneToolStripMenuItem_Click);
             // 
@@ -382,7 +392,7 @@ namespace EduSweep_2.Forms
             this.deleteToolStripMenuItem.Enabled = false;
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(199, 34);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -391,14 +401,14 @@ namespace EduSweep_2.Forms
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reportBrowserToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // reportBrowserToolStripMenuItem
             // 
             this.reportBrowserToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportBrowserToolStripMenuItem.Image")));
             this.reportBrowserToolStripMenuItem.Name = "reportBrowserToolStripMenuItem";
-            this.reportBrowserToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.reportBrowserToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.reportBrowserToolStripMenuItem.Text = "Report Manager";
             this.reportBrowserToolStripMenuItem.Click += new System.EventHandler(this.reportBrowserToolStripMenuItem_Click);
             // 
@@ -407,14 +417,14 @@ namespace EduSweep_2.Forms
             this.quarantineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quarantineBrowserToolStripMenuItem});
             this.quarantineToolStripMenuItem.Name = "quarantineToolStripMenuItem";
-            this.quarantineToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.quarantineToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
             this.quarantineToolStripMenuItem.Text = "Quarantine";
             // 
             // quarantineBrowserToolStripMenuItem
             // 
             this.quarantineBrowserToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quarantineBrowserToolStripMenuItem.Image")));
             this.quarantineBrowserToolStripMenuItem.Name = "quarantineBrowserToolStripMenuItem";
-            this.quarantineBrowserToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.quarantineBrowserToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
             this.quarantineBrowserToolStripMenuItem.Text = "Quarantine Manager";
             this.quarantineBrowserToolStripMenuItem.Click += new System.EventHandler(this.quarantineBrowserToolStripMenuItem_Click);
             // 
@@ -426,14 +436,14 @@ namespace EduSweep_2.Forms
             this.toolStripSeparator6,
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // fileInspectorToolStripMenuItem
             // 
             this.fileInspectorToolStripMenuItem.Enabled = false;
             this.fileInspectorToolStripMenuItem.Name = "fileInspectorToolStripMenuItem";
-            this.fileInspectorToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.fileInspectorToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
             this.fileInspectorToolStripMenuItem.Text = "Launch File Inspector";
             this.fileInspectorToolStripMenuItem.Click += new System.EventHandler(this.fileInspectorToolStripMenuItem_Click);
             // 
@@ -441,20 +451,20 @@ namespace EduSweep_2.Forms
             // 
             this.launchSignatureStudioToolStripMenuItem.Enabled = false;
             this.launchSignatureStudioToolStripMenuItem.Name = "launchSignatureStudioToolStripMenuItem";
-            this.launchSignatureStudioToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.launchSignatureStudioToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
             this.launchSignatureStudioToolStripMenuItem.Text = "Launch Signature Studio";
             this.launchSignatureStudioToolStripMenuItem.Click += new System.EventHandler(this.launchSignatureStudioToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(200, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(302, 6);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionsToolStripMenuItem.Image")));
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(305, 34);
             this.optionsToolStripMenuItem.Text = "Settings...";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -469,14 +479,14 @@ namespace EduSweep_2.Forms
             this.toolStripSeparator5,
             this.toolStripMenuItemAbout});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // toolStripMenuItemHomepage
             // 
             this.toolStripMenuItemHomepage.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemHomepage.Image")));
             this.toolStripMenuItemHomepage.Name = "toolStripMenuItemHomepage";
-            this.toolStripMenuItemHomepage.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItemHomepage.Size = new System.Drawing.Size(262, 34);
             this.toolStripMenuItemHomepage.Text = "Project Homepage";
             this.toolStripMenuItemHomepage.Click += new System.EventHandler(this.toolStripMenuItemHomepage_Click);
             // 
@@ -484,7 +494,7 @@ namespace EduSweep_2.Forms
             // 
             this.toolStripMenuItemDocs.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemDocs.Image")));
             this.toolStripMenuItemDocs.Name = "toolStripMenuItemDocs";
-            this.toolStripMenuItemDocs.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItemDocs.Size = new System.Drawing.Size(262, 34);
             this.toolStripMenuItemDocs.Text = "Documentation";
             this.toolStripMenuItemDocs.Click += new System.EventHandler(this.toolStripMenuItemDocs_Click);
             // 
@@ -492,58 +502,61 @@ namespace EduSweep_2.Forms
             // 
             this.toolStripMenuItemIssue.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemIssue.Image")));
             this.toolStripMenuItemIssue.Name = "toolStripMenuItemIssue";
-            this.toolStripMenuItemIssue.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItemIssue.Size = new System.Drawing.Size(262, 34);
             this.toolStripMenuItemIssue.Text = "Report an Issue";
             this.toolStripMenuItemIssue.Click += new System.EventHandler(this.toolStripMenuItemIssue_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(259, 6);
             // 
             // toolStripMenuItemUpdates
             // 
             this.toolStripMenuItemUpdates.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemUpdates.Image")));
             this.toolStripMenuItemUpdates.Name = "toolStripMenuItemUpdates";
-            this.toolStripMenuItemUpdates.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItemUpdates.Size = new System.Drawing.Size(262, 34);
             this.toolStripMenuItemUpdates.Text = "Check for Updates";
             this.toolStripMenuItemUpdates.Click += new System.EventHandler(this.toolStripMenuItemUpdates_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(259, 6);
             // 
             // toolStripMenuItemAbout
             // 
             this.toolStripMenuItemAbout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemAbout.Image")));
             this.toolStripMenuItemAbout.Name = "toolStripMenuItemAbout";
-            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItemAbout.Size = new System.Drawing.Size(262, 34);
             this.toolStripMenuItemAbout.Text = "About";
             this.toolStripMenuItemAbout.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // pictureBoxHeader
             // 
-            this.pictureBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxHeader.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHeader.Image")));
-            this.pictureBoxHeader.Location = new System.Drawing.Point(2, 28);
+            this.pictureBoxHeader.Location = new System.Drawing.Point(0, 35);
+            this.pictureBoxHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxHeader.Name = "pictureBoxHeader";
-            this.pictureBoxHeader.Size = new System.Drawing.Size(702, 40);
+            this.pictureBoxHeader.Size = new System.Drawing.Size(1056, 62);
+            this.pictureBoxHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxHeader.TabIndex = 6;
             this.pictureBoxHeader.TabStop = false;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 301);
+            this.ClientSize = new System.Drawing.Size(1056, 463);
             this.Controls.Add(this.pictureBoxHeader);
             this.Controls.Add(this.statusStripWorkingDirectory);
             this.Controls.Add(this.menuStripTop);
             this.Controls.Add(this.groupBoxTasks);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripTop;
-            this.MinimumSize = new System.Drawing.Size(720, 250);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1069, 354);
             this.Name = "FormMain";
             this.Text = "EduSweep";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);

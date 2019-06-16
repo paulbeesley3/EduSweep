@@ -68,25 +68,27 @@
             // 
             // statusStripQuarantine
             // 
+            this.statusStripQuarantine.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStripQuarantine.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCount,
             this.toolStripStatusLabelSpacer});
-            this.statusStripQuarantine.Location = new System.Drawing.Point(0, 339);
+            this.statusStripQuarantine.Location = new System.Drawing.Point(0, 523);
             this.statusStripQuarantine.Name = "statusStripQuarantine";
-            this.statusStripQuarantine.Size = new System.Drawing.Size(824, 22);
+            this.statusStripQuarantine.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStripQuarantine.Size = new System.Drawing.Size(1236, 32);
             this.statusStripQuarantine.TabIndex = 0;
             this.statusStripQuarantine.Text = "statusStrip1";
             // 
             // toolStripStatusLabelCount
             // 
             this.toolStripStatusLabelCount.Name = "toolStripStatusLabelCount";
-            this.toolStripStatusLabelCount.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelCount.Size = new System.Drawing.Size(60, 25);
             this.toolStripStatusLabelCount.Text = "Ready";
             // 
             // toolStripStatusLabelSpacer
             // 
             this.toolStripStatusLabelSpacer.Name = "toolStripStatusLabelSpacer";
-            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(770, 17);
+            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(1153, 25);
             this.toolStripStatusLabelSpacer.Spring = true;
             // 
             // objectListViewFiles
@@ -111,9 +113,11 @@
             this.objectListViewFiles.EmptyListMsgFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.objectListViewFiles.FullRowSelect = true;
             this.objectListViewFiles.HasCollapsibleGroups = false;
-            this.objectListViewFiles.Location = new System.Drawing.Point(3, 41);
+            this.objectListViewFiles.HideSelection = false;
+            this.objectListViewFiles.Location = new System.Drawing.Point(4, 58);
+            this.objectListViewFiles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.objectListViewFiles.Name = "objectListViewFiles";
-            this.objectListViewFiles.Size = new System.Drawing.Size(794, 226);
+            this.objectListViewFiles.Size = new System.Drawing.Size(1192, 352);
             this.objectListViewFiles.TabIndex = 2;
             this.objectListViewFiles.UseCompatibleStateImageBehavior = false;
             this.objectListViewFiles.UseExplorerTheme = true;
@@ -175,9 +179,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 30);
+            this.label2.Location = new System.Drawing.Point(99, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(746, 30);
+            this.label2.Size = new System.Drawing.Size(1119, 46);
             this.label2.TabIndex = 50;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -188,18 +193,21 @@
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.labelHeader.Location = new System.Drawing.Point(65, 9);
+            this.labelHeader.Location = new System.Drawing.Point(98, 14);
+            this.labelHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(154, 21);
+            this.labelHeader.Size = new System.Drawing.Size(236, 32);
             this.labelHeader.TabIndex = 49;
             this.labelHeader.Text = "Quarantine Manager";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
@@ -210,9 +218,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxQuarantine.Controls.Add(this.objectListViewFiles);
             this.groupBoxQuarantine.Controls.Add(this.toolStripQuarantine);
-            this.groupBoxQuarantine.Location = new System.Drawing.Point(12, 66);
+            this.groupBoxQuarantine.Location = new System.Drawing.Point(18, 102);
+            this.groupBoxQuarantine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxQuarantine.Name = "groupBoxQuarantine";
-            this.groupBoxQuarantine.Size = new System.Drawing.Size(800, 270);
+            this.groupBoxQuarantine.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxQuarantine.Size = new System.Drawing.Size(1200, 415);
             this.groupBoxQuarantine.TabIndex = 51;
             this.groupBoxQuarantine.TabStop = false;
             this.groupBoxQuarantine.Text = "Quarantine Files";
@@ -220,6 +230,7 @@
             // toolStripQuarantine
             // 
             this.toolStripQuarantine.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripQuarantine.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripQuarantine.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonDetails,
             this.toolStripButtonOpenOriginalLocation,
@@ -230,10 +241,11 @@
             this.toolStripSeparator2,
             this.toolStripDropDownButtonOnline,
             this.toolStripDropDownButtonExtensions});
-            this.toolStripQuarantine.Location = new System.Drawing.Point(3, 16);
+            this.toolStripQuarantine.Location = new System.Drawing.Point(4, 24);
             this.toolStripQuarantine.Name = "toolStripQuarantine";
+            this.toolStripQuarantine.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStripQuarantine.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripQuarantine.Size = new System.Drawing.Size(794, 25);
+            this.toolStripQuarantine.Size = new System.Drawing.Size(1192, 34);
             this.toolStripQuarantine.TabIndex = 3;
             this.toolStripQuarantine.Text = "toolStrip1";
             // 
@@ -242,7 +254,7 @@
             this.toolStripButtonDetails.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDetails.Image")));
             this.toolStripButtonDetails.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDetails.Name = "toolStripButtonDetails";
-            this.toolStripButtonDetails.Size = new System.Drawing.Size(86, 22);
+            this.toolStripButtonDetails.Size = new System.Drawing.Size(128, 29);
             this.toolStripButtonDetails.Text = "Inspect File";
             this.toolStripButtonDetails.ToolTipText = "Get more information on this file";
             this.toolStripButtonDetails.Click += new System.EventHandler(this.toolStripButtonDetails_Click);
@@ -252,7 +264,7 @@
             this.toolStripButtonOpenOriginalLocation.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOpenOriginalLocation.Image")));
             this.toolStripButtonOpenOriginalLocation.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOpenOriginalLocation.Name = "toolStripButtonOpenOriginalLocation";
-            this.toolStripButtonOpenOriginalLocation.Size = new System.Drawing.Size(150, 22);
+            this.toolStripButtonOpenOriginalLocation.Size = new System.Drawing.Size(223, 29);
             this.toolStripButtonOpenOriginalLocation.Text = "Open Original Location";
             this.toolStripButtonOpenOriginalLocation.ToolTipText = "Open the folder where this file originated";
             this.toolStripButtonOpenOriginalLocation.Click += new System.EventHandler(this.toolStripButtonOpenOriginalLocation_Click);
@@ -260,14 +272,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripButtonAdd
             // 
             this.toolStripButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAdd.Image")));
             this.toolStripButtonAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonAdd.Name = "toolStripButtonAdd";
-            this.toolStripButtonAdd.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButtonAdd.Size = new System.Drawing.Size(74, 29);
             this.toolStripButtonAdd.Text = "Add";
             this.toolStripButtonAdd.ToolTipText = "Add files to quarantine";
             this.toolStripButtonAdd.Click += new System.EventHandler(this.toolStripButtonAdd_Click);
@@ -277,7 +289,7 @@
             this.toolStripButtonRestore.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRestore.Image")));
             this.toolStripButtonRestore.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRestore.Name = "toolStripButtonRestore";
-            this.toolStripButtonRestore.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButtonRestore.Size = new System.Drawing.Size(99, 29);
             this.toolStripButtonRestore.Text = "Restore";
             this.toolStripButtonRestore.ToolTipText = "Restore files to their original locations";
             this.toolStripButtonRestore.Click += new System.EventHandler(this.toolStripButtonRestore_Click);
@@ -287,7 +299,7 @@
             this.toolStripButtonDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDelete.Image")));
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(90, 29);
             this.toolStripButtonDelete.Text = "Delete";
             this.toolStripButtonDelete.ToolTipText = "Delete files permanently";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
@@ -295,7 +307,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripDropDownButtonOnline
             // 
@@ -306,7 +318,7 @@
             this.toolStripDropDownButtonOnline.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButtonOnline.Image")));
             this.toolStripDropDownButtonOnline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButtonOnline.Name = "toolStripDropDownButtonOnline";
-            this.toolStripDropDownButtonOnline.Size = new System.Drawing.Size(122, 22);
+            this.toolStripDropDownButtonOnline.Size = new System.Drawing.Size(181, 29);
             this.toolStripDropDownButtonOnline.Text = "Filename Search";
             this.toolStripDropDownButtonOnline.ToolTipText = "Search for this file name";
             // 
@@ -314,7 +326,7 @@
             // 
             this.toolStripMenuItemGoogle.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemGoogle.Image")));
             this.toolStripMenuItemGoogle.Name = "toolStripMenuItemGoogle";
-            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemGoogle.Size = new System.Drawing.Size(217, 34);
             this.toolStripMenuItemGoogle.Text = "Google";
             this.toolStripMenuItemGoogle.Click += new System.EventHandler(this.toolStripMenuItemGoogle_Click);
             // 
@@ -322,7 +334,7 @@
             // 
             this.toolStripMenuItemBing.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemBing.Image")));
             this.toolStripMenuItemBing.Name = "toolStripMenuItemBing";
-            this.toolStripMenuItemBing.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemBing.Size = new System.Drawing.Size(217, 34);
             this.toolStripMenuItemBing.Text = "Bing";
             this.toolStripMenuItemBing.Click += new System.EventHandler(this.toolStripMenuItemBing_Click);
             // 
@@ -330,7 +342,7 @@
             // 
             this.toolStripMenuItemDDG.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemDDG.Image")));
             this.toolStripMenuItemDDG.Name = "toolStripMenuItemDDG";
-            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItemDDG.Size = new System.Drawing.Size(217, 34);
             this.toolStripMenuItemDDG.Text = "DuckDuckGo";
             this.toolStripMenuItemDDG.Click += new System.EventHandler(this.toolStripMenuItemDDG_Click);
             // 
@@ -343,7 +355,7 @@
             this.toolStripDropDownButtonExtensions.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButtonExtensions.Image")));
             this.toolStripDropDownButtonExtensions.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButtonExtensions.Name = "toolStripDropDownButtonExtensions";
-            this.toolStripDropDownButtonExtensions.Size = new System.Drawing.Size(124, 22);
+            this.toolStripDropDownButtonExtensions.Size = new System.Drawing.Size(186, 29);
             this.toolStripDropDownButtonExtensions.Text = "Extension Search";
             this.toolStripDropDownButtonExtensions.ToolTipText = "Search for this file\'s extension";
             // 
@@ -351,7 +363,7 @@
             // 
             this.toolStripMenuItemExtFilExt.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemExtFilExt.Image")));
             this.toolStripMenuItemExtFilExt.Name = "toolStripMenuItemExtFilExt";
-            this.toolStripMenuItemExtFilExt.Size = new System.Drawing.Size(182, 22);
+            this.toolStripMenuItemExtFilExt.Size = new System.Drawing.Size(277, 34);
             this.toolStripMenuItemExtFilExt.Text = "FILExt.com";
             this.toolStripMenuItemExtFilExt.Click += new System.EventHandler(this.toolStripMenuItemExtFilExt_Click);
             // 
@@ -359,7 +371,7 @@
             // 
             this.toolStripMenuItemExtFileInfo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemExtFileInfo.Image")));
             this.toolStripMenuItemExtFileInfo.Name = "toolStripMenuItemExtFileInfo";
-            this.toolStripMenuItemExtFileInfo.Size = new System.Drawing.Size(182, 22);
+            this.toolStripMenuItemExtFileInfo.Size = new System.Drawing.Size(277, 34);
             this.toolStripMenuItemExtFileInfo.Text = "Fileinfo.net";
             this.toolStripMenuItemExtFileInfo.Click += new System.EventHandler(this.toolStripMenuItemExtFileInfo_Click);
             // 
@@ -367,22 +379,23 @@
             // 
             this.toolStripMenuItemExtFES.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemExtFES.Image")));
             this.toolStripMenuItemExtFES.Name = "toolStripMenuItemExtFES";
-            this.toolStripMenuItemExtFES.Size = new System.Drawing.Size(182, 22);
+            this.toolStripMenuItemExtFES.Size = new System.Drawing.Size(277, 34);
             this.toolStripMenuItemExtFES.Text = "File Extension Seeker";
             this.toolStripMenuItemExtFES.Click += new System.EventHandler(this.toolStripMenuItemExtFES_Click);
             // 
             // QuarantineManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 361);
+            this.ClientSize = new System.Drawing.Size(1236, 555);
             this.Controls.Add(this.groupBoxQuarantine);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStripQuarantine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(840, 400);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1249, 585);
             this.Name = "QuarantineManager";
             this.Text = "Quarantine Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuarantineManager_FormClosing);

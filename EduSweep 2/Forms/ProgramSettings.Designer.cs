@@ -123,9 +123,10 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(317, 375);
+            this.buttonCancel.Location = new System.Drawing.Point(476, 577);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(112, 35);
             this.buttonCancel.TabIndex = 18;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -134,9 +135,10 @@
             // buttonSave
             // 
             this.buttonSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonSave.Location = new System.Drawing.Point(236, 375);
+            this.buttonSave.Location = new System.Drawing.Point(354, 577);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(112, 35);
             this.buttonSave.TabIndex = 17;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -149,10 +151,11 @@
             this.tabControl.Controls.Add(this.tabPageVirus);
             this.tabControl.Controls.Add(this.tabPageLogging);
             this.tabControl.Controls.Add(this.tabPageLanguage);
-            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Location = new System.Drawing.Point(18, 18);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(381, 357);
+            this.tabControl.Size = new System.Drawing.Size(572, 549);
             this.tabControl.TabIndex = 1;
             // 
             // tabPageQuarantine
@@ -162,10 +165,11 @@
             this.tabPageQuarantine.Controls.Add(this.label13);
             this.tabPageQuarantine.Controls.Add(this.label14);
             this.tabPageQuarantine.Controls.Add(this.pictureBox4);
-            this.tabPageQuarantine.Location = new System.Drawing.Point(4, 22);
+            this.tabPageQuarantine.Location = new System.Drawing.Point(4, 29);
+            this.tabPageQuarantine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageQuarantine.Name = "tabPageQuarantine";
-            this.tabPageQuarantine.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageQuarantine.Size = new System.Drawing.Size(373, 331);
+            this.tabPageQuarantine.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageQuarantine.Size = new System.Drawing.Size(564, 516);
             this.tabPageQuarantine.TabIndex = 4;
             this.tabPageQuarantine.Text = "Quarantine";
             this.tabPageQuarantine.UseVisualStyleBackColor = true;
@@ -177,9 +181,11 @@
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.progressBarQuarantinePurge);
             this.groupBox3.Controls.Add(this.buttonPurgeQuarantine);
-            this.groupBox3.Location = new System.Drawing.Point(6, 167);
+            this.groupBox3.Location = new System.Drawing.Point(9, 257);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(361, 158);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(542, 243);
             this.groupBox3.TabIndex = 62;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Manual Cleanup";
@@ -187,43 +193,48 @@
             // labelQuarantineSize
             // 
             this.labelQuarantineSize.AutoSize = true;
-            this.labelQuarantineSize.Location = new System.Drawing.Point(7, 82);
+            this.labelQuarantineSize.Location = new System.Drawing.Point(10, 126);
+            this.labelQuarantineSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuarantineSize.Name = "labelQuarantineSize";
-            this.labelQuarantineSize.Size = new System.Drawing.Size(211, 13);
+            this.labelQuarantineSize.Size = new System.Drawing.Size(313, 20);
             this.labelQuarantineSize.TabIndex = 63;
             this.labelQuarantineSize.Text = "0.0MB of space is being used by these files";
             // 
             // labelQuarantineCount
             // 
             this.labelQuarantineCount.AutoSize = true;
-            this.labelQuarantineCount.Location = new System.Drawing.Point(7, 56);
+            this.labelQuarantineCount.Location = new System.Drawing.Point(10, 86);
+            this.labelQuarantineCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuarantineCount.Name = "labelQuarantineCount";
-            this.labelQuarantineCount.Size = new System.Drawing.Size(147, 13);
+            this.labelQuarantineCount.Size = new System.Drawing.Size(220, 20);
             this.labelQuarantineCount.TabIndex = 62;
             this.labelQuarantineCount.Text = "0 items currently in quarantine";
             // 
             // label20
             // 
             this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 16);
+            this.label20.Location = new System.Drawing.Point(9, 25);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(345, 40);
+            this.label20.Size = new System.Drawing.Size(518, 62);
             this.label20.TabIndex = 61;
             this.label20.Text = "The quarantine folder can be emptied from here. This will remove all quarantine i" +
     "tems, regardless of their age.";
             // 
             // progressBarQuarantinePurge
             // 
-            this.progressBarQuarantinePurge.Location = new System.Drawing.Point(6, 110);
+            this.progressBarQuarantinePurge.Location = new System.Drawing.Point(9, 169);
+            this.progressBarQuarantinePurge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBarQuarantinePurge.Name = "progressBarQuarantinePurge";
-            this.progressBarQuarantinePurge.Size = new System.Drawing.Size(345, 13);
+            this.progressBarQuarantinePurge.Size = new System.Drawing.Size(518, 20);
             this.progressBarQuarantinePurge.TabIndex = 1;
             // 
             // buttonPurgeQuarantine
             // 
-            this.buttonPurgeQuarantine.Location = new System.Drawing.Point(6, 129);
+            this.buttonPurgeQuarantine.Location = new System.Drawing.Point(9, 198);
+            this.buttonPurgeQuarantine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPurgeQuarantine.Name = "buttonPurgeQuarantine";
-            this.buttonPurgeQuarantine.Size = new System.Drawing.Size(347, 23);
+            this.buttonPurgeQuarantine.Size = new System.Drawing.Size(520, 35);
             this.buttonPurgeQuarantine.TabIndex = 9;
             this.buttonPurgeQuarantine.Text = "Empty Quarantine";
             this.buttonPurgeQuarantine.UseVisualStyleBackColor = true;
@@ -234,9 +245,11 @@
             this.groupBox9.Controls.Add(this.checkBoxQuarantineCleanup);
             this.groupBox9.Controls.Add(this.label12);
             this.groupBox9.Controls.Add(this.quarantineAgeLimit);
-            this.groupBox9.Location = new System.Drawing.Point(6, 65);
+            this.groupBox9.Location = new System.Drawing.Point(9, 100);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(361, 96);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox9.Size = new System.Drawing.Size(542, 148);
             this.groupBox9.TabIndex = 61;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Automatic Cleanup";
@@ -244,9 +257,10 @@
             // checkBoxQuarantineCleanup
             // 
             this.checkBoxQuarantineCleanup.AutoSize = true;
-            this.checkBoxQuarantineCleanup.Location = new System.Drawing.Point(6, 27);
+            this.checkBoxQuarantineCleanup.Location = new System.Drawing.Point(9, 42);
+            this.checkBoxQuarantineCleanup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxQuarantineCleanup.Name = "checkBoxQuarantineCleanup";
-            this.checkBoxQuarantineCleanup.Size = new System.Drawing.Size(223, 17);
+            this.checkBoxQuarantineCleanup.Size = new System.Drawing.Size(332, 24);
             this.checkBoxQuarantineCleanup.TabIndex = 7;
             this.checkBoxQuarantineCleanup.Text = "Clear out old quarantine files automatically";
             this.checkBoxQuarantineCleanup.UseVisualStyleBackColor = true;
@@ -254,15 +268,17 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 54);
+            this.label12.Location = new System.Drawing.Point(4, 83);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 13);
+            this.label12.Size = new System.Drawing.Size(188, 20);
             this.label12.TabIndex = 37;
             this.label12.Text = "Maximum File Age (Days)";
             // 
             // quarantineAgeLimit
             // 
-            this.quarantineAgeLimit.Location = new System.Drawing.Point(6, 70);
+            this.quarantineAgeLimit.Location = new System.Drawing.Point(9, 108);
+            this.quarantineAgeLimit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.quarantineAgeLimit.Maximum = new decimal(new int[] {
             365,
             0,
@@ -274,7 +290,7 @@
             0,
             0});
             this.quarantineAgeLimit.Name = "quarantineAgeLimit";
-            this.quarantineAgeLimit.Size = new System.Drawing.Size(347, 20);
+            this.quarantineAgeLimit.Size = new System.Drawing.Size(520, 26);
             this.quarantineAgeLimit.TabIndex = 8;
             this.quarantineAgeLimit.Value = new decimal(new int[] {
             30,
@@ -285,9 +301,10 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(63, 27);
+            this.label13.Location = new System.Drawing.Point(94, 42);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(310, 32);
+            this.label13.Size = new System.Drawing.Size(465, 49);
             this.label13.TabIndex = 60;
             this.label13.Text = "Files in quarantine can be removed automatically after a certain period.";
             // 
@@ -296,18 +313,21 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.label14.Location = new System.Drawing.Point(62, 6);
+            this.label14.Location = new System.Drawing.Point(93, 9);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(184, 21);
+            this.label14.Size = new System.Drawing.Size(284, 32);
             this.label14.TabIndex = 59;
             this.label14.Text = "Quarantine Management";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox4.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 58;
             this.pictureBox4.TabStop = false;
             // 
@@ -318,10 +338,11 @@
             this.tabPageReports.Controls.Add(this.label9);
             this.tabPageReports.Controls.Add(this.label10);
             this.tabPageReports.Controls.Add(this.pictureBox3);
-            this.tabPageReports.Location = new System.Drawing.Point(4, 22);
+            this.tabPageReports.Location = new System.Drawing.Point(4, 29);
+            this.tabPageReports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageReports.Name = "tabPageReports";
-            this.tabPageReports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReports.Size = new System.Drawing.Size(373, 331);
+            this.tabPageReports.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageReports.Size = new System.Drawing.Size(564, 516);
             this.tabPageReports.TabIndex = 3;
             this.tabPageReports.Text = "Reports";
             this.tabPageReports.UseVisualStyleBackColor = true;
@@ -333,9 +354,11 @@
             this.groupBox11.Controls.Add(this.label31);
             this.groupBox11.Controls.Add(this.progressBarReportsPurge);
             this.groupBox11.Controls.Add(this.buttonPurgeReports);
-            this.groupBox11.Location = new System.Drawing.Point(6, 167);
+            this.groupBox11.Location = new System.Drawing.Point(9, 257);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(361, 158);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Size = new System.Drawing.Size(542, 243);
             this.groupBox11.TabIndex = 63;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Manual Cleanup";
@@ -343,43 +366,48 @@
             // labelReportSize
             // 
             this.labelReportSize.AutoSize = true;
-            this.labelReportSize.Location = new System.Drawing.Point(7, 82);
+            this.labelReportSize.Location = new System.Drawing.Point(10, 126);
+            this.labelReportSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReportSize.Name = "labelReportSize";
-            this.labelReportSize.Size = new System.Drawing.Size(211, 13);
+            this.labelReportSize.Size = new System.Drawing.Size(313, 20);
             this.labelReportSize.TabIndex = 63;
             this.labelReportSize.Text = "0.0MB of space is being used by these files";
             // 
             // labelReportCount
             // 
             this.labelReportCount.AutoSize = true;
-            this.labelReportCount.Location = new System.Drawing.Point(7, 56);
+            this.labelReportCount.Location = new System.Drawing.Point(10, 86);
+            this.labelReportCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReportCount.Name = "labelReportCount";
-            this.labelReportCount.Size = new System.Drawing.Size(141, 13);
+            this.labelReportCount.Size = new System.Drawing.Size(212, 20);
             this.labelReportCount.TabIndex = 62;
             this.labelReportCount.Text = "0 reports are currently stored";
             // 
             // label31
             // 
             this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(6, 16);
+            this.label31.Location = new System.Drawing.Point(9, 25);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(345, 40);
+            this.label31.Size = new System.Drawing.Size(518, 62);
             this.label31.TabIndex = 61;
             this.label31.Text = "The reports folder can be emptied from here. This will remove all reports, regard" +
     "less of their age.";
             // 
             // progressBarReportsPurge
             // 
-            this.progressBarReportsPurge.Location = new System.Drawing.Point(6, 110);
+            this.progressBarReportsPurge.Location = new System.Drawing.Point(9, 169);
+            this.progressBarReportsPurge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBarReportsPurge.Name = "progressBarReportsPurge";
-            this.progressBarReportsPurge.Size = new System.Drawing.Size(345, 13);
+            this.progressBarReportsPurge.Size = new System.Drawing.Size(518, 20);
             this.progressBarReportsPurge.TabIndex = 1;
             // 
             // buttonPurgeReports
             // 
-            this.buttonPurgeReports.Location = new System.Drawing.Point(6, 129);
+            this.buttonPurgeReports.Location = new System.Drawing.Point(9, 198);
+            this.buttonPurgeReports.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPurgeReports.Name = "buttonPurgeReports";
-            this.buttonPurgeReports.Size = new System.Drawing.Size(347, 23);
+            this.buttonPurgeReports.Size = new System.Drawing.Size(520, 35);
             this.buttonPurgeReports.TabIndex = 12;
             this.buttonPurgeReports.Text = "Remove All Reports";
             this.buttonPurgeReports.UseVisualStyleBackColor = true;
@@ -390,9 +418,11 @@
             this.groupBox2.Controls.Add(this.checkBoxReportCleanup);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.reportAgeLimit);
-            this.groupBox2.Location = new System.Drawing.Point(6, 65);
+            this.groupBox2.Location = new System.Drawing.Point(9, 100);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(361, 96);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(542, 148);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Automatic Cleanup";
@@ -400,9 +430,10 @@
             // checkBoxReportCleanup
             // 
             this.checkBoxReportCleanup.AutoSize = true;
-            this.checkBoxReportCleanup.Location = new System.Drawing.Point(6, 27);
+            this.checkBoxReportCleanup.Location = new System.Drawing.Point(9, 42);
+            this.checkBoxReportCleanup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxReportCleanup.Name = "checkBoxReportCleanup";
-            this.checkBoxReportCleanup.Size = new System.Drawing.Size(184, 17);
+            this.checkBoxReportCleanup.Size = new System.Drawing.Size(274, 24);
             this.checkBoxReportCleanup.TabIndex = 10;
             this.checkBoxReportCleanup.Text = "Clear out old reports automatically";
             this.checkBoxReportCleanup.UseVisualStyleBackColor = true;
@@ -410,15 +441,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 54);
+            this.label11.Location = new System.Drawing.Point(4, 83);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 13);
+            this.label11.Size = new System.Drawing.Size(212, 20);
             this.label11.TabIndex = 37;
             this.label11.Text = "Maximum Report Age (Days)";
             // 
             // reportAgeLimit
             // 
-            this.reportAgeLimit.Location = new System.Drawing.Point(6, 70);
+            this.reportAgeLimit.Location = new System.Drawing.Point(9, 108);
+            this.reportAgeLimit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reportAgeLimit.Maximum = new decimal(new int[] {
             365,
             0,
@@ -430,7 +463,7 @@
             0,
             0});
             this.reportAgeLimit.Name = "reportAgeLimit";
-            this.reportAgeLimit.Size = new System.Drawing.Size(347, 20);
+            this.reportAgeLimit.Size = new System.Drawing.Size(520, 26);
             this.reportAgeLimit.TabIndex = 11;
             this.reportAgeLimit.Value = new decimal(new int[] {
             30,
@@ -441,9 +474,10 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(63, 27);
+            this.label9.Location = new System.Drawing.Point(94, 42);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(304, 32);
+            this.label9.Size = new System.Drawing.Size(456, 49);
             this.label9.TabIndex = 55;
             this.label9.Text = "Reports are created after each task completes and can be removed automatically af" +
     "ter a certain period.";
@@ -453,18 +487,21 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.label10.Location = new System.Drawing.Point(62, 6);
+            this.label10.Location = new System.Drawing.Point(93, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(153, 21);
+            this.label10.Size = new System.Drawing.Size(235, 32);
             this.label10.TabIndex = 54;
             this.label10.Text = "Report Management";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
             // 
@@ -475,10 +512,11 @@
             this.tabPageVirus.Controls.Add(this.label5);
             this.tabPageVirus.Controls.Add(this.label6);
             this.tabPageVirus.Controls.Add(this.pictureBox1);
-            this.tabPageVirus.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVirus.Location = new System.Drawing.Point(4, 29);
+            this.tabPageVirus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageVirus.Name = "tabPageVirus";
-            this.tabPageVirus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVirus.Size = new System.Drawing.Size(373, 331);
+            this.tabPageVirus.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageVirus.Size = new System.Drawing.Size(564, 516);
             this.tabPageVirus.TabIndex = 5;
             this.tabPageVirus.Text = "Antivirus";
             this.tabPageVirus.UseVisualStyleBackColor = true;
@@ -489,9 +527,11 @@
             this.groupBoxServerTest.Controls.Add(this.textBoxServerPing);
             this.groupBoxServerTest.Controls.Add(this.labelConnectionTest);
             this.groupBoxServerTest.Controls.Add(this.buttonServerTest);
-            this.groupBoxServerTest.Location = new System.Drawing.Point(6, 169);
+            this.groupBoxServerTest.Location = new System.Drawing.Point(9, 260);
+            this.groupBoxServerTest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxServerTest.Name = "groupBoxServerTest";
-            this.groupBoxServerTest.Size = new System.Drawing.Size(361, 156);
+            this.groupBoxServerTest.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxServerTest.Size = new System.Drawing.Size(542, 240);
             this.groupBoxServerTest.TabIndex = 67;
             this.groupBoxServerTest.TabStop = false;
             this.groupBoxServerTest.Text = "Connection Test";
@@ -499,36 +539,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 63);
+            this.label1.Location = new System.Drawing.Point(9, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 63;
             this.label1.Text = "Test Result";
             // 
             // textBoxServerPing
             // 
             this.textBoxServerPing.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxServerPing.Location = new System.Drawing.Point(6, 79);
+            this.textBoxServerPing.Location = new System.Drawing.Point(9, 122);
+            this.textBoxServerPing.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxServerPing.Name = "textBoxServerPing";
             this.textBoxServerPing.ReadOnly = true;
-            this.textBoxServerPing.Size = new System.Drawing.Size(347, 20);
+            this.textBoxServerPing.Size = new System.Drawing.Size(518, 26);
             this.textBoxServerPing.TabIndex = 62;
             // 
             // labelConnectionTest
             // 
             this.labelConnectionTest.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConnectionTest.Location = new System.Drawing.Point(6, 16);
+            this.labelConnectionTest.Location = new System.Drawing.Point(9, 25);
+            this.labelConnectionTest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelConnectionTest.Name = "labelConnectionTest";
-            this.labelConnectionTest.Size = new System.Drawing.Size(345, 34);
+            this.labelConnectionTest.Size = new System.Drawing.Size(518, 52);
             this.labelConnectionTest.TabIndex = 61;
             this.labelConnectionTest.Text = "Performs a check of the server settings by attempting to connect to a ClamAV serv" +
     "er and retrieve its version information.";
             // 
             // buttonServerTest
             // 
-            this.buttonServerTest.Location = new System.Drawing.Point(6, 105);
+            this.buttonServerTest.Location = new System.Drawing.Point(9, 162);
+            this.buttonServerTest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonServerTest.Name = "buttonServerTest";
-            this.buttonServerTest.Size = new System.Drawing.Size(347, 23);
+            this.buttonServerTest.Size = new System.Drawing.Size(520, 35);
             this.buttonServerTest.TabIndex = 9;
             this.buttonServerTest.Text = "Test Connection";
             this.buttonServerTest.UseVisualStyleBackColor = true;
@@ -541,9 +585,11 @@
             this.groupBoxServer.Controls.Add(this.textBoxServer);
             this.groupBoxServer.Controls.Add(this.label4);
             this.groupBoxServer.Controls.Add(this.numericUpDownServerPort);
-            this.groupBoxServer.Location = new System.Drawing.Point(6, 65);
+            this.groupBoxServer.Location = new System.Drawing.Point(9, 100);
+            this.groupBoxServer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxServer.Name = "groupBoxServer";
-            this.groupBoxServer.Size = new System.Drawing.Size(361, 98);
+            this.groupBoxServer.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxServer.Size = new System.Drawing.Size(542, 151);
             this.groupBoxServer.TabIndex = 66;
             this.groupBoxServer.TabStop = false;
             this.groupBoxServer.Text = "Clamd Server";
@@ -551,9 +597,10 @@
             // checkBoxEnableClamAV
             // 
             this.checkBoxEnableClamAV.AutoSize = true;
-            this.checkBoxEnableClamAV.Location = new System.Drawing.Point(9, 22);
+            this.checkBoxEnableClamAV.Location = new System.Drawing.Point(14, 34);
+            this.checkBoxEnableClamAV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxEnableClamAV.Name = "checkBoxEnableClamAV";
-            this.checkBoxEnableClamAV.Size = new System.Drawing.Size(193, 17);
+            this.checkBoxEnableClamAV.Size = new System.Drawing.Size(288, 24);
             this.checkBoxEnableClamAV.TabIndex = 40;
             this.checkBoxEnableClamAV.Text = "Enable ClamAV antivirus integration";
             this.checkBoxEnableClamAV.UseVisualStyleBackColor = true;
@@ -561,31 +608,35 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 49);
+            this.label7.Location = new System.Drawing.Point(9, 75);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.Size = new System.Drawing.Size(173, 20);
             this.label7.TabIndex = 39;
             this.label7.Text = "IP Address / Hostname";
             // 
             // textBoxServer
             // 
-            this.textBoxServer.Location = new System.Drawing.Point(9, 65);
+            this.textBoxServer.Location = new System.Drawing.Point(14, 100);
+            this.textBoxServer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxServer.Name = "textBoxServer";
-            this.textBoxServer.Size = new System.Drawing.Size(262, 20);
+            this.textBoxServer.Size = new System.Drawing.Size(391, 26);
             this.textBoxServer.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 49);
+            this.label4.Location = new System.Drawing.Point(411, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 37;
             this.label4.Text = "Port";
             // 
             // numericUpDownServerPort
             // 
-            this.numericUpDownServerPort.Location = new System.Drawing.Point(277, 65);
+            this.numericUpDownServerPort.Location = new System.Drawing.Point(416, 100);
+            this.numericUpDownServerPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownServerPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -597,7 +648,7 @@
             0,
             0});
             this.numericUpDownServerPort.Name = "numericUpDownServerPort";
-            this.numericUpDownServerPort.Size = new System.Drawing.Size(75, 20);
+            this.numericUpDownServerPort.Size = new System.Drawing.Size(112, 26);
             this.numericUpDownServerPort.TabIndex = 8;
             this.numericUpDownServerPort.Value = new decimal(new int[] {
             3310,
@@ -608,9 +659,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(63, 27);
+            this.label5.Location = new System.Drawing.Point(94, 42);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 32);
+            this.label5.Size = new System.Drawing.Size(444, 49);
             this.label5.TabIndex = 65;
             this.label5.Text = "Connect to a ClamAV (clamd) server to enable support for virus scanning on detect" +
     "ed files.";
@@ -620,18 +672,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.label6.Location = new System.Drawing.Point(62, 6);
+            this.label6.Location = new System.Drawing.Point(93, 9);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 21);
+            this.label6.Size = new System.Drawing.Size(232, 32);
             this.label6.TabIndex = 64;
             this.label6.Text = "Antivirus Integration";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
@@ -641,9 +696,10 @@
             this.tabPageLogging.Controls.Add(this.label3);
             this.tabPageLogging.Controls.Add(this.label8);
             this.tabPageLogging.Controls.Add(this.pictureBox2);
-            this.tabPageLogging.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLogging.Location = new System.Drawing.Point(4, 29);
+            this.tabPageLogging.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageLogging.Name = "tabPageLogging";
-            this.tabPageLogging.Size = new System.Drawing.Size(373, 331);
+            this.tabPageLogging.Size = new System.Drawing.Size(564, 516);
             this.tabPageLogging.TabIndex = 7;
             this.tabPageLogging.Text = "Logging";
             this.tabPageLogging.UseVisualStyleBackColor = true;
@@ -652,9 +708,11 @@
             // 
             this.groupBox1.Controls.Add(this.comboBoxLogLevel);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Location = new System.Drawing.Point(6, 65);
+            this.groupBox1.Location = new System.Drawing.Point(9, 100);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 138);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(542, 212);
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Logging Level";
@@ -667,26 +725,29 @@
             "Minimal",
             "Standard (Recommended)",
             "Enhanced"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(6, 111);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(9, 171);
+            this.comboBoxLogLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
-            this.comboBoxLogLevel.Size = new System.Drawing.Size(349, 21);
+            this.comboBoxLogLevel.Size = new System.Drawing.Size(522, 28);
             this.comboBoxLogLevel.TabIndex = 63;
             // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(6, 16);
+            this.label17.Location = new System.Drawing.Point(9, 25);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(347, 92);
+            this.label17.Size = new System.Drawing.Size(520, 142);
             this.label17.TabIndex = 62;
             this.label17.Text = resources.GetString("label17.Text");
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 27);
+            this.label3.Location = new System.Drawing.Point(94, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 32);
+            this.label3.Size = new System.Drawing.Size(465, 49);
             this.label3.TabIndex = 63;
             this.label3.Text = "Adjust the granularity of events logged by the application and scan engine.";
             // 
@@ -695,18 +756,21 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.label8.Location = new System.Drawing.Point(62, 6);
+            this.label8.Location = new System.Drawing.Point(93, 9);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(212, 21);
+            this.label8.Size = new System.Drawing.Size(326, 32);
             this.label8.TabIndex = 62;
             this.label8.Text = "Logging and Instrumentation";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 61;
             this.pictureBox2.TabStop = false;
             // 
@@ -716,10 +780,11 @@
             this.tabPageLanguage.Controls.Add(this.label15);
             this.tabPageLanguage.Controls.Add(this.label16);
             this.tabPageLanguage.Controls.Add(this.pictureBox5);
-            this.tabPageLanguage.Location = new System.Drawing.Point(4, 22);
+            this.tabPageLanguage.Location = new System.Drawing.Point(4, 29);
+            this.tabPageLanguage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageLanguage.Name = "tabPageLanguage";
-            this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLanguage.Size = new System.Drawing.Size(373, 331);
+            this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageLanguage.Size = new System.Drawing.Size(564, 516);
             this.tabPageLanguage.TabIndex = 6;
             this.tabPageLanguage.Text = "Language";
             this.tabPageLanguage.UseVisualStyleBackColor = true;
@@ -729,9 +794,11 @@
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.comboBoxLanguage);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(6, 65);
+            this.groupBox4.Location = new System.Drawing.Point(9, 100);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(361, 104);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(542, 160);
             this.groupBox4.TabIndex = 68;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Language";
@@ -739,9 +806,10 @@
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 79);
+            this.label18.Location = new System.Drawing.Point(4, 122);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(345, 23);
+            this.label18.Size = new System.Drawing.Size(518, 35);
             this.label18.TabIndex = 64;
             this.label18.Text = "Additional languages coming soon.\r\n";
             // 
@@ -751,17 +819,19 @@
             this.comboBoxLanguage.FormattingEnabled = true;
             this.comboBoxLanguage.Items.AddRange(new object[] {
             "English (British)"});
-            this.comboBoxLanguage.Location = new System.Drawing.Point(6, 54);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(9, 83);
+            this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
-            this.comboBoxLanguage.Size = new System.Drawing.Size(349, 21);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(522, 28);
             this.comboBoxLanguage.TabIndex = 63;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(9, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 35);
+            this.label2.Size = new System.Drawing.Size(520, 54);
             this.label2.TabIndex = 62;
             this.label2.Text = "Choose your preferred language that will be used for displaying text throughout t" +
     "he application.";
@@ -769,9 +839,10 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(63, 27);
+            this.label15.Location = new System.Drawing.Point(94, 42);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(304, 32);
+            this.label15.Size = new System.Drawing.Size(456, 49);
             this.label15.TabIndex = 63;
             this.label15.Text = "Customise EduSweep to suit your language and international preferences.";
             // 
@@ -780,18 +851,21 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.label16.Location = new System.Drawing.Point(62, 6);
+            this.label16.Location = new System.Drawing.Point(93, 9);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(200, 21);
+            this.label16.Size = new System.Drawing.Size(308, 32);
             this.label16.TabIndex = 62;
             this.label16.Text = "Language and International";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.Size = new System.Drawing.Size(72, 74);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
             // 
@@ -827,15 +901,16 @@
             // ProgramSettings
             // 
             this.AcceptButton = this.buttonSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(404, 407);
+            this.ClientSize = new System.Drawing.Size(606, 626);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProgramSettings";
