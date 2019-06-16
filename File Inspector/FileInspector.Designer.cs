@@ -63,9 +63,11 @@
             // groupBoxAnalysis
             // 
             this.groupBoxAnalysis.Controls.Add(this.listViewAnalysis);
-            this.groupBoxAnalysis.Location = new System.Drawing.Point(12, 79);
+            this.groupBoxAnalysis.Location = new System.Drawing.Point(18, 122);
+            this.groupBoxAnalysis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxAnalysis.Name = "groupBoxAnalysis";
-            this.groupBoxAnalysis.Size = new System.Drawing.Size(550, 290);
+            this.groupBoxAnalysis.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxAnalysis.Size = new System.Drawing.Size(825, 446);
             this.groupBoxAnalysis.TabIndex = 1;
             this.groupBoxAnalysis.TabStop = false;
             this.groupBoxAnalysis.Text = "File Properties";
@@ -78,10 +80,12 @@
             this.listViewAnalysis.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewAnalysis.FullRowSelect = true;
             this.listViewAnalysis.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewAnalysis.Location = new System.Drawing.Point(3, 16);
+            this.listViewAnalysis.HideSelection = false;
+            this.listViewAnalysis.Location = new System.Drawing.Point(4, 24);
+            this.listViewAnalysis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewAnalysis.MultiSelect = false;
             this.listViewAnalysis.Name = "listViewAnalysis";
-            this.listViewAnalysis.Size = new System.Drawing.Size(544, 271);
+            this.listViewAnalysis.Size = new System.Drawing.Size(817, 417);
             this.listViewAnalysis.TabIndex = 5;
             this.listViewAnalysis.UseCompatibleStateImageBehavior = false;
             this.listViewAnalysis.View = System.Windows.Forms.View.Details;
@@ -105,6 +109,7 @@
             // toolStripInspector
             // 
             this.toolStripInspector.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripInspector.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripInspector.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonOpen,
             this.toolStripButtonRefresh,
@@ -115,8 +120,9 @@
             this.toolStripButtonSums});
             this.toolStripInspector.Location = new System.Drawing.Point(0, 0);
             this.toolStripInspector.Name = "toolStripInspector";
+            this.toolStripInspector.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStripInspector.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripInspector.Size = new System.Drawing.Size(575, 25);
+            this.toolStripInspector.Size = new System.Drawing.Size(862, 34);
             this.toolStripInspector.TabIndex = 8;
             this.toolStripInspector.Text = "toolStrip1";
             // 
@@ -125,7 +131,7 @@
             this.toolStripButtonOpen.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOpen.Image")));
             this.toolStripButtonOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonOpen.Name = "toolStripButtonOpen";
-            this.toolStripButtonOpen.Size = new System.Drawing.Size(65, 22);
+            this.toolStripButtonOpen.Size = new System.Drawing.Size(96, 29);
             this.toolStripButtonOpen.Text = "Open...";
             this.toolStripButtonOpen.Click += new System.EventHandler(this.toolStripButtonOpen_Click);
             // 
@@ -135,14 +141,14 @@
             this.toolStripButtonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRefresh.Image")));
             this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
-            this.toolStripButtonRefresh.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(98, 29);
             this.toolStripButtonRefresh.Text = "Refresh";
             this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripButtonDelete
             // 
@@ -150,7 +156,7 @@
             this.toolStripButtonDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDelete.Image")));
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(81, 22);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(121, 29);
             this.toolStripButtonDelete.Text = "Delete File";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
@@ -162,7 +168,7 @@
             this.toolStripSplitButtonview.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButtonview.Image")));
             this.toolStripSplitButtonview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButtonview.Name = "toolStripSplitButtonview";
-            this.toolStripSplitButtonview.Size = new System.Drawing.Size(100, 22);
+            this.toolStripSplitButtonview.Size = new System.Drawing.Size(147, 29);
             this.toolStripSplitButtonview.Text = "Execute File";
             this.toolStripSplitButtonview.ButtonClick += new System.EventHandler(this.toolStripSplitButtonview_ButtonClick);
             // 
@@ -170,14 +176,14 @@
             // 
             this.openWithNotepadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openWithNotepadToolStripMenuItem.Image")));
             this.openWithNotepadToolStripMenuItem.Name = "openWithNotepadToolStripMenuItem";
-            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.openWithNotepadToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.openWithNotepadToolStripMenuItem.Text = "View with Notepad";
             this.openWithNotepadToolStripMenuItem.Click += new System.EventHandler(this.openWithNotepadToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 34);
             // 
             // toolStripButtonSums
             // 
@@ -185,16 +191,18 @@
             this.toolStripButtonSums.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSums.Image")));
             this.toolStripButtonSums.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSums.Name = "toolStripButtonSums";
-            this.toolStripButtonSums.Size = new System.Drawing.Size(109, 22);
+            this.toolStripButtonSums.Size = new System.Drawing.Size(160, 29);
             this.toolStripButtonSums.Text = "File Checksums";
             this.toolStripButtonSums.Click += new System.EventHandler(this.toolStripButtonSums_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.richTextBoxDetails);
-            this.groupBox2.Location = new System.Drawing.Point(12, 375);
+            this.groupBox2.Location = new System.Drawing.Point(18, 577);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(550, 139);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(825, 214);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File Analysis";
@@ -202,24 +210,27 @@
             // richTextBoxDetails
             // 
             this.richTextBoxDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxDetails.Location = new System.Drawing.Point(3, 16);
+            this.richTextBoxDetails.Location = new System.Drawing.Point(4, 24);
+            this.richTextBoxDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBoxDetails.Name = "richTextBoxDetails";
             this.richTextBoxDetails.ReadOnly = true;
             this.richTextBoxDetails.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBoxDetails.ShortcutsEnabled = false;
-            this.richTextBoxDetails.Size = new System.Drawing.Size(544, 120);
+            this.richTextBoxDetails.Size = new System.Drawing.Size(817, 185);
             this.richTextBoxDetails.TabIndex = 1;
             this.richTextBoxDetails.Text = "";
             // 
             // statusStripInspector
             // 
+            this.statusStripInspector.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStripInspector.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelScan,
             this.toolStripStatusLabelSpacer,
             this.progressBarTaskProgress});
-            this.statusStripInspector.Location = new System.Drawing.Point(0, 524);
+            this.statusStripInspector.Location = new System.Drawing.Point(0, 810);
             this.statusStripInspector.Name = "statusStripInspector";
-            this.statusStripInspector.Size = new System.Drawing.Size(575, 22);
+            this.statusStripInspector.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStripInspector.Size = new System.Drawing.Size(862, 30);
             this.statusStripInspector.SizingGrip = false;
             this.statusStripInspector.TabIndex = 49;
             // 
@@ -227,38 +238,40 @@
             // 
             this.toolStripStatusLabelScan.AutoSize = false;
             this.toolStripStatusLabelScan.Name = "toolStripStatusLabelScan";
-            this.toolStripStatusLabelScan.Size = new System.Drawing.Size(425, 17);
+            this.toolStripStatusLabelScan.Size = new System.Drawing.Size(425, 23);
             this.toolStripStatusLabelScan.Text = "Ready";
             this.toolStripStatusLabelScan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStripStatusLabelSpacer
             // 
             this.toolStripStatusLabelSpacer.Name = "toolStripStatusLabelSpacer";
-            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(33, 17);
+            this.toolStripStatusLabelSpacer.Size = new System.Drawing.Size(260, 23);
             this.toolStripStatusLabelSpacer.Spring = true;
             // 
             // progressBarTaskProgress
             // 
             this.progressBarTaskProgress.Name = "progressBarTaskProgress";
-            this.progressBarTaskProgress.Size = new System.Drawing.Size(100, 16);
+            this.progressBarTaskProgress.Size = new System.Drawing.Size(150, 22);
             // 
             // labelMajorStatus
             // 
             this.labelMajorStatus.AutoSize = true;
             this.labelMajorStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMajorStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.labelMajorStatus.Location = new System.Drawing.Point(51, 34);
+            this.labelMajorStatus.Location = new System.Drawing.Point(76, 52);
+            this.labelMajorStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMajorStatus.Name = "labelMajorStatus";
-            this.labelMajorStatus.Size = new System.Drawing.Size(102, 21);
+            this.labelMajorStatus.Size = new System.Drawing.Size(157, 32);
             this.labelMajorStatus.TabIndex = 52;
             this.labelMajorStatus.Text = "File Inspector";
             // 
             // labelMinorStatus
             // 
             this.labelMinorStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinorStatus.Location = new System.Drawing.Point(52, 55);
+            this.labelMinorStatus.Location = new System.Drawing.Point(78, 85);
+            this.labelMinorStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMinorStatus.Name = "labelMinorStatus";
-            this.labelMinorStatus.Size = new System.Drawing.Size(483, 21);
+            this.labelMinorStatus.Size = new System.Drawing.Size(724, 32);
             this.labelMinorStatus.TabIndex = 51;
             this.labelMinorStatus.Text = "Displays the properties of a given file and determines possible file types based " +
     "on content.";
@@ -266,17 +279,19 @@
             // pictureBoxSummary
             // 
             this.pictureBoxSummary.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSummary.Image")));
-            this.pictureBoxSummary.Location = new System.Drawing.Point(12, 38);
+            this.pictureBoxSummary.Location = new System.Drawing.Point(18, 58);
+            this.pictureBoxSummary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxSummary.Name = "pictureBoxSummary";
-            this.pictureBoxSummary.Size = new System.Drawing.Size(35, 32);
+            this.pictureBoxSummary.Size = new System.Drawing.Size(52, 49);
+            this.pictureBoxSummary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSummary.TabIndex = 50;
             this.pictureBoxSummary.TabStop = false;
             // 
             // FileInspector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 546);
+            this.ClientSize = new System.Drawing.Size(862, 840);
             this.Controls.Add(this.labelMajorStatus);
             this.Controls.Add(this.labelMinorStatus);
             this.Controls.Add(this.pictureBoxSummary);
@@ -286,6 +301,7 @@
             this.Controls.Add(this.toolStripInspector);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FileInspector";
             this.Text = "File Inspector";
